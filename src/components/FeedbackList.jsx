@@ -1,12 +1,29 @@
 import FeedbackItem from "./FeedbackItem"
 import {motion, AnimatePresence} from 'framer-motion'
-import {useContext} from 'react'
+import {useContext, useEffect} from 'react'
+import {fetchFeedback} from '../context/FeedBackActions'
 import FeedbackContext from '../context/FeedbackContext'
 import Spinner from "./shared/Spinner"
 
 
 function FeedbackList() {
-    const {feedback, isLoading} = useContext(FeedbackContext);
+
+    const {feedback, isLoading, dispatch} = useContext(FeedbackContext);
+
+    useEffect(() => {
+        async function myFeedBack () {
+            dispatch({
+                type: 'SET_LOADING'})
+             const feedback = await fetchFeedback();
+             dispatch({
+                type: 'GET_FEEDBACK',
+                payload: feedback
+            })
+        }
+        myFeedBack();
+        
+    }, [])
+
 
     if(!isLoading && (!feedback || feedback.length === 0)) {
         return <p>No feedback yet</p>
@@ -31,15 +48,6 @@ function FeedbackList() {
             
         </div>
     )
-
-    // return (
-    //     <div className="feedback-list">
-    //         {feedback.map((item) => (
-    //             <FeedbackItem key={item.id} item={item} handleDelete={handleDelete}/>
-    //         ))}
-            
-    //     </div>
-    // )
 }
 
 export default FeedbackList

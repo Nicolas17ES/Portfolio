@@ -3,11 +3,14 @@ import Button from './shared/Button'
 import RatingSelect from './RatingSelect'
 import {useState, useContext, useEffect} from 'react'
 import FeedbackContext from '../context/FeedbackContext'
+import {addFeedback, updateFeedback} from '../context/FeedBackActions'
+
 
 function FeedbackForm() {
-    const {addFeedback, feedbackEdit, updateFeedback} = useContext(FeedbackContext);
+    const {feedbackEdit, feedback, dispatch} = useContext(FeedbackContext);
     const [text, setText] = useState('');
     const [rating, setRating] = useState(10);
+    const [questionNumber, setQuestionNumber] = useState(null)
     const [btnDisabled, setBtnDisabled] = useState(true);
     const [message, setMessage] = useState('');
     
@@ -19,6 +22,8 @@ function FeedbackForm() {
         }
 
     }, [feedbackEdit])
+
+
 
     const handleTextChange = (e) => {
         if(text === ''){
@@ -34,19 +39,40 @@ function FeedbackForm() {
         setText(e.target.value)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         if(text.trim().length >= 10){
             const newFeedback = {
                 text,
                 rating,
+                questionNumber,
             }
             if(feedbackEdit.edit === true){
-                updateFeedback(feedbackEdit.item.id, newFeedback)
-            } else {
-                addFeedback(newFeedback)
-            }
 
+                const data = await updateFeedback(feedbackEdit.item.id, newFeedback)
+                
+                let payload = feedback.map((item) => (item.id === feedbackEdit.item.id ? {...item, ...data} : item))
+                
+                dispatch({
+                    type: 'GET_FEEDBACK',
+                    payload: payload
+                })
+
+                dispatch({
+                    type: "UPDATE_FEEDBACK"
+                })
+            } else {
+                async function addTheFeedback(){
+                    const data = await addFeedback(newFeedback)
+                    let payload = [data, ...feedback]
+                    dispatch({
+                            type: 'GET_FEEDBACK',
+                            payload: payload
+                        })
+                    setText('')
+                }
+                addTheFeedback();
+            }
             setText('')
         }
         
@@ -54,7 +80,7 @@ function FeedbackForm() {
     return (
         <Card>
             <form onSubmit={handleSubmit}>
-                <h2>Please rate my Portfolio and share your opinion with others</h2>
+                <h2>Please rate my Portfolio and help me improve it.</h2>
                 <RatingSelect select={(rating) => setRating(rating)}/>
                 <div className="input-group">
                     <input onChange={handleTextChange} value={text} type="text" placeholder="Write your review" name="" id=""/>
