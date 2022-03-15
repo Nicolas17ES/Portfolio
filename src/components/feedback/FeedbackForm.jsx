@@ -4,15 +4,23 @@ import RatingSelect from './RatingSelect'
 import {useState, useContext, useEffect} from 'react'
 import FeedbackContext from '../../context/feedback/FeedbackContext'
 import {addFeedback, updateFeedback} from '../../context/feedback/FeedBackActions'
+import PropTypes from 'prop-types'
+import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from 'react-icons/bs'
 
 
-function FeedbackForm() {
+
+
+function FeedbackForm({data}) {
     const {feedbackEdit, feedback, dispatch} = useContext(FeedbackContext);
     const [text, setText] = useState('');
     const [rating, setRating] = useState(10);
-    const [questionNumber, setQuestionNumber] = useState(null)
     const [btnDisabled, setBtnDisabled] = useState(true);
     const [message, setMessage] = useState('');
+
+    const formInfo = {
+        title: data.formTitle,
+        questionNumber: data.questionNumber
+    }
     
     useEffect(() => {
         if(feedbackEdit.edit === true){
@@ -45,7 +53,8 @@ function FeedbackForm() {
             const newFeedback = {
                 text,
                 rating,
-                questionNumber,
+                questionNumber: formInfo.questionNumber,
+                
             }
             if(feedbackEdit.edit === true){
 
@@ -80,7 +89,7 @@ function FeedbackForm() {
     return (
         <Card>
             <form onSubmit={handleSubmit}>
-                <h2>Please rate my Portfolio and help me improve it.</h2>
+                <h2>{formInfo.title}</h2>
                 <RatingSelect select={(rating) => setRating(rating)}/>
                 <div className="input-group">
                     <input onChange={handleTextChange} value={text} type="text" placeholder="Write your review" name="" id=""/>
@@ -90,6 +99,12 @@ function FeedbackForm() {
             </form>
         </Card>
     )
+}
+
+
+FeedbackForm.propTypes = {
+    formTitle: PropTypes.string,
+
 }
 
 export default FeedbackForm

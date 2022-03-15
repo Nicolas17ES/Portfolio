@@ -6,7 +6,7 @@ import FeedbackContext from '../../context/feedback/FeedbackContext'
 import Spinner from "../shared/Spinner"
 
 
-function FeedbackList() {
+function FeedbackList({questionNumber}) {
 
     const {feedback, isLoading, dispatch} = useContext(FeedbackContext);
 
@@ -28,13 +28,16 @@ function FeedbackList() {
     if(!isLoading && (!feedback || feedback.length === 0)) {
         return <p>No feedback yet</p>
     }
+
+    let validFeedback = feedback.filter((item) => item.questionNumber == questionNumber)
+
     
     return isLoading ? (
         <Spinner/>
     ) : (
         <div className="feedback-list">
             <AnimatePresence>
-            {feedback.map((item) => (
+            {validFeedback.map((item) => (
                 <motion.div 
                 key={item.id}
                 initial={{opacity: 0}}
