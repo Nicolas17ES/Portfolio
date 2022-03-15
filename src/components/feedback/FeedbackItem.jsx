@@ -1,10 +1,10 @@
 import {useState} from 'react';
-import Card from './shared/Card'
+import Card from '../shared/Card'
 import PropTypes from 'prop-types'
 import {FaTimes, FaEdit} from 'react-icons/fa'
 import {useContext} from 'react'
-import FeedbackContext from '../context/FeedbackContext'
-import {deleteFeedback} from '../context/FeedBackActions'
+import FeedbackContext from '../../context/feedback/FeedbackContext'
+import {deleteFeedback} from '../../context/feedback/FeedBackActions'
 
  
 function FeedbackItem({item}) {

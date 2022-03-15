@@ -1,9 +1,9 @@
-import Card from './shared/Card'
-import Button from './shared/Button'
+import Card from '../shared/Card'
+import Button from '../shared/Button'
 import RatingSelect from './RatingSelect'
 import {useState, useContext, useEffect} from 'react'
-import FeedbackContext from '../context/FeedbackContext'
-import {addFeedback, updateFeedback} from '../context/FeedBackActions'
+import FeedbackContext from '../../context/feedback/FeedbackContext'
+import {addFeedback, updateFeedback} from '../../context/feedback/FeedBackActions'
 
 
 function FeedbackForm() {

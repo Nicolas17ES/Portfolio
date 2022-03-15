@@ -1,13 +1,13 @@
-import Header from "./components/Header"
-import FeedbackList from "./components/FeedbackList"
+import Header from "./components/feedback/Header"
+import FeedbackList from "./components/feedback/FeedbackList"
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import FeedbackStats from "./components/FeedbackStats"
-import FeedbackForm from "./components/FeedbackForm"
-import AboutPage from './pages/AboutPage'
-import AboutIconLink from './components/AboutLink'
+import FeedbackStats from "./components/feedback/FeedbackStats"
+import FeedbackForm from "./components/feedback/FeedbackForm"
+import AboutPage from './pages/feedback/AboutPage'
+import AboutIconLink from './components/feedback/AboutLink'
 
 
-import {FeedbackProvider} from './context/FeedbackContext'
+import {FeedbackProvider} from './context/feedback/FeedbackContext'
 
 
 

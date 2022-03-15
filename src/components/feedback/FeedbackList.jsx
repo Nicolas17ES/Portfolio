@@ -1,9 +1,9 @@
 import FeedbackItem from "./FeedbackItem"
 import {motion, AnimatePresence} from 'framer-motion'
 import {useContext, useEffect} from 'react'
-import {fetchFeedback} from '../context/FeedBackActions'
-import FeedbackContext from '../context/FeedbackContext'
-import Spinner from "./shared/Spinner"
+import {fetchFeedback} from '../../context/feedback/FeedBackActions'
+import FeedbackContext from '../../context/feedback/FeedbackContext'
+import Spinner from "../shared/Spinner"
 
 
 function FeedbackList() {
