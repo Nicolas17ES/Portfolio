@@ -58,9 +58,10 @@ function FeedbackForm({data}) {
             }
             if(feedbackEdit.edit === true){
 
-                const data = await updateFeedback(feedbackEdit.item.id, newFeedback)
+                await updateFeedback(feedbackEdit.item.feedback_id, newFeedback)
+                console.log(feedbackEdit.item.feedback_id)
                 
-                let payload = feedback.map((item) => (item.id === feedbackEdit.item.id ? {...item, ...data} : item))
+                let payload = feedback.map((item) => (item.feedback_id === feedbackEdit.item.feedback_id ? {...item, ...newFeedback} : item))
                 
                 dispatch({
                     type: 'GET_FEEDBACK',
@@ -72,8 +73,8 @@ function FeedbackForm({data}) {
                 })
             } else {
                 async function addTheFeedback(){
-                    const data = await addFeedback(newFeedback)
-                    let payload = [data, ...feedback]
+                    await addFeedback(newFeedback)
+                    let payload = [newFeedback, ...feedback]
                     dispatch({
                             type: 'GET_FEEDBACK',
                             payload: payload

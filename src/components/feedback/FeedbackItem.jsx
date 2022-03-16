@@ -11,8 +11,8 @@ function FeedbackItem({item}) {
         const {dispatch, feedback} = useContext(FeedbackContext);
 
         async function deleteTheFeedback (id){
-           await deleteFeedback(item.id);
-            let payload = feedback.filter((item) => item.id != id)
+           await deleteFeedback(item.feedback_id);
+            let payload = feedback.filter((item) => item.feedback_id != id)
             dispatch({
                 type: 'GET_FEEDBACK',
                 payload: payload
@@ -32,7 +32,7 @@ function FeedbackItem({item}) {
     return (
         <Card>
             <div className="num-display">{item.rating}</div>
-            <button onClick={() => deleteTheFeedback(item.id)} className="close"><FaTimes color="purple"/></button>
+            <button onClick={() => deleteTheFeedback(item.feedback_id)} className="close"><FaTimes color="purple"/></button>
             <button onClick={editFeedback} className="edit"><FaEdit color="purple"/></button>
             <div className="text-display">{item.text}</div>
         </Card>

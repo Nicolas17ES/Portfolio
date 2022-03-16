@@ -233,6 +233,11 @@ input:focus {
   cursor: pointer;
 }
 
+.arrow:hover{
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
  * document */
 

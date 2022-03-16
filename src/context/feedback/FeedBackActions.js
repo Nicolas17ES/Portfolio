@@ -2,7 +2,7 @@
 
 export const fetchFeedback = async () => {
         
-        const response = await fetch("/feedback?_sort=id&_order=desc")
+        const response = await fetch("/feedback")
         const data = await response.json();
         return data;
     }
@@ -16,13 +16,16 @@ export const fetchFeedback = async () => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(newFeedback)
+            
         })
+        console.log(newFeedback)
         const data = await response.json();
         return data;
     }
 
     //Edit the item that has been set
     export const updateFeedback = async (id, updatedItem) => {
+        console.log(id)
         
         const response = await fetch(`/feedback/${id}`, {
             method: "PUT",
