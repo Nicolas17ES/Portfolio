@@ -4,8 +4,8 @@ import RatingSelect from './RatingSelect'
 import {useState, useContext, useEffect} from 'react'
 import FeedbackContext from '../../context/feedback/FeedbackContext'
 import {addFeedback, updateFeedback} from '../../context/feedback/FeedBackActions'
+import Button2 from '../shared/Button2'
 import PropTypes from 'prop-types'
-import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from 'react-icons/bs'
 
 
 
@@ -90,6 +90,7 @@ function FeedbackForm({data}) {
         <Card>
             <form onSubmit={handleSubmit}>
                 <h2>{formInfo.title}</h2>
+                {/* <Button2 color="green"/> */}
                 <RatingSelect select={(rating) => setRating(rating)}/>
                 <div className="input-group">
                     <input onChange={handleTextChange} value={text} type="text" placeholder="Write your review" name="" id=""/>

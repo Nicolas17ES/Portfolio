@@ -45,3 +45,18 @@ export const deleteFeedback = async (id) => {
         }
     }
 
+
+// NEXT QUESTION IN FEEDBACK//
+
+export const nextQuestion = (questionCount) => {
+    let count = 1;
+    return questionCount += count
+}
+
+//PREVIOUS QUESTION IN FEEDBACK
+
+export const previousQuestion = (questionCount) => {
+    let count = 1;
+    return questionCount -= count
+}
+

@@ -25,7 +25,7 @@
       "id": 5
     },
     {
-      "text": "Review from question one good porfolio",
+      "text": "Review from question one good ahahahahhah",
       "rating": 8,
       "questionNumber": 1,
       "id": 6
@@ -35,6 +35,18 @@
       "rating": 6,
       "questionNumber": 2,
       "id": 7
+    },
+    {
+      "text": "It is very nice",
+      "rating": 8,
+      "questionNumber": 1,
+      "id": 8
+    },
+    {
+      "text": "Your animal finder is great",
+      "rating": 7,
+      "questionNumber": 3,
+      "id": 9
     }
   ]
 }

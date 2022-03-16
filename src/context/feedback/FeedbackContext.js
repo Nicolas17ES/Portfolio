@@ -10,7 +10,8 @@ export const FeedbackProvider = ({children}) => {
         feedback: [],
         loading: false,
         item: {},
-        edit: false
+        edit: false,
+        questionCount: 1,
     }
     const [state, dispatch] = useReducer(feedbackReducer, initialState)
 
@@ -20,6 +21,7 @@ export const FeedbackProvider = ({children}) => {
             item: state.item,
             edit: state.edit
         },
+        questionCount: state.questionCount,
         dispatch,
     }}>
         {children}

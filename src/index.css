@@ -190,13 +190,33 @@ input:focus {
 .about-link {
   display: flex;
   justify-content: flex-end;
+  margin-top: 50px;
+}
+
+/* arrows to go to next feedback */
+.nextArrow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 35px;
+}
+
+.previousArrow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.arrow{
+  cursor: pointer;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
  * document */
+
 .about-link a {
   color: #fff;
   cursor: pointer;
+
 }
 
 .about-link a:hover {
