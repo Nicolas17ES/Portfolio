@@ -1,8 +1,11 @@
+
+//FEEDBACK//
+
 //Fecth feedback//
 
 export const fetchFeedback = async () => {
         
-        const response = await fetch("/feedback")
+        const response = await fetch("http://localhost:3001/feedback")
         const data = await response.json();
         return data;
     }
@@ -10,7 +13,7 @@ export const fetchFeedback = async () => {
 //add feedback
 
   export const addFeedback = async (newFeedback) => {
-        const response = await fetch("/feedback", {
+        const response = await fetch("http://localhost:3001/feedback", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -18,7 +21,7 @@ export const fetchFeedback = async () => {
             body: JSON.stringify(newFeedback)
             
         })
-        console.log(newFeedback)
+       
         const data = await response.json();
         return data;
     }
@@ -27,7 +30,7 @@ export const fetchFeedback = async () => {
     export const updateFeedback = async (id, updatedItem) => {
         console.log(id)
         
-        const response = await fetch(`/feedback/${id}`, {
+        const response = await fetch(`http://localhost:3001/feedback/${id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'
@@ -44,10 +47,41 @@ export const fetchFeedback = async () => {
 
 export const deleteFeedback = async (id) => {
         if(window.confirm('Are you sure you want to delete?')){
-            await fetch(`/feedback/${id}`, { method: "DELETE"})
+            await fetch(`http://localhost:3001/feedback/${id}`, { method: "DELETE"})
+        } else {
+            return null
         }
     }
 
+//LIKES//
+
+//fetch likes//
+export const fetchLikes = async () => {
+        
+        const response = await fetch(`http://localhost:3001/likes`)
+        const data = await response.json();
+        return data;
+    }
+
+//post likes//
+
+export const addLike = async (info) => {
+    console.log(info)
+        const response = await fetch("http://localhost:3001/likes", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(info)
+            
+        })
+        
+        const data = await response.json();
+        return data;
+    }
+
+
+//QUESTIONS//
 
 // NEXT QUESTION IN FEEDBACK//
 

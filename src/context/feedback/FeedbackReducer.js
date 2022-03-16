@@ -17,6 +17,11 @@ const feedbackReducer = (state, action) => {
                 ...state,
                 edit: false,
             }
+        case 'GET_LIKES':
+            return {
+                ...state,
+                likes: action.payload,
+            }
         case 'SET_LOADING':
             return {
                 ...state,
