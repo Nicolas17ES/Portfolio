@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
@@ -143,6 +147,25 @@ input:focus {
 
 .edit {
   right: 40px;
+}
+
+.btnSize{
+  color: white;
+  font-size: 0.8rem;
+  border: 1px;
+  background-color: #202142;
+  top: 5%;
+  left: 88%;
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.btnSize:hover{
+  transform: scale(0.98);
+  opacity: 0.9;
 }
 
 .btn {

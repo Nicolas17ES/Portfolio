@@ -90,7 +90,6 @@ function FeedbackForm({data}) {
         <Card>
             <form onSubmit={handleSubmit}>
                 <h2>{formInfo.title}</h2>
-                {/* <Button2 color="green"/> */}
                 <RatingSelect select={(rating) => setRating(rating)}/>
                 <div className="input-group">
                     <input onChange={handleTextChange} value={text} type="text" placeholder="Write your review" name="" id=""/>
@@ -98,6 +97,7 @@ function FeedbackForm({data}) {
                 </div>
             {message && <div className="message">{message}</div>}
             </form>
+            <Button2 text="View project"/>
         </Card>
     )
 }

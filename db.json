@@ -47,6 +47,12 @@
       "rating": 7,
       "questionNumber": 3,
       "id": 9
+    },
+    {
+      "text": "Cool animals but bad examples",
+      "rating": 4,
+      "questionNumber": 3,
+      "id": 10
     }
   ]
 }
