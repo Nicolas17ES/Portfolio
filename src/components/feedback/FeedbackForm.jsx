@@ -88,7 +88,8 @@ function FeedbackForm({data}) {
         
     }
     return (
-        <Card>
+        <section className="mt-28 question">
+            <Card>
             <form onSubmit={handleSubmit}>
                 <h2>{formInfo.title}</h2>
                 <RatingSelect select={(rating) => setRating(rating)}/>
@@ -100,6 +101,8 @@ function FeedbackForm({data}) {
             </form>
             <Button2 text="View project"/>
         </Card>
+        </section>
+    
     )
 }
 

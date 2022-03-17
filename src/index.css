@@ -15,6 +15,7 @@ body {
   background-color: #202142;
   color: #fff;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 ul {
@@ -22,9 +23,12 @@ ul {
 }
 
 .container {
-  max-width: 768px;
+  max-width: 75%;
   margin: auto;
-  padding: 0 20px;
+  padding: 6px 40px;
+  border-radius: 15px;
+  
+
 }
 
 header {
@@ -41,8 +45,9 @@ header {
   color: #333;
   border-radius: 15px;
   padding: 40px 50px;
-  margin: 20px 0;
+  margin: 20px auto;
   position: relative;
+  max-width: 768px;
 }
 
 .card.reverse {
@@ -178,6 +183,8 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 768px;
+  margin: 0 auto 40px;
 }
 
 .num-display {
@@ -295,14 +302,18 @@ input:focus {
 /* arrows to go to next feedback */
 .nextArrow {
   display: flex;
+  margin: auto;
   justify-content: flex-end;
   margin-bottom: 35px;
+  max-width: 768px;
 }
 
 .previousArrow {
   display: flex;
   justify-content: space-between;
   margin-bottom: 35px;
+  max-width: 768px;
+  margin: 20px auto 50px;
 }
 
 .arrow{
@@ -334,6 +345,7 @@ input:focus {
 .about p {
   margin: 10px 0;
 }
+
 
 @media (max-width: 600px) {
   .rating li {
