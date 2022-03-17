@@ -22,6 +22,11 @@ const feedbackReducer = (state, action) => {
                 ...state,
                 likes: action.payload,
             }
+        case 'GET_REPLIES':
+            return {
+                ...state,
+                replies: action.payload,
+            }
         case 'SET_LOADING':
             return {
                 ...state,

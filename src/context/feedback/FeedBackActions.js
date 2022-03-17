@@ -58,7 +58,7 @@ export const deleteFeedback = async (id) => {
 //fetch likes//
 export const fetchLikes = async () => {
         
-        const response = await fetch(`http://localhost:3001/likes`)
+        const response = await fetch(`http://localhost:3001/portfolio/likes`)
         const data = await response.json();
         return data;
     }
@@ -67,7 +67,7 @@ export const fetchLikes = async () => {
 
 export const addLike = async (info) => {
     console.log(info)
-        const response = await fetch("http://localhost:3001/likes", {
+        const response = await fetch("http://localhost:3001/portfolio/likes", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -79,6 +79,33 @@ export const addLike = async (info) => {
         const data = await response.json();
         return data;
     }
+
+//REPLIES//
+
+//get replies//
+export const getReplies = async () => {
+    const response = await fetch(`http://localhost:3001/portfolio/comments`)
+        const data = await response.json();
+        return data;
+}
+
+//post replies//
+export const addReply = async (replyData) => {
+    
+        const response = await fetch("http://localhost:3001/portfolio/comments", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(replyData)
+            
+        })
+        
+        const data = await response.json();
+        return data;
+    }
+
+
 
 
 //QUESTIONS//

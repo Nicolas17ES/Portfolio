@@ -4,10 +4,13 @@ import AboutPage from './pages/feedback/AboutPage'
 import QuestionOne from './components/feedback/QuestionOne'
 import QuestionTwo from './components/feedback/QuestionTwo'
 import AboutIconLink from './components/feedback/AboutLink'
+import NavBar from './components/shared/NavBar/NavBar'
 
 
 import {FeedbackProvider} from './context/feedback/FeedbackContext'
 import Feedback from "./pages/feedback/Feedback"
+import NotFound from './pages/NotFound'
+
 
 
 
@@ -16,7 +19,7 @@ function App() {
     return (
         <Router>
             <FeedbackProvider>
-                <Header />
+                <NavBar />
                 <div className="container">
                     <Routes>
                         <Route 
@@ -25,6 +28,7 @@ function App() {
                         ></Route>
                     
                         <Route path="/about" element={<AboutPage/>}/>
+                        <Route path='/*' element={<NotFound/>}/>
                     </Routes>
                     <AboutIconLink/>
                 </div>
