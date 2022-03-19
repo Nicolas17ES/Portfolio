@@ -5,6 +5,70 @@
 	height: 100%;
 }
 
+/* Exit button */
+.outer {
+  position: absolute;
+  margin: auto;
+  width: 30px;
+  margin-top: -110px;
+  margin-left: -80px;
+  cursor: pointer;
+}
+
+.inner {
+  width: inherit;
+  text-align: center;
+}
+
+label { 
+  font-size: .8em; 
+  line-height: 4em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all .3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.inner:before, .inner:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: inherit;
+  background: #FFC107;
+  left: 0;
+  transition: all .3s ease-in;
+}
+
+.inner:before {
+  top: 50%; 
+  transform: rotate(45deg);  
+}
+
+.inner:after {  
+  bottom: 50%;
+  transform: rotate(-45deg);  
+}
+
+.outer:hover label {
+  opacity: 1;
+}
+
+.outer:hover .inner:before,
+.outer:hover .inner:after {
+  transform: rotate(0);
+}
+
+.outer:hover .inner:before {
+  top: 0;
+}
+
+.outer:hover .inner:after {
+  bottom: 0;
+}
+
+/* exit button end */
+
 span{
 	margin: 0 11px;
 	line-height: .7;
@@ -143,8 +207,13 @@ span{
 /* MEDIA QUERY SMALL IPAD */
 
 @media (min-width: 500px){
+
+	.main{
+		font-size: 30px;
+	}
+
 	span{
-		margin: 0 15px;
+		margin: 0 16px;
 		line-height: .7;
 		animation: span 4.3s ease-in 4 alternate;
 		
@@ -161,25 +230,25 @@ span{
 
 	@keyframes letter {
 		0%,30%{ min-width: 27px; }
-		70%,100%{ min-width: 180px; }
+		70%,100%{ min-width: 250px; }
 		99.999999999%,100%{ border: 4.95px solid #202142;}
 	}
 
 	@keyframes letter2 {
 		0%,30%{ height:  27px; }
-		70%,100%{ height: 58vw; }
+		70%,100%{ height: 64vw; }
 		99.999999999%,100%{ border: 4.95px solid #202142;}
 	}
 
 	.image{
-		top: 100px;
-		width: 160px;
+		top: 120px;
+		width: 190px;
 
 	}
 	
 	.textOne{
 		font-size: 1.4rem;
-		top: 100px;
+		top: 115px;
 		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
@@ -193,7 +262,7 @@ span{
 		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: 100px;
+		margin-top: 120px;
 		left: 0;
 		right: 0;
 		text-align: center;	
@@ -202,8 +271,8 @@ span{
 	.access{
 		visibility: hidden;
 		opacity: 0;
-		width: 130px;
-		height: 80px;
+		width: 190px;
+		height: 115px;
 		border: 2px solid white ;
 		border-radius: 5%;
 		background-color: white;
@@ -212,7 +281,7 @@ span{
 		margin-right: auto;
 		left: 0;
 		right: 0;
-		top: 100px;
+		top: 120px;
 		animation: imageWhite 2.8s ease-in 1 forwards 13s;
 	}
 
@@ -227,7 +296,7 @@ span{
 @media (min-width: 620px){
 
 	.main{
-		font-size: 40px;	
+		font-size:50px;	
 	}
 
 	span{
@@ -243,7 +312,8 @@ span{
 	}
 
 	.letter{
-		height: 32px;
+		height: 40px;
+	
 	}
 
 	@keyframes letter {
@@ -253,20 +323,20 @@ span{
 	}
 
 	@keyframes letter2 {
-		0%,30%{ height:  32px; }
-		70%,100%{ height: 50vw; }
+		0%,30%{ height:  40px; }
+		70%,100%{ height: 55vw; }
 		99.999999999%,100%{ border: 4.95px solid #202142;}
 	}
 
 	.image{
-		width: 190px;
-		top: 120px;
+		width: 240px;
+		top: 140px;
 		animation: imageDelay 1.5s ease-in-out 2 alternate 10.9s;	
 	}
 
 	.textOne{
 		font-size: 1.7rem;
-		top: 85px;
+		top: 105px;
 		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
@@ -279,16 +349,16 @@ span{
 		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: 140px;
+		margin-top: 160px;
 		left: 0;
 		right: 0;
 		text-align: center;	
 	}
 
 	.access{
-		width: 190px;
-		top: 120px;
-		height: 125px;
+		width: 240px;
+		top: 140px;
+		height: 155px;
 	}
 }
 

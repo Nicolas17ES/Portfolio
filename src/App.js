@@ -10,6 +10,8 @@ import {FeedbackProvider} from './context/feedback/FeedbackContext'
 import Feedback from "./pages/feedback/Feedback"
 import NotFound from './pages/NotFound'
 import LandingPage from './pages/main/LandingPage'
+import Home from './pages/home/Home'
+import PaperScissors from './pages/games/Paper'
 
 
 
@@ -31,6 +33,8 @@ function App() {
                         <Route path="/about" element={<AboutPage/>}/>
                         <Route path='/*' element={<NotFound/>}/>
                         <Route path='/'  element={<LandingPage/>}/>
+                        <Route path='/home'  element={<Home/>}/>
+                        <Route path='/paper'  element={<PaperScissors/>}/>
                     </Routes>
                     {window.location.pathname!== '/' && <AboutIconLink/>}
                 </div>

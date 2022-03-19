@@ -1,7 +1,8 @@
 import './LandingPage.css'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import {useEffect} from 'react'
 import Pills from '../../components/shared/pills/Pills'
+
 
 function LandingPage() {
     let navigate = useNavigate();
@@ -19,6 +20,14 @@ function LandingPage() {
 
     return (
         <div className="landing-page">
+            <Link to="/home">
+                <div class="outer">
+                    <div class="inner">
+                        <label>Skipt Intro</label>
+                    </div>
+                </div>
+            </Link>
+            
             <div class="main">
                 <span>N</span>
                 <span>I</span>
