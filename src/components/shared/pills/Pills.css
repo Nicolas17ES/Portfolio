@@ -1,0 +1,256 @@
+.question{
+    visibility: hidden;
+	opacity: 0;
+    animation: morpheus 1.3s ease-in 1 forwards 15.8s;
+
+}
+
+@keyframes morpheus {
+	99%, 100%{ visibility: visible;
+		opacity: 1;
+	}
+}
+
+.pills{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 130px;
+    z-index: 1000;
+    position: relative;
+    margin-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.red-pill{
+    color: red;
+    transform: rotate(90deg);
+    padding: 8px;
+    border: 1px solid red;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.red-pill:hover{
+    transform: scale(1.2) rotate(90deg);
+    opacity: 0.7;
+    
+}
+
+.blue-pill{
+    color: blue;
+    padding: 8px;
+    border: 1px solid blue;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.blue-pill:hover{
+    transform: scale(1.2);
+    opacity: 0.7;
+    
+}
+
+.text-pills{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 130px;
+    z-index: 1000;
+    position: relative;
+    font-size: 6px;
+    margin-top: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    color: black;
+}
+
+.morpheus {
+  height: 45px;
+  width: 45px;
+  pointer-events: none;
+  background-image: url('../../assets/morpheus2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -50px;
+  margin: auto;
+}
+
+/* SMALL IPAD */
+@media (min-width: 500px){
+    .text-pills{
+        width: 130px;
+        font-size: 8px;
+        margin-top: 10px;
+    }
+
+    .morpheus {
+        height: 50px;
+        width: 50px;
+        top: -117px;
+    }
+}
+
+/* IPAD QUERY */
+
+@media (min-width: 620px){
+    .pills{
+        margin-top: 30px;
+        width: 190px;
+        padding: 0px;
+    }
+    .text-pills{
+        width: 190px;
+        font-size: 11px;
+        margin-top: 20px;
+    }
+
+     .morpheus {
+         width: 60px;
+         height: 60px;
+        top: -135px;
+    }
+}
+
+/* BIG TABLET */
+
+@media (min-width: 760px){
+    .morpheus {
+        width: 65px;
+        height: 65px;
+        top: -160px;
+        border: 5px solid white;
+    }
+    .pills{
+        width: 265px;
+        margin-top: 40px;
+    }
+
+    .text-pills{
+        width: 265px;
+        font-size: 15px;
+        margin-top: 35px;
+    }
+
+    .blue-pill:hover{
+        transform: scale(1.7);
+        opacity: 0.7;
+    }
+
+    .red-pill:hover{
+        transform: scale(1.7) rotate(90deg);
+        opacity: 0.7;
+    }
+}
+
+@media (min-width: 1024px){
+    .morpheus{
+        width: 72px;
+        height: 72px;
+        top: -143px;
+    }
+    .pills{
+        margin-top: 60px;
+        width: 320px;
+    }
+    .text-pills{
+        font-size: 17px;
+        width: 320px;
+    }
+
+     .blue-pill:hover{
+        transform: scale(1.9);
+        opacity: 0.7;
+    }
+
+    .red-pill:hover{
+        transform: scale(1.9) rotate(90deg);
+        opacity: 0.7;
+    }
+
+}
+
+
+/* BIG SCREEN */
+
+@media (min-width: 1200px) {
+    .morpheus {
+        height: 100px;
+        width: 100px;
+        top: -150px;
+
+    }
+
+    .text-pills{
+        font-size: 18px;
+        width: 320px;
+        margin-top: 35px;
+        padding-right: 10px;
+        padding-left: 10px;
+      
+    }
+
+
+    .pills{
+        width: 320px;
+        margin-top: 60px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+     .blue-pill:hover{
+        transform: scale(2);
+        opacity: 0.7;
+    }
+
+    .red-pill:hover{
+        transform: scale(2) rotate(90deg);
+        opacity: 0.7;
+    }
+}
+
+
+@media (min-width: 1580px) {
+    .morpheus {
+        height: 110px;
+        width: 110px;
+        top: -200px;
+
+    }
+
+    .text-pills{
+        font-size: 20px;
+        width: 400px;
+        margin-top: 55px;
+        padding-right: 10px;
+        padding-left: 10px;
+      
+    }
+
+
+    .pills{
+        width: 400px;
+        margin-top: 70px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+     .blue-pill:hover{
+        transform: scale(2.5);
+        opacity: 0.7;
+    }
+
+    .red-pill:hover{
+        transform: scale(2.5) rotate(90deg);
+        opacity: 0.7;
+    }
+}

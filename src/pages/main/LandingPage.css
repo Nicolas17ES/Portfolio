@@ -6,7 +6,7 @@
 }
 
 span{
-	margin: 0 15px;
+	margin: 0 11px;
 	line-height: .7;
 	animation: span 4.3s ease-in 4 alternate;
 	
@@ -22,7 +22,6 @@ span{
 	
 }
 
-
 .letter{
 	display: inline-flex;
 	height: 25px;
@@ -34,7 +33,7 @@ span{
 }
 
 @keyframes span {
-	0%,30%{ margin: 0 10px; }
+	0%,30%{ margin: 0 11px; }
 	70%,100%{ margin: 0 3px; }
 }
 
@@ -50,12 +49,8 @@ span{
 	70%,100%{ height: 45vw; }
 	99.999999999%,100%{ border: 4.95px solid #202142;}
 }
-/* 
-@keyframes imageBackwards {
-	0%,30%{ height:  27px; }
-	70%,100%{ height: 45vw; }
-	99.999999999%,100%{ border: 4.95px solid #202142;}
-} */
+
+/* inside image */
 
 .image{
 	position: absolute;
@@ -118,7 +113,48 @@ span{
 	
 }
 
+/* morpheus */
+
+.access{
+	visibility: hidden;
+	opacity: 0;
+	width: 130px;
+	height: 80px;
+	border: 2px solid white ;
+	border-radius: 5%;
+	background-color: white;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 40px;
+	animation: imageWhite 2.8s ease-in 1 forwards 13s;
+}
+
+@keyframes imageWhite {
+	99%, 100%{ visibility: visible;
+		opacity: 1;
+		transform:rotate(360deg);
+	}
+}
+
+
+/* MEDIA QUERY SMALL IPAD */
+
 @media (min-width: 500px){
+	span{
+		margin: 0 15px;
+		line-height: .7;
+		animation: span 4.3s ease-in 4 alternate;
+		
+	}
+
+	@keyframes span {
+		0%,30%{ margin: 0 15px; }
+		70%,100%{ margin: 0 3px; }
+	}
+
 	.letter{
 		min-width: 20px;
 	}
@@ -163,15 +199,47 @@ span{
 		text-align: center;	
 	}
 
+	.access{
+		visibility: hidden;
+		opacity: 0;
+		width: 130px;
+		height: 80px;
+		border: 2px solid white ;
+		border-radius: 5%;
+		background-color: white;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		top: 100px;
+		animation: imageWhite 2.8s ease-in 1 forwards 13s;
+	}
+
+
 }
+
+
+
 
 /* IPAD MEDIA QUERY */
 
 @media (min-width: 620px){
 
 	.main{
-		font-size: 40px;
+		font-size: 40px;	
+	}
+
+	span{
+		margin: 0 20px;
+		line-height: .7;
+		animation: span 4.3s ease-in 4 alternate;
 		
+	}
+
+	@keyframes span {
+		0%,30%{ margin: 0 18px; }
+		70%,100%{ margin: 0 3px; }
 	}
 
 	.letter{
@@ -216,9 +284,17 @@ span{
 		right: 0;
 		text-align: center;	
 	}
+
+	.access{
+		width: 190px;
+		top: 120px;
+		height: 125px;
+	}
 }
 
-/* medium small */
+
+
+/* COMPUTER SCREEN SMALL */
 
 @media (min-width: 760px){
 
@@ -237,7 +313,7 @@ span{
 	}
 
 	@keyframes span {
-		0%,30%{ margin: 0 15px; }
+		0%,30%{ margin: 0 20px; }
 		70%,100%{ margin: 0 10px; }
 		
 	}
@@ -280,7 +356,15 @@ span{
 		right: 0;
 		text-align: center;	
 	}
+
+	.access{
+		top: 150px;
+		width: 265px;
+		height: 180px;
+	}
 }
+
+
 
 /* medium screen media query */
 
@@ -290,12 +374,10 @@ span{
 		font-size: 60px;
 	}
 
-	.span{
-		margin: 0 15px;
-	}
 
 	.letter{
 		height: 46px;
+		border: 7px solid white;
 	}
 
 	@keyframes span {
@@ -343,13 +425,27 @@ span{
 		right: 0;
 		text-align: center;
 	}
+
+	.access{
+		top: 130px;
+		width: 320px;
+		height: 220px;
+	}
 }
+
+
 
 /* big screen media query */
 
 @media (min-width: 1200px) {
 	.main{
 		font-size: 70px;
+	}
+
+	span{
+		margin: 0 25px;
+		line-height: .7;
+		animation: span 4.3s ease-in 4 alternate;
 	}
 
 	.letter{
@@ -400,12 +496,10 @@ span{
 	@keyframes imageWhite {
 	99%, 100%{ visibility: visible;
 		opacity: 1;
-		transform:rotate(180deg);
+		transform:rotate(360deg);
 	}
 	
 }
-
-	
 
 	.textOne{
 		font-size: 2.3rem;
@@ -427,6 +521,72 @@ span{
 		left: 0;
 		right: 0;
 		text-align: center;
+	}
+}
+
+/* BIG COMPUTER SCREEN */
+
+@media (min-width: 1580px) {
+	.main{
+		font-size: 80px;
+	}
+
+	.letter{
+		height: 60px;
+		width: 43px;
+		border: 6px solid white;
+
+	}
+
+	@keyframes span {
+		0%,30%{ margin: 0 25px; }
+		70%,100%{ margin: 0 20px; }
+	}
+
+	@keyframes letter2 {
+		0%,30%{ height:  60px; }
+		70%,100%{ height: 35vw; }
+		99.999999999%,100%{ border: 6px solid #202142;}
+	}
+
+	@keyframes letter {
+		0%,30%{ min-width: 34px; }
+		70%,100%{ min-width: 450px;}
+		99.999999999%,100%{ border: 6px solid #202142;}
+	}
+
+	.image{
+		top: 180px;
+		width: 400px;
+	}
+
+	.textOne{
+		font-size: 2.4rem;
+		top: 215px;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+
+	.textTwo{
+		font-size: 2.4rem;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 265px;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+
+
+	.access{
+		top: 180px;
+		width: 400px;
+		height: 255px;
 	}
 }
 
