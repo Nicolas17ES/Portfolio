@@ -1,8 +1,7 @@
-import Header from "./components/feedback/Header"
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {useLocation} from 'react-router-dom'
 import AboutPage from './pages/feedback/AboutPage'
-import QuestionOne from './components/feedback/QuestionOne'
-import QuestionTwo from './components/feedback/QuestionTwo'
+
 import AboutIconLink from './components/feedback/AboutLink'
 import NavBar from './components/shared/NavBar/NavBar'
 
@@ -10,16 +9,18 @@ import NavBar from './components/shared/NavBar/NavBar'
 import {FeedbackProvider} from './context/feedback/FeedbackContext'
 import Feedback from "./pages/feedback/Feedback"
 import NotFound from './pages/NotFound'
+import LandingPage from './pages/main/LandingPage'
 
 
 
 
 function App() {
+  
 
     return (
         <Router>
             <FeedbackProvider>
-                <NavBar />
+                {window.location.pathname!== '/' && <NavBar/>}
                 <div className="container">
                     <Routes>
                         <Route 
@@ -29,8 +30,9 @@ function App() {
                     
                         <Route path="/about" element={<AboutPage/>}/>
                         <Route path='/*' element={<NotFound/>}/>
+                        <Route path='/'  element={<LandingPage/>}/>
                     </Routes>
-                    <AboutIconLink/>
+                    {window.location.pathname!== '/' && <AboutIconLink/>}
                 </div>
             </FeedbackProvider>
         </Router>
