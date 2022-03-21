@@ -1,0 +1,29 @@
+.rock-icons-result{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 28px;
+}
+
+/* FULL ICON ELEMENTS */
+
+.elements-result{
+    width: 160px;
+    height: 200px;
+    cursor: pointer;
+    margin-top: 80px;
+    /* margin: auto 70px; */
+}
+
+.text-icons-result{
+    margin-top: 20px;
+    text-align: center;
+}
+/* SVGS */
+
+.svg-result{
+   
+    margin: auto;
+}
+

@@ -5,10 +5,10 @@ import './Pills.css'
 function Pills() {
 
     return (
-        <div className="question">
+        <div className="question-pills">
             <img className="morpheus" alt=""/>
             <div className="pills">
-                <span className="red-pill"><Link to="/paper"><CgPill/></Link></span>
+                <span className="red-pill"><Link to="/rock"><CgPill/></Link></span>
 
                 
                 <span className="blue-pill"><Link to="/home"><CgPill/></Link></span>

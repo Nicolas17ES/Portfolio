@@ -16,6 +16,7 @@ body {
   color: #fff;
   line-height: 1.6;
   overflow-x: hidden;
+  margin-bottom: 100px;
 }
 
 ul {
@@ -109,11 +110,11 @@ header {
   color: #fff;
 }
 
-[type='radio'] {
+.input-radio{
   opacity: 0;
 }
 
-[type='radio']:checked ~ label {
+.input-radio:checked ~ label {
   background: #ff6a95;
   color: #fff;
 }
@@ -126,13 +127,13 @@ header {
   border-radius: 8px;
 }
 
-input {
+.input-feedback {
   flex-grow: 2;
   border: none;
   font-size: 16px;
 }
 
-input:focus {
+.input-feedback:focus {
   outline: none;
 }
 

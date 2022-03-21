@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-label { 
+.skip-intro { 
   font-size: .8em; 
   line-height: 4em;
   text-transform: uppercase;

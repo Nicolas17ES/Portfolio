@@ -29,9 +29,10 @@ const showNavbar= () => {
            <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes size={24}/>
           </button>
-           <Link to="/notfound">Home</Link>
+           <Link to="/home">Home</Link>
            <Link to="/notfound">Projects</Link>
-           <Link to="/notfound">Games</Link>
+           <Link to="/rock">Games</Link>
+           <Link to="/feedback">Feedback</Link>
            <Link to="/notfound">About</Link>
 
          </nav>

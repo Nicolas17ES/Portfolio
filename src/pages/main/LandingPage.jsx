@@ -23,7 +23,7 @@ function LandingPage() {
             <Link to="/home">
                 <div class="outer">
                     <div class="inner">
-                        <label>Skipt Intro</label>
+                        <label className="skip-intro">Skipt Intro</label>
                     </div>
                 </div>
             </Link>

@@ -94,7 +94,7 @@ function FeedbackForm({data}) {
                 <h2>{formInfo.title}</h2>
                 <RatingSelect select={(rating) => setRating(rating)}/>
                 <div className="input-group">
-                    <input onChange={handleTextChange} value={text} type="text" placeholder="Write your review" name="" id=""/>
+                    <input className="input-feedback" onChange={handleTextChange} value={text} type="text" placeholder="Write your review" name="" id=""/>
                     <Button type="submit" isDisabled={btnDisabled}> Send </Button>
                 </div>
             {message && <div className="message">{message}</div>}

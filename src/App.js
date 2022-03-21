@@ -5,8 +5,8 @@ import AboutPage from './pages/feedback/AboutPage'
 import AboutIconLink from './components/feedback/AboutLink'
 import NavBar from './components/shared/NavBar/NavBar'
 
-
 import {FeedbackProvider} from './context/feedback/FeedbackContext'
+import {GamesProvider} from './context/games/GamesContext'
 import Feedback from "./pages/feedback/Feedback"
 import NotFound from './pages/NotFound'
 import LandingPage from './pages/main/LandingPage'
@@ -22,22 +22,25 @@ function App() {
     return (
         <Router>
             <FeedbackProvider>
-                {window.location.pathname!== '/' && <NavBar/>}
-                <div className="container">
-                    <Routes>
-                        <Route 
-                            path="/feedback"
-                            element={<Feedback/>}
-                        ></Route>
-                    
-                        <Route path="/about" element={<AboutPage/>}/>
-                        <Route path='/*' element={<NotFound/>}/>
-                        <Route path='/'  element={<LandingPage/>}/>
-                        <Route path='/home'  element={<Home/>}/>
-                        <Route path='/paper'  element={<PaperScissors/>}/>
-                    </Routes>
-                    {window.location.pathname!== '/' && <AboutIconLink/>}
-                </div>
+                <GamesProvider>
+                    {/* {window.location.pathname !== '/' && <NavBar/>} */}
+                    <NavBar/>
+                    <div className="container">
+                        <Routes>
+                            <Route 
+                                path="/feedback"
+                                element={<Feedback/>}
+                            ></Route>
+                        
+                            <Route path="/about" element={<AboutPage/>}/>
+                            <Route path='/*' element={<NotFound/>}/>
+                            <Route path='/'  element={<LandingPage/>}/>
+                            <Route path='/home'  element={<Home/>}/>
+                            <Route path='/rock'  element={<PaperScissors/>}/>
+                        </Routes>
+                        {/* {window.location.pathname!== '/' && <AboutIconLink/>} */}
+                    </div>
+                </GamesProvider>
             </FeedbackProvider>
         </Router>
     )
