@@ -1,4 +1,4 @@
-import './ResultRockPaper.css'
+import './RockPaper.css'
 import {useContext, useEffect} from 'react'
 import GamesContext from '../../../context/games/GamesContext'
 import {generateRandomNumber} from '../../../context/games/GamesActions'
@@ -27,13 +27,13 @@ function ResultRockPaper() {
 
     let resultUser = null;
     if(rockSelectedElement === 1){
-            resultUser = <Rock/>
+            resultUser = <Rock className="svg"/>
 
         } else if (rockSelectedElement === 2){
-            resultUser = <Paper/>
+            resultUser = <Paper className="svg"/>
 
         } else if (rockSelectedElement === 3){
-            resultUser = <Scissors/>
+            resultUser = <Scissors className="svg"/>
 
         } else {    
             return null
@@ -43,13 +43,13 @@ function ResultRockPaper() {
 
     let resultMachine = null;
         if(randomNumber === 1){
-            resultMachine = <Rock/>
+            resultMachine = <Rock className="svg"/>
 
         } else if (randomNumber === 2){
-            resultMachine = <Paper/>
+            resultMachine = <Paper className="svg"/>
 
         } else if (randomNumber === 3){
-            resultMachine = <Scissors/>
+            resultMachine = <Scissors className="svg"/>
 
         } else {    
             return null
@@ -70,10 +70,10 @@ function ResultRockPaper() {
     return (
         <>
             <GameTitle title={title}/>
-            <div className="rock-icons-result">
-                <div className="elements-result"><span className="svg-result">{resultUser}</span><p className="text-icons-result">You</p></div>
-                <div className="elements-result"><span className="svg-result"><Versus/></span></div>
-                <div className="elements-result"><span className="svg-result">{resultMachine}</span><p className="text-icons-result">Machine</p></div>
+            <div className="rock-icons">
+                <div className="elements"><span>{resultUser}</span><p className="text-icons">You</p></div>
+                <div className="elements"><span><Versus className="versus"/></span></div>
+                <div className="elements"><span>{resultMachine}</span><p className="text-icons">Me</p></div>
             </div>
        </>
     )

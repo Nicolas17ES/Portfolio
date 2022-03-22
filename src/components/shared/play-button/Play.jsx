@@ -5,7 +5,6 @@ import {useContext} from 'react'
 
 function Play({text, style, rockDispatch}) {
     const {dispatch, rockSelectedElement} = useContext(GamesContext);
-    console.log(rockSelectedElement)
     const playGame = () => {
       
       if(rockDispatch === 'PLAY') {

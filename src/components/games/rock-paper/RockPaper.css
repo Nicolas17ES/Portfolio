@@ -2,25 +2,38 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    font-size: 18px;
     width: 100%;
-    font-size: 28px;
+    margin-top: 100px;
+    margin-bottom: 70px;
 }
 
-/* FULL ICON ELEMENTS */
-
 .elements{
-    width: 160px;
-    height: 200px;
     cursor: pointer;
+    padding: 5px;
+    margin: auto 20px;
     /* margin: auto 70px; */
 }
 
-.rock-elements{
-    margin-top: 170px;
+.svg{
+    width: 50px;
+    height: 50px;
+    
 }
-.scissors-elements{
-    margin-top: 170px;
+
+.versus{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 55px;
+    padding-top: 0px;
 }
+
+.result-buttons{
+    display: flex;
+    gap: 40px;
+}
+
+
 
 /* ICON TEXTS */
 
@@ -29,15 +42,6 @@
     text-align: center;
 }
 
-
-/* SVGS */
-
-.svg{
-    width: 130px;
-    height: 130px;
-    margin: auto;
-    padding: 15px;
-}
 
 
 .svg:hover{
@@ -54,18 +58,72 @@
     border-radius: 5%;
 }
 
-/* KEYFRAMES */
 
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+
+@media (min-width: 500px) {
+    .svg{
+        width: 90px;
+        height: 90px;
+    }
+    .versus{
+        width: 90px;
+        height: 90px;
+    }
+
+    .rock-icons{
+        font-size: 20px;
+        width: 100%;
+        margin-top: 140px;
+    }
+
+    .elements{
+        cursor: pointer;
+        padding: 5px;
+        margin: auto 30px;
+        /* margin: auto 70px; */
+    }
+
 }
+
+@media (min-width: 992px){
+    .rock-icons{
+        margin-bottom: 70px;
+    }
+    .svg{
+        width: 135px;
+        height: 135px;
+    }
+    .versus{
+        width: 135px;
+        height: 135px;
+    }
+
+    .elements{
+        cursor: pointer;
+        padding: 5px;
+        margin: auto 80px;
+        /* margin: auto 70px; */
+    }
+}
+
+
+@media (min-width: 1500px){
+    .rock-icons{
+        margin-top: 170px;
+        margin-bottom: 120px;
+    }
+ 
+
+    .elements{
+        cursor: pointer;
+        padding: 5px;
+        margin: auto 80px;
+        /* margin: auto 70px; */
+    }
+}
+
+
+
+
+
+

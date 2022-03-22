@@ -4,8 +4,8 @@
     align-items: center;
     /* margin-top: 20px; */
     background-color: #D5E2D6;
-    width: 170px;
-    height: 70px;
+    width: 100px;
+    height: 60px;
     border-radius: 10px;
     cursor: pointer;
     border: 5px solid #5a815c;
@@ -19,7 +19,7 @@
 
 .play-text{
     color: #5a815c;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -36,6 +36,39 @@
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+@media (min-width: 500px){
+    .play-button{
+        width: 120px;
+        height: 70px;
+    }
+
+    .play-text{
+        color: #5a815c;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+}
+
+
+@media (min-width: 760px){
+    .play-button{
+        width: 160px;
+        height: 80px;
+        margin-top: 20px;
+    }
+
+    .play-text{
+        color: #5a815c;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+
 }
 
 

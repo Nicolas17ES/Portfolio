@@ -6,7 +6,6 @@ import {useRef, useState, useEffect} from 'react'
 
 import {useContext} from 'react'
 import GamesContext from '../../../context/games/GamesContext'
-import GamesActions from '../../../context/games/GamesActions'
 
 
 function RockPaper() {

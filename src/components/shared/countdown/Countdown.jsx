@@ -15,15 +15,15 @@ function Countdown() {
             type: 'PLAY__ROCK_GAME',
             payload: 'RESULT',
         })
-        }, 5680);
+        }, 3780);
 
     }, [])
     
     return (
         <div className="countdown">
-            <span className="countdown-one">1</span>
+            <span className="countdown-one">3</span>
             <span className="countdown-two">2</span>
-            <span className="countdown-three">3</span>
+            <span className="countdown-three">1</span>
         </div>
     )
 }

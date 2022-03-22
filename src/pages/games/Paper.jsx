@@ -20,7 +20,7 @@ function Paper() {
     }
 
     const display = () => {
-        if(rockStatus === null){
+        if(rockStatus === null || rockStatus === 'QUIT'){
             return (
                 <>
                     <GameTitle title="Rock   Paper   Scissors"/>

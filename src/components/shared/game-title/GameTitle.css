@@ -3,11 +3,33 @@
   text-align: center;
   font-weight: bold;
   line-height: 50px;
-  font-size: 80px;
+  font-size: 60px;
  
  
   /*-----------------------*/
   text-shadow: 1px 1px #4A744D, 2px 2px #4A744D, 3px 3px #4A744D, 4px 4px #4A744D, 5px 5px #4A744D, 6px 6px #4A744D, 7px 7px #4A744D;
   
+}
+
+@media (min-width: 500px){
+  .game-title {
+    margin-top: 30px;
+  }
+}
+
+
+@media (min-width: 760px){
+  .title-h1 {
+    font-size: 80px;
+  }
+  .game-title {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1500px){
+  .title-h1 {
+    font-size: 90px;
+  }
 }
 

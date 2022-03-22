@@ -15,17 +15,17 @@
 .countdown-one{
     visibility: hidden;
     opacity: 0;
-    animation: appear 1.8s ease-in-out 1 normal .5s;
+    animation: appear 1.2s ease-in-out 1 normal .3s;
 }
 .countdown-two{
     visibility: hidden;
     opacity: 0;
-    animation: appear 1.8s ease-in-out 1 normal 2.2s;
+    animation: appear 1.2s ease-in-out 1 normal 1.3s;
 }
 .countdown-three{
     visibility: hidden;
     opacity: 0;
-    animation: appear 1.8s ease-in-out 1 normal 3.9s;
+    animation: appear 1.2s ease-in-out 1 normal 2.4s;
 
 }
 
