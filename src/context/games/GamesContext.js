@@ -11,14 +11,14 @@ export const GamesProvider = ({children}) => {
         rockDisplayResult: false,
         randomNumber: null,
     }
-    const [state, dispatch] = useReducer(gamesReducer, initialState)
+    const [state, dispatchGames] = useReducer(gamesReducer, initialState)
 
     return <GamesContext.Provider value={{
         rockStatus: state.rockStatus,
         rockSelectedElement: state.rockSelectedElement,
         rockDisplayResult: state.rockDisplayResult,
         randomNumber: state.randomNumber,
-        dispatch,
+        dispatchGames,
     }}>
         {children}
     </GamesContext.Provider>

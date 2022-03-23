@@ -6,15 +6,17 @@ import './NavBar.css'
 
 import { useContext } from 'react'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
+import GamesContext from '../../../context/games/GamesContext'
 
 
-function NavBar({containerRef}) {
+
+function NavBar() {
 const {blurry, dispatch} = useContext(FeedbackContext);
+const {dispatchGames} = useContext(GamesContext);
 
 const navRef = useRef();
-const divisor = useRef();
 const showNavbar= () => {
-  console.log(blurry)
+  
   navRef.current.classList.toggle("responsive_nav")
   dispatch({
     type: 'BLURRY_BACKGROUND',
@@ -22,6 +24,31 @@ const showNavbar= () => {
   })
   
   
+}
+
+//RESTART GAME//
+
+const reStartGame = () => {
+    dispatchGames({
+        type: 'STATUS_ROCK_GAME',
+        payload: 'QUIT',
+    })
+    dispatchGames({
+        type: 'SELECTED_ELEMENT_ROCK_GAME',
+        payload: null,
+    })
+}
+
+//HIDE NAVBAR WHEN CLICKIN LINK//
+
+const hideResponsiveNavBar = () => {
+  if(blurry === true){
+    navRef.current.classList.remove("responsive_nav")
+    dispatch({
+      type: 'BLURRY_BACKGROUND',
+      payload: false,
+    })
+  }
 }
 
   
@@ -36,12 +63,12 @@ const showNavbar= () => {
          <nav ref={navRef}>
            <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes size={24}/>
-          </button>
-           <Link to="/home">Home</Link>
-           <Link to="/notfound">Projects</Link>
-           <Link to="/rock">Games</Link>
-           <Link to="/feedback">Feedback</Link>
-           <Link to="/notfound">About</Link>
+            </button>
+           <Link to="/home" onClick={hideResponsiveNavBar}>Home</Link>
+           <Link to="/notfound" onClick={hideResponsiveNavBar}>Projects</Link>
+           <Link to="/rock" onClick={reStartGame, hideResponsiveNavBar}>Games</Link>
+           <Link to="/feedback" onClick={hideResponsiveNavBar}>Feedback</Link>
+           <Link to="/notfound" onClick={hideResponsiveNavBar}>About</Link>
 
 
          </nav>

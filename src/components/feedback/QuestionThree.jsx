@@ -11,7 +11,7 @@ function QuestionThree() {
     }
 
     return (
-        <div>
+        <div className="questionPages">
             <>
                 <FeedbackForm data={data}/>
                 <NextArrow/>

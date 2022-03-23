@@ -42,7 +42,7 @@
 @media (min-width: 500px){
     .play-button{
         width: 120px;
-        height: 70px;
+        height: 60px;
     }
 
     .play-text{
@@ -58,13 +58,13 @@
 @media (min-width: 760px){
     .play-button{
         width: 160px;
-        height: 80px;
-        margin-top: 20px;
+        height: 60px;
+        /* margin-top: 20px; */
     }
 
     .play-text{
         color: #5a815c;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: bold;
     }
 

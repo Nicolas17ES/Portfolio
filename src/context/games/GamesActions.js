@@ -13,6 +13,12 @@ export const startRockGame = () => {
 export const resultRockGame = () => {
     return 'RESULT'
 }
+export const quitRockGame = () => {
+    return 'QUIT'
+}
+export const playAgainRockGame = () => {
+    return 'QUIT GAME'
+}
 
 export const generateRandomNumber = () => { 
 

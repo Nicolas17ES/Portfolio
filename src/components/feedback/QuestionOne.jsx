@@ -13,7 +13,7 @@ function QuestionOne() {
     
     
     return (
-        <div>
+        <div className="questionPages">
              <>
                 <FeedbackForm data={data}/>
                 <NextArrow/>

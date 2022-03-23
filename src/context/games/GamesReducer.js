@@ -1,11 +1,6 @@
 const gamesReducer = (state, action) => {
     switch(action.type){
-        case 'PLAY__ROCK_GAME':
-            return {
-                ...state,
-                rockStatus: action.payload,
-            }
-        case 'START_ROCK_GAME':
+        case 'STATUS_ROCK_GAME':
             return {
                 ...state,
                 rockStatus: action.payload,

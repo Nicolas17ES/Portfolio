@@ -9,7 +9,7 @@ import GamesContext from '../../../context/games/GamesContext'
 
 
 function RockPaper() {
-    const {dispatch, rockSelectedElement} = useContext(GamesContext);
+    const {dispatchGames, rockSelectedElement} = useContext(GamesContext);
 
     const selectedRock = useRef();
     const selectedPaper = useRef();
@@ -17,12 +17,12 @@ function RockPaper() {
 
     const setSelectedElement = (selectedElement) => {
         if(rockSelectedElement === selectedElement){
-            dispatch({
+            dispatchGames({
                 type: 'SELECTED_ELEMENT_ROCK_GAME',
                 payload: null
             })
         } else {
-            dispatch({
+            dispatchGames({
                 type: 'SELECTED_ELEMENT_ROCK_GAME',
                 payload: selectedElement
             })

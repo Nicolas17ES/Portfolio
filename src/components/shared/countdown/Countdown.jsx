@@ -1,20 +1,18 @@
 import './Countdown.css'
 import GamesContext from '../../../context/games/GamesContext'
+import {resultRockGame} from '../../../context/games/GamesActions'
 import {useContext, useEffect} from 'react'
 
 function Countdown() {
-    const {dispatch} = useContext(GamesContext);
+    const {dispatchGames} = useContext(GamesContext);
 
     useEffect(() => {
         setTimeout(function() {
-        dispatch({
-            type: 'DISPLAY_RESULT',
-            payload: true,
-        })
-        dispatch({
-            type: 'PLAY__ROCK_GAME',
-            payload: 'RESULT',
-        })
+            const status = resultRockGame()
+            dispatchGames({
+                type: 'STATUS_ROCK_GAME',
+                payload: status,
+            })
         }, 3780);
 
     }, [])

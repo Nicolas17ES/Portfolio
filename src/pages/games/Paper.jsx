@@ -19,6 +19,8 @@ function Paper() {
         'margin-top': '20px'
     }
 
+    console.log("status =  " + rockStatus + ' rockresult=' +  rockDisplayResult)
+
     const display = () => {
         if(rockStatus === null || rockStatus === 'QUIT'){
             return (
@@ -41,7 +43,7 @@ function Paper() {
                     <Countdown/>
                 </>
             )
-        } else if (rockDisplayResult === true && rockStatus === 'RESULT'){
+        } else if (rockStatus === 'RESULT'){
             return (
                 <>
                     <Result/>

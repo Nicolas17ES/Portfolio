@@ -7,15 +7,17 @@ import  {ReactComponent as Rock } from '../../assets/rock2.svg'
 import {ReactComponent as Scissors } from '../../assets/scissors.svg'
 import {ReactComponent as Versus } from '../../assets/versus.svg'
 import GameTitle from '../../shared/game-title/GameTitle'
+import PLay from './../../shared/play-button/Play'
+import Play from './../../shared/play-button/Play'
 
 
 function ResultRockPaper() {
-    const {rockStatus, rockSelectedElement, rockDisplayResult , randomNumber, dispatch} = useContext(GamesContext);
+    const {rockStatus, rockSelectedElement, rockDisplayResult , randomNumber, dispatchGames} = useContext(GamesContext);
 
     useEffect(() => {
         const number = generateRandomNumber();
 
-        dispatch({
+        dispatchGames({
             type: 'RANDOM_NUMBER',
             payload: number,
         })
@@ -67,6 +69,12 @@ function ResultRockPaper() {
     }
 
 
+     const stylePlayAgain = {
+        'margin-top': '0px'
+    }
+
+
+
     return (
         <>
             <GameTitle title={title}/>
@@ -74,6 +82,10 @@ function ResultRockPaper() {
                 <div className="elements"><span>{resultUser}</span><p className="text-icons">You</p></div>
                 <div className="elements"><span><Versus className="versus"/></span></div>
                 <div className="elements"><span>{resultMachine}</span><p className="text-icons">Me</p></div>
+            </div>
+            <div className="result-buttons">
+                <Play text="PLAY AGAIN"  rockDispatch={'PLAY AGAIN'} style={stylePlayAgain}/>
+                <Play text="QUIT"  rockDispatch={'QUIT'} style={stylePlayAgain}/>
             </div>
        </>
     )
