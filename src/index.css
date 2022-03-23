@@ -17,10 +17,21 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   margin-bottom: 100px;
+  /* filter: blur(5px); */
+}
+
+.blurry-body{
+  filter: blur(2px);
+  transition: 0.3s ease-out 0.2s;
 }
 
 ul {
   list-style: none;
+}
+
+.fake-container{
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .container {

@@ -7,6 +7,10 @@
     margin-top: 100px;
     margin-bottom: 70px;
 }
+.mask{
+    mask-image: url('../../assets/pruebamask.jpg');
+  mask-repeat: no-repeat;
+}
 
 .elements{
     cursor: pointer;

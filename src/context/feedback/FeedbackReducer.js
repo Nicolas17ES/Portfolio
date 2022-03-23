@@ -37,6 +37,11 @@ const feedbackReducer = (state, action) => {
                 ...state,
                 questionCount: action.payload,
             }
+        case 'BLURRY_BACKGROUND':
+            return {
+                ...state,
+                blurry: action.payload,
+            }
         default: 
             return state;
     }

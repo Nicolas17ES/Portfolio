@@ -6,8 +6,8 @@ function GameTitle({title}) {
 
     return (
         <div className="game-title">
-           <div class="circle"></div>
-            <h1 className="title-h1"><span className="title-text">{title}</span></h1>
+           
+            <h1 className="title-h1">{title}</h1>
         </div>
     )
 }

@@ -4,6 +4,7 @@ import AboutPage from './pages/feedback/AboutPage'
 
 import AboutIconLink from './components/feedback/AboutLink'
 import NavBar from './components/shared/NavBar/NavBar'
+import Container from './components/shared/Container'
 
 import {FeedbackProvider} from './context/feedback/FeedbackContext'
 import {GamesProvider} from './context/games/GamesContext'
@@ -25,21 +26,23 @@ function App() {
                 <GamesProvider>
                     {/* {window.location.pathname !== '/' && <NavBar/>} */}
                     <NavBar/>
-                    <div className="container">
-                        <Routes>
-                            <Route 
-                                path="/feedback"
-                                element={<Feedback/>}
-                            ></Route>
-                        
-                            <Route path="/about" element={<AboutPage/>}/>
-                            <Route path='/*' element={<NotFound/>}/>
-                            <Route path='/'  element={<LandingPage/>}/>
-                            <Route path='/home'  element={<Home/>}/>
-                            <Route path='/rock'  element={<PaperScissors/>}/>
-                        </Routes>
-                        {/* {window.location.pathname!== '/' && <AboutIconLink/>} */}
-                    </div>
+                    <Container>
+                        <div className="container">
+                            <Routes>
+                                <Route 
+                                    path="/feedback"
+                                    element={<Feedback/>}
+                                ></Route>
+                            
+                                <Route path="/about" element={<AboutPage/>}/>
+                                <Route path='/*' element={<NotFound/>}/>
+                                <Route path='/'  element={<LandingPage/>}/>
+                                <Route path='/home'  element={<Home/>}/>
+                                <Route path='/rock'  element={<PaperScissors/>}/>
+                            </Routes>
+                            {/* {window.location.pathname!== '/' && <AboutIconLink/>} */}
+                        </div>
+                    </Container>
                 </GamesProvider>
             </FeedbackProvider>
         </Router>

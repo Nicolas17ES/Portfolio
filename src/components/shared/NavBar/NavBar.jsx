@@ -4,16 +4,24 @@ import {FaHamburger, FaBars, FaTimes, FaDog} from 'react-icons/fa'
 import {useRef} from 'react'
 import './NavBar.css'
 
- 
+import { useContext } from 'react'
+import FeedbackContext from '../../../context/feedback/FeedbackContext'
 
 
-function NavBar() {
+function NavBar({containerRef}) {
+const {blurry, dispatch} = useContext(FeedbackContext);
 
 const navRef = useRef();
 const divisor = useRef();
 const showNavbar= () => {
+  console.log(blurry)
   navRef.current.classList.toggle("responsive_nav")
-  divisor.current.classList.toggle("lower_elements")
+  dispatch({
+    type: 'BLURRY_BACKGROUND',
+    payload: !blurry
+  })
+  
+  
 }
 
   
@@ -35,12 +43,13 @@ const showNavbar= () => {
            <Link to="/feedback">Feedback</Link>
            <Link to="/notfound">About</Link>
 
+
          </nav>
          <button className="nav-btn burger" onClick={showNavbar}>
            <FaHamburger size={24}/>
          </button>
        </header>
-       <div className="divisor" ref={divisor}>Hey</div>
+       {/* <div className="divisor" ref={divisor}>Hey</div> */}
       </>
 
        

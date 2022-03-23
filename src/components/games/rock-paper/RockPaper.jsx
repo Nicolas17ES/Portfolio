@@ -73,9 +73,9 @@ function RockPaper() {
 
     return (
         <div className="rock-icons">
-            <div ref={selectedRock} onClick={() => { selectRock(); setSelectedElement(1);}} className="rock-elements elements"><Rock className="rock svg"/><p className="text-icons">Rock</p></div>
-            <div ref={selectedPaper} onClick={() => { selectPaper(); setSelectedElement(2);}} className="paper-elements elements"><Paper className="paper svg"/><p className="text-icons">Paper</p></div>
-            <div ref={selectedScissors} onClick={() => { selectScissors(); setSelectedElement(3);}} className="scissors-elements elements"><Scissors className="scissors svg"/><p className="text-icons">Scissors</p></div>
+            <div ref={selectedRock} onClick={() => { selectRock(); setSelectedElement(1);}} className="rock-elements elements"><Rock className="rock svg mask"/><p className="text-icons">Rock</p></div>
+            <div ref={selectedPaper} onClick={() => { selectPaper(); setSelectedElement(2);}} className="paper-elements elements"><Paper className="paper svg mask"/><p className="text-icons">Paper</p></div>
+            <div ref={selectedScissors} onClick={() => { selectScissors(); setSelectedElement(3);}} className="scissors-elements elements"><Scissors className="scissors svg mask"/><p className="text-icons">Scissors</p></div>
         </div>
     )
 }

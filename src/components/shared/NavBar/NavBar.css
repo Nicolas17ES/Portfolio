@@ -13,6 +13,8 @@ header{
 
 }
 
+
+
 nav a{
     margin: 0 2rem;
     color: wheat;
@@ -40,20 +42,12 @@ header .nav-btn:hover{
 
 .left-side{
     z-index: 9999;
-    
+
 }
 
 
 
-.divisor{
-  background: transparent;
-    border: none;
-    outline: none;
-    visibility: hidden;
-    opacity: 0;
-}
-
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 868px){
 
     header .nav-btn{
     visibility: visible;
@@ -61,7 +55,7 @@ header .nav-btn:hover{
     }
 
     .logo{
-        margin-left: 10px;
+        margin-left: 9vw;
         transition: 1s ease-out;
         transform: rotate(1turn);    
     }
@@ -70,8 +64,8 @@ header .nav-btn:hover{
     header nav{
         position: fixed;
         right: 0;
-        height: 70%;
-        width: 100%;
+        height: 80vh;
+        width: 100vw;
         border-radius: 8px;
         padding: 20px 0px 30px 0px;
         display: flex;
@@ -79,16 +73,16 @@ header .nav-btn:hover{
         align-items: center;
         justify-content: flex-end;
         gap: 1.5rem;
-        
+
         background-color: #202142;
         transition: 0.8s;
         transform: translateY(-100vh);
     }
 
     .burger{
-        margin-right: 7px;
+        margin-right: 9vw;
     }
-   
+
 
     header .responsive_nav{
         transform: none;
@@ -96,15 +90,27 @@ header .nav-btn:hover{
 
     nav .nav-close-btn{
         position: absolute;
-        right: 37px;
-        bottom: 230px;
-        
+        margin-left: 69vw;
+        top: 38vh;
+
     }
-    
+
     .lower_elements{
       margin-top: 15%;
       transition: 1s;
     }
-    
+
 }
 /* NAVBAR HEADER */
+@media only screen and (max-width: 550px){
+     nav .nav-close-btn{
+       margin-right: 10vw;
+        
+
+    }
+
+    .burger{
+       
+    }
+
+}
