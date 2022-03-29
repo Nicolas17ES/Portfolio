@@ -26,7 +26,8 @@ function FeedbackList({questionNumber}) {
 
 
     if(!isLoading && (!feedback || feedback.length === 0)) {
-        return <p>No feedback yet</p>
+
+        return <div className="feedback-list"><p>No feedback yet</p></div>
     }
 
     let validFeedback = feedback.filter((item) => item.questionNumber == questionNumber)

@@ -1,15 +1,11 @@
 .rock-icons{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     font-size: 18px;
     width: 100%;
-    margin-top: 100px;
-    margin-bottom: 70px;
-}
-.mask{
-    mask-image: url('../../assets/pruebamask.jpg');
-  mask-repeat: no-repeat;
+    margin: 100px auto 70px auto;
+  
 }
 
 .elements{
@@ -22,6 +18,7 @@
 .svg{
     width: 50px;
     height: 50px;
+    margin: auto;
     
 }
 

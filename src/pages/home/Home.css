@@ -1,0 +1,232 @@
+.home-page{
+    width: 100%;
+    margin: 0px auto;
+    
+}
+
+/* FIRST PAGE OF HOME */
+.section-one{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    height: 80vh;
+    margin: auto auto 50px auto;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    /* text-align-last: center; */
+}
+
+/* LEFT SIDE -- INTRO */
+
+.cabezera-left{
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    width: 100%;
+    /* border: 4px solid white; */
+    margin: auto;
+}
+
+/* TEXT LEFT SIDE */
+.hello-text{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+.intro-text{
+    font-weight: 100;
+    font-size: 12px;
+    text-align: justify; /* For Edge */
+    text-align-last: center;
+
+}
+
+.name{
+    font-size: 27px;
+    margin-bottom: 50px;
+}
+
+
+/* RIGHT SIDE - IMAGE */
+.cabezera-rigth{
+    width: 50%;
+    margin: auto;
+    display: none;
+}
+
+
+
+.image-portrait{
+    margin: auto;
+    width: 80%;
+    animation: rotate-animation 8s ease-in-out forwards;
+
+}
+
+/* IMAGE ANIMATION */
+
+@keyframes rotate-animation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(401deg);}
+} 
+
+/* CONTACT BUTTON */
+.contact-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    width: 60%;
+    height: 40px;
+    border: 1px solid white;
+    padding: 13px 20px;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+
+.contact-icon{
+    margin-left: 10px;
+    color: white;
+}
+
+.contact-button:hover{
+    color: #171830;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.6s;
+    transform: scale(1.1);   
+    
+}
+.contact-button:hover p{
+    display: none;  
+}
+.contact-button:hover:before{
+    content: '';
+    margin-left: -5px; 
+}
+
+
+
+
+
+@media (min-width: 490px){
+    .section-one{
+        display: flex;
+        flex-direction: column;
+      }
+    .home-page{
+        width: 90%;
+        margin: 0px auto;   
+    }
+    .hello-text{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+
+    .intro-text{
+        font-weight: 100;
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .name{
+        font-size: 42px;
+        margin-bottom: 50px;
+    }
+    .cabezera-rigth img{
+        width: 60%;   
+    }
+
+    .contact-button{
+        width: 190px;
+        margin: auto;
+    }
+}
+
+
+
+@media (min-width: 770px){
+    .cabezera-rigth{
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+    .section-one{
+        display: flex;
+        flex-direction: row;
+        height: 80vh;
+        margin-bottom: 50px;
+        padding: 20px;
+        border-radius: 30px;
+        text-align: left;
+        text-align-last: left;
+    
+    }
+
+    .cabezera-left{
+        font-weight: 800;
+        letter-spacing: 1px;
+        width: 50%;
+        /* border: 4px solid white; */
+        margin: 40px auto;
+    }
+    .hello-text{
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+
+    .intro-text{
+        font-weight: 100;
+        font-size: 15px;
+        text-align: left;
+        text-align-last: left;
+    }
+
+    .name{
+        font-size: 45px;
+        margin-bottom: 50px;
+    }
+
+    .cabezera-rigth{
+        width: 50%;
+        /* border: 4px solid white; */
+        margin: auto;
+    }
+
+    .cabezera-rigth img{
+        width: 100%;
+        margin-left: 50px;
+       
+    }
+
+     .contact-button{
+        width: 190px;
+        margin: 0;
+        height: 50px;
+
+    }
+}
+
+@media (min-width: 1020px){
+
+    .name{
+        font-size: 68px;
+        margin-bottom: 70px;
+    }
+    .cabezera-rigth img{
+        width: 85%;
+        margin-left: 120px;
+    }
+}
+
+@media (min-width: 1300px){
+    .cabezera-rigth img{
+        width: 75%;
+        margin-left: 170px;
+       
+    }
+}

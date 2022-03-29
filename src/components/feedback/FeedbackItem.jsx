@@ -10,7 +10,7 @@ import {deleteFeedback, fetchLikes, addLike, getReplies, addReply} from '../../c
 
  
 function FeedbackItem({item}) {
-        const {dispatch, feedback, likes, replies} = useContext(FeedbackContext);
+        const {dispatch, feedback, likes, replies, owner} = useContext(FeedbackContext);
         const [text, setText] = useState('');
 
         //get likes//
@@ -123,12 +123,15 @@ function FeedbackItem({item}) {
                 {replyPerItem && replyPerItem.map((reply) => <div className="flex"><BsReply className="reply-icon" size={22}/><p>{reply.comment}</p></div>)}
             </div>
             {/* reply form */}
-            <form className="reply mt-5" onSubmit={handleSubmit}>
+            {owner && (
+                <form className="reply mt-5" onSubmit={handleSubmit}>
                 <div className="input-group2">
                     <input className="input2" onChange={handleTextChange} value={text} type="text" placeholder="Add a reply" name="" id=""/>
                     <button className="button-reply" type="submit"> Send </button>
                 </div>
             </form>
+            )}
+            
         </Card>
     )
 }

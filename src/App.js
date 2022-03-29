@@ -28,7 +28,9 @@ function App() {
                     <NavBar/>
                     <Container>
                         <div className="container">
+                            <main>
                             <Routes>
+                                
                                 <Route 
                                     path="/feedback"
                                     element={<Feedback/>}
@@ -39,8 +41,10 @@ function App() {
                                 <Route path='/'  element={<LandingPage/>}/>
                                 <Route path='/home'  element={<Home/>}/>
                                 <Route path='/rock'  element={<PaperScissors/>}/>
+                               
                             </Routes>
                             {/* {window.location.pathname!== '/' && <AboutIconLink/>} */}
+                            </main>
                         </div>
                     </Container>
                 </GamesProvider>

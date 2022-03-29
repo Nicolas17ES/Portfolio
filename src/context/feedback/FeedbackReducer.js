@@ -42,6 +42,12 @@ const feedbackReducer = (state, action) => {
                 ...state,
                 blurry: action.payload,
             }
+        case 'IS_OWNER':
+            return {
+                ...state,
+                owner: action.payload,
+            }
+        
         default: 
             return state;
     }

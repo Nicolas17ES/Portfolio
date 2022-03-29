@@ -12,10 +12,12 @@
   text-shadow: 1px 1px #4A744D, 2px 2px #4A744D, 3px 3px #4A744D, 4px 4px #4A744D, 5px 5px #4A744D, 6px 6px #4A744D, 7px 7px #4A744D;
   
 }
-
+.game-title {
+    margin-top: 65px;
+  }
 @media (min-width: 500px){
   .game-title {
-    margin-top: 30px;
+    margin-top: 70px;
   }
 }
 
@@ -23,9 +25,6 @@
 @media (min-width: 760px){
   .title-h1 {
     font-size: 80px;
-  }
-  .game-title {
-    margin-top: 30px;
   }
 }
 

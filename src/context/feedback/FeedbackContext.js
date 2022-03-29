@@ -15,6 +15,7 @@ export const FeedbackProvider = ({children}) => {
         likes: [],
         replies: [],
         blurry: false,
+        owner: false,
     }
     const [state, dispatch] = useReducer(feedbackReducer, initialState)
 
@@ -28,6 +29,7 @@ export const FeedbackProvider = ({children}) => {
         likes: state.likes,
         replies: state.replies,
         blurry: state.blurry,
+        owner: state.owner,
         dispatch,
     }}>
         {children}

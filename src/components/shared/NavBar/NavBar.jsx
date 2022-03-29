@@ -7,6 +7,7 @@ import './NavBar.css'
 import { useContext } from 'react'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import GamesContext from '../../../context/games/GamesContext'
+import { isOwner } from '../../../context/feedback/FeedBackActions'
 
 
 
@@ -51,32 +52,65 @@ const hideResponsiveNavBar = () => {
   }
 }
 
-  
+// RESTART PLUS HIDENNAVBAR //
+
+const reStartNavBar = () => {
+  hideResponsiveNavBar();
+  reStartGame()
+}
+
+//OWNER//
+const handleClick = (e) => {
+    if(e.detail === 3){
+      let response = prompt('What shines brighter than the sun?');
+      if(response === 'myself'){
+        const owner = isOwner(response);
+        dispatch({
+          type: 'IS_OWNER',
+          payload: owner
+        })
+      }
+    }
+
+}
   
     return (
       <>
       <header>
         <div className="left-side flex">
-          <h3><FaDog className="logo" size={30}/></h3>
+          <h3><FaDog onClick={handleClick} className="logo" size={30}/></h3>
         </div>
          
          <nav ref={navRef}>
-           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-            <FaTimes size={24}/>
+           <button className="nav-btn close-btn" onClick={showNavbar}>
+            <FaTimes className="nav-close-btn" size={24}/>
             </button>
-           <Link to="/home" onClick={hideResponsiveNavBar}>Home</Link>
-           <Link to="/notfound" onClick={hideResponsiveNavBar}>Projects</Link>
-           <Link to="/rock" onClick={reStartGame, hideResponsiveNavBar}>Games</Link>
-           <Link to="/feedback" onClick={hideResponsiveNavBar}>Feedback</Link>
-           <Link to="/notfound" onClick={hideResponsiveNavBar}>About</Link>
-
-
+              <div className="nav-links">
+                  <div className="link-one">          
+                      <Link className="link-nav" to="/home" onClick={reStartNavBar}>Home</Link>
+                  </div>
+                  <div className="link-two">
+                      <Link className="link-nav" to="/projects" onClick={reStartNavBar}>Projects</Link>
+                  </div>
+                  <div className="link-three">
+                      <Link className="link-nav" to="/rock" onClick={reStartNavBar}>Games</Link>
+                  </div>
+                  <div className="link-four">
+                      <Link className="link-nav" to="/feedback" onClick={reStartNavBar}>Feedback</Link>
+                  </div>
+                  <div className="link-five">
+                      <Link className="link-nav" to="/about" onClick={reStartNavBar}>About</Link>
+                  </div>
+                  <div className="link-six">
+                      <Link className="link-nav about" to="/contact" onClick={reStartNavBar}>Contact</Link>
+                  </div>
+              </div>
          </nav>
          <button className="nav-btn burger" onClick={showNavbar}>
            <FaHamburger size={24}/>
          </button>
        </header>
-       {/* <div className="divisor" ref={divisor}>Hey</div> */}
+       <div className="divisor"></div>
       </>
 
        

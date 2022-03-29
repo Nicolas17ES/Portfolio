@@ -3,7 +3,7 @@ import Button from '../shared/Button'
 import RatingSelect from './RatingSelect'
 import {useState, useContext, useEffect} from 'react'
 import FeedbackContext from '../../context/feedback/FeedbackContext'
-import {addFeedback, updateFeedback} from '../../context/feedback/FeedBackActions'
+import {addFeedback, updateFeedback, isOwner} from '../../context/feedback/FeedBackActions'
 import Button2 from '../shared/Button2'
 import PropTypes from 'prop-types'
 

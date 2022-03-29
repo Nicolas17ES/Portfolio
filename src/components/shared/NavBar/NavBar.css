@@ -3,28 +3,64 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    min-height: 85px;
     padding: 0 2rem;
-    color: wheat;
+    color: #171830;
     position: sticky;
-    background-color: #202142;
+    background-color: #171830;
+    border-bottom: 3px solid #171830;
+    padding-bottom: 20px;
     top: 0;
     z-index: 999;
+    position: fixed;
+}
 
+.divisor{
+    margin-bottom: 100px;
+}
+
+nav{
+    margin-left: 5%;
+}
+
+.nav-links{
+    display: flex;
+    /* background-color: rgb(160, 160, 141); */
+    justify-content: center;
+    width: fit-content;
+    margin: 20px auto 0px auto;
+    height: auto;
+    /* text-align: center; */
 }
 
 
-
-nav a{
-    margin: 0 2rem;
-    color: wheat;
+.link-nav{
+    margin: 0 3rem 0 1rem;
+    color: white;
+    border: 1px solid #171830;
     text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.7s ease;
+    background-color: #171830;
 }
 
-nav a:hover{
-    color: rgb(248, 141, 54);
+.link-nav:hover{
+    color: #171830;
+    transform: scale(1.2);
+    background-color: white;
 }
 
+.logo{
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+.logo:hover{
+    transition: 1s ease-out;
+    transform: rotate(1turn);
+}
 header .nav-btn{
     padding: 5px;
     cursor: pointer;
@@ -47,70 +83,199 @@ header .nav-btn:hover{
 
 
 
-@media only screen and (max-width: 868px){
+@media only screen and (max-width: 1020px){
 
     header .nav-btn{
-    visibility: visible;
-    opacity: 1;
+        visibility: visible;
+        opacity: 1;
     }
 
     .logo{
-        margin-left: 9vw;
+        margin-left: 11vw;
         transition: 1s ease-out;
-        transform: rotate(1turn);    
+        transform: rotate(1turn); 
+        position: fixed; 
+        display: block;
+  
     }
 
 
-    header nav{
+    nav{
         position: fixed;
+        top: 0vh;
         right: 0;
-        height: 80vh;
-        width: 100vw;
+        height: 30vh;
+        width: 100%;
         border-radius: 8px;
-        padding: 20px 0px 30px 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 1.5rem;
-
-        background-color: #202142;
-        transition: 0.8s;
+        padding: 40px 0 0 0;
+        background-color: #171830;
+        border-radius: 0 0 35% 35%;
+        transition: 0.8s ease-in-out;
         transform: translateY(-100vh);
+        border-bottom: 3px solid white;
+        /* -webkit-transform: translateZ(0); */
+        z-index: 1030;
+    }
+
+    .nav-links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 70%;
+        margin-top: 60px;
+    }
+
+    .divisor{
+        margin-bottom: 90px;
+    }
+  
+    .link-nav{
+        margin: auto 12px;
+        color: white;
+        font-size: 0.9rem;
+        /* border: 1px solid white; */
+        text-decoration: none;
+        /* padding: 7px; */
+        border-radius: 50%;
+    }
+    .link-nav:hover{
+        transform: scale(1.2);
     }
 
     .burger{
         margin-right: 9vw;
+        margin-top: 4vh;
+        color: white;
     }
 
 
-    header .responsive_nav{
+    .responsive_nav{
         transform: none;
     }
+    .close-btn{
+        display: block;
+        color: white;
+    }
 
-    nav .nav-close-btn{
+    .nav-close-btn{
         position: absolute;
-        margin-left: 69vw;
-        top: 38vh;
+        right: 14vw;
+        top: 5vh;
+
+    }
+    .logo{
+        margin-top: -2px;
 
     }
 
-    .lower_elements{
+    /* .lower_elements{
       margin-top: 15%;
       transition: 1s;
+    } */
+
+}
+
+@media (max-width: 900px){
+    .nav-links{
+        display: flex;
+        flex-wrap: wrap;
+        
+        margin: 40px auto;
+        width: 100%;
+        gap: 22px 0;
+        text-align: center;
     }
 
+    .nav-links > div {
+        flex: 30%;
+    }
 }
 /* NAVBAR HEADER */
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 650px){
      nav .nav-close-btn{
-       margin-right: 10vw;
-        
-
+       right: 16vw;
     }
 
-    .burger{
-       
+    .divisor{
+        margin-bottom: 90px;
     }
+
+    .nav-links{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 50px auto;
+        width: 100%;
+        gap: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links > div {
+        flex: 33%;
+    }
+   
+
+    .link-nav{
+        font-size: 0.9rem;
+        text-decoration: none;
+        padding: 5px;
+        border-radius: 50%;
+    }
+   
+
+    .link-nav:hover{
+        transform: scale(1.2);
+    }
+}
+
+@media only screen and (max-width: 440px){
+      nav .nav-close-btn{
+       right: 17vw;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px auto;
+        width: 100%;
+        gap: 8px 0;
+    }
+
+    .nav-links > div {
+        flex: 33%;
+    }
+
+
+    .link-nav{
+        font-size: 0.7rem;
+        text-decoration: none;
+        padding: 4px;
+        border-radius: 50%;
+    }
+  
+  
+
+    .link-nav:hover{
+        transform: scale(1.2);
+    }
+
+    .divisor{
+        margin-bottom: 50px;
+    }
+
 
 }
+
+@media (max-width: 375px) {
+    .nav-links{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px auto;
+        width: 100%;
+        gap: 5px 0;
+    }
+
+    .link-nav{
+        margin: auto 2px;
+        font-size: 0.6rem;
+    }
+} 

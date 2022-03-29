@@ -124,3 +124,14 @@ export const previousQuestion = (questionCount) => {
     return questionCount -= count
 }
 
+
+//OWNER//
+
+export const isOwner = (myself) => {
+    if(myself === 'myself'){
+        return true
+    } else {
+        return false;
+    }
+}
+

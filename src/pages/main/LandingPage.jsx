@@ -20,13 +20,13 @@ function LandingPage() {
 
     return (
         <div className="landing-page">
-            <Link to="/home">
+            {/* <Link to="/home">
                 <div class="outer">
                     <div class="inner">
                         <label className="skip-intro">Skipt Intro</label>
                     </div>
                 </div>
-            </Link>
+            </Link> */}
             
             <div class="main">
                 <span>N</span>
