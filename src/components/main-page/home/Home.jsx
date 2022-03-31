@@ -1,8 +1,19 @@
 import './Home.css'
-import portrait from '../../components/assets/fluid16.png'
+import portrait from '../../assets/fluid16.png'
 import {FcContacts} from 'react-icons/fc'
+import { useContext} from 'react'
+import FeedbackContext from '../../../context/feedback/FeedbackContext'
+import {scrollToComponent} from '../../../context/feedback/FeedBackActions'
 
 function Home() {
+    const {dispatch} = useContext(FeedbackContext);
+    const executeScroll = () => {
+        const payload = scrollToComponent();
+        dispatch({
+                    type: 'SCROLL_VIEW',
+                    payload: payload
+                })
+    }
     return (
         
         <div className="home-page">
@@ -17,9 +28,15 @@ function Home() {
                 <div className="cabezera-rigth">
                    <img className="image-portrait" src={portrait} alt=""/>
                 </div>
-                
+                <div onClick={executeScroll} class="center-con">
+                    <div class="round">
+                        <span className="button-lines"></span>
+                        <span className="button-lines"></span>
+                        <span className="button-lines"></span>
+                        <span className="button-lines"></span>
+                    </div>
+                </div>
             </section>
-            <p>hdhd</p>
         </div>
     )
 }

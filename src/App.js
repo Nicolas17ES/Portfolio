@@ -11,7 +11,7 @@ import {GamesProvider} from './context/games/GamesContext'
 import Feedback from "./pages/feedback/Feedback"
 import NotFound from './pages/NotFound'
 import LandingPage from './pages/main/LandingPage'
-import Home from './pages/home/Home'
+import Main from './pages/main/MainPage'
 import PaperScissors from './pages/games/Paper'
 
 
@@ -39,7 +39,7 @@ function App() {
                                 <Route path="/about" element={<AboutPage/>}/>
                                 <Route path='/*' element={<NotFound/>}/>
                                 <Route path='/'  element={<LandingPage/>}/>
-                                <Route path='/home'  element={<Home/>}/>
+                                <Route path='/home'  element={<Main/>}/>
                                 <Route path='/rock'  element={<PaperScissors/>}/>
                                
                             </Routes>

@@ -69,10 +69,10 @@
 
 /* exit button end */
 
-span{
+.letter-animation{
 	margin: 0 11px;
 	line-height: .7;
-	animation: span 4.3s ease-in 4 alternate;
+	animation: span1 4.3s ease-in 4 alternate;
 	
 }
 
@@ -96,7 +96,7 @@ span{
 	letter2 4s ease-in-out 4 alternate;
 }
 
-@keyframes span {
+@keyframes span1 {
 	0%,30%{ margin: 0 11px; }
 	70%,100%{ margin: 0 3px; }
 }
@@ -212,14 +212,14 @@ span{
 		font-size: 30px;
 	}
 
-	span{
+	.letter-animation{
 		margin: 0 16px;
 		line-height: .7;
-		animation: span 4.3s ease-in 4 alternate;
+		animation: span1 4.3s ease-in 4 alternate;
 		
 	}
 
-	@keyframes span {
+	@keyframes span1 {
 		0%,30%{ margin: 0 15px; }
 		70%,100%{ margin: 0 3px; }
 	}
@@ -299,14 +299,14 @@ span{
 		font-size:50px;	
 	}
 
-	span{
+	.letter-animation{
 		margin: 0 20px;
 		line-height: .7;
-		animation: span 4.3s ease-in 4 alternate;
+		animation: span1 4.3s ease-in 4 alternate;
 		
 	}
 
-	@keyframes span {
+	@keyframes span1 {
 		0%,30%{ margin: 0 18px; }
 		70%,100%{ margin: 0 3px; }
 	}
@@ -372,7 +372,7 @@ span{
 		font-size: 55px;
 	}
 
-	span{
+	.letter-animation{
 		margin: 0 20px;
 		line-height: .7;
 	}
@@ -382,7 +382,7 @@ span{
 		min-width: 27px;
 	}
 
-	@keyframes span {
+	@keyframes span1 {
 		0%,30%{ margin: 0 20px; }
 		70%,100%{ margin: 0 10px; }
 		
@@ -450,7 +450,7 @@ span{
 		border: 7px solid white;
 	}
 
-	@keyframes span {
+	@keyframes span1 {
 		0%,30%{ margin: 0 20px; }
 		70%,100%{ margin: 0 15px; }
 	}
@@ -512,10 +512,10 @@ span{
 		font-size: 70px;
 	}
 
-	span{
+	.letter-animation{
 		margin: 0 25px;
 		line-height: .7;
-		animation: span 4.3s ease-in 4 alternate;
+		animation: span1 4.3s ease-in 4 alternate;
 	}
 
 	.letter{
@@ -525,7 +525,7 @@ span{
 
 	}
 
-	@keyframes span {
+	@keyframes span1 {
 		0%,30%{ margin: 0 25px; }
 		70%,100%{ margin: 0 20px; }
 	}
@@ -608,7 +608,7 @@ span{
 
 	}
 
-	@keyframes span {
+	@keyframes span1 {
 		0%,30%{ margin: 0 25px; }
 		70%,100%{ margin: 0 20px; }
 	}

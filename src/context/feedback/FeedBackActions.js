@@ -135,3 +135,9 @@ export const isOwner = (myself) => {
     }
 }
 
+//scroll//
+
+export const scrollToComponent = () => {
+    return true;
+}
+

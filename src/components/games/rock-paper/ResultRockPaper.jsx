@@ -6,9 +6,9 @@ import { ReactComponent as Paper }  from '../../assets/paper.svg'
 import  {ReactComponent as Rock } from '../../assets/rock2.svg'
 import {ReactComponent as Scissors } from '../../assets/scissors.svg'
 import {ReactComponent as Versus } from '../../assets/versus.svg'
-import GameTitle from '../../shared/game-title/GameTitle'
-import PLay from './../../shared/play-button/Play'
-import Play from './../../shared/play-button/Play'
+import GameTitle from '../game-title/GameTitle'
+import PLay from '../play-button/Play'
+import Play from '../play-button/Play'
 
 
 function ResultRockPaper() {

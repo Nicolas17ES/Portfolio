@@ -1,0 +1,332 @@
+.about-page{
+    width: 100%;
+    margin: 100px auto;
+    padding: 40px;
+}
+
+/* FIRST PAGE OF HOME */
+.section-two{
+    display: grid;
+    grid-template-columns: .3fr 1fr .3fr 1fr .3fr 1fr .3fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "catorce catorce catorce catorce catorce catorce catorce"
+    "cinco uno ocho dos once cuatro diecinueve"
+    "cinco seis ocho siete once tres diecinueve"
+    "cinco seis ocho nueve once tres diecinueve"
+    "cinco seis ocho nueve once tres diecinueve"
+    "trece trece ocho nueve once diez diez"
+    "quince quince ocho dieciseis once doce doce"
+    ;
+    gap: 0.6rem;
+    height: 80vh;
+    margin: auto;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 1.6vw;
+
+}
+
+.box1{
+    grid-area: uno;
+    border: 2px solid white;
+    visibility: hidden;
+    animation: 1.5s fadeIn ease-in forwards 1s;
+
+
+    
+}
+.box2{
+    grid-area: dos;
+    background-color: #a4fac3;
+    visibility: hidden;
+    animation: 1.5s fadeIn ease-in forwards 0.6s;
+
+}
+.box3{
+    grid-area: tres;
+    position: relative;
+    font-weight: 400;
+    font-size: 1.1vw; 
+    letter-spacing: 3px;
+    border: 2px solid white;
+    visibility: hidden;
+    z-index: 99;
+    animation: 1.5s fadeIn ease-in forwards 1.4s;
+
+}
+.box4{
+    grid-area: cuatro;
+    border: 2px solid white;
+    visibility: hidden;
+    animation: 1.5s fadeIn ease-in forwards 1s;
+
+}
+.box5{
+    grid-area: cinco;
+    background-color: #f57e7e;
+    visibility: hidden;
+    animation: 1.5s fadeIn ease-in forwards;
+
+}
+.box6{
+    position: relative;
+    grid-area: seis;
+    font-weight: 400;
+    font-size: 1.1vw; 
+    letter-spacing: 3px;
+    border: 2px solid white;
+    visibility: hidden;
+    z-index: 99;
+    animation: 1.5s fadeIn ease-in forwards 1.4s;
+
+}
+.plus-icon{
+    position: absolute;
+    bottom: 9px;
+    right: 9px;
+}
+
+.box6:hover{
+    transform: scale(1.6);
+    background-color: white;
+    font-weight: 800; 
+    font-size: 12px; 
+    color: #171830;
+    letter-spacing: 1.5px;
+}
+.box6:hover p{
+    display: none;
+}
+.box6:hover .plus-icon{
+    display: none;
+}
+
+.box6:hover:before{
+    content: "Started my Web Dev journey two years ago as a self-taught student. It quickly became a passion so I decided to start a Coding Course at Epitech University and started developing websites and apps for personal projects. I specialize in JavaScript and I am now focused on React.js, Vue.js and Java for Android Studio. ";
+}
+
+
+.box7{
+    grid-area: siete;
+    border: 2px solid white;
+    visibility: hidden;
+    animation: 1.5s fadeIn ease-in forwards 1s;
+}
+
+.box8{
+    grid-area: ocho;
+}
+
+.box9{
+    grid-area: nueve;
+    font-weight: 400;
+    font-size: 1.1vw; 
+    letter-spacing: 3px;
+    border: 2px solid white;
+    visibility: hidden;
+    z-index: 99;
+    animation: 1.5s fadeIn ease-in forwards 1.4s;
+}
+
+
+.box10{
+    grid-area: diez;
+    background-color: #a4fac3;
+    visibility: hidden;
+    animation: 1.5s fadeIn ease-in forwards 0.6s;
+}
+
+.box11{
+    grid-area: once;
+   
+}
+
+.box12{
+    grid-area: doce;   
+}
+
+
+
+.box13{
+    grid-area: trece;
+    background-color: #a4fac3;
+    visibility: hidden;
+    animation: 1.5s fadeIn ease-in forwards 0.6s;
+}
+
+.box14{
+    grid-area: catorce;
+
+    
+}
+
+.box15{
+    grid-area: quince;
+    
+}
+
+.box16{
+    grid-area: dieciseis;
+    background-color: #f57e7e;
+    visibility: hidden;
+    animation: 1.5s fadeIn ease-in forwards;
+    
+
+}
+
+.box17{
+    grid-area: diecisiete;
+    
+}
+
+.box18{
+    grid-area: dieciocho;
+  
+}
+
+.box19{
+    grid-area: diecinueve;
+    visibility: hidden;
+    animation: 1.5s fadeIn ease-in forwards;
+    background-color: #f57e7e;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+    /* border: 2px solid wheat; */
+}
+
+.box:hover{
+    transform: scale(1.1);
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+@media(max-width: 960px) {
+    .section-two{
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr .5fr 3fr 1fr .5fr .5fr 3fr 1fr .5fr .5fr 3fr 1fr;
+        grid-template-areas: 
+            "cinco"
+            "uno"
+            "seis"
+            "ocho"
+            "dos"
+            "siete"
+            "nueve"
+            "once"
+            "diecinueve"
+            "cuatro"
+            "tres"
+            "catorce"; 
+        height: 100%;
+        width: 80%;
+        margin: auto;
+        font-size: 2vw;
+    }
+    .box8{
+        display: none;
+    }
+    .box10{
+        display: none;
+    }
+    .box11{
+        display: none;
+    }
+    .box12{
+        display: none;
+    }
+
+    .box15{
+        display: none;
+    }
+    .box13{
+        display: none;
+    }
+    .box16{
+        display: none;
+    }
+    .box14{
+        display: none;
+    }
+    
+
+    
+    .box3{
+        font-size: 1.7vw; 
+        
+    }
+    .box6{
+        font-size: 1.7vw;
+       
+        
+    }
+    .box9{
+        font-size: 1.7vw;    
+    }
+}
+
+@media(max-width: 670px){
+    .section-two{
+        font-size: 3vw;
+        width: 90%;
+    }
+    .box3{
+        font-size: 2.3vw; 
+        
+    }
+    .box6{
+        font-size: 2.3vw;
+       
+        
+    }
+    .box9{
+        font-size: 2.3vw;    
+    }
+    .box7{
+        white-space: nowrap;
+    }
+}
+
+@media(max-width: 420px){
+    .section-two{
+        font-size: 3.5vw;
+    }
+    .box3{
+        font-size: 2.8vw; 
+        
+    }
+    .box6{
+        font-size: 2.8vw;
+       
+        
+    }
+    .box9{
+        font-size: 2.8vw;    
+    }
+}

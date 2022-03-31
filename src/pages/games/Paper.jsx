@@ -1,8 +1,8 @@
 import './Paper.css'
 import RockPaper from '../../components/games/rock-paper/RockPaper'
-import GameTitle from '../../components/shared/game-title/GameTitle'
-import PlayButton from '../../components/shared/play-button/Play'
-import Countdown from '../../components/shared/countdown/Countdown'
+import GameTitle from '../../components/games/game-title/GameTitle'
+import PlayButton from '../../components/games/play-button/Play'
+import Countdown from '../../components/games/countdown/Countdown'
 import Result from '../../components/games/rock-paper/ResultRockPaper'
 
 import {useContext} from 'react'

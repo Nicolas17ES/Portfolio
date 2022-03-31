@@ -47,6 +47,16 @@ const feedbackReducer = (state, action) => {
                 ...state,
                 owner: action.payload,
             }
+        case 'IS_OWNER':
+            return {
+                ...state,
+                owner: action.payload,
+            }
+        case 'SCROLL_VIEW':
+            return {
+                ...state,
+                scroll: action.payload,
+            }
         
         default: 
             return state;

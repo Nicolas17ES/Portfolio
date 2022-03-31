@@ -29,13 +29,13 @@ function LandingPage() {
             </Link> */}
             
             <div class="main">
-                <span>N</span>
-                <span>I</span>
-                <span>C</span>
-                <span class="letter"></span>
-                <span>L</span>
-                <span>A</span>
-                <span>S</span>
+                <span className="letter-animation">N</span>
+                <span className="letter-animation">I</span>
+                <span className="letter-animation">C</span>
+                <span class="letter letter-animation"></span>
+                <span className="letter-animation">L</span>
+                <span className="letter-animation">A</span>
+                <span className="letter-animation">S</span>
             </div>
             
             <div className="textOne">
