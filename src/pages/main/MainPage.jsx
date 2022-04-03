@@ -6,6 +6,7 @@ function MainPage() {
         <div>
             <Home/>
             <About/>
+            
         </div>
     )
 }

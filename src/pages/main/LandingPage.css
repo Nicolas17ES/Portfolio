@@ -1,73 +1,9 @@
-
 .landing-page{
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
-/* Exit button */
-.outer {
-  position: absolute;
-  margin: auto;
-  width: 30px;
-  margin-top: -110px;
-  margin-left: -80px;
-  cursor: pointer;
-}
-
-.inner {
-  width: inherit;
-  text-align: center;
-}
-
-.skip-intro { 
-  font-size: .8em; 
-  line-height: 4em;
-  text-transform: uppercase;
-  color: #fff;
-  transition: all .3s ease-in;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.inner:before, .inner:after {
-  position: absolute;
-  content: '';
-  height: 1px;
-  width: inherit;
-  background: #FFC107;
-  left: 0;
-  transition: all .3s ease-in;
-}
-
-.inner:before {
-  top: 50%; 
-  transform: rotate(45deg);  
-}
-
-.inner:after {  
-  bottom: 50%;
-  transform: rotate(-45deg);  
-}
-
-.outer:hover label {
-  opacity: 1;
-}
-
-.outer:hover .inner:before,
-.outer:hover .inner:after {
-  transform: rotate(0);
-}
-
-.outer:hover .inner:before {
-  top: 0;
-}
-
-.outer:hover .inner:after {
-  bottom: 0;
-}
-
-/* exit button end */
 
 .letter-animation{
 	margin: 0 11px;
@@ -76,7 +12,7 @@
 	
 }
 
-.main{
+.mainLanding{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -208,7 +144,7 @@
 
 @media (min-width: 500px){
 
-	.main{
+	.mainLanding{
 		font-size: 30px;
 	}
 
@@ -226,6 +162,8 @@
 
 	.letter{
 		min-width: 20px;
+		animation: letter 4.3s ease-in-out 4 alternate,
+		letter2 4s ease-in-out 4 alternate;
 	}
 
 	@keyframes letter {
@@ -295,7 +233,7 @@
 
 @media (min-width: 620px){
 
-	.main{
+	.mainLanding{
 		font-size:50px;	
 	}
 
@@ -313,6 +251,8 @@
 
 	.letter{
 		height: 40px;
+		animation: letter 4.3s ease-in-out 4 alternate,
+		letter2 4s ease-in-out 4 alternate;
 	
 	}
 
@@ -368,7 +308,7 @@
 
 @media (min-width: 760px){
 
-	.main{
+	.mainLanding{
 		font-size: 55px;
 	}
 
@@ -380,6 +320,8 @@
 	.letter{
 		height: 41px;
 		min-width: 27px;
+		animation: letter 4.3s ease-in-out 4 alternate,
+		letter2 4s ease-in-out 4 alternate;
 	}
 
 	@keyframes span1 {
@@ -440,7 +382,7 @@
 
 @media (min-width: 1024px){
 
-	.main{
+	.mainLanding{
 		font-size: 60px;
 	}
 
@@ -448,6 +390,8 @@
 	.letter{
 		height: 46px;
 		border: 7px solid white;
+		animation: letter 4.3s ease-in-out 4 alternate,
+		letter2 4s ease-in-out 4 alternate;	
 	}
 
 	@keyframes span1 {
@@ -508,7 +452,7 @@
 /* big screen media query */
 
 @media (min-width: 1200px) {
-	.main{
+	.mainLanding{
 		font-size: 70px;
 	}
 
@@ -522,6 +466,8 @@
 		height: 54px;
 		width: 43px;
 		border: 6px solid white;
+		animation: letter 4.3s ease-in-out 4 alternate,
+		letter2 4s ease-in-out 4 alternate;
 
 	}
 
@@ -597,7 +543,7 @@
 /* BIG COMPUTER SCREEN */
 
 @media (min-width: 1580px) {
-	.main{
+	.mainLanding{
 		font-size: 80px;
 	}
 
@@ -605,6 +551,8 @@
 		height: 60px;
 		width: 43px;
 		border: 6px solid white;
+		animation: letter 4.3s ease-in-out 4 alternate,
+		letter2 4s ease-in-out 4 alternate;
 
 	}
 

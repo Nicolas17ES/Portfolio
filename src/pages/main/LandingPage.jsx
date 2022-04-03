@@ -20,15 +20,7 @@ function LandingPage() {
 
     return (
         <div className="landing-page">
-            {/* <Link to="/home">
-                <div class="outer">
-                    <div class="inner">
-                        <label className="skip-intro">Skipt Intro</label>
-                    </div>
-                </div>
-            </Link> */}
-            
-            <div class="main">
+            <div class="mainLanding">
                 <span className="letter-animation">N</span>
                 <span className="letter-animation">I</span>
                 <span className="letter-animation">C</span>

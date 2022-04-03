@@ -8,6 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 body {
@@ -17,7 +18,6 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   margin-bottom: 100px;
-  /* filter: blur(5px); */
 }
 
 /* RESET STYLESHEET */
@@ -159,9 +159,11 @@ template {
 /* RESET STYLESHEET */
 
 .blurry-body{
-  filter: blur(2px);
+  filter: blur(4px);
   transition: 0.3s ease-out 0.2s;
 }
+
+
 
 ul {
   list-style: none;
@@ -170,12 +172,14 @@ ul {
 .fake-container{
   min-width: 100%;
   min-height: 100%;
+  
 }
 
 .container {
   max-width: 100%;
   margin: auto;
   padding: 6px 40px;
+  
   /* border-radius: 15px; */
 }
 

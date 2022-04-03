@@ -17,6 +17,7 @@ export const FeedbackProvider = ({children}) => {
         blurry: false,
         owner: false,
         scroll: false,
+        showModal: false,
     }
     const [state, dispatch] = useReducer(feedbackReducer, initialState)
 
@@ -32,6 +33,7 @@ export const FeedbackProvider = ({children}) => {
         blurry: state.blurry,
         owner: state.owner,
         scroll: state.scroll,
+        showModal: state.showModal,
         dispatch,
     }}>
         {children}

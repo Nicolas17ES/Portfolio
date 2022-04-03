@@ -1,8 +1,10 @@
 .about-page{
-    width: 100%;
+    width: 85vw;
     margin: 100px auto;
-    padding: 40px;
+    padding: 40px 0px;
+   
 }
+
 
 /* FIRST PAGE OF HOME */
 .section-two{
@@ -19,12 +21,15 @@
     "quince quince ocho dieciseis once doce doce"
     ;
     gap: 0.6rem;
-    height: 80vh;
+    
     margin: auto;
     font-weight: bold;
     letter-spacing: 5px;
     font-size: 1.6vw;
 
+}
+.work-around{
+    margin-top: 50vh;
 }
 
 .box1{
@@ -32,9 +37,6 @@
     border: 2px solid white;
     visibility: hidden;
     animation: 1.2s fadeIn ease-in forwards .6s;
-
-
-    
 }
 .box2{
     grid-area: dos;
@@ -56,6 +58,9 @@
     animation: 1.2s fadeIn ease-in forwards 1s;
 
 }
+/* .modal-about-do{
+    z-index: 999;
+} */
 .box4{
     grid-area: cuatro;
     border: 2px solid white;
@@ -83,30 +88,6 @@
     animation: 1.2s fadeIn ease-in forwards 1s;
 
 }
-/* .plus-icon{
-    position: absolute;
-    bottom: 9px;
-    right: 9px;
-}
-
-.box6:hover{
-    transform: scale(1.6);
-    background-color: white;
-    font-weight: 800; 
-    font-size: 12px; 
-    color: #171830;
-    letter-spacing: 1.5px;
-}
-.box6:hover p{
-    display: none;
-}
-.box6:hover .plus-icon{
-    display: none;
-}
-
-.box6:hover:before{
-    content: "Started my Web Dev journey two years ago as a self-taught student. It quickly became a passion so I decided to start a Coding Course at Epitech University and started developing websites and apps for personal projects. I specialize in JavaScript and I am now focused on React.js, Vue.js and Java for Android Studio. ";
-} */
 
 
 .box7{
@@ -138,27 +119,8 @@
     position: absolute;
     left: -2.7vw;
     top: -1.5vh;
-    z-index: 100;
+    
 }
-
-.box9:hover{
-    color: #171830;;
-    transform: rotateY(180deg) scale(1.4);
-    background-color: white;
-}
-.box9:hover .vinyl{
-    left: -3.7vw;
-    top: -3.5vh;
-}
-.box9:hover:before{
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nemo, perferendis eum sapiente velit repellendus earum dolor ipsam aperiam pariatur corrupti, cumque nobis ab illum tenetur iusto cum suscipit. Nesciunt.";
-    transform: rotateY(-180deg);
-    text-align: left;
-    font-size: .8vw;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
-
 
 
 .box10{
@@ -187,9 +149,7 @@
 }
 
 .box14{
-    grid-area: catorce;
-
-    
+    grid-area: catorce;   
 }
 
 .box15{
@@ -237,9 +197,7 @@
     /* border: 2px solid wheat; */
 }
 
-/* .box:hover{
-    transform: scale(1.1);
-} */
+
 
 
 @keyframes fadeIn {

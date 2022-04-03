@@ -12,7 +12,7 @@ import { isOwner } from '../../../context/feedback/FeedBackActions'
 
 
 function NavBar() {
-const {blurry, dispatch} = useContext(FeedbackContext);
+const {blurry, dispatch, showModal} = useContext(FeedbackContext);
 const {dispatchGames} = useContext(GamesContext);
 
 const navRef = useRef();
@@ -73,10 +73,19 @@ const handleClick = (e) => {
     }
 
 }
+
+//HIDE MODAL//
+
+const hideModal = () => {
+  dispatch({
+    type: "SHOW_MODAL",
+    payload: false,
+  })
+}
   
     return (
       <>
-      <header>
+      <header onClick={hideModal}>
         <div className="left-side flex">
           <h3><FaDog onClick={handleClick} className="logo" size={30}/></h3>
         </div>

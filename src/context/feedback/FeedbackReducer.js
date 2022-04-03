@@ -57,6 +57,11 @@ const feedbackReducer = (state, action) => {
                 ...state,
                 scroll: action.payload,
             }
+        case 'SHOW_MODAL':
+            return {
+                ...state,
+                showModal: action.payload,
+            }
         
         default: 
             return state;

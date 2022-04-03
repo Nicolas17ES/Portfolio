@@ -2,7 +2,14 @@ import FeedbackContext from '../../context/feedback/FeedbackContext'
 import {useState, useContext, useRef} from 'react'
 
 function Container({children}) {
-    const {blurry} = useContext(FeedbackContext);
+    const {blurry, showModal, dispatch} = useContext(FeedbackContext);
+
+    const hideModal = () => {
+        dispatch({
+            type: "SHOW_MODAL",
+            payload: false
+        })
+    }
     const containerRef = useRef();
 
     if(blurry === true){
@@ -10,29 +17,14 @@ function Container({children}) {
     } else {
         containerRef.current?.classList?.remove("blurry-body")
     }
+ 
+   
 
     return (
-        <div ref={containerRef} className="fake-container">
+        <div onClick={hideModal} ref={containerRef} className="fake-container">
             {children}
         </div>
     )
 }
 
 export default Container
-
-
-// import {useState, useContext, useRef} from 'react'
-// import FeedbackContext from '../../context/feedback/FeedbackContext'
-
-// function DivContainer({children}) {
-//     const {blurry} = useContext(FeedbackContext);
-//     const containerRef = useRef();
-
-//     return (
-//         <div ref={containerRef} className="container">
-//             {children}
-//         </div>
-//     )
-// }
-
-// export default DivContainer
