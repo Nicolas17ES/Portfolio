@@ -13,6 +13,7 @@ import NotFound from './pages/NotFound'
 import LandingPage from './pages/main/LandingPage'
 import Main from './pages/main/MainPage'
 import PaperScissors from './pages/games/Paper'
+import Contact from './components/main-page/contact/Contact'
 
 
 
@@ -41,9 +42,9 @@ function App() {
                                 <Route path='/'  element={<LandingPage/>}/>
                                 <Route path='/home'  element={<Main/>}/>
                                 <Route path='/rock'  element={<PaperScissors/>}/>
+                                <Route path='/contact'  element={<Contact/>}/>
                                
                             </Routes>
-                            {/* {window.location.pathname!== '/' && <AboutIconLink/>} */}
                             </main>
                         </div>
                     </Container>

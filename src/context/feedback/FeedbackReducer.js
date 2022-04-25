@@ -62,6 +62,11 @@ const feedbackReducer = (state, action) => {
                 ...state,
                 showModal: action.payload,
             }
+        case 'MODAL':
+            return {
+                ...state,
+                modal: action.payload,
+            }
         
         default: 
             return state;

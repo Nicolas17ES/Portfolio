@@ -1,0 +1,88 @@
+/* scroll down button */
+
+.center-con{
+    width: fit-content;
+    height: 100px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    animation: 2s appearElement ease forwards 2.5s;
+}
+
+
+
+.round {
+    position: relative;
+    border: 2px solid #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: auto;
+    transition-duration: 0.7s;
+}
+
+.round:hover{
+    transform: scale(1.2);
+}
+
+.button-lines{
+    z-index: 9;
+    height: 2px;
+    margin: 0px;
+    width: 11px;
+    background: #fff;
+    transition: 0.7s ease;
+}
+
+.button-lines:first-child {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 35%;
+}
+
+.button-lines:nth-child(2) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 35%;
+}
+
+.button-lines:nth-child(3) {
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 25%;
+    bottom: 54%;
+}
+
+.button-lines:nth-child(4) {
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 45%;
+    bottom: 54%;
+}
+
+.round:hover  .button-lines:nth-child(1) {
+    transform: rotate(-135deg);
+}
+
+.round:hover .button-lines:nth-child(2) {
+    transform: rotate(135deg);
+}
+
+.round:hover .button-lines:nth-child(3) {
+    transform: rotate(225deg);
+}
+
+.round:hover .button-lines:nth-child(4) {
+    transform: rotate(-225deg);
+}

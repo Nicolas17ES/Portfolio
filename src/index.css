@@ -159,8 +159,8 @@ template {
 /* RESET STYLESHEET */
 
 .blurry-body{
-  filter: blur(4px);
-  transition: 0.3s ease-out 0.2s;
+  filter: blur(6px);
+  transition: 0.1s linear 0.2s;
 }
 
 

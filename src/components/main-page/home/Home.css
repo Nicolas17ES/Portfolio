@@ -1,6 +1,7 @@
 .home-page{
     width: 100%;
     margin: 0px auto;
+    height: 100vh;
     
 }
 
@@ -31,6 +32,9 @@
 .hello-text{
     font-size: 20px;
     margin-bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    animation: 2s appearElement ease forwards .5s;
 }
 
 
@@ -39,12 +43,34 @@
     font-size: 12px;
     text-align: justify; /* For Edge */
     text-align-last: center;
-
+    padding-bottom: 10px;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    animation: 2s appearElement ease forwards 1.3s;
 }
+
+.intro-text:after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 40%;
+    width: 98%;
+    border-bottom: 8px solid #a4fac3;
+    left: 0;
+    bottom: -6px;
+}
+
 
 .name{
     font-size: 27px;
     margin-bottom: 50px;
+    opacity: 0;
+    visibility: hidden;
+    animation: 2s appearElement ease forwards .9s;
+}
+.nicolas{
+    color: #f57e7e;
 }
 
 
@@ -60,7 +86,11 @@
 .image-portrait{
     margin: auto;
     width: 80%;
-    animation: rotate-animation 2.5s ease-in-out forwards;
+    /* animation: rotate-animation 2.5s ease-in-out forwards; */
+    opacity: 0;
+    visibility: hidden;
+    animation: 2s appearElement ease forwards 2.1s;
+    transform: rotate(45deg);
 
 }
 
@@ -82,12 +112,27 @@
     border: 1px solid white;
     padding: 13px 20px;
     border-radius: 5px;
-    margin: 50px auto;
+    margin: 50px auto 0 auto;
+    opacity: 0;
+    visibility: hidden;
+    animation: 2s appearElement ease forwards 1.7s;
 }
 
 .contact-icon{
     margin-left: 10px;
     color: white;
+}
+
+/* animation appear */
+@keyframes appearElement{
+    0%{
+        opacity: 0;
+        visibility: hidden; 
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .contact-button:hover{
@@ -108,91 +153,7 @@
 
 
 /* scroll down button */
-
-.center-con{
-    width: fit-content;
-    height: 100px;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    cursor: pointer;
-}
-
-
-
-.round {
-    position: relative;
-    border: 3px solid #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    margin: auto;
-    transition-duration: 0.7s;
-}
-
-.round:hover{
-    transform: scale(1.2);
-}
-
-.button-lines{
-    z-index: 9;
-    height: 2px;
-    margin: 0px;
-    width: 13px;
-    background: #fff;
-    transition: 0.7s ease;
-}
-
-.button-lines:first-child {
-    display: block;
-    position: absolute;
-    transform: rotate(45deg);
-    left: 25%;
-    bottom: 35%;
-}
-
-.button-lines:nth-child(2) {
-    display: block;
-    position: absolute;
-    transform: rotate(-45deg);
-    left: 45%;
-    bottom: 35%;
-}
-
-.button-lines:nth-child(3) {
-    display: block;
-    position: absolute;
-    transform: rotate(45deg);
-    left: 25%;
-    bottom: 54%;
-}
-
-.button-lines:nth-child(4) {
-    display: block;
-    position: absolute;
-    transform: rotate(-45deg);
-    left: 45%;
-    bottom: 54%;
-}
-
-.round:hover  .button-lines:nth-child(1) {
-    transform: rotate(-135deg);
-}
-
-.round:hover .button-lines:nth-child(2) {
-    transform: rotate(135deg);
-}
-
-.round:hover .button-lines:nth-child(3) {
-    transform: rotate(225deg);
-}
-
-.round:hover .button-lines:nth-child(4) {
-    transform: rotate(-225deg);
-}
-
+/* end scroll */
 
 
 @media (min-width: 490px){
@@ -226,7 +187,7 @@
 
     .contact-button{
         width: 190px;
-        margin: auto;
+        margin: 50px auto;
     }
 }
 
@@ -234,10 +195,10 @@
 
 @media (min-width: 770px){
     .cabezera-rigth{
-    width: 50%;
-    margin: auto;
-    display: block;
-}
+        width: 50%;
+        margin: auto;
+        display: block;
+    }
 
     .section-one{
         display: flex;

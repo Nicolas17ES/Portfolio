@@ -1,6 +1,7 @@
 
 import {Link} from 'react-router-dom'
 import {FaHamburger, FaBars, FaTimes, FaDog} from 'react-icons/fa'
+import {BiDownArrow} from 'react-icons/bi'
 import {useRef} from 'react'
 import './NavBar.css'
 
@@ -16,6 +17,7 @@ const {blurry, dispatch, showModal} = useContext(FeedbackContext);
 const {dispatchGames} = useContext(GamesContext);
 
 const navRef = useRef();
+const dropdown = useRef();
 const showNavbar= () => {
   
   navRef.current.classList.toggle("responsive_nav")
@@ -40,6 +42,16 @@ const reStartGame = () => {
     })
 }
 
+// toggle blurry on mouse enter dropdown
+
+// const toggleBlurry = () => {
+  
+//   dispatch({
+//       type: 'BLURRY_BACKGROUND',
+//       payload: !blurry,
+//     })
+// }
+
 //HIDE NAVBAR WHEN CLICKIN LINK//
 
 const hideResponsiveNavBar = () => {
@@ -50,6 +62,12 @@ const hideResponsiveNavBar = () => {
       payload: false,
     })
   }
+}
+
+// ON DROPDOWN CLICK OPEN MINI-MENU
+
+const showDropdown = () => {
+  dropdown.current.classList.toggle("showDropdown")
 }
 
 // RESTART PLUS HIDENNAVBAR //
@@ -82,6 +100,27 @@ const hideModal = () => {
     payload: false,
   })
 }
+
+// scroll to about component//
+  const redirectToAbout = () => {
+    hideResponsiveNavBar();
+    reStartGame()
+      dispatch({
+                type: 'SCROLL_VIEW',
+                payload: 1
+            })
+  }
+// scroll to skills component//
+  const redirectToSkills = () => {
+    hideResponsiveNavBar();
+    reStartGame()
+      dispatch({
+                type: 'SCROLL_VIEW',
+                payload: 2
+            })
+  }
+
+
   
     return (
       <>
@@ -95,8 +134,13 @@ const hideModal = () => {
             <FaTimes className="nav-close-btn" size={24}/>
             </button>
               <div className="nav-links">
-                  <div className="link-one">          
-                      <Link className="link-nav" to="/home" onClick={reStartNavBar}>Home</Link>
+                  <div className="link-one" onClick={showDropdown}>          
+                      <Link className="link-nav home-link" to="/home" onClick={reStartGame}>Home <BiDownArrow className="dropdown-arrow"/></Link>
+                      <ul ref={dropdown} class="dropdown">
+                        <li><Link to="/home" className="dropdown-links" onClick={redirectToAbout}>About</Link></li>
+                        <li><Link to="/home" className="dropdown-links" onClick={redirectToSkills}>Skills</Link></li>
+                        <li><Link to="/home" className="dropdown-links">Illustration</Link></li>
+                      </ul>
                   </div>
                   <div className="link-two">
                       <Link className="link-nav" to="/projects" onClick={reStartNavBar}>Projects</Link>
@@ -106,9 +150,6 @@ const hideModal = () => {
                   </div>
                   <div className="link-four">
                       <Link className="link-nav" to="/feedback" onClick={reStartNavBar}>Feedback</Link>
-                  </div>
-                  <div className="link-five">
-                      <Link className="link-nav" to="/about" onClick={reStartNavBar}>About</Link>
                   </div>
                   <div className="link-six">
                       <Link className="link-nav about" to="/contact" onClick={reStartNavBar}>Contact</Link>

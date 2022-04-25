@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import {useContext} from 'react'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 
-function ModalVinyl({show}) {
+function ModalVinyl({title, body}) {
+    console.log(title)
 
     const {showModal, dispatch} = useContext(FeedbackContext);
 
@@ -17,23 +18,24 @@ function ModalVinyl({show}) {
     if(showModal){
         document.body.style.overflow = "hidden"
     } else {
-        document.body.style.overflow = "scroll"
+        document.body.style.overflowX = "hidden"
+        document.body.style.overflowY = "scroll"
     }
 
     
     const display = () => {
-        if(showModal){
+        if(showModal ){
             return (
                 <div className="modal-blur" onClick={closeModal}>
                     <div className={`modal ${showModal === true ? "show" : ""}`}>
                     <div  onClick={e => e.stopPropagation()} className="modal-content">
                         <div className="modal-header">
-                            <h3>Title goes here</h3>
+                            <h3>{title}</h3>
                         </div>
                         <div className="modal-body">
-                            This will be the body
+                            {body}
                         </div>
-                        <div className="modal-footer">
+                        <div onClick={closeModal} className="modal-footer">
                             <buttton onClick={closeModal} className="close-modal">Close</buttton>
                         </div>
                     </div>
@@ -51,7 +53,8 @@ function ModalVinyl({show}) {
 }
 
 ModalVinyl.propTypes = {
-    show: PropTypes.boolean,
+    title: PropTypes.string,
+    body: PropTypes.body,
 
 }
 

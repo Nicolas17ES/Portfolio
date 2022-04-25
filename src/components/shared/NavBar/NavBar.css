@@ -46,10 +46,12 @@ nav{
 }
 
 .link-nav:hover{
-    color: #171830;
-    transform: scale(1.2);
-    background-color: white;
+    color: wheat;
 }
+.link-nav:hover .dropdown-arrow{
+    color: wheat;
+}
+
 
 .logo{
     cursor: pointer;
@@ -80,7 +82,53 @@ header .nav-btn:hover{
     z-index: 9999;
 
 }
+.link-one{
+    position: relative;
+}
+.dropdown-arrow{
+    position: absolute;
+    top: 26%;
+    right: 25%;
+    cursor: pointer;
+    color: white;
+}
+/* dropdown */
+.dropdown{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    padding: 20px;
+    left: 0%;
+    display: none;
+    width: 145px;
+    color: white;
+    background: #171830;
+    border-radius: 5px;
+}
 
+.link-one:hover .dropdown{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    text-align: left;
+}
+
+
+.dropdown li{
+    clear: both;
+    margin-left: 5px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    border-style: none;
+}
+
+.dropdown li .dropdown-links:hover {
+    padding-left: 10px;
+    border-left: 4px solid #a4fac3;
+    transition: all 0.3s ease-in;
+    color: wheat;
+}
 
 
 @media only screen and (max-width: 1020px){
@@ -91,7 +139,7 @@ header .nav-btn:hover{
     }
 
     .logo{
-        margin-left: 11vw;
+        margin-left: 9vw;
         transition: 1s ease-out;
         transform: rotate(1turn); 
         position: fixed; 
@@ -168,10 +216,12 @@ header .nav-btn:hover{
 
     }
 
-    /* .lower_elements{
-      margin-top: 15%;
-      transition: 1s;
-    } */
+    .dropdown-arrow{
+        right: 2%;
+    }
+    .dropdown{
+        font-size: 0.9rem;
+    }
 
 }
 
@@ -179,7 +229,6 @@ header .nav-btn:hover{
     .nav-links{
         display: flex;
         flex-wrap: wrap;
-        
         margin: 40px auto;
         width: 100%;
         gap: 22px 0;
@@ -188,6 +237,12 @@ header .nav-btn:hover{
 
     .nav-links > div {
         flex: 30%;
+    }
+    .dropdown{
+        left: 23%;
+    }
+    .dropdown-arrow{
+        right: 20%;
     }
 }
 /* NAVBAR HEADER */
@@ -224,6 +279,14 @@ header .nav-btn:hover{
 
     .link-nav:hover{
         transform: scale(1.2);
+    }
+
+    .dropdown{
+        left: 17%;
+    }
+
+    .dropdown-arrow{
+        right: 10%;
     }
 }
 
@@ -262,7 +325,21 @@ header .nav-btn:hover{
         margin-bottom: 50px;
     }
 
+    .dropdown{
+        left: 10%;
+        font-size: 0.7rem;
+    }
 
+    .dropdown-arrow{
+        top: 36%;
+        right: 10%;
+    }
+    .showDropdown{
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        text-align: left;
+    }
 }
 
 @media (max-width: 375px) {
@@ -276,6 +353,16 @@ header .nav-btn:hover{
 
     .link-nav{
         margin: auto 2px;
+        font-size: 0.6rem;
+    }
+
+    .dropdown-arrow{
+        top: 42%;
+        right: 10%;
+    }
+
+    .dropdown{
+        left: 0%;
         font-size: 0.6rem;
     }
 } 
