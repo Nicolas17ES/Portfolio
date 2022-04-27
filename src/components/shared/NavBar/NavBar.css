@@ -139,7 +139,7 @@ header .nav-btn:hover{
     }
 
     .logo{
-        margin-left: 9vw;
+        margin-left: 11vw;
         transition: 1s ease-out;
         transform: rotate(1turn); 
         position: fixed; 

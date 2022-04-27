@@ -12,6 +12,7 @@ import Feedback from "./pages/feedback/Feedback"
 import NotFound from './pages/NotFound'
 import LandingPage from './pages/main/LandingPage'
 import Main from './pages/main/MainPage'
+import Projects from './pages/projects/Projects'
 import PaperScissors from './pages/games/Paper'
 import Contact from './components/main-page/contact/Contact'
 
@@ -43,7 +44,7 @@ function App() {
                                 <Route path='/home'  element={<Main/>}/>
                                 <Route path='/rock'  element={<PaperScissors/>}/>
                                 <Route path='/contact'  element={<Contact/>}/>
-                               
+                                <Route path='/projects'  element={<Projects/>}/>
                             </Routes>
                             </main>
                         </div>

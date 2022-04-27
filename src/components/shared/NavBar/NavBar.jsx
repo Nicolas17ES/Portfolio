@@ -114,10 +114,24 @@ const hideModal = () => {
   const redirectToSkills = () => {
     hideResponsiveNavBar();
     reStartGame()
-      dispatch({
-                type: 'SCROLL_VIEW',
-                payload: 2
-            })
+    console.log(window.location)
+    if(window.location.href === 'http://localhost:3000/home'){
+        dispatch({
+                  type: 'SCROLL_VIEW',
+                  payload: 2
+              })
+    } else {
+         dispatch({
+                  type: 'SCROLL_VIEW',
+                  payload: 2
+              })
+        setTimeout(() => {
+          dispatch({
+                  type: 'SCROLL_VIEW',
+                  payload: 2
+              })
+      }, 330);
+    }
   }
 
 

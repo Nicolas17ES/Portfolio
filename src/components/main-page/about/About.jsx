@@ -73,7 +73,6 @@ function About(props) {
    
 
     useEffect(() => {
-        console.log(scroll)
         if(scroll === 1){
             scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center", offset: 10})
             dispatch({

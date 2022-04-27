@@ -20,7 +20,6 @@ function Skills() {
 
     // scroll till this point//
     useEffect(() => {
-
         if(scroll === 2){
             scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center"})
             dispatch({
