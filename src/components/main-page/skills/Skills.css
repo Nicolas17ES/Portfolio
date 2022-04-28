@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     height: 80vh;
-    margin-top: 20vh;
+    margin-top: 250px;
     position: relative;
 }
 
@@ -369,7 +369,7 @@
 
 .center-absolute{
     position: absolute;
-    top: 39%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -462,7 +462,7 @@
 @media(max-width: 1000px){
     .skills-page{
         flex-direction: column;
-        margin-top: 100px;
+        margin-top: 250px;
     }
 
     /* left side */

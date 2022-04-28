@@ -72,6 +72,11 @@ const feedbackReducer = (state, action) => {
                 ...state,
                 isLoading: action.payload,
             }
+        case 'ANIMATION':
+            return {
+                ...state,
+                hasAnimated: action.payload,
+            }
         
         default: 
             return state;

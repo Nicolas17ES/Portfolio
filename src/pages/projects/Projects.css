@@ -208,6 +208,7 @@
 
 .languages{
     font-size: 11px;
+    white-space: nowrap;
 }
 
 /* END PROJECT LANGUAGES AND FRAMEWORKS */
@@ -229,6 +230,16 @@
     display: block;
     width: calc(168% + 1.3px);
     height: 131px;
+}
+.plus-icon-projects{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99;
+}
+.plus-icon-projects:hover{
+    transform: scale(1.3);
+    transition: .6s ease;
 }
 
 .shape-fill {

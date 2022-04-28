@@ -20,6 +20,7 @@ export const FeedbackProvider = ({children}) => {
         showModal: false,
         modal: 0,
         isLoading: false,
+        hasAnimated: true,
     }
     const [state, dispatch] = useReducer(feedbackReducer, initialState)
 
@@ -38,6 +39,7 @@ export const FeedbackProvider = ({children}) => {
         showModal: state.showModal,
         modal: state.modal,
         isLoading: state.isLoading,
+        hasAnimated: state.hasAnimated,
         dispatch,
     }}>
         {children}

@@ -13,7 +13,7 @@ import ScrollButton from '../../shared/scroll-button/ScrollButton2'
 
 
 function About(props) {
-    const {scroll, dispatch, showModal, modal} = useContext(FeedbackContext);
+    const {scroll, dispatch, showModal, modal, hasAnimated} = useContext(FeedbackContext);
     const scrollTo = useRef();
     const [reference, inView] = useInView({
         threshold: 0,
@@ -86,8 +86,57 @@ function About(props) {
 
           
  
-
-return (
+if(hasAnimated === true){
+    return (
+        <div  ref={reference} className="about-page">
+               <>
+               <section className="section-two">
+                <div className="box1 box">ABOUT ME</div>
+                <div className="box2 box"></div>
+                <div onClick={e => e.stopPropagation()} className="box3 box">
+                    <Laptop className="laptop about-svg"/>
+                    <button className="plus-icon-button" onClick={displayModalLaptop}>
+                        <AiFillPlusCircle className="plus-icon" size={24}/>
+                    </button>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ashjkdh hola...</p> 
+                    {modalToShow()}
+                </div>
+                <div className="box4 box">WHAT I DO</div>
+                <div className="box5 box"></div>
+                <div onClick={e => e.stopPropagation()} className="box6 box">
+                    <Road className="road about-svg"/>
+                    <button className="plus-icon-button" onClick={displayModalRoad}>
+                        <AiFillPlusCircle className="plus-icon" size={24}/>
+                    </button>
+                    <p ref={scrollTo}>Lorem ipsum dolor sit amet consectetur adipisicing elit ashjkdh hola casa...</p>
+                    {modalToShow()}
+                </div>
+                <div className="box7 box">THINGS I LOVE</div>
+                <div className="box8 box"></div>
+                <div onClick={e => e.stopPropagation()} className="box9 box">
+                    <Vinyl className="vinyl about-svg"/>
+                    <button className="plus-icon-button" onClick={displayModalVinyl}>
+                        <AiFillPlusCircle className="plus-icon" size={24}/>
+                    </button>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ashjkdh hola casa...</p>
+                    {modalToShow()}  
+                </div>
+                <div className="box10 box"></div>
+                <div className="box11 box"></div>
+                <div className="box12 box"></div>
+                <div className="box13 box"></div>
+                <div className="box15 box"></div>
+                <div className="box16 box"></div>
+                <div className="box19 box"></div>
+            </section>
+            <div className="scroll-button-container" onClick={executeScroll}>
+                <ScrollButton/>
+            </div>
+            </>
+        </div>
+    )
+} else {
+    return (
        <div  ref={reference} className="about-page">
            {inView ? (
                <>
@@ -142,6 +191,7 @@ return (
         </div>
         
     )
+    }
 }
 
 export default About

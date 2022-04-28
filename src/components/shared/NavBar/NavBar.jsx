@@ -109,6 +109,10 @@ const hideModal = () => {
                 type: 'SCROLL_VIEW',
                 payload: 1
             })
+      dispatch({
+                type: 'ANIMATION',
+                payload: true
+            })
   }
 // scroll to skills component//
   const redirectToSkills = () => {
@@ -120,10 +124,18 @@ const hideModal = () => {
                   type: 'SCROLL_VIEW',
                   payload: 2
               })
+        dispatch({
+                type: 'ANIMATION',
+                payload: true
+            })
     } else {
+        dispatch({
+                  type: 'ANIMATION',
+                  payload: true
+              })
          dispatch({
                   type: 'SCROLL_VIEW',
-                  payload: 2
+                  payload: 1
               })
         setTimeout(() => {
           dispatch({
