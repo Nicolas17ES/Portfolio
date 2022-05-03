@@ -6,6 +6,8 @@ import {ReactComponent as Node } from '../../components/assets/skills/node.svg'
 import {ReactComponent as Mysql } from '../../components/assets/skills/mysql.svg'
 import {ReactComponent as React } from '../../components/assets/skills/react.svg'
 import {ReactComponent as Tailwind } from '../../components/assets/skills/tailwind.svg'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import { Carousel } from 'react-responsive-carousel';
 
 import {useContext, useEffect, useRef} from 'react'
 
@@ -55,15 +57,18 @@ function Projects() {
         subtitle: "Web Application created with REACT and NODEJS based on finding lost animals.",
         about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque explicabo beatae, fugiat, vitae temporibus eligendi similique sapiente omnis ea molestias nemo vel, a molestiae consectetur autem.",
     }
+    
     return (
         <div className="projects-page">
-            <div className="project">
-                <span ref={scrollTo} className="top-absolute"></span>
-                <ProjectCard founditApp={founditApp}/>
-            </div>
-            <div className="project">
-                <ProjectCard founditApp={founditWeb}/>
-            </div>
+            <Carousel className="carousel" showArrows={false} >
+                <div className="project">
+                    <span ref={scrollTo} className="top-absolute"></span>
+                    <ProjectCard founditApp={founditApp}/>
+                </div>
+                <div className="project">
+                    <ProjectCard founditApp={founditWeb}/>
+                </div>
+            </Carousel>
         </div>
     )
 }

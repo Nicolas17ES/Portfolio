@@ -288,7 +288,7 @@
     position: relative;
     display: block;
     width: calc(168% + 1.3px);
-    height: 100px;
+    height: 70px;
 }
 .plus-icon-projects{
     position: absolute;
@@ -308,21 +308,21 @@
 @media (max-width: 1250px){
     .project-subtitle{
         font-size: 15px;
-        margin-top: -70px;
+        margin-top: -40px;
     }
     .java{
         margin-bottom: 4.5vh;
     }
     .project-svg{
-        height: 100px;
+        height: 70px;
     }
 
     .project-card:before {
-        height: 70%;
+        height: 77%;
     }
 
     .project-card:after {
-        height: 70%;
+        height: 77%;
     }
 }
 
@@ -332,7 +332,6 @@
     }
     .project-subtitle{
         font-size: 14px;
-        margin-top: -60px;
         text-align: center;
     }
     .about-and-icos{
@@ -419,7 +418,7 @@
     }
     .project-subtitle{
         font-size: 13px;
-        margin-top: -20px;
+        margin-top: -10px;
     }
     .lang-fram{
         display: flex;
@@ -451,19 +450,19 @@
         margin-bottom: 10px;
     }
     .project-svg{
-        height: 60px;
+        height: 50px;
     }
     
 }
 
-@media (max-width: 634px){
+@media (max-width: 674px){
     .project-card{
         width: 90vw;
     }
 
     .project-subtitle{
         font-size: 12px;
-        margin-top: -60px;
+        margin-top: -30px;
     }
     .lang-fram{
         gap: 10px 50px;
@@ -516,7 +515,7 @@
     }
     .project-subtitle{
         font-size: 9px;
-        margin-top: -30px;
+        margin-top: -55px;
     }
      .project-about{
         font-size: 8px;
@@ -561,5 +560,8 @@
 
     .project-svg{
         height: 50px;
+    }
+    .mysql-icon{
+        margin-bottom: 10px;
     }
 }

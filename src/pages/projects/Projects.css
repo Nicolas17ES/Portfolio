@@ -15,7 +15,7 @@
     align-items: center;
     margin: 40px auto;
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     padding: 40px 70px;
     position: relative;
 }
@@ -139,6 +139,10 @@
 }
 
 @media (max-width: 480px){
+    .project{
+        height: 78vh;
+    }
+    
     .project-title {
         left: 46%;
         font-size: 7.5vw;
@@ -164,6 +168,7 @@
     .project-top{
         margin-top: 0px;
         width: 100px;
+        border: 1px solid yellow;
     }
     .project-icon{
         margin: 0px auto;
