@@ -15,6 +15,7 @@ import Main from './pages/main/MainPage'
 import Projects from './pages/projects/Projects'
 import PaperScissors from './pages/games/Paper'
 import Contact from './components/main-page/contact/Contact'
+import Trail from './components/shared/trail-line/TrailLine'
 
 
 
@@ -45,6 +46,7 @@ function App() {
                                 <Route path='/rock'  element={<PaperScissors/>}/>
                                 <Route path='/contact'  element={<Contact/>}/>
                                 <Route path='/projects'  element={<Projects/>}/>
+                                <Route path='/tests'  element={<Trail/>}/>
                             </Routes>
                             </main>
                         </div>

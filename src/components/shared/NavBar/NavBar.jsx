@@ -114,6 +114,7 @@ const hideModal = () => {
                 payload: true
             })
   }
+
 // scroll to skills component//
   const redirectToSkills = () => {
     hideResponsiveNavBar();
@@ -145,8 +146,62 @@ const hideModal = () => {
       }, 330);
     }
   }
+// scroll to basement component//
+  const redirectToBasement = () => {
+    hideResponsiveNavBar();
+    reStartGame()
+    console.log(window.location)
+    if(window.location.href === 'http://localhost:3000/home'){
+        dispatch({
+                  type: 'SCROLL_VIEW',
+                  payload: "basement"
+              })
+        dispatch({
+                type: 'ANIMATION',
+                payload: true
+            })
+    } else {
+        dispatch({
+                  type: 'ANIMATION',
+                  payload: true
+              })
+         dispatch({
+                  type: 'SCROLL_VIEW',
+                  payload: "basement"
+              })
+      //   setTimeout(() => {
+      //     dispatch({
+      //             type: 'SCROLL_VIEW',
+      //             payload: 2
+      //         })
+      // }, 330);
+    }
+  }
 
-
+  // scroll to projects component top//
+  const redirectToProjects = () => {
+    reStartNavBar();
+    dispatch({
+                type: 'SCROLL_VIEW',
+                payload: "projects"
+            })
+  }
+  // scroll to feedback component top//
+  const redirectToFeedback = () => {
+    reStartNavBar();
+    dispatch({
+                type: 'SCROLL_VIEW',
+                payload: "feedback"
+            })
+  }
+  // scroll to contact component top//
+  const redirectToContact = () => {
+    reStartNavBar();
+    dispatch({
+                type: 'SCROLL_VIEW',
+                payload: "contact"
+            })
+  }
   
     return (
       <>
@@ -165,20 +220,20 @@ const hideModal = () => {
                       <ul ref={dropdown} class="dropdown">
                         <li><Link to="/home" className="dropdown-links" onClick={redirectToAbout}>About</Link></li>
                         <li><Link to="/home" className="dropdown-links" onClick={redirectToSkills}>Skills</Link></li>
-                        <li><Link to="/home" className="dropdown-links">Illustration</Link></li>
+                        <li><Link to="/home" className="dropdown-links" onClick={redirectToBasement}>Basement</Link></li>
                       </ul>
                   </div>
                   <div className="link-two">
-                      <Link className="link-nav" to="/projects" onClick={reStartNavBar}>Projects</Link>
+                      <Link className="link-nav" to="/projects" onClick={redirectToProjects}>Projects</Link>
                   </div>
                   <div className="link-three">
                       <Link className="link-nav" to="/rock" onClick={reStartNavBar}>Games</Link>
                   </div>
                   <div className="link-four">
-                      <Link className="link-nav" to="/feedback" onClick={reStartNavBar}>Feedback</Link>
+                      <Link className="link-nav" to="/feedback" onClick={redirectToFeedback}>Feedback</Link>
                   </div>
                   <div className="link-six">
-                      <Link className="link-nav about" to="/contact" onClick={reStartNavBar}>Contact</Link>
+                      <Link className="link-nav about" to="/contact" onClick={redirectToContact}>Contact</Link>
                   </div>
               </div>
          </nav>

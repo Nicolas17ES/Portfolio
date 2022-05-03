@@ -1,15 +1,21 @@
-
-
-.scroll2 {
+.trail-line{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px 0px;
+    cursor: pointer;
     position: absolute;
-    bottom: 10px;
+    bottom: -120px;
     right: 50%;
     left: 50%;
-    width: 24px;
-    height: 24px;
+}
+
+.trails {
+    width: 8px;
+    height: 8px;
     cursor: pointer;
-    margin-left: -12px;
-    margin-bottom: 50px;
+  
     border-left: 3px solid #fff;
     border-bottom: 3px solid #fff;
     -webkit-transform: rotate(-45deg);

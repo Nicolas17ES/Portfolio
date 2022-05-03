@@ -1,0 +1,47 @@
+.arrow {
+  width: 5px;
+  height: 20px;
+  border: 1px solid white;
+  position: relative;
+  animation: scroll 1.5s 6;
+  background-color: white;
+  margin-bottom: 80px;
+  -webkit-animation: scroll 1.5s 6;
+}
+.arrow::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: -6.5px;
+    width: 5px;
+    height: 10px;
+    
+    border-top: 15px solid white;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+
+@keyframes scroll {
+  0% {
+    height: 20px;
+  }
+  30% {
+    height: 30px;
+  }
+  60% {
+    height: 20px;
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    height: 20px;
+  }
+  30% {
+    height: 30px;
+  }
+  60% {
+    height: 20px;
+  }
+}

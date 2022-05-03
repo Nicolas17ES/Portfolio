@@ -8,6 +8,8 @@ import SkillsTable from './SkillsTable'
 import {useContext, useEffect, useRef} from 'react'
 
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
+import ScrollButton from '../../shared/scroll-button/ScrollButton3'
+import TrailLine from '../../shared/trail-line/TrailLine'
 
 function Skills() {
     const {scroll, dispatch, hasAnimated} = useContext(FeedbackContext);
@@ -17,6 +19,13 @@ function Skills() {
         threshold: 0,
         triggerOnce: true,
     })
+      // scroll to next component//
+    const executeScroll = () => {
+        dispatch({
+                type: 'SCROLL_VIEW',
+                payload: "basement"
+            })
+    }
 
     // scroll till this point//
     useEffect(() => {
@@ -38,13 +47,17 @@ function Skills() {
                     <div className="top-skill">
                         <h3 className="skills-title">SKILLS</h3>
                     </div>
-                    <span ref={scrollTo} className="center-absolute">center</span>
+                    <span ref={scrollTo} className="center-absolute"></span>
                     <div className="bottom-skill">
                         <p className="skills-text">Lorem ipsum dolor sit amet consectetur djwknd ti error incidunt ea fugiat unde, maiores, necessitatibus nemo velit hola casa coche perro comida animales zanahoria cucaracha hahah ole ole mas texto.</p>
                         <span className="skills-arrow"><Arrow className="arrow-svg"/></span>
                     </div>
-                    </div>
+                </div>
                 <SkillsTable/>
+                    <div className="scrolling-test" onClick={executeScroll}> 
+                        <ScrollButton className="button-skills"/> 
+                        <TrailLine className="scroll-button-container"/>
+                    </div>
                 </>
             </div>
         )
@@ -64,10 +77,14 @@ function Skills() {
                         </div>
                         </div>
                     <SkillsTable/>
+                    <div className="scrolling-test" onClick={executeScroll}> 
+                        <ScrollButton className="button-skills"/>  
+                        <TrailLine className="scroll-button-container"/>
+                    </div>
                     </>
                 ): (
                 
-                    <div ref={scrollTo} className="work-around"></div>
+                    <div ref={scrollTo} className="work-around-skills"></div>
                     
             )}
                 

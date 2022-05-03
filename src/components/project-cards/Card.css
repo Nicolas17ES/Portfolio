@@ -8,8 +8,8 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 0px 134px;
+    align-items: center;
+    padding: 0px 80px;
     flex-direction: column;
     cursor: pointer;
     color: #171830;
@@ -154,29 +154,32 @@
     font-style: italic;
     text-decoration: underline;
     text-underline-offset: 2px;
-    margin-top: -100px;
+    margin-top: -60px;
 }
 
 .about-and-icos{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    margin-top: 40px;
+    justify-content: center;
+    margin: 50px auto 0px auto;
     width: 100%;
-    gap: 30px;
+    gap: 20px;
 }
 
 .project-about{
     text-align: left;
     font-size: 13px;
-    padding: 25px 40px;
+    padding: 25px 30px;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
-    width: 65%;
+    width: 85%;
     height: 95%;
     color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -201,7 +204,7 @@
     content: '';
     display: block;
     position: absolute;
-    height: 62.5%;
+    height: 70%;
     width: 37%;
     border-top: 8px solid #a4fac3;
     border-right: 8px solid #a4fac3;
@@ -214,7 +217,7 @@
     content: '';
     display: block;
     position: absolute;
-    height: 62.5%;
+    height: 70%;
     width: 6%;
     border-top: 8px solid #a4fac3;
     border-left: 8px solid #a4fac3;
@@ -230,19 +233,21 @@
 
 .lang-fram{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     font-size: 14px;
     font-weight: 600;
-    margin-left: 25px;
+    margin-left: 0px;
+    gap: 20px;
 }
 
 /* languages */
 
 .project-top{
     margin: 4px 0px;
-    width: 120px;
+    width: 105px;
+    height: 70px;
     border: 3px solid white;
     border-radius: 10px;
     color: #171830;
@@ -253,6 +258,11 @@
 .project-icon{
     margin: 5px auto;
     width: 25px;
+    height: fit-content;
+}
+.mysql-icon{
+    width: 37px;
+    margin-bottom: 11px;
 }
 
 .languages{
@@ -278,12 +288,12 @@
     position: relative;
     display: block;
     width: calc(168% + 1.3px);
-    height: 131px;
+    height: 100px;
 }
 .plus-icon-projects{
     position: absolute;
-    right: 15px;
-    bottom: 15px;
+    right: 10px;
+    bottom: 10px;
     z-index: 99;
 }
 .plus-icon-projects:hover{
@@ -301,7 +311,7 @@
         margin-top: -70px;
     }
     .java{
-        margin-bottom: 8vh;
+        margin-bottom: 4.5vh;
     }
     .project-svg{
         height: 100px;
@@ -316,7 +326,7 @@
     }
 }
 
-@media (max-width: 1050px){
+@media (max-width: 1090px){
     .project-card{
         padding: 70px;
     }
@@ -343,10 +353,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: nowrap;
         flex-direction: row;
         margin-left: 0px;
         width: 100%;
-        gap: 60px;
+        gap: 20px;
     }
     .java{
         margin-bottom: .5vh;
@@ -366,7 +377,11 @@
 
 }
 
-@media (max-width: 800px){
+@media (max-width: 930px){
+
+    .project-card{
+        padding: 0px 50px;
+    }
     .project-title {
         left: 43%;
         font-size: 7.7vw;
@@ -375,27 +390,11 @@
         left: 43%;
         font-size: 7.7vw;
     }
-
-     .project-card:before {
-        width: 25%;
-
-    }
-
-}
-
-@media (max-width: 674px){
-    .project-card{
-        padding: 30px;
-    }
-    .project-subtitle{
-        font-size: 13px;
-        margin-top: -50px;
-    }
     .project-about{
         text-align: center;
         font-size: 11.8px;
-        padding: 20px 23px;
-        margin-top: 30px;
+        padding: 12px 17px;
+        margin-top: 10px;
     }
     .punto{ 
         height: 30px; 
@@ -403,20 +402,53 @@
         border-right: 15px solid white; 
         border-bottom: 10px solid transparent; 
     }
+
+    .languages{
+        font-size: 10px;
+    }
+
+     .project-card:before {
+        width: 25%;
+    }
+
+}
+
+@media (max-width: 774px){
+    .project-card{
+        padding: 30px;
+    }
+    .project-subtitle{
+        font-size: 13px;
+        margin-top: -20px;
+    }
+    .lang-fram{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-weight: 600;
+        gap: 0px 70px;
+    }
     .project-top{
-        margin-top: 20px;
+        margin-top: 10px;
         width: 100px;
+        height: 60px;
         border: none;
-        color: white;
-        background-color: #171830;
+        color: #171830;
+        background-color: white;
+        padding: 5px;
     }
     .project-icon{
-        margin: 0px auto 10px auto;
+        margin: 0px auto 0px auto;
         width: 30px;
     }
 
     .languages{
-        font-size: 11px;
+        font-size: 10px;
+    }
+    .mysql-icon{
+        width: 37px;
+        margin-bottom: 10px;
     }
     .project-svg{
         height: 60px;
@@ -424,23 +456,72 @@
     
 }
 
+@media (max-width: 634px){
+    .project-card{
+        width: 90vw;
+    }
+
+    .project-subtitle{
+        font-size: 12px;
+        margin-top: -60px;
+    }
+    .lang-fram{
+        gap: 10px 50px;
+    }
+    .project-about{
+        text-align: center;
+        font-size: 10px;
+        padding: 10px 14px;
+        margin-top: 10px;
+    }
+    .project-top{
+        margin-top: 0px;
+        width: 100px;
+        height: 55px;
+        border: none;
+        color: white;
+        background-color: #171830;
+        padding: 5px;
+    }
+    .project-icon{
+        margin: 0px auto 0px auto;
+        width: 30px;
+    }
+
+    .languages{
+        font-size: 10px;
+    }
+    .mysql-icon{
+        width: 37px;
+        margin-bottom: 10px;
+    }
+    .project-svg{
+        height: 50px;
+    }
+ 
+    
+}
+
 @media (max-width: 480px){
+    .project-card{
+        padding: 0px 25px;
+    }
     .project-title {
         left: 46%;
-        font-size: 7.5vw;
+        font-size: 6.5vw;
     }
     .project-title-animals {
         left: 46%;
-        font-size: 7.5vw;
+        font-size: 6.5vw;
     }
     .project-subtitle{
-        font-size: 10.7px;
+        font-size: 9px;
         margin-top: -30px;
     }
      .project-about{
-        font-size: 10px;
-        padding: 10px 13px;
-        margin-top: 10px;
+        font-size: 8px;
+        padding: 10px 10px;
+        margin-top: 0px;
     }
 
     .punto{ 
@@ -453,31 +534,32 @@
     }
     .project-top{
         margin-top: 0px;
-        width: 100px;
+        width: 65px;
     }
     .project-icon{
         margin: 0px auto;
-        width: 26px;
+        width: 20px;
     }
 
     .languages{
-        font-size: 9px;
+        font-size: 8px;
     }
     .lang-fram{
-        gap: 20px;
+        gap: 10px;
+        justify-content: space-between;
     }
 
     .project-card:before {
-        height: 78.7%;
+        height: 80.7%;
         width: 20%;
 
     }
 
     .project-card:after {
-        height: 78.7%;
+        height: 80.7%;
     }
 
     .project-svg{
-        height: 70px;
+        height: 50px;
     }
 }

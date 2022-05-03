@@ -27,8 +27,8 @@
     font-size: 1.6vw;
 }
 
-.work-around{
-    margin-top: 35vh;
+.work-around-about{
+    margin-top: 30vh;
 }
 
 .about-svg{
@@ -230,6 +230,9 @@
 }
 
 /* scroll button container */
+.scroll-button-container{
+    margin-top: 50px;
+}
 
 
 /* MEDIA QUERIES */
@@ -346,12 +349,12 @@
     .box7{
         white-space: nowrap;
     }
-    .scroll-button-container{
+    /* .scroll-button-container{
         position: absolute;
         bottom: 40px;
         left: 0;
         right: 0;
-    }
+    } */
 }
 
 @media(max-width: 420px){
@@ -363,7 +366,7 @@
     .about-page{
         margin-top: 85px;
     }
-    .work-around{
+    .work-around-about{
         margin-top: 30vh;
     }
     .box3{

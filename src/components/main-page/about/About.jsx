@@ -8,12 +8,14 @@ import { useInView } from 'react-intersection-observer';
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import ModalVinyl from './ModalVinyl'
 import ScrollButton from '../../shared/scroll-button/ScrollButton2'
+import TrailLine from '../../shared/trail-line/TrailLine'
+
 
 
 
 
 function About(props) {
-    const {scroll, dispatch, showModal, modal, hasAnimated} = useContext(FeedbackContext);
+    const {scroll, dispatch, modal, hasAnimated} = useContext(FeedbackContext);
     const scrollTo = useRef();
     const [reference, inView] = useInView({
         threshold: 0,
@@ -131,6 +133,7 @@ if(hasAnimated === true){
             </section>
             <div className="scroll-button-container" onClick={executeScroll}>
                 <ScrollButton/>
+                <TrailLine/>
             </div>
             </>
         </div>
@@ -179,13 +182,17 @@ if(hasAnimated === true){
                 <div className="box16 box"></div>
                 <div className="box19 box"></div>
             </section>
-            <div className="scroll-button-container" onClick={executeScroll}>
+            {/* <div className="scroll-button-container" onClick={executeScroll}>
                 <ScrollButton/>
-            </div>
+            </div> */}
+            <div className="scroll-button-container"  onClick={executeScroll}>
+                    <ScrollButton />
+                    <TrailLine/>
+                </div>
             </>
            ) : (
               
-                <div ref={scrollTo} className="work-around"></div>
+                <div ref={scrollTo} className="work-around-about"></div>
                 
            )} 
         </div>

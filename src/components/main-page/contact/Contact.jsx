@@ -1,6 +1,6 @@
 import './Contact.css'
 import  {ReactComponent as ContactSvg } from '../../assets/contact.svg'
-import { useState, useContext } from 'react';
+import { useState, useContext, useRef, useEffect } from 'react';
 import { send } from 'emailjs-com';
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import ModalVinyl from './ModalEmail'
@@ -8,7 +8,20 @@ import Spinner from '../../shared/spinner/Spinner'
 
 
 function Contact() {
-    const {dispatch, modal, isLoading} = useContext(FeedbackContext);
+    const {dispatch, modal, isLoading, scroll} = useContext(FeedbackContext);
+    const scrollTo = useRef();
+
+    // scroll till this point//
+    useEffect(() => {
+        if(scroll === "contact"){
+            scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center"})
+            dispatch({
+                    type: 'SCROLL_VIEW',
+                    payload: false
+                })
+        }
+
+    }, [scroll])
 
     const [toSend, setToSend] = useState({
         from_name: '',
@@ -79,6 +92,7 @@ function Contact() {
     } else {
         return (
             <div className="contact-page">
+                <span ref={scrollTo} className="top-absolute"></span>
                 <section className="form-border">
                     <div className="contact-left">
                         <h3 className="contact-title">Let's Work Together!</h3>

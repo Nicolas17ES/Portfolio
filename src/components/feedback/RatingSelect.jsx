@@ -1,14 +1,28 @@
-import { useState, useContext, useEffect } from 'react'
+import { useState, useContext, useEffect, useRef } from 'react'
 import FeedbackContext from '../../context/feedback/FeedbackContext'
 
 
 function RatingSelect({ select }) {
   const [selected, setSelected] = useState(10)
-  const {feedbackEdit} = useContext(FeedbackContext);
+  const {feedbackEdit, scroll, dispatch} = useContext(FeedbackContext);
+  const scrollTo = useRef();
+
+
 
   useEffect(() => {
     setSelected(feedbackEdit.item.rating)
   }, [feedbackEdit])
+
+   useEffect(() => {
+        if(scroll === "feedback"){
+            scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center"})
+            dispatch({
+                    type: 'SCROLL_VIEW',
+                    payload: false
+                })
+        }
+
+    }, [scroll])
 
 
   const handleChange = (e) => {
@@ -18,6 +32,7 @@ function RatingSelect({ select }) {
 
   return (
     <ul className='rating'>
+      <span ref={scrollTo} className="top-absolute"></span>
       <li>
         <input
           type='radio'
