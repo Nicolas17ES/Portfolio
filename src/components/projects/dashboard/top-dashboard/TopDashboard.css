@@ -1,3 +1,16 @@
 .top-dashboard{
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.block-dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+.reverse-block{
+    flex-direction: row-reverse;
 }

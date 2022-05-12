@@ -4,6 +4,7 @@ import ProjectTitle from '../../projectTitles/ProjectTitle'
 import ProjectResume from '../../project-resumes/ProjectResumes'
 import {AiFillGithub} from 'react-icons/ai'
 import {FaBackward} from 'react-icons/fa'
+import {FaForward} from 'react-icons/fa'
 
 function Intro() {
 
@@ -28,6 +29,7 @@ function Intro() {
                 <div className="view-repo">
                     <button onClick={() => navigate(-1)} className="reposatory-button"><FaBackward size={25} className="repo-icon"/><span>GO BACK</span></button>
                     <a className="reposatory-link" href="https://github.com/Nicolas17ES/AndroidApp" target="_blank"><button className="reposatory-button"><AiFillGithub size={25} className="repo-icon"/><span>VIEW CODE</span></button></a>
+                    <Link to={"/projects/dashboard"}><button className="reposatory-button"><FaForward size={25} className="repo-icon"/><span>NEXT WORK</span></button></Link>
                 </div>
             <div className="about-blocks">
                 <div className="block-left">
