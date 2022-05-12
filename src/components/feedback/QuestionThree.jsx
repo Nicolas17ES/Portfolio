@@ -6,8 +6,9 @@ import {Link} from 'react-router-dom'
 
 function QuestionThree() {
     const data = {
-        formTitle: "Please rate my Animal Finder React App",
+        formTitle: "Please rate my Dashboard React App",
         questionNumber: 3,
+        dataLink: "/projects/dashboard"
     }
 
     return (

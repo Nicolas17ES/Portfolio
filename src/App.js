@@ -13,9 +13,11 @@ import NotFound from './pages/NotFound'
 import LandingPage from './pages/main/LandingPage'
 import Main from './pages/main/MainPage'
 import Projects from './pages/projects/Projects'
+import FoundIt from './pages/projects/foundit/FoundIt'
+import Dashboard from './pages/projects/dashboard/Dashboard'
 import PaperScissors from './pages/games/Paper'
 import Contact from './components/main-page/contact/Contact'
-import Trail from './components/shared/trail-line/TrailLine'
+
 
 
 
@@ -46,7 +48,9 @@ function App() {
                                 <Route path='/rock'  element={<PaperScissors/>}/>
                                 <Route path='/contact'  element={<Contact/>}/>
                                 <Route path='/projects'  element={<Projects/>}/>
-                                <Route path='/tests'  element={<Trail/>}/>
+                                <Route path='/projects/foundit'  element={<FoundIt/>}/>
+                                <Route path='/projects/dashboard'  element={<Dashboard/>}/>
+                                {/* <Route path='/tests'  element={<Videos/>}/> */}
                             </Routes>
                             </main>
                         </div>

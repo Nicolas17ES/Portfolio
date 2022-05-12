@@ -19,7 +19,7 @@
     position: relative;
     -webkit-animation: linear 1 forwards;
     -webkit-animation-name: display-footer;
-    -webkit-animation-duration: 3.5s;
+    -webkit-animation-duration: 1.7s;
 }
 
 @keyframes display-footer {
@@ -52,9 +52,9 @@
     border-radius: 50%;
     left: 20px;
     border: 2px solid #f66;
-    -webkit-animation: linear 1;
+    -webkit-animation: linear 1 forwards;
     -webkit-animation-name: run-right;
-    -webkit-animation-duration: 3.5s;
+    -webkit-animation-duration: 1.7s;
 }
 .full-footer:before{
     content: "";
@@ -65,9 +65,9 @@
     border-radius: 50%;
     right: 20px;
     border: 2px solid #f66;
-    -webkit-animation: linear 1;
+    -webkit-animation: linear 1 forwards;
     -webkit-animation-name: run-left;
-    -webkit-animation-duration: 3.5s;
+    -webkit-animation-duration: 1.7s;
 }
 
 /* animation for rounded balls */
@@ -80,13 +80,10 @@
     border: 2px solid white;
     background-color: white; 
   }
-  50% { 
+  100% { 
     left: calc(100% - 44px);
 
    }
-  100% {
-    left: 0;     
-  }
 }
 @keyframes run-left {
   0% {
@@ -96,12 +93,9 @@
     border: 2px solid white;
     background-color: white; 
   }
-  50% { 
+  100% { 
     right: calc(100% - 44px);
    }
-  100% {
-    right: 0;     
-  }
 }
 
 /* end animation for rounded balls */
@@ -122,11 +116,11 @@
 }
 /* footer content fade in */
 .footer-content{
-  animation: fadeInAbout 5.5s ease-out;
-  -webkit-animation: fadeInAbout 5.5s ease-out;
-  -moz-animation: fadeInAbout 5.5s ease-out;
-  -o-animation: fadeInAbout 5.5s ease-out;
-  -ms-animation: fadeInAbout 5.5s ease-out;
+  animation: fadeInAbout 3s ease-out;
+  -webkit-animation: fadeInAbout 3s ease-out;
+  -moz-animation: fadeInAbout 3s ease-out;
+  -o-animation: fadeInAbout 3s ease-out;
+  -ms-animation: fadeInAbout 3s ease-out;
 
 }
 @keyframes fadeInAbout {

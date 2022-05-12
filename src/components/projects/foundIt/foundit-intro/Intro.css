@@ -1,0 +1,164 @@
+.project-intro{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 30px 0px;
+    width: 100%;
+    height: 100%;
+    min-height: 85vh;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.top-project{
+    display: flex;
+}
+
+/* BUTTON */
+
+.reposatory-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7px;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 80px;
+    height: 62px;
+    padding: 7px;
+   
+}
+
+
+
+.view-repo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: .7rem;
+}
+
+.reposatory-button:hover{
+    color: #171830;
+    background-color: white;
+    transition: 0.7s ease;
+    transform: scale(1.05);      
+}
+.reposatory-button:hover span{
+    color: #171830; 
+}
+.reposatory-button:hover .repo-icon{
+    color: #171830;  
+}
+
+
+/* BUTTON END */
+
+.about-blocks{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 1px;
+}
+
+.block-left{
+    height: 330px;
+    width: 40%;
+}
+
+.block-1{
+    width: 100%;
+    height: 100%;
+}
+
+.block-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    height: 330px;
+    gap: 30px;
+}
+.block-2{
+    width: 100%;
+    height: 40%;
+}
+.block-3{
+    width: 100%;
+    height: 60%;
+}
+
+@media(max-width: 1200px){
+    .about-blocks{
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+    }
+    .block-left{
+        height: 100%;
+        width: 90%;
+    }
+
+    .block-right{
+        flex-direction: row;
+        align-items: flex-end;
+        width: 90%;
+        height: 100%;
+        min-height: 230px;
+        gap: 30px;
+    }
+    .block-2{
+        width: 42%;
+        height: 100%;
+    }
+    .block-3{
+        width: 58%;
+        height: 100%;
+    }
+}
+@media(max-width: 930px){
+    .block-right{
+        flex-direction: column;
+        width: 90%;
+        height: 100%;
+        min-height: 230px;
+        gap: 30px;
+    }
+    .block-2{
+        width: 100%;
+        height: 100%;
+    }
+    .block-3{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media(max-width: 550px){
+    .reposatory-button{
+        gap: 5px;
+        padding: 6px;
+        margin-top: 13px;
+    }
+    .repo-icon{
+        width: 20px;
+    }
+
+    .view-repo{
+        font-size: .6rem;
+    }
+}
+@media(max-width: 450px){
+    .project-intro{
+        margin-top: 50px;
+    }
+}
+
+
+

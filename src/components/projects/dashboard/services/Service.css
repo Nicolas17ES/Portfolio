@@ -1,0 +1,88 @@
+.flights{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: url(https://images.unsplash.com/photo-1621632361333-4649f0b59adc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODl8fGZsaWdodHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 220px;
+  height: 150px;
+}
+
+.tag-teal {
+  background-color: #47bcd4;
+}
+
+.tag-news {
+  background: #cccccc;
+  border-radius: 50px;
+  max-width: 50%;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button-74 {
+  height: 50px;
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.plus {
+  /* transform: rotate(45deg); */
+  display:inline-block;
+  width:20px;
+  height:20px;
+  margin-top: 20px;
+  margin-left: 160px;
+  margin-bottom: 7px;
+  cursor: pointer;
+  
+  background:
+    linear-gradient(#fff 0 0),
+    linear-gradient(#fff 0 0),
+    #000;
+  background-position:center;
+  background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
+  background-repeat:no-repeat;
+}
+.plus:hover{
+    background-color: rgb(134, 134, 134);
+}
+
+
+.radius {
+  border-radius:50%;
+}

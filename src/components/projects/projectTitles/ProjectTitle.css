@@ -1,0 +1,65 @@
+/* END FOUND IT APP*/
+.title {
+    color: rgb(245, 126, 126);
+    font-size: 90px;
+    letter-spacing: 9px;
+    cursor: pointer;
+    justify-self: flex-start;
+    margin: auto;
+    margin-top: -20px;
+    position: relative;
+    transition: .6s;
+}
+
+
+.title::before {
+    content: '';
+    position: absolute;
+    width: 96%;
+    height: 7px;
+    top: 130px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    transition: all .6s;
+}
+
+
+
+/* END PROJECT TITLE */
+
+@media (max-width: 930px){
+    .title {
+        font-size: 75px;
+    }
+    .title::before {
+        top: 100px;
+    }
+    .title::after {
+        font-size: 29px;
+        top: -20px;
+    }
+}
+@media (max-width: 760px){
+    .title {
+        font-size: 60px;
+    }
+    .title::before {
+        top: 85px;
+    }
+    .title::after {
+        font-size: 20px;
+        top: -15px;
+    }
+}
+@media (max-width: 500px){
+    .title {
+        font-size: 50px;
+    }
+    .title::before {
+        top: 85px;
+    }
+    .title::after {
+        font-size: 17px;
+        top: -15px;
+    }
+}

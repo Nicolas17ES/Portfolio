@@ -8,7 +8,7 @@ import SkillsTable from './SkillsTable'
 import {useContext, useEffect, useRef} from 'react'
 
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
-import ScrollButton from '../../shared/scroll-button/ScrollButton3'
+import ScrollButton from '../../shared/scroll-button/ScrollButton2'
 import TrailLine from '../../shared/trail-line/TrailLine'
 
 function Skills() {
@@ -56,7 +56,6 @@ function Skills() {
                 <SkillsTable/>
                     <div className="scrolling-test" onClick={executeScroll}> 
                         <ScrollButton className="button-skills"/> 
-                        <TrailLine className="scroll-button-container"/>
                     </div>
                 </>
             </div>
@@ -79,7 +78,7 @@ function Skills() {
                     <SkillsTable/>
                     <div className="scrolling-test" onClick={executeScroll}> 
                         <ScrollButton className="button-skills"/>  
-                        <TrailLine className="scroll-button-container"/>
+                        
                     </div>
                     </>
                 ): (

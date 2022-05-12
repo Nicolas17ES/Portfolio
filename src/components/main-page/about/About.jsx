@@ -133,7 +133,6 @@ if(hasAnimated === true){
             </section>
             <div className="scroll-button-container" onClick={executeScroll}>
                 <ScrollButton/>
-                <TrailLine/>
             </div>
             </>
         </div>
@@ -187,7 +186,6 @@ if(hasAnimated === true){
             </div> */}
             <div className="scroll-button-container"  onClick={executeScroll}>
                     <ScrollButton />
-                    <TrailLine/>
                 </div>
             </>
            ) : (

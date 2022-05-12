@@ -1,0 +1,27 @@
+
+.mobile-svg{
+    width: 430px;
+    height: 460px;
+    background-size: 47% 78.5%;
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+
+
+@media (max-width: 930px){
+    .mobile-svg{
+        width: 330px;
+        height: 350px;  
+    }
+}
+@media (max-width: 760px){
+    .mobile-svg{
+        width: 295px;
+        height: 320px;
+    }
+}
+
+
+
+
+

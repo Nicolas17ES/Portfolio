@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import Card from '../shared/Card'
 import Button from '../shared/Button'
 import RatingSelect from './RatingSelect'
@@ -19,7 +20,8 @@ function FeedbackForm({data}) {
 
     const formInfo = {
         title: data.formTitle,
-        questionNumber: data.questionNumber
+        questionNumber: data.questionNumber,
+        dataLink: data.dataLink
     }
     
     useEffect(() => {
@@ -99,7 +101,9 @@ function FeedbackForm({data}) {
                 </div>
             {message && <div className="message">{message}</div>}
             </form>
-            <Button2 text="View project"/>
+            <Link to={`${formInfo.dataLink}`}>
+                <Button2 text="View project"/>
+            </Link>
         </Card>
         </section>
     

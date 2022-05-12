@@ -1,5 +1,5 @@
 import './Projects.css'
-import ProjectCard from '../../components/project-cards/Card'
+import ProjectCard from '../../components/projects/project-cards/Card'
 import {ReactComponent as Android } from '../../components/assets/skills/android.svg'
 import {ReactComponent as Java } from '../../components/assets/skills/java.svg'
 import {ReactComponent as Node } from '../../components/assets/skills/node.svg'
@@ -10,6 +10,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 import {useContext, useEffect, useRef} from 'react'
+import {Link} from 'react-router-dom'
 
 import FeedbackContext from '../../context/feedback/FeedbackContext'
 
@@ -44,7 +45,7 @@ function Projects() {
         subtitle: "Mobile App created with Android Studio and Java focused on finding lost animals.",
         about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque explicabo beatae, lorem lore m lorem lorem lorem lorem lore lorem lorem fugiat, vitae temporibus eligendi similique sapiente omnis ea molestias nemo vel, a molestiae consectetur autem.",
     }
-    const founditWeb = {
+    const dashboardApp = {
         logo1: <React className="project-icon"/>,
         logo1Name: "REACT",
         logo2: <Node className="project-icon"/>,
@@ -53,21 +54,50 @@ function Projects() {
         logo3Name: "MYSQL",
         logo4: <Tailwind className="project-icon"/>,
         logo4Name: "TAILWIND",
-        title: <h3 className="project-title-animals">ANIMALS</h3>,
-        subtitle: "Web Application created with REACT and NODEJS based on finding lost animals.",
+        title: <h3 className="project-title-dashboard">DASHBRD</h3>,
+        subtitle: "Web Application created with REACT and NODEJS based on a personal dashboard.",
         about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque explicabo beatae, fugiat, vitae temporibus eligendi similique sapiente omnis ea molestias nemo vel, a molestiae consectetur autem.",
     }
     
     return (
         <div className="projects-page">
-            <Carousel className="carousel" showArrows={false} >
-                <div className="project">
-                    <span ref={scrollTo} className="top-absolute"></span>
-                    <ProjectCard founditApp={founditApp}/>
-                </div>
-                <div className="project">
-                    <ProjectCard founditApp={founditWeb}/>
-                </div>
+            <Carousel 
+            className="carousel" 
+            showArrows={true} 
+            showStatus={false}
+            useKeyboardArrows={true} 
+                renderIndicator={(onClickHandler, isSelected, index, label) => {
+                    const defStyle = { margin: 15, color: "white", cursor: "pointer" };
+                    const style = isSelected
+                    ? { ...defStyle, color: "#f57e7e" }
+                    : { ...defStyle };
+                    return (
+                    <span
+                        style={style}
+                        onClick={onClickHandler}
+                        onKeyDown={onClickHandler}
+                        value={index}
+                        key={index}
+                        role="button"
+                        tabIndex={0}
+                        aria-label={`${label} ${index + 1}`}
+                    >
+                        {index}
+                    </span>
+                    );
+                }}
+            >
+                <Link to="/projects/foundit">
+                    <div className="project" >
+                        <span ref={scrollTo} className="top-absolute"></span>
+                        <ProjectCard founditApp={founditApp}/>
+                    </div>
+                </Link>
+                <Link to="/projects/dashboard">
+                    <div className="project">
+                        <ProjectCard founditApp={dashboardApp}/>
+                    </div>
+                </Link>
             </Carousel>
         </div>
     )

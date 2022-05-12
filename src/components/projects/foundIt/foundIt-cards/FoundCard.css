@@ -1,0 +1,165 @@
+.found-cards-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    
+}
+
+.block-found{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.block-found-video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    gap: 0px 70px;
+    margin-bottom: 80px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.image-title{
+    position: relative;
+    font-size: 25px; 
+    font-weight: bold; 
+    line-height: 1.5; 
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.image-title:after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0%;
+    width: 93%;
+    border-bottom: 2px solid white;
+    left: 9px;
+    bottom: 8px;
+}
+
+.image-text{
+    position: relative;
+    width: 250px;
+    border-radius: 2px;
+    font-size: 14px; 
+    line-height: 24px; 
+    margin: 0 0 0px; 
+    text-align: justify; 
+    text-justify: inter-word; 
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+.image-text:after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0%;
+    width: 87%;
+    border-left: 5px solid #f57e7e;
+    border-bottom: 5px solid #f57e7e;
+    left: 15px;
+    bottom: 3px;
+   
+}
+
+@media (max-width: 930px){
+    .text{
+        margin-bottom: 30px;
+    }
+    .image-title{
+        font-size: 23px; 
+    }
+    .image-text{
+        font-size: 12.5px; 
+        line-height: 22px; 
+        
+    }
+}
+@media (max-width: 850px){
+     .carousel .control-dots{
+        display: none;
+    }
+}
+
+@media (max-width: 760px){
+    .found-cards-page{
+        margin-top: 0px; 
+    }
+    .block-found{
+        flex-direction: column-reverse;
+        margin-bottom: 0px;
+    }
+    .block-found-video{
+        flex-direction: column-reverse;
+        margin: 0px auto 0px auto;
+        gap: 0px 70px;
+    }
+    .text{
+        margin-bottom: 30px;
+    }
+    .image-title{
+        font-size: 23px; 
+        text-align: center;
+    }
+    .image-text{
+        font-size: 12px; 
+        line-height: 22px;
+        text-align: center;
+        width: 350px;  
+        margin-top: -7px;
+    }
+
+    .image-text:after{
+        left: 33px;
+        bottom: 9px;
+    }
+}
+@media (max-width: 450px){
+    .found-cards-page{
+        margin-top: 35px; 
+    }
+    .block-found{
+        flex-direction: column-reverse;
+        margin-bottom: 0px;
+    }
+    .block-found-video{
+        flex-direction: column-reverse;
+        margin: 0px auto 0px auto;
+        gap: 0px 70px;
+        margin-bottom: 0px;
+    }
+    .text{
+        margin-bottom: 15px;
+    }
+    .image-title{
+        font-size: 18px; 
+    }
+    .image-text{
+        width: 310px;  
+        margin-top: -7px;
+        font-size: 10px;
+    }
+
+    .image-text:after{
+        display: none;
+    }
+    .carousel .control-dots{
+        display: none;
+    }
+}
+

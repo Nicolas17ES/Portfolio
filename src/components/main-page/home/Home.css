@@ -101,18 +101,28 @@
     to {transform: rotate(45deg);}
 } 
 
+
+/* BUTTONS HOME */
+.buttons-home{
+    display: flex;
+    gap: 0px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* CONTACT BUTTON */
 .contact-button{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
-    width: 60%;
+    font-size: 11px;
+    width: 95%;
     height: 40px;
     border: 1px solid white;
     padding: 13px 20px;
     border-radius: 5px;
-    margin: 50px auto 0 auto;
+    margin: 90px auto 0 auto;
     opacity: 0;
     visibility: hidden;
     animation: 2s appearElement ease forwards 1.7s;
@@ -121,7 +131,14 @@
 .contact-icon{
     margin-left: 10px;
     color: white;
+    width: 18px;
 }
+.contact-icon-git{
+    margin-left: 10px;
+    color: white;
+    width: 18px;
+}
+
 
 /* animation appear */
 @keyframes appearElement{
@@ -140,11 +157,13 @@
     background-color: white;
     border-radius: 50%;
     transition: 0.7s ease;
-    transform: scale(1.1);   
-    
+    transform: scale(1.1);      
 }
 .contact-button:hover p{
     display: none;  
+}
+.contact-button:hover .contact-icon-git{
+    color: #171830;  
 }
 .contact-button:hover:before{
     content: '';
@@ -185,8 +204,15 @@
         width: 60%;   
     }
 
+    .buttons-home{
+        display: flex;
+        gap: 0px 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
     .contact-button{
-        width: 190px;
+        width: 130px;
         margin: 50px auto;
     }
 }
@@ -249,11 +275,21 @@
        
     }
 
+    /* BUTTONS HOME */
+    .buttons-home{
+        display: flex;
+        gap: 0px 10px;
+    }
+    .buttons-home{
+        justify-content: flex-start;
+        gap: 0px 35px;
+    }
+
      .contact-button{
-        width: 190px;
+         font-size: 14px;
+        width: 140px;
         margin: 0;
         height: 50px;
-
     }
 }
 
@@ -267,6 +303,12 @@
         width: 85%;
         margin-left: 120px;
     }
+
+     .contact-button{
+        width: 160px;
+    }
+
+
     /* scroll down button */
     
 }
@@ -274,7 +316,6 @@
 @media (min-width: 1300px){
     .cabezera-rigth img{
         width: 75%;
-        margin-left: 170px;
-       
+        margin-left: 170px; 
     }
 }
