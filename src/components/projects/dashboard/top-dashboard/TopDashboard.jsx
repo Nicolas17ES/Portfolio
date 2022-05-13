@@ -36,13 +36,13 @@ function TopDashboard() {
     // text for each block//
 
     const textOne = {
-        text: "La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone https://github.com/mdn/interactive-examples y envíenos una solicitud de extracción (pull request).",
+        text: "La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone y envíenos una solicitud de extracción (pull request).",
     }
     const textTwo = {
-        text: "La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone https://github.com/mdn/interactive-examples y envíenos una solicitud de extracción (pull request).",
+        text: "La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone  y envíenos una solicitud de extracción (pull request).",
     }
     const textThree = {
-        text: "La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone https://github.com/mdn/interactive-examples y envíenos una solicitud de extracción (pull request).",
+        text: "La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone y envíenos una solicitud de extracción (pull request).",
     }
     // end text for each block//
 

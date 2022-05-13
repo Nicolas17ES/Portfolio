@@ -1,5 +1,33 @@
 .text-services{
     width: 30%;
-    border: 1px solid white;
-    text-align: center;
+    text-align: justify; /* For Edge */
+    text-align-last: center;
+    background-color: white;
+    color: #171830;
+    padding: 20.2px;
+    border-radius: 10px;
+    box-shadow: 0 30px 60px -12px rgba(255, 255, 255, 0.25),
+        0 18px 36px -18px rgba(255, 255, 255, 0.25),
+        0 -12px 36px -8px rgba(255, 255, 255, 0.25);
+    font-size: .9rem;
+    position: relative;
+}
+
+
+@media(max-width: 850px){
+    .text-services{
+        padding: 15px;
+        font-size: .8rem;
+    }
+}
+
+@media(max-width: 750px){
+    .text-services{
+        width: 50%;
+    }
+}
+@media(max-width: 550px){
+    .text-services{
+        width: 65%;
+    }
 }

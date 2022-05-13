@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   width: 30%;
-  border: 1px solid white;
 }
 .flights{
   display: flex;
@@ -19,6 +18,8 @@
   overflow: hidden;
   width: 220px;
   height: 150px;
+  min-width: 200px;
+  min-height: 140px;
 }
 
 .tag-teal {
@@ -92,4 +93,22 @@
 
 .radius {
   border-radius:50%;
+}
+
+@media(max-width: 750px){
+  .flights{
+    width: 220px;
+    height: 150px;
+    min-width: 220px;
+    min-height: 160px;
+  }
+}
+
+@media(max-width: 450px){
+    .flights{
+      width: 220px;
+      height: 150px;
+      min-width: 200px;
+      min-height: 130px;
+    }
 }

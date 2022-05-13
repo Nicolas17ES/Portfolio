@@ -9,8 +9,59 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 90px;
+    gap: 110px;
+    margin-top: 30px;
+    position: relative;
+    /* border: 1px solid white; */
 }
+.block-dashboard:after{
+    content: '';
+    width: 30%;
+    border-bottom: solid 5px #a4fac3;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;   
+}
+
 .reverse-block{
     flex-direction: row-reverse;
+}
+
+.text-services:after{
+    content: '';
+    height: 230px;
+    border-left: solid 5px #a4fac3;
+    position: absolute;
+    left: 50%;
+    top: 125%;
+    transform: translate(-50%,-50%);
+    z-index: -1;   
+}
+
+@media(max-width: 750px){
+    .block-dashboard{
+        flex-direction: column;
+        gap: 110px;
+        margin-top: 30px;
+        position: relative;
+    }
+
+    .block-dashboard:after{
+        height: 65%;
+        border-right: solid 5px #a4fac3;
+        border-bottom: none;
+        left: 35.5%;
+        top: 40%;
+    }
+       
+}
+
+/* margin-top: 50px; */
+
+@media(max-width: 450px){
+    .top-dashboard{
+        margin-top: 50px;
+    }
 }
