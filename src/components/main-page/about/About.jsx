@@ -53,12 +53,42 @@ function About(props) {
         })
     }
 
+    // blocks of data for each modal //
+    const modalData = [
+        {
+            itleOne: "CODING",
+            bodyOne: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+            titleTwo: "MUSIC",
+            bodyTwo: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+            titleThree: "SPORTS",
+            bodyThree: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+        },
+        {
+            titleOne: "4rd May 2020",
+            bodyOne: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+            titleTwo: "5rd May 2020",
+            bodyTwo: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+            titleThree: "6rd May 2020",
+            bodyThree: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+        },
+        {
+            titleOne: "FRONT-END",
+            bodyOne: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+            titleTwo: "BACK-END",
+            bodyTwo: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+            titleThree: "UI/UX",
+            bodyThree: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+        },
+    
+    ]
+    // blocks of data for each modal //
+
     // show modal depending on lcick event
 
     const modalToShow = () => {
-        if(modal === 1){return <ModalVinyl title={"Things I love"} body={"Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto."}/>}
-        else if(modal === 2) {return <ModalVinyl title={"About me"} body={"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de,"}/>}
-        else if(modal === 3) {return <ModalVinyl title={"WHAT I DO"} body={"Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sic"}/>}
+        if(modal === 1){return <ModalVinyl data={modalData[0]}/>}
+        else if(modal === 2) {return <ModalVinyl data={modalData[1]}/>}
+        else if(modal === 3) {return <ModalVinyl data={modalData[2]}/>}
         else{ return null}
     }
 
@@ -98,7 +128,7 @@ if(hasAnimated === true){
                 <div onClick={e => e.stopPropagation()} className="box3 box">
                     <Laptop className="laptop about-svg"/>
                     <button className="plus-icon-button" onClick={displayModalLaptop}>
-                        <AiFillPlusCircle className="plus-icon" size={24}/>
+                        <AiFillPlusCircle className="plus-icon" size={26}/>
                     </button>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ashjkdh hola...</p> 
                     {modalToShow()}

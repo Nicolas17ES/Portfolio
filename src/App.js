@@ -17,6 +17,7 @@ import FoundIt from './pages/projects/foundit/FoundIt'
 import Dashboard from './pages/projects/dashboard/Dashboard'
 import PaperScissors from './pages/games/Paper'
 import Contact from './components/main-page/contact/Contact'
+import Computer from './components/projects/dashboard/bottom-dashboard/dashb-card/DashCard'
 
 
 
@@ -50,7 +51,7 @@ function App() {
                                 <Route path='/projects'  element={<Projects/>}/>
                                 <Route path='/projects/foundit'  element={<FoundIt/>}/>
                                 <Route path='/projects/dashboard'  element={<Dashboard/>}/>
-                                {/* <Route path='/tests'  element={<Videos/>}/> */}
+                                <Route path='/tests'  element={<Computer/>}/>
                             </Routes>
                             </main>
                         </div>

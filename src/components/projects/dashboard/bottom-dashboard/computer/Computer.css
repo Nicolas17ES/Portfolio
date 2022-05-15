@@ -1,0 +1,10 @@
+.computer-svg{
+    width: 900px;
+    height: 700px;
+    background-size: 86% 59%;
+    background-repeat: no-repeat;
+    background-position: 45px 15px;
+    /* -webkit-filter: drop-shadow( 20px 20px 22px rgba(0, 0, 0, .9));
+    filter: drop-shadow( 30px 30px 10px rgba(0, 0, 0, .9)); */
+
+}

@@ -11,17 +11,17 @@ function Intro() {
     const navigate = useNavigate();
 
     const block1 = {
-        data: <> <li>Lorem,olorum aut, mque ratione illo dicta ad dolores non rerum, praesentium esse corporis quidem velit amet nobis voluptatibus eveniet architecto odit accusantium enim eius nesciunt neque eos quas. Sunt, dolores amet.</li>
-                <li>Lorem, unde  totam quas a facilis optio laborum abusrd <strong className="strong">Lorem ipsum.</strong> eaque non quod enim magnam praesentium, soluta, inventore vero vel exercitationem quos illo nemo quidem? Sit.</li>
+        data: <> <li>ad dolores non quidem velit amet nobis voluptatibus eveniet architecto odit accusantium enim eius nesciunt neque eos quas. Sunt, dolores amet.</li>
+                <li>Lorem, unde laborum abusrd <strong className="strong">Lorem ipsum.</strong> eaque non quod praesentium, soluta, inventore vero vel exercitationem quos illo nemo quidem? Sit.</li>
                 </>
     }
     const block2 = {
         data: <>
-                <li>Lorem <strong className="strong">dolor sit amet lorem lorem lorem.</strong>  ipsum dolor sit amet consectetur adipisicing elit. Accusamus, beatae $19/month hola casa cocheipsam harum, sit, fuga totam quam a cumque provident voluptatibus illum facere.</li></>
+                <li>Lorem <strong className="strong">dolor sit amet lorem </strong>  ipsum beatae $19/month hola casa cocheipsam harum, sit, fuga totam quam a cumque provident voluptatibus illum facere.</li></>
     }
     const block3 = {
         data: <>
-                <li>Lorem ipsum dolor sit amet consectetur mollitia aliquam corporis fuga distinctio nulla consectetur magni vero deserunt quasi quam et! Molestias accusantium dignissimos at ducimus voluptate odit minus <strong className="strong">Lorem ipsum dolor sit amet. </strong> fuga accusamus asperiores. A illo fugit magni?</li></>
+                <li>Lorem ipsum dolor sit amet aliquam corporis fuga  magni vero deserunt quasi quam et! Molestias accusantium dignissimos at ducimus voluptate odit minus <strong className="strong">Lore sit amet. </strong> fuga accusamus asperiores. A illo fugit magni?</li></>
     }
     return (
         <div className="project-intro">

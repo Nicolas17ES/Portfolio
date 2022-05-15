@@ -28,6 +28,7 @@
     width: 80px;
     height: 62px;
     padding: 7px;
+    box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, .9);
    
 }
 
@@ -58,7 +59,7 @@
 /* BUTTON END */
 
 .about-blocks{
-    width: 80%;
+    width: 65%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -111,15 +112,14 @@
         align-items: flex-end;
         width: 90%;
         height: 100%;
-        min-height: 230px;
         gap: 30px;
     }
     .block-2{
-        width: 42%;
+        width: 50%;
         height: 100%;
     }
     .block-3{
-        width: 58%;
+        width: 50%;
         height: 100%;
     }
 }
@@ -147,16 +147,29 @@
         margin-top: 13px;
     }
     .repo-icon{
-        width: 20px;
+        width: 14px;
     }
 
     .view-repo{
         font-size: .6rem;
     }
+    .reposatory-button{
+        width: 60px;
+        height: 40px;
+        padding: 3px;
+    }
+    .view-repo{
+        gap: 12px;
+        font-size: .45rem;
+    }
+    
 }
 @media(max-width: 450px){
     .project-intro{
         margin-top: 50px;
+    }
+    .about-blocks{
+        width: 90%;
     }
 }
 

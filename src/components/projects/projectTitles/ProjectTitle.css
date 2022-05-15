@@ -9,6 +9,11 @@
     margin-top: -20px;
     position: relative;
     transition: .6s;
+    text-shadow: 4px 4px rgba(0, 0, 0, .6);
+    
+}
+.title p{
+  text-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);  
 }
 
 
@@ -21,6 +26,7 @@
     background: rgba(255, 255, 255, 1);
     border-radius: 10px;
     transition: all .6s;
+    box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
 }
 
 

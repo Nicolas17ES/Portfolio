@@ -2,9 +2,10 @@ import './Modal.css'
 import PropTypes from 'prop-types'
 import {useContext} from 'react'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
+import Timeline from './timeline/Timeline'
+import {CgCloseO} from 'react-icons/cg'
 
-function ModalVinyl({title, body}) {
-    console.log(title)
+function ModalVinyl({data}) {
 
     const {showModal, dispatch} = useContext(FeedbackContext);
 
@@ -27,17 +28,19 @@ function ModalVinyl({title, body}) {
         if(showModal ){
             return (
                 <div className="modal-blur" onClick={closeModal}>
-                    <div className={`modal ${showModal === true ? "show" : ""}`}>
-                    <div  onClick={e => e.stopPropagation()} className="modal-content">
-                        <div className="modal-header">
+                    <div className={`modal-about ${showModal === true ? "show" : ""}`}>
+                    <div  onClick={e => e.stopPropagation()} className="modal-content-about">
+                        <Timeline data={data}/>
+                        {/* <div className="modal-header">
                             <h3>{title}</h3>
                         </div>
                         <div className="modal-body">
                             {body}
-                        </div>
-                        <div onClick={closeModal} className="modal-footer">
-                            <buttton onClick={closeModal} className="close-modal">Close</buttton>
-                        </div>
+                        </div> */}
+                        {/* <div onClick={closeModal} className="modal-footer-about"> */}
+                            {/* <buttton onClick={closeModal} className="close-modal">Close</buttton> */}
+                            <button onClick={closeModal} className="close-modal-about" ><CgCloseO size={25} className="modal-icon"/></button>
+                        {/* </div> */}
                     </div>
                 </div>
             </div>
@@ -52,10 +55,10 @@ function ModalVinyl({title, body}) {
     )
 }
 
-ModalVinyl.propTypes = {
-    title: PropTypes.string,
-    body: PropTypes.body,
+// ModalVinyl.propTypes = {
+//     title: PropTypes.string,
+//     body: PropTypes.body,
 
-}
+// }
 
 export default ModalVinyl

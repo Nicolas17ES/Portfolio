@@ -155,19 +155,19 @@
 .contact-button:hover{
     color: #171830;
     background-color: white;
-    border-radius: 50%;
     transition: 0.7s ease;
     transform: scale(1.1);      
 }
-.contact-button:hover p{
+/* .contact-button:hover p{
     display: none;  
-}
-.contact-button:hover .contact-icon-git{
-    color: #171830;  
 }
 .contact-button:hover:before{
     content: '';
     margin-left: -5px; 
+} */
+
+.contact-button:hover .contact-icon-git{
+    color: #171830;  
 }
 
 

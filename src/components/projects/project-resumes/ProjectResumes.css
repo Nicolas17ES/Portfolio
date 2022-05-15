@@ -1,8 +1,9 @@
 .project-about-main{
     text-align: left;
-    font-size: 14px;
+    font-size: 13px;
     padding: 25px 40px;
-    border: 1px solid #ddd;
+    border: 6px solid #131327;
+    box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
@@ -34,7 +35,7 @@
 
 .strong::before {
   /* Highlight color */
-  background-color: #a4fac3;;
+   background-color: #a4fac3;
   content: "";
   position: absolute;
   width: 100%;
@@ -63,7 +64,7 @@
 }
 @media (max-width: 760px){
     .project-about-main{
-      font-size: 12px;
+      font-size: 11px;
   }
 }
 @media (max-width: 450px){
