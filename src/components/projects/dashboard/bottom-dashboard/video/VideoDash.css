@@ -1,0 +1,125 @@
+
+.video-dash-page{
+    margin-top: 60px;
+}
+.video-title {
+    color: rgb(245, 126, 126);
+    font-size: 50px;
+    letter-spacing: 9px;
+    cursor: pointer;
+    justify-self: flex-start;
+    margin: auto;
+    margin-top: -20px;
+    position: relative;
+    transition: .6s;
+    text-shadow: 3px 3px rgba(0, 0, 0, .6);
+    
+}
+
+
+.video-title::before {
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 4px;
+    top: 70px;
+    left: 0;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    transition: all .6s;
+    box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
+}
+
+
+
+ @media (max-width: 1000px){
+    .video-js-dash{
+        width: 560px;
+        height: 270px;
+    }
+}
+ 
+@media (max-width: 800px){
+    .video-js-dash{
+        width: 470px;
+        height: 240px;
+    }
+}
+
+  
+
+@media (max-width: 670px){
+    .video-title {
+        font-size: 38px;
+        margin-top: 0px;   
+    }
+    .video-title::before {
+        content: '';
+        position: absolute;
+        width: 98%;
+        height: 4px;
+        top: 57px;
+        left: 0;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 10px;
+        transition: all .6s;
+        box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
+    }
+    .video-js-dash{
+        margin-top: 15px;
+        width: 410px;
+        height: 206px;
+    }
+   
+}
+@media (max-width: 550px){
+    .video-title {
+        font-size: 37px;
+        margin-top: 0px;
+        letter-spacing: 2px;
+        
+    }
+    .video-title::before {
+        content: '';
+        position: absolute;
+        width: 98%;
+        height: 4px;
+        top: 57px;
+        left: 0;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 10px;
+        transition: all .6s;
+        box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
+    }
+     .video-js-dash{
+        width: 330px;
+        height: 180px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 450px){
+    .video-title {
+        font-size: 24px;
+        margin-top: 0px;
+        white-space: nowrap;
+        
+    }
+    .video-title::before {
+        content: '';
+        position: absolute;
+        width: 98%;
+        height: 4px;
+        top: 37px;
+        left: 0;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 10px;
+        transition: all .6s;
+        box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
+    }
+    .video-js-dash{
+        width: 250px;
+        height: 125px;
+        margin-top: 15px;
+    }
+}

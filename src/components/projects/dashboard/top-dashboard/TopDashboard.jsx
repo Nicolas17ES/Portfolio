@@ -7,6 +7,7 @@ import ProjectTitle from '../../projectTitles/ProjectTitle'
 
 import {AiFillGithub} from 'react-icons/ai'
 import {FaBackward} from 'react-icons/fa'
+import {AiOutlineArrowDown} from 'react-icons/ai'
 
 
 function TopDashboard() {
@@ -66,6 +67,7 @@ function TopDashboard() {
                 <Service data={news}/>
                 <TextBlock data={textThree}/>
             </div>
+            <button className="reposatory-button-gallery"><span>GALLERY</span></button>
         </div>
     )
 }

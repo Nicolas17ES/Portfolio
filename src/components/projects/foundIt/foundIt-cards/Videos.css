@@ -1,11 +1,11 @@
 @media (max-width: 930px){
-    .video-js {
+    .video-js-found {
         width: 180px;
         height: 340px;
     }
 }
 @media (max-width: 760px){
-    .video-js {
+    .video-js-found {
         width: 160px;
         height: 290px;
     }

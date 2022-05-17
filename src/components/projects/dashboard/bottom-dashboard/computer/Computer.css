@@ -1,10 +1,54 @@
 .computer-svg{
-    width: 900px;
-    height: 700px;
-    background-size: 86% 59%;
+    margin-top: -20px;
+    width: 720px;
+    height: 570px;
+    background-size: 92% 59.5%;
     background-repeat: no-repeat;
-    background-position: 45px 15px;
-    /* -webkit-filter: drop-shadow( 20px 20px 22px rgba(0, 0, 0, .9));
-    filter: drop-shadow( 30px 30px 10px rgba(0, 0, 0, .9)); */
+    background-position: 30px 83px;
+}
 
+
+@media (max-width: 1000px){
+    .computer-svg{
+        margin-top: 10px;
+        width: 560px;
+        height: 430px;
+        background-size: 92% 59.5%;
+        background-position: 22px 63px;
+    }
+}
+@media (max-width: 800px){
+    .computer-svg{
+        width: 470px;
+        height: 380px;
+        background-size: 92% 59.5%;
+        background-position: 19px 56px;
+    }
+}
+
+@media (max-width: 670px){
+    .computer-svg{
+        width: 400px;
+        height: 320px;
+        background-size: 92% 59.5%;
+        background-position: 16px 47px;
+    }
+}
+@media (max-width: 550px){
+    .computer-svg{
+        margin-top: 50px;
+        width: 350px;
+        height: 270px;
+        background-size: 92% 59.5%;
+        background-position: 14px 40px;
+    }
+}
+@media (max-width: 450px){
+    .computer-svg{
+        margin-top: 40px;
+        width: 250px;
+        height: 200px;
+        background-size: 92% 59.5%;
+        background-position: 10px 29px;
+    }
 }

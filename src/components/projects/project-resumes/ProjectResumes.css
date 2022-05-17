@@ -3,7 +3,8 @@
     font-size: 13px;
     padding: 25px 40px;
     border: 6px solid #131327;
-    box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
+    box-shadow:  10px 10px rgba(0, 0, 0, 1);
+    border: 2px solid black;
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;

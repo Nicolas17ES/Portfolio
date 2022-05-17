@@ -59,10 +59,11 @@
 }
 @media (max-width: 500px){
     .title {
-        font-size: 50px;
+        font-size: 40px;
+        letter-spacing: 3.5px;
     }
     .title::before {
-        top: 85px;
+        top: 65px;
     }
     .title::after {
         font-size: 17px;

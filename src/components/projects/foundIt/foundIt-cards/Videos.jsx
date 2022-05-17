@@ -8,6 +8,7 @@ function Videos({videoProp, posterProp}) {
     return (
         <div>
             <VideoPlayer
+            className="video-js-found"
                 src={videoSrc}
                 poster={poster}
                 width="230"
