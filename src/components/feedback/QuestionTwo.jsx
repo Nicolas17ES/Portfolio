@@ -2,7 +2,6 @@ import FeedbackForm from '../../components/feedback/FeedbackForm'
 import FeedbackStats from '../../components/feedback/FeedbackStats'
 import FeedbackList from '../../components/feedback/FeedbackList'
 import NextArrow from '../shared/NextArrow'
-import {Link} from 'react-router-dom'
 
 function QuestionTwo() {
 

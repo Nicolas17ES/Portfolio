@@ -1,4 +1,8 @@
 import './DashCard.css'
+
+import {useContext, useEffect, useRef} from 'react'
+import FeedbackContext from '../../../../../context/feedback/FeedbackContext'
+
 import Computer from '../computer/Computer'
 import Video from '../video/VideoDash'
 import Title from '../title/VideoTitle'
@@ -26,8 +30,27 @@ import NewsVideo  from '../../../../assets/dashboard/News.mov'
 import WeatherVideo  from '../../../../assets/dashboard/Weather.mov'
 
 function DashCard() {
+
+    const {scroll, dispatch} = useContext(FeedbackContext);
+    const scrollToHere = useRef();
+
+
+    useEffect(() => {
+        if(scroll === "DASH_GALLERY"){
+            scrollToHere.current.scrollIntoView({ behavior: "smooth", block: "center"})
+            dispatch({
+                    type: 'SCROLL_VIEW',
+                    payload: false
+                })
+        }
+
+    }, [scroll, dispatch])
+
+     console.log(scroll)
+    
     return (
         <div className="dash-cards-page">
+            <span ref={scrollToHere} className="center-absolute"></span>
              <Carousel 
                 className="carousel" 
                 showArrows={true} 

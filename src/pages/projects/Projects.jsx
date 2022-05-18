@@ -30,7 +30,20 @@ function Projects() {
                 })
         }
 
-    }, [scroll])
+    }, [scroll, dispatch])
+
+    const redirectToDash = () => {
+        dispatch({
+                    type: 'SCROLL_VIEW',
+                    payload: 'dashboard'
+                })
+    }
+    const redirectToFound = () => {
+        dispatch({
+                    type: 'SCROLL_VIEW',
+                    payload: 'foundit'
+                })
+    }
 
     const founditApp = {
         logo1: <Java className="project-icon"/>,
@@ -88,13 +101,13 @@ function Projects() {
                 }}
             >
                 <Link to="/projects/foundit">
-                    <div className="project" >
+                    <div className="project" onClick={redirectToFound} >
                         <span ref={scrollTo} className="top-absolute"></span>
                         <ProjectCard founditApp={founditApp}/>
                     </div>
                 </Link>
                 <Link to="/projects/dashboard">
-                    <div className="project">
+                    <div className="project" onClick={redirectToDash} >
                         <ProjectCard founditApp={dashboardApp}/>
                     </div>
                 </Link>

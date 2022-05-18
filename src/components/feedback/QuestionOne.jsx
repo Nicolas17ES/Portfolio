@@ -2,7 +2,7 @@ import FeedbackForm from './FeedbackForm'
 import FeedbackStats from './FeedbackStats'
 import FeedbackList from './FeedbackList'
 import NextArrow from '../shared/NextArrow'
-import {Link} from 'react-router-dom'
+
 
 function QuestionOne() {
 

@@ -9,11 +9,12 @@ import FeedbackContext from '../../../context/feedback/FeedbackContext'
 function Dashboard() {
         const {scroll, dispatch} = useContext(FeedbackContext);
         const scrollTo = useRef();
-        console.log(window.location.href)
 
         // scroll till this point//
         useEffect(() => {
-            if(scroll === "dashboard"){
+            if(scroll === 'DASH_GALLERY' || scroll === false){
+                return null
+            } else if(scroll === "dashboard" || window.location.href === 'http://localhost:3000/projects/dashboard'){
                 scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center"})
                 dispatch({
                         type: 'SCROLL_VIEW',
@@ -21,10 +22,12 @@ function Dashboard() {
                     })
             }
 
-        }, [scroll])
+        }, [scroll, dispatch])
+        
 
     return (
         <div className="dashboard-page">
+            <span ref={scrollTo} className="top-absolute"></span>
             <TopDashboard/>
             <BottomDashboard/>
         </div>

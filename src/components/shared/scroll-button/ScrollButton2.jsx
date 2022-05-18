@@ -1,7 +1,7 @@
 import './ScrollButton2.css'
 function ScrollButton2() {
     return (
-        <section className="section05" class="demo">
+        <section className="section05 demo">
             <span className="scroll2"></span>
         </section>
     )

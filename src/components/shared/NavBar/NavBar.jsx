@@ -1,6 +1,6 @@
 
 import {Link} from 'react-router-dom'
-import {FaHamburger, FaBars, FaTimes, FaDog} from 'react-icons/fa'
+import {FaHamburger, FaTimes, FaDog} from 'react-icons/fa'
 import {BiDownArrow} from 'react-icons/bi'
 import {useRef} from 'react'
 import './NavBar.css'
@@ -13,8 +13,9 @@ import { isOwner } from '../../../context/feedback/FeedBackActions'
 
 
 function NavBar() {
-const {blurry, dispatch, showModal} = useContext(FeedbackContext);
+const {blurry, dispatch} = useContext(FeedbackContext);
 const {dispatchGames} = useContext(GamesContext);
+
 
 const navRef = useRef();
 const dropdown = useRef();
@@ -42,15 +43,6 @@ const reStartGame = () => {
     })
 }
 
-// toggle blurry on mouse enter dropdown
-
-// const toggleBlurry = () => {
-  
-//   dispatch({
-//       type: 'BLURRY_BACKGROUND',
-//       payload: !blurry,
-//     })
-// }
 
 //HIDE NAVBAR WHEN CLICKIN LINK//
 
@@ -102,6 +94,19 @@ const hideModal = () => {
 }
 
 // scroll to about component//
+  const redirectToHome = () => {
+    hideResponsiveNavBar();
+    reStartGame()
+      dispatch({
+                type: 'SCROLL_VIEW',
+                payload: 0
+            })
+      dispatch({
+                type: 'ANIMATION',
+                payload: true
+            })
+  }
+// scroll to about component//
   const redirectToAbout = () => {
     hideResponsiveNavBar();
     reStartGame()
@@ -119,7 +124,7 @@ const hideModal = () => {
   const redirectToSkills = () => {
     hideResponsiveNavBar();
     reStartGame()
-    console.log(window.location)
+   
     if(window.location.href === 'http://localhost:3000/home'){
         dispatch({
                   type: 'SCROLL_VIEW',
@@ -150,7 +155,6 @@ const hideModal = () => {
   const redirectToBasement = () => {
     hideResponsiveNavBar();
     reStartGame()
-    console.log(window.location)
     if(window.location.href === 'http://localhost:3000/home'){
         dispatch({
                   type: 'SCROLL_VIEW',
@@ -169,12 +173,6 @@ const hideModal = () => {
                   type: 'SCROLL_VIEW',
                   payload: "basement"
               })
-      //   setTimeout(() => {
-      //     dispatch({
-      //             type: 'SCROLL_VIEW',
-      //             payload: 2
-      //         })
-      // }, 330);
     }
   }
 
@@ -216,8 +214,8 @@ const hideModal = () => {
             </button>
               <div className="nav-links">
                   <div className="link-one" onClick={showDropdown}>          
-                      <Link className="link-nav home-link" to="/home" onClick={reStartGame}>Home <BiDownArrow className="dropdown-arrow"/></Link>
-                      <ul ref={dropdown} class="dropdown">
+                      <Link className="link-nav home-link" to="/home" onClick={redirectToHome}>Home <BiDownArrow className="dropdown-arrow"/></Link>
+                      <ul ref={dropdown} className="dropdown">
                         <li><Link to="/home" className="dropdown-links" onClick={redirectToAbout}>About</Link></li>
                         <li><Link to="/home" className="dropdown-links" onClick={redirectToSkills}>Skills</Link></li>
                         <li><Link to="/home" className="dropdown-links" onClick={redirectToBasement}>Basement</Link></li>

@@ -1,30 +1,29 @@
 import './LandingPage.css'
-import { useNavigate, Link } from "react-router-dom";
-import {useEffect} from 'react'
+
 import Pills from '../../components/shared/pills/Pills'
 
 
 function LandingPage() {
-    let navigate = useNavigate();
+    // let navigate = useNavigate();
 
     
-    const redirect = () => {
-        setTimeout(() => {
-            return navigate("/feedback");
-        }, 16300);
-    }
+    // const redirect = () => {
+    //     setTimeout(() => {
+    //         return navigate("/feedback");
+    //     }, 16300);
+    // }
 
-    useEffect(() => {
-        // redirect();
-    }, [])
+    // useEffect(() => {
+    //     redirect();
+    // }, [])
 
     return (
         <div className="landing-page">
-            <div class="mainLanding">
+            <div className="mainLanding">
                 <span className="letter-animation">N</span>
                 <span className="letter-animation">I</span>
                 <span className="letter-animation">C</span>
-                <span class="letter letter-animation"></span>
+                <span className="letter letter-animation"></span>
                 <span className="letter-animation">L</span>
                 <span className="letter-animation">A</span>
                 <span className="letter-animation">S</span>

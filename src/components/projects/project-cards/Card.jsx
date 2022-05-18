@@ -1,6 +1,5 @@
 import './Card.css'
-import {ReactComponent as Nodejs } from '../../assets/skills/node.svg'
-import {ReactComponent as Mysql } from '../../assets/skills/mysql.svg'
+
 import {AiFillPlusCircle} from 'react-icons/ai'
 
 function Card({founditApp}) {

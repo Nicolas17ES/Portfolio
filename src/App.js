@@ -1,8 +1,7 @@
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import {useLocation} from 'react-router-dom'
+
 import AboutPage from './pages/feedback/AboutPage'
 
-import AboutIconLink from './components/feedback/AboutLink'
 import NavBar from './components/shared/NavBar/NavBar'
 import Container from './components/shared/Container'
 

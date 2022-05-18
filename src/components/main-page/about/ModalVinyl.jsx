@@ -1,5 +1,4 @@
 import './Modal.css'
-import PropTypes from 'prop-types'
 import {useContext} from 'react'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import Timeline from './timeline/Timeline'
@@ -55,10 +54,5 @@ function ModalVinyl({data}) {
     )
 }
 
-// ModalVinyl.propTypes = {
-//     title: PropTypes.string,
-//     body: PropTypes.body,
-
-// }
 
 export default ModalVinyl

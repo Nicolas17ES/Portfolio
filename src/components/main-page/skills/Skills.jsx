@@ -9,7 +9,7 @@ import {useContext, useEffect, useRef} from 'react'
 
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import ScrollButton from '../../shared/scroll-button/ScrollButton2'
-import TrailLine from '../../shared/trail-line/TrailLine'
+
 
 function Skills() {
     const {scroll, dispatch, hasAnimated} = useContext(FeedbackContext);
@@ -37,7 +37,7 @@ function Skills() {
                 })
         }
 
-    }, [scroll])
+    }, [scroll, dispatch])
 
     if(hasAnimated === true){
         return (

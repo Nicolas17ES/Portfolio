@@ -1,4 +1,5 @@
-import {Link, useNavigate} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
+import { useContext } from 'react'
 
 import './TopDashboard.css'
 import Service from '../services/Service'
@@ -7,10 +8,20 @@ import ProjectTitle from '../../projectTitles/ProjectTitle'
 
 import {AiFillGithub} from 'react-icons/ai'
 import {FaBackward} from 'react-icons/fa'
-import {AiOutlineArrowDown} from 'react-icons/ai'
+import FeedbackContext from '../../../../context/feedback/FeedbackContext'
 
 
 function TopDashboard() {
+
+    const {dispatch} = useContext(FeedbackContext);
+
+    const scrollToGallery = () => {
+        dispatch({
+                type: 'SCROLL_VIEW',
+                payload: "DASH_GALLERY"
+            })
+    }
+
 
     const navigate = useNavigate();
 
@@ -53,7 +64,7 @@ function TopDashboard() {
             <ProjectTitle title={"DASHBRD"}/>
                 <div className="view-repo">
                     <button onClick={() => navigate(-1)} className="reposatory-button"><FaBackward size={25} className="repo-icon"/><span>GO BACK</span></button>
-                    <a className="reposatory-link" href="https://github.com/Nicolas17ES/Dashboard-react" target="_blank"><button className="reposatory-button"><AiFillGithub size={25} className="repo-icon"/><span>VIEW CODE</span></button></a>
+                    <a className="reposatory-link" href="https://github.com/Nicolas17ES/Dashboard-react" rel="noreferrer"  target="_blank"><button className="reposatory-button"><AiFillGithub size={25} className="repo-icon"/><span>VIEW CODE</span></button></a>
                 </div>
             <div className="block-dashboard">
                 <Service data={booking}/>
@@ -67,7 +78,7 @@ function TopDashboard() {
                 <Service data={news}/>
                 <TextBlock data={textThree}/>
             </div>
-            <button className="reposatory-button-gallery"><span>GALLERY</span></button>
+            <button className="reposatory-button-gallery" onClick={scrollToGallery}><span>GALLERY</span></button>
         </div>
     )
 }

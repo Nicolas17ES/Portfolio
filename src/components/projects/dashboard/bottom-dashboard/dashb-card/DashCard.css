@@ -24,6 +24,12 @@
     flex-direction: column;
 }
 
+.center-absolute{
+    display: absolute;
+    top: 230px;
+    
+}
+
 @media(max-width: 470px){
     .dash-cards-page{
         display: flex;

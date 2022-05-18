@@ -3,7 +3,7 @@ import './ScrollButton.css'
 function ScrollButton() {
     return (
          <div className="center-con">
-            <div class="round">
+            <div className="round">
                 <span className="button-lines"></span>
                 <span className="button-lines"></span>
                 <span className="button-lines"></span>

@@ -28,7 +28,7 @@ function Intro() {
                 <ProjectTitle title={"FOUNDIT"}/>
                 <div className="view-repo">
                     <button onClick={() => navigate(-1)} className="reposatory-button"><FaBackward size={25} className="repo-icon"/><span>GO BACK</span></button>
-                    <a className="reposatory-link" href="https://github.com/Nicolas17ES/AndroidApp" target="_blank"><button className="reposatory-button"><AiFillGithub size={25} className="repo-icon"/><span>VIEW CODE</span></button></a>
+                    <a className="reposatory-link" href="https://github.com/Nicolas17ES/AndroidApp" rel="noreferrer" target="_blank"><button className="reposatory-button"><AiFillGithub size={25} className="repo-icon"/><span>VIEW CODE</span></button></a>
                     <Link to={"/projects/dashboard"}><button className="reposatory-button"><FaForward size={25} className="repo-icon"/><span>NEXT WORK</span></button></Link>
                 </div>
             <div className="about-blocks">

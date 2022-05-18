@@ -2,14 +2,12 @@ import './About.css'
 import { ReactComponent as Vinyl }  from '../../assets/vinyl.svg'
 import { ReactComponent as Road }  from '../../assets/road.svg'
 import { ReactComponent as Laptop }  from '../../assets/laptop.svg'
-import {useRef, useContext, useEffect, useState} from 'react'
+import {useRef, useContext, useEffect} from 'react'
 import {AiFillPlusCircle} from 'react-icons/ai'
 import { useInView } from 'react-intersection-observer';
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import ModalVinyl from './ModalVinyl'
 import ScrollButton from '../../shared/scroll-button/ScrollButton2'
-import TrailLine from '../../shared/trail-line/TrailLine'
-
 
 
 
@@ -113,7 +111,7 @@ function About(props) {
                 })
         }
 
-    }, [scroll])
+    }, [scroll, dispatch])
 
 
           
