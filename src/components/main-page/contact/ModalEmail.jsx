@@ -4,7 +4,7 @@ import {useContext} from 'react'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 
 function ModalVinyl({title, body}) {
-    console.log(title)
+
 
     const {showModal, dispatch} = useContext(FeedbackContext);
 
@@ -36,7 +36,7 @@ function ModalVinyl({title, body}) {
                             {body}
                         </div>
                         <div onClick={closeModal} className="modal-footer">
-                            <buttton onClick={closeModal} className="close-modal">Close</buttton>
+                            <button onClick={closeModal} className="close-modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ function ModalVinyl({title, body}) {
 
 ModalVinyl.propTypes = {
     title: PropTypes.string,
-    body: PropTypes.body,
+    body: PropTypes.string,
 
 }
 

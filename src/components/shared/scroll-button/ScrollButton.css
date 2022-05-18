@@ -86,3 +86,24 @@
 .round:hover .button-lines:nth-child(4) {
     transform: rotate(-225deg);
 }
+
+@media(max-width: 850px){
+    .center-con{
+        bottom: -20px;
+    }
+
+    .round {
+        border: 1.4px solid #fff;
+        width: 35px;
+        height: 35px;
+    }
+    .button-lines{
+        z-index: 9;
+        height: 1.4px;
+        margin: 0px;
+        width: 10px;
+        background: #fff;
+        transition: 0.7s ease;
+    }
+
+}

@@ -2,6 +2,7 @@
     width: 100%;
     margin: 0px auto;
     height: 100vh;
+    min-height: 100%;
     
 }
 
@@ -158,13 +159,7 @@
     transition: 0.7s ease;
     transform: scale(1.1);      
 }
-/* .contact-button:hover p{
-    display: none;  
-}
-.contact-button:hover:before{
-    content: '';
-    margin-left: -5px; 
-} */
+
 
 .contact-button:hover .contact-icon-git{
     color: #171830;  

@@ -28,7 +28,6 @@ export const fetchFeedback = async () => {
 
     //Edit the item that has been set
     export const updateFeedback = async (id, updatedItem) => {
-        console.log(id)
         
         const response = await fetch(`http://localhost:3001/feedback/${id}`, {
             method: "PUT",
@@ -66,7 +65,7 @@ export const fetchLikes = async () => {
 //post likes//
 
 export const addLike = async (info) => {
-    console.log(info)
+
         const response = await fetch("http://localhost:3001/portfolio/likes", {
             method: "POST",
             headers: {

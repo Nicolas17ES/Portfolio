@@ -8,7 +8,7 @@ import SkillsTable from './SkillsTable'
 import {useContext, useEffect, useRef} from 'react'
 
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
-import ScrollButton from '../../shared/scroll-button/ScrollButton2'
+import ScrollButton from '../../shared/scroll-button/ScrollButton3'
 
 
 function Skills() {
@@ -69,7 +69,7 @@ function Skills() {
                         <div className="top-skill">
                             <h3 className="skills-title">SKILLS</h3>
                         </div>
-                        <span ref={scrollTo} className="center-absolute"></span>
+                        <span ref={scrollTo} className="center-absolute-skills"></span>
                         <div className="bottom-skill">
                             <p className="skills-text">Lorem ipsum dolor sit amet consectetur djwknd ti error incidunt ea fugiat unde, maiores, necessitatibus nemo velit hola casa coche perro comida animales zanahoria cucaracha hahah ole ole mas texto.</p>
                             <span className="skills-arrow"><Arrow className="arrow-svg"/></span>
@@ -77,7 +77,7 @@ function Skills() {
                         </div>
                     <SkillsTable/>
                     <div className="scrolling-test" onClick={executeScroll}> 
-                        <ScrollButton className="button-skills"/>  
+                        <ScrollButton/>  
                         
                     </div>
                     </>

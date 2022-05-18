@@ -1,6 +1,6 @@
 import './Play.css'
 import GamesContext from '../../../context/games/GamesContext'
-import {playRockGame, startRockGame, quitRockGame, playAgainRockGame} from '../../../context/games/GamesActions'
+import {playRockGame, startRockGame, quitRockGame} from '../../../context/games/GamesActions'
 import {useContext} from 'react'
 import {useNavigate} from 'react-router-dom'
 

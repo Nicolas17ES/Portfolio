@@ -1,5 +1,4 @@
 import Card from '../shared/Card'
-import Button from '../shared/Button'
 import PropTypes from 'prop-types'
 import {FaTimes, FaEdit} from 'react-icons/fa'
 import {FcLike} from 'react-icons/fc'
@@ -17,7 +16,6 @@ function FeedbackItem({item}) {
 
          async function getTheLikes() {
            const data = await fetchLikes();
-
                 dispatch({
                     type: 'GET_LIKES',
                     payload: data
@@ -26,8 +24,7 @@ function FeedbackItem({item}) {
         
         //get replies//
         async function getTheReplies() {
-           const data = await getReplies(item.feedback_id);
-
+           const data = await getReplies(item.feedback_id)
                 dispatch({
                     type: 'GET_REPLIES',
                     payload: data
@@ -37,13 +34,18 @@ function FeedbackItem({item}) {
         useEffect(() => {
            getTheLikes()
            getTheReplies()
+           // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [])
 
         //get likes for each feedback item//
-        const likePerItem = likes.filter((like) => like.feedback_id == item.feedback_id)
+        const likePerItem = likes.filter((like) => like.feedback_id === item.feedback_id)
+        
 
         //get reply per each feedback item//
-        const replyPerItem = replies.filter((reply) => reply.feedback_id == item.feedback_id)
+        const replyPerItem = replies.filter((reply) => reply.feedback_id === item.feedback_id)
+
+        
+
             
 
         //add a like to a feedback//
@@ -65,7 +67,7 @@ function FeedbackItem({item}) {
         async function deleteTheFeedback (id){
            const data = await deleteFeedback(item.feedback_id);
            if(data != null){
-                let payload = feedback.filter((item) => item.feedback_id != id)
+                let payload = feedback.filter((item) => item.feedback_id !== id)
                 dispatch({
                     type: 'GET_FEEDBACK',
                     payload: payload
@@ -120,7 +122,7 @@ function FeedbackItem({item}) {
             <div className="text-display">{item.text}</div>
             {/* replies */}
             <div className="replies">
-                {replyPerItem && replyPerItem.map((reply) => <div className="flex"><BsReply className="reply-icon" size={22}/><p>{reply.comment}</p></div>)}
+                {replyPerItem && replyPerItem.map((reply, index) => <div className="flex" key={index}><BsReply className="reply-icon" size={22}/><p>{reply.comment}</p></div>)}
             </div>
             {/* reply form */}
             {owner && (

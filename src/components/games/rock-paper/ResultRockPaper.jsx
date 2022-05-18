@@ -7,12 +7,11 @@ import  {ReactComponent as Rock } from '../../assets/rock2.svg'
 import {ReactComponent as Scissors } from '../../assets/scissors.svg'
 import {ReactComponent as Versus } from '../../assets/versus.svg'
 import GameTitle from '../game-title/GameTitle'
-import PLay from '../play-button/Play'
 import Play from '../play-button/Play'
 
 
 function ResultRockPaper() {
-    const {rockStatus, rockSelectedElement, rockDisplayResult , randomNumber, dispatchGames} = useContext(GamesContext);
+    const {rockSelectedElement, randomNumber, dispatchGames} = useContext(GamesContext);
 
     useEffect(() => {
         const number = generateRandomNumber();
@@ -22,7 +21,7 @@ function ResultRockPaper() {
             payload: number,
         })
     
-    }, [])
+    }, [dispatchGames])
 
 
     //USER SELECTED ELEMENT//
@@ -70,7 +69,7 @@ function ResultRockPaper() {
 
 
      const stylePlayAgain = {
-        'margin-top': '0px'
+        'marginTop': '0px'
     }
 
 

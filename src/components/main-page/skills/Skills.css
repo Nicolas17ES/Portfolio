@@ -4,7 +4,8 @@
     align-items: center;
     width: 100%;
     height: 80vh;
-    margin-top: 170px;
+    /* min-height: 100%; */
+    margin-top: 100px;
     position: relative;
 }
 
@@ -366,12 +367,18 @@
 /* WORK AROUND FOR SCROLL */
 
 .work-around-skills{
-    margin-top: -9vh;
+    margin-top: -19vh;
 }
 
 .center-absolute{
     position: absolute;
     top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.center-absolute-skills{
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -440,6 +447,9 @@
     .center-absolute{
         top: 40%;
     }
+    .center-absolute-skills{
+        top: 45%;
+    }
 }
 
 @media(max-width: 1020px){
@@ -475,7 +485,7 @@
 @media(max-width: 1000px){
     .skills-page{
         flex-direction: column;
-        margin-top: 250px;
+        margin-top: 100px;
     }
 
     /* left side */
@@ -494,7 +504,7 @@
 
     .skills-title{
         margin-top: 2vh;
-        font-size: 90px;
+        font-size: 80px;
     }
 
     /* BOTTOM TEXT AND ARROW */
@@ -574,11 +584,27 @@
     .skill16{
         display: none;
     }
+    .skills-text:after{
+        left: -5px;
+        bottom: -3px;
+        border-radius: 5px;
+        border-left: 4px solid #f57e7e;
+        border-bottom: 4px solid #f57e7e;
+    }
+    .skills-text:before{
+        right: -5px;
+        top: -3px;
+        border-radius: 5px;
+        border-top: 4px solid #a4fac3;
+        border-right: 4px solid #a4fac3;
+        
+    }
 }
 
 @media(max-width: 600px){
     .skills-page{
         height: 100%;
+        margin-top: 90px;
     }
     .center-absolute{
         top: 50%;
@@ -586,22 +612,26 @@
     .work-around-skills{
         margin-top: 35vh;
     }
+    .skills-right{
+        margin: 0px auto 20px auto;
+    }
 }
 @media(max-width: 500px){
+    
     .skills-title{
-        font-size: 70px;
-        margin-top: 12vh;
-        margin-bottom: 4vh;
+        font-size: 68px;
+        margin-top: -30px;
+        margin-bottom: 0;
     }
     .skills-text{
         width: 80%;
-        font-size: 11px;
+        font-size: 10px;
     }
     .skills-right{
         width: 90%;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        gap: 7px;
+        gap: 2px;
         grid-template-areas: 
         "one two three four"
         "five six seven eight"
@@ -610,17 +640,18 @@
     }
      .skill{
         width: 95%;
+        height: 80%;
     }
 
     .skill p{
-        margin-top: 0;
+        margin-bottom: 5px;
         font-size: 1.4vw;
     }
     .skill-icon{
-        width: 22px;
+        width: 20px;
     }
     .skill-stars{
-        width: 40px;
+        width: 35px;
     }
     .skill16{
         display: block;

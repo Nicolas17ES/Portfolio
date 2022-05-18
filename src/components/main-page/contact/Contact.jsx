@@ -21,7 +21,7 @@ function Contact() {
                 })
         }
 
-    }, [scroll])
+    }, [scroll, dispatch])
 
     const [toSend, setToSend] = useState({
         from_name: '',
@@ -48,7 +48,6 @@ function Contact() {
                 payload: false,
             })
             displayModalEmail();
-            console.log('SUCCESS!', response.status, response.text);
             setToSend({
                 from_name: '',
                 subject: '',
@@ -61,7 +60,7 @@ function Contact() {
                 type: "LOADING",
                 payload: false,
             })
-            alert("Error:" + err + ". " + "Please try again.")
+            alert(`Error: " + ${err} + ". " + "Please try again later.`)
         });
     };
 

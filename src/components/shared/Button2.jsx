@@ -5,7 +5,7 @@ function Button2({text, color}) {
    
     return (
         <div className="mt-8 flex justify-start">
-            <button type="button" class="btnSize">{text}</button>
+            <button type="button" className="btnSize">{text}</button>
         </div>
     )
 }

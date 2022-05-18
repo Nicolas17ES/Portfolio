@@ -10,16 +10,15 @@ import GamesContext from '../../context/games/GamesContext'
 
 function Paper() {
 
-    const {rockStatus, rockSelectedElement, rockDisplayResult} = useContext(GamesContext);
+    const {rockStatus} = useContext(GamesContext);
 
     const stylePlayOne = {
-        'margin-top': '160px'
+        'marginTop': '160px'
     }
     const stylePlayTwo = {
-        'margin-top': '20px'
+        'marginTop': '20px'
     }
 
-    console.log("status =  " + rockStatus + ' rockresult=' +  rockDisplayResult)
 
     const display = () => {
         if(rockStatus === null || rockStatus === 'QUIT'){

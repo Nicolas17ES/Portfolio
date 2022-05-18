@@ -159,7 +159,8 @@
     font-style: italic;
     text-decoration: underline;
     text-underline-offset: 2px;
-    margin-top: -60px;
+    margin-top: -100px;
+    margin-left: -300px;
 }
 
 .about-and-icos{
@@ -246,6 +247,9 @@
     margin-left: 0px;
     gap: 20px;
 }
+.lang-fram > section{
+    flex: 25%;
+}
 
 /* languages */
 
@@ -310,10 +314,21 @@
     fill: #F57E7E;
 }
 
+@media (max-width: 1500px){
+    .project-subtitle{
+        font-size: 15px;
+        margin-top: -40px;
+        margin-left: -100px;
+    }
+    .lang-fram > section{
+        flex: none;
+    }
+}
 @media (max-width: 1250px){
     .project-subtitle{
         font-size: 15px;
         margin-top: -40px;
+        margin-left: -100px;
     }
     .java{
         margin-bottom: 4.5vh;
@@ -338,6 +353,7 @@
     .project-subtitle{
         font-size: 14px;
         text-align: center;
+        margin-left: 0px;
     }
     .about-and-icos{
         align-items: center;
@@ -434,9 +450,9 @@
         gap: 0px 70px;
     }
     .project-top{
-        margin-top: 10px;
+        margin-top: 5px;
         width: 100px;
-        height: 60px;
+        height: 57px;
         border: none;
         color: #171830;
         background-color: white;
@@ -444,7 +460,7 @@
     }
     .project-icon{
         margin: 0px auto 0px auto;
-        width: 30px;
+        width: 26px;
     }
 
     .languages{
@@ -455,12 +471,12 @@
         margin-bottom: 10px;
     }
     .project-svg{
-        height: 50px;
+        height: 37px;
     }
     
 }
 
-@media (max-width: 674px){
+@media (max-width: 744px){
     .project-card{
         width: 90vw;
     }
@@ -470,7 +486,7 @@
         margin-top: -30px;
     }
     .lang-fram{
-        gap: 10px 50px;
+        gap: 10px 20px;
     }
     .project-about{
         text-align: center;
@@ -500,7 +516,7 @@
         margin-bottom: 10px;
     }
     .project-svg{
-        height: 50px;
+        height:40px;
     }
  
     
@@ -564,7 +580,7 @@
     }
 
     .project-svg{
-        height: 50px;
+        height: 40px;
     }
     .mysql-icon{
         margin-bottom: 10px;

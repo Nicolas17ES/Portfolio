@@ -2,9 +2,9 @@ import './ScrollButton3.css'
 
 function ScrollButton3() {
     return (
-        <div>
-            <div className="arrow-scroll"></div>
-        </div>
+       <section className="section05 ">
+            <span className="scroll3"></span>
+        </section>
     )
 }
 

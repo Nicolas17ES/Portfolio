@@ -22,7 +22,7 @@ function FeedbackList({questionNumber}) {
         }
         myFeedBack();
         
-    }, [])
+    }, [dispatch])
 
 
     if(!isLoading && (!feedback || feedback.length === 0)) {
@@ -30,7 +30,7 @@ function FeedbackList({questionNumber}) {
         return <div className="feedback-list"><p>No feedback yet</p></div>
     }
 
-    let validFeedback = feedback.filter((item) => item.questionNumber == questionNumber)
+    let validFeedback = feedback.filter((item) => item.questionNumber === questionNumber)
 
     
     return isLoading ? (
@@ -38,9 +38,9 @@ function FeedbackList({questionNumber}) {
     ) : (
         <div className="feedback-list">
             <AnimatePresence>
-            {validFeedback.map((item) => (
+            {validFeedback.map((item, index) => (
                 <motion.div 
-                key={item.id}
+                key={index}
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 exit={{opacity: 0}}
