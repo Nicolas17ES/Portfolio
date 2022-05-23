@@ -201,6 +201,8 @@ header {
   margin: 20px auto;
   position: relative;
   max-width: 768px;
+  box-shadow:  10px 6px rgba(0, 0, 0, 1);
+    border: 2px solid black;
 }
 
 .card.reverse {
@@ -212,10 +214,16 @@ header {
   font-size: 22px;
   font-weight: 600;
   text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(78, 84, 252, 0.3);
+  border-radius: 3px;
+  margin: auto;
+  padding: 5px 10px;
+  width: fit-content;
 }
 
 .text-display{
-  background-color: rgba(78, 84, 252, 0.3);
+  background-color: rgba(78, 84, 252, 0.2);
   width: fit-content;
   color: black;
   padding: 8px;
@@ -258,7 +266,7 @@ header {
 
 .rating li:hover,
 .num-display {
-  background: #ff6a95;
+  background: #f57e7e;
   color: #fff;
 }
 
@@ -267,7 +275,7 @@ header {
 }
 
 .input-radio:checked ~ label {
-  background: #ff6a95;
+  background: #f57e7e;
   color: #fff;
 }
 
@@ -296,7 +304,7 @@ header {
 }
 
 .replies p {
-  background-color: rgba(106, 255, 248, 0.33);
+  background-color: rgba(164, 250, 195, .5);
   width: fit-content;
   color: black;
   padding: 5px;
@@ -308,7 +316,7 @@ header {
   margin-top: 6px;
   margin-right: 4px;
   transform: rotate(180deg);
-  color: rgb(106, 255, 248);
+  color: #a4fac3;
 }
 
 .input-group2 {
@@ -358,6 +366,7 @@ header {
   cursor: pointer;
   background: none;
   border: none;
+  color: #f57e7e;
 }
 
 .edit {
@@ -370,6 +379,7 @@ header {
   right: 20px;
   cursor: pointer;
   transition: all .4s ease-in-out;
+  color: #f57e7e;
 }
 
 .like:hover{

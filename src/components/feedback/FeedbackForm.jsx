@@ -61,7 +61,6 @@ function FeedbackForm({data}) {
             if(feedbackEdit.edit === true){
 
                 await updateFeedback(feedbackEdit.item.feedback_id, newFeedback)
-                console.log(feedbackEdit.item.feedback_id)
                 
                 let payload = feedback.map((item) => (item.feedback_id === feedbackEdit.item.feedback_id ? {...item, ...newFeedback} : item))
                 
@@ -91,9 +90,9 @@ function FeedbackForm({data}) {
     }
     return (
         <section className="mt-28 question">
-            <Card>
+            <Card >
             <form onSubmit={handleSubmit}>
-                <h2>{formInfo.title}</h2>
+                <h2 className="form-title">{formInfo.title}</h2>
                 <RatingSelect select={(rating) => setRating(rating)}/>
                 <div className="input-group">
                     <input className="input-feedback" onChange={handleTextChange} value={text} type="text" placeholder="Write your review" name="" id=""/>

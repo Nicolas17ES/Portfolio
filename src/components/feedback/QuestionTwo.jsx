@@ -6,7 +6,7 @@ import NextArrow from '../shared/NextArrow'
 function QuestionTwo() {
 
     const data = {
-        formTitle: "Please rate my Android App and help me improve it",
+        formTitle: "Rate My Android App And Help Me Improve It",
         questionNumber: 2,
         dataLink: "/projects/foundit"
     }

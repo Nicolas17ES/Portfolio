@@ -26,82 +26,66 @@ function SkillsTable() {
         <div className="skills-right">
                 <div className="skill skill1">
                     <Reactsvg className="skill-icon"/>
-                    <p>REACT</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill2">
                     <Vue className="skill-icon"/>
-                    <p>VUE</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill3">
                     <Android className="skill-icon"/>
-                    <p>ANDROID STUDIO</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill4">
                     <Laravel className="skill-icon"/>
-                    <p>LARAVEL</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill5">
                     <Javascript className="skill-icon"/>
-                    <p>JAVASCRIPT</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={21}/><BsStarHalf className="half-star" size={18}/></span>
                 </div>
                 <div className="skill skill6">
                     <Java className="skill-icon"/>
-                    <p>JAVA</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill7">
                     <Php className="skill-icon"/>
-                    <p>PHP</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill8">
                     <Node className="skill-icon"/>
-                    <p>NODEJS</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill9">
                     <Html className="skill-icon"/>
-                    <p>HTML</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill10">
                     <Css className="skill-icon"/>
-                    <p>CSS</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill11">
                     <Bootstrap className="skill-icon"/>
-                    <p>BOOTSTRAP</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill12">
                     <Tailwind className="skill-icon"/>
-                    <p>TAILWIND</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill13">
                     <Mysql className="skill-icon"/>
-                    <p>MYSQL</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill14">
                     <Mongodb className="skill-icon"/>
-                    <p>MONGODB</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill15">
                     <Figma className="skill-icon"/>
-                    <p>FIGMA</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
                 </div>
                 <div className="skill skill16">
                     <Fire className="skill-icon"/>
-                    <p>ATTITUDE</p>
                     <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/></span>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 .project-about-main{
-    text-align: left;
+    text-align: center; 
+    text-justify: inter-word;
     font-size: 13px;
     padding: 25px 40px;
     border: 6px solid #131327;
@@ -63,13 +64,10 @@
       font-size: 12.5px;
   }
 }
-@media (max-width: 760px){
-    .project-about-main{
-      font-size: 11px;
-  }
-}
+
+
 @media (max-width: 450px){
     .project-about-main{
-      font-size: 10px;
+      font-size: 11px;
   }
 }

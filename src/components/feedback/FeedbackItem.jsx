@@ -110,12 +110,12 @@ function FeedbackItem({item}) {
 
 
     return (
-        <Card>
+        <Card className="item-card">
             <div className="num-display">{item.rating}</div>
             {/* buttons */}
-            <button onClick={() => deleteTheFeedback(item.feedback_id)} className="close"><FaTimes color="purple"/></button>
-            <button onClick={editFeedback} className="edit"><FaEdit color="purple"/></button>
-            <button onClick={addALike} className="like"><FcLike color="purple"/></button>
+            <button onClick={() => deleteTheFeedback(item.feedback_id)} className="close"><FaTimes color="#f57e7e"/></button>
+            <button onClick={editFeedback} className="edit"><FaEdit color="#f57e7e"/></button>
+            <button onClick={addALike} className="like"><FcLike/></button>
             {/* likes */}
             <p className="likesCount">{likePerItem.length}</p>
             {/* main text */}

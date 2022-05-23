@@ -98,6 +98,9 @@ function Contact() {
                         <p className="contact-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id facilis laudantium nesciunt praesentium eius quidem modi ist hahah hola pedro yuguu.</p>
                         <ContactSvg className="contact-svg"/>
                     </div>
+                    <div className="contact-hide">
+                        <h3>Let's Work Together!</h3>
+                    </div>
                     <div className="contact-right">
                         <form className="contact-form" onSubmit={onSubmit}>
                             <div className="group">      

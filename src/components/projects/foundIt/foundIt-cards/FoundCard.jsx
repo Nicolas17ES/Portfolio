@@ -47,6 +47,7 @@ import { Carousel } from 'react-responsive-carousel';
 function FoundCard() {
     return (
         <div className="found-cards-page">
+            <button className="gallery-foundit"><span>GALLERY</span></button>
             <Carousel 
                 className="carousel" 
                 showArrows={true} 

@@ -4,14 +4,13 @@ import FeedbackContext from '../../context/feedback/FeedbackContext'
 
 function RatingSelect({ select }) {
   const [selected, setSelected] = useState(10)
-  const {feedbackEdit, scroll, dispatch} = useContext(FeedbackContext);
+  const {scroll, dispatch} = useContext(FeedbackContext);
   const scrollTo = useRef();
+  
 
-
-
-  useEffect(() => {
-    setSelected(feedbackEdit.item.rating)
-  }, [feedbackEdit])
+  // useEffect(() => {
+  //   setSelected(feedbackEdit.item.rating)
+  // }, [feedbackEdit])
 
    useEffect(() => {
         if(scroll === "feedback"){
@@ -22,7 +21,7 @@ function RatingSelect({ select }) {
                 })
         }
 
-    }, [scroll])
+    }, [scroll, dispatch])
 
 
   const handleChange = (e) => {

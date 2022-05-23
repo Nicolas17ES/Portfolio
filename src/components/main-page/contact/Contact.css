@@ -14,7 +14,8 @@
     border-radius: 10px;
     display: flex;
     margin: auto;
-    background-color: #171830;
+    box-shadow:  10px 6px rgba(0, 0, 0, 1);
+    border: 2px solid black;
 }
 
 /* LEFT SIDE */
@@ -30,7 +31,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(250, 235, 208);
+    background-color: rgb(252, 242, 224);
+}
+.contact-hide{
+    display: none;
 }
 .contact-title{
     color: #171830;
@@ -61,7 +65,7 @@
     padding: 70px 30px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: rgb(156, 202, 253);
+    background-color: #232447;
 }
 
 /* form */
@@ -86,7 +90,7 @@
   width:300px;
   border:none;
   color:#171830; 
-  background-color: rgb(156, 202, 253);
+  background-color: #232447;
   border-bottom:1px solid rgb(250, 235, 208);
 }
 .input-contact:focus{ 
@@ -208,12 +212,28 @@
     .form-border{
         flex-direction: column;
         margin: auto;
+        box-shadow: none;
+        border: none;
     }
 
     /* LEFT SIDE */
-    .contact-left{
+    /* .contact-left{
         width: 80%;
         border-radius: 10px;
+        box-shadow:  10px 8px rgba(252, 242, 224, .6);
+        border: 2px solid rgb(252, 242, 224);
+    } */
+    .contact-left{
+       display: none;
+    }
+
+    .contact-hide{
+        display: block;
+        color: rgb(250, 235, 208);
+        text-align: center;
+        font-size: 38px;
+        font-weight: 800;
+        white-space: nowrap;
     }
     .contact-title{
         font-size: 4vw;
@@ -232,6 +252,8 @@
         width: 80%;
         margin: 40px auto;
         border-radius: 10px;
+        box-shadow:  10px 8px rgba(0, 0, 0, 1);
+        border: 2px solid black;
     }
 }
 
@@ -241,6 +263,9 @@
     }
     .contact-right{
         width: 100%;
+    }
+    .contact-hide{
+        font-size: 28px;
     }
     .contact-title{
         font-size: 3.8vw;
@@ -283,6 +308,12 @@
     .contact-left{
         width: 100%;
         margin-top: 60px;
+    }
+
+    .contact-hide{
+        font-size: 22px;
+        margin-top: 60px;
+        font-weight: 600;
     }
     .contact-right{
         width: 100%;

@@ -64,7 +64,10 @@
     z-index: 99;
     cursor: pointer;
     animation: .8s fadeIn ease-in forwards .6s;
-
+    transition: .6s;
+}
+.box3:hover{
+    transform: scale(1.05);
 }
 /* .modal-about-do{
     z-index: 999;

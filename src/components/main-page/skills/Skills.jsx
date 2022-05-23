@@ -2,8 +2,6 @@ import React from 'react'
 import { useInView } from 'react-intersection-observer';
 import './Skills.css'
 
-import {ReactComponent as Arrow } from '../../assets/skills/arrow.svg'
-
 import SkillsTable from './SkillsTable'
 import {useContext, useEffect, useRef} from 'react'
 
@@ -45,12 +43,12 @@ function Skills() {
                 <>
                 <div className="skills-left">
                     <div className="top-skill">
-                        <h3 className="skills-title">SKILLS</h3>
+                        <h3 className="skills-title">MY SKILLS</h3>
                     </div>
                     <span ref={scrollTo} className="center-absolute"></span>
                     <div className="bottom-skill">
                         <p className="skills-text">Lorem ipsum dolor sit amet consectetur djwknd ti error incidunt ea fugiat unde, maiores, necessitatibus nemo velit hola casa coche perro comida animales zanahoria cucaracha hahah ole ole mas texto.</p>
-                        <span className="skills-arrow"><Arrow className="arrow-svg"/></span>
+                        {/* <span className="skills-arrow"><Arrow className="arrow-svg"/></span> */}
                     </div>
                 </div>
                 <SkillsTable/>
@@ -67,14 +65,14 @@ function Skills() {
                     <>
                     <div className="skills-left">
                         <div className="top-skill">
-                            <h3 className="skills-title">SKILLS</h3>
+                            <h3 className="skills-title">MY SKILLS</h3>
                         </div>
                         <span ref={scrollTo} className="center-absolute-skills"></span>
                         <div className="bottom-skill">
                             <p className="skills-text">Lorem ipsum dolor sit amet consectetur djwknd ti error incidunt ea fugiat unde, maiores, necessitatibus nemo velit hola casa coche perro comida animales zanahoria cucaracha hahah ole ole mas texto.</p>
-                            <span className="skills-arrow"><Arrow className="arrow-svg"/></span>
+                            {/* <span className="skills-arrow"><Arrow className="arrow-svg"/></span> */}
                         </div>
-                        </div>
+                    </div>
                     <SkillsTable/>
                     <div className="scrolling-test" onClick={executeScroll}> 
                         <ScrollButton/>  
