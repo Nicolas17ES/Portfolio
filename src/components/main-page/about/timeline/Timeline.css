@@ -18,14 +18,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: 0 auto;
     height: 100%;
     text-align: left;
 }
 
 .rb-container {
-  width: 60%;
-  margin: auto;
+  width: 80%;
+  margin: 0 auto;
   position: relative;
   font-size: .6rem;
 }
@@ -59,11 +59,19 @@
   background: #a4fac3;
   height: 25px;
   width: 25px;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
 .rb-container ul.rb li:hover::before {
   border-color: #171830;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
@@ -78,22 +86,22 @@ ul.rb li .timestamp {
   color: #fff;
 }
 
-@media(max-width: 800px){
+@media(max-width: 900px){
   .rb-container {
-    width: 85%;
+    width: 95%;
   }
   ul.rb li .timestamp {
-    font-size: .7rem;
+    font-size: .6rem;
   }
 }
 @media(max-width: 500px){
   rb-container {
-    width: 65%;
-    font-size: .5rem;
+    width: 75%;
+    font-size: .45rem;
   }
   .rb-container ul.rb li {
     margin-left: 1.3em;
-    height: 125px;
+    height: 140px;
     border-left: 2px dashed #fff;
     padding: 0 0 0px 30px;
   }

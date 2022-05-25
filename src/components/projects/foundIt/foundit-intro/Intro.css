@@ -29,6 +29,11 @@
     height: 62px;
     padding: 7px;
     box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, .9);
+    -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
    
 }
 
@@ -45,7 +50,6 @@
 .reposatory-button:hover{
     color: #171830;
     background-color: white;
-    transition: 0.7s ease;
     transform: scale(1.05);      
 }
 .reposatory-button:hover span{
@@ -66,16 +70,18 @@
     justify-content: space-between;
     gap: 30px;
     padding: 1px;
+    margin-top: 40px;
 }
 
 .block-left{
-    height: 330px;
+    height: 250px;
     width: 40%;
 }
 
 .block-1{
     width: 100%;
     height: 100%;
+    text-align: left;
 }
 
 .block-right{
@@ -84,12 +90,13 @@
     justify-content: center;
     flex-direction: column;
     width: 60%;
-    height: 330px;
+    height: 250px;
     gap: 30px;
 }
 .block-2{
     width: 100%;
     height: 40%;
+    padding: 0;
 }
 .block-3{
     width: 100%;

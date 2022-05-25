@@ -95,7 +95,7 @@ function Contact() {
                 <section className="form-border">
                     <div className="contact-left">
                         <h3 className="contact-title">Let's Work Together!</h3>
-                        <p className="contact-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id facilis laudantium nesciunt praesentium eius quidem modi ist hahah hola pedro yuguu.</p>
+                        <p className="contact-text">I am always open for any kind of collaboration or work opportunity. If you liked what you have seen just drop me a line and I will get back to you in the next 24h!</p>
                         <ContactSvg className="contact-svg"/>
                     </div>
                     <div className="contact-hide">

@@ -41,7 +41,11 @@ nav{
     text-decoration: none;
     padding: 10px;
     border-radius: 50%;
-    transition: 0.7s ease;
+    -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
     background-color: #171830;
 }
 
@@ -57,10 +61,14 @@ nav{
     cursor: pointer;
     color: white;
     display: none;
+    -webkit-transition: all 1000ms ease-out;
+    -moz-transition: all 1000ms ease-out;
+    -ms-transition: all 1000ms ease-out;
+    -o-transition: all 1000ms ease-out;
+    transition: all 1000ms ease-out;
 }
 
 .logo:hover{
-    transition: 1s ease-out;
     transform: rotate(1turn);
 }
 header .nav-btn{
@@ -126,7 +134,11 @@ header .nav-btn:hover{
 .dropdown li .dropdown-links:hover {
     padding-left: 10px;
     border-left: 4px solid #a4fac3;
-    transition: all 0.3s ease-in;
+     -webkit-transition: all 300ms ease-in;
+    -moz-transition: all 300ms ease-in;
+    -ms-transition: all 300ms ease-in;
+    -o-transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
     color: wheat;
 }
 
@@ -140,7 +152,11 @@ header .nav-btn:hover{
 
     .logo{
         margin-left: 11vw;
-        transition: 1s ease-out;
+        -webkit-transition: all 1000ms ease-out;
+        -moz-transition: all 1000ms ease-out;
+        -ms-transition: all 1000ms ease-out;
+        -o-transition: all 1000ms ease-out;
+        transition: all 1000ms ease-out;
         transform: rotate(1turn); 
         position: fixed; 
         display: block;
@@ -158,7 +174,11 @@ header .nav-btn:hover{
         padding: 40px 0 0 0;
         background-color: #171830;
         border-radius: 0 0 35% 35%;
-        transition: 0.8s ease-in-out;
+        -webkit-transition: all 800ms ease-in-out;
+        -moz-transition: all 800ms ease-in-out;
+        -ms-transition: all 800ms ease-in-out;
+        -o-transition: all 800ms ease-in-out;
+        transition: all 800ms ease-in-out;
         transform: translateY(-100vh);
         border-bottom: 3px solid white;
         /* -webkit-transform: translateZ(0); */

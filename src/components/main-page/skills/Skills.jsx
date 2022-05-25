@@ -1,6 +1,8 @@
+import './Skills.css'
+
 import React from 'react'
 import { useInView } from 'react-intersection-observer';
-import './Skills.css'
+import {motion, useAnimation} from 'framer-motion'
 
 import SkillsTable from './SkillsTable'
 import {useContext, useEffect, useRef} from 'react'
@@ -14,9 +16,27 @@ function Skills() {
     const scrollTo = useRef();
 
     const [reference, inView] = useInView({
-        threshold: 0,
-        triggerOnce: true,
+        threshold: 0.2,
     })
+    const animation = useAnimation();
+
+    useEffect(() => {
+        if(inView){
+            animation.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring',
+                    duration: 1.5,
+                    delay: 0.1,
+                    
+                }
+            })
+        } else if (!inView){
+            animation.start({ opacity: 0})
+        }
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [inView]);
+
       // scroll to next component//
     const executeScroll = () => {
         dispatch({
@@ -45,9 +65,9 @@ function Skills() {
                     <div className="top-skill">
                         <h3 className="skills-title">MY SKILLS</h3>
                     </div>
-                    <span ref={scrollTo} className="center-absolute"></span>
+                    <span ref={scrollTo} className="center-absolute-skills"></span>
                     <div className="bottom-skill">
-                        <p className="skills-text">Lorem ipsum dolor sit amet consectetur djwknd ti error incidunt ea fugiat unde, maiores, necessitatibus nemo velit hola casa coche perro comida animales zanahoria cucaracha hahah ole ole mas texto.</p>
+                        <p className="skills-text">Throughout the last two years I acquired a series of skills that helped me become the Developer I am today. Some of those skills were self-taught and others were learned during my 6 month journey at the Coding Academy at Epitech University.</p>
                         {/* <span className="skills-arrow"><Arrow className="arrow-svg"/></span> */}
                     </div>
                 </div>
@@ -60,17 +80,15 @@ function Skills() {
         )
     } else {
         return (
-            <div ref={reference} className="skills-page" id="skillsId">
-                {inView ? (
-                    <>
+            <div ref={reference} >
+                <motion.div animate={animation} className="skills-page" id="skillsId">
                     <div className="skills-left">
                         <div className="top-skill">
                             <h3 className="skills-title">MY SKILLS</h3>
                         </div>
                         <span ref={scrollTo} className="center-absolute-skills"></span>
                         <div className="bottom-skill">
-                            <p className="skills-text">Lorem ipsum dolor sit amet consectetur djwknd ti error incidunt ea fugiat unde, maiores, necessitatibus nemo velit hola casa coche perro comida animales zanahoria cucaracha hahah ole ole mas texto.</p>
-                            {/* <span className="skills-arrow"><Arrow className="arrow-svg"/></span> */}
+                            <p className="skills-text">Throughout the last two years I acquired a series of skills that helped me become the Developer I am today. Some of those skills were self-taught and others were learned during my 6 month journey at the Coding Academy at Epitech University.</p>
                         </div>
                     </div>
                     <SkillsTable/>
@@ -78,13 +96,7 @@ function Skills() {
                         <ScrollButton/>  
                         
                     </div>
-                    </>
-                ): (
-                
-                    <div ref={scrollTo} className="work-around-skills"></div>
-                    
-            )}
-                
+                </motion.div>
             </div>
         )
     }

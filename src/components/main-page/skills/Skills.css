@@ -5,7 +5,7 @@
     width: 88%;
     height: 80vh;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 20px;
     position: relative;
     gap: 60px;
 }
@@ -42,7 +42,11 @@
     visibility: hidden;
     cursor: pointer;
     border-radius: 50%;
-    transition: transform .6s;
+    -webkit-transition: all 600ms;
+    -moz-transition: all 600ms;
+    -ms-transition: all 600ms;
+    -o-transition: all 600ms;
+    transition: all 600ms;
     box-shadow:  4px 4px rgba(0, 0, 0, 1);
     border: 2px solid black;
 }
@@ -69,7 +73,7 @@
 /* skill stars only shown on hover */
 .skill-stars{
     display: none;
-    width: 80px;
+    width: 65px;
 }
 .half-star{
     margin-top: 1px;
@@ -260,9 +264,9 @@
     letter-spacing: 6px;
     margin: 0px auto;
     position: relative;
-    visibility: hidden;
+    /* visibility: hidden;
     opacity: 0;
-    animation: 2s appearElement ease forwards;
+    animation: 2s appearElement ease forwards; */
     text-shadow: 4px 4px rgba(0, 0, 0, .6);   
 }
 
@@ -274,7 +278,11 @@
     top: 100px;
     background: rgba(255, 255, 255, 1);
     border-radius: 10px;
-    transition: all .6s;
+   -webkit-transition: all 600ms;
+    -moz-transition: all 600ms;
+    -ms-transition: all 600ms;
+    -o-transition: all 600ms;
+    transition: all 600ms;
     box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
 }
 
@@ -294,23 +302,24 @@
 .skills-text{
     width: 100%;
     text-align: justify;
-    word-break: break-all;
+    
     font-size: 1vw;
     letter-spacing: 2px;
-    height: fit-content;
+    height: 150px;
     padding: 20px;
-    visibility: hidden;
     margin: 0px auto;
-    opacity: 0;
-    animation: 2s appearElement ease forwards .3s;
+    /* opacity: 0;
+    visibility: hidden;
+    animation: 2s appearElement ease forwards .3s; */
     box-shadow:  10px 10px rgba(0, 0, 0, 1);
     border: 2px solid black;
     background-color: #232447;
     border-radius: 10px;
+    
 }
 
 /* animation appear */
-@keyframes appearElement{
+/* @keyframes appearElement{
     0%{
         opacity: 0;
         visibility: hidden; 
@@ -319,7 +328,7 @@
         opacity: 1;
         visibility: visible;
     }
-}
+} */
 
 /* WORK AROUND FOR SCROLL */
 
@@ -367,7 +376,7 @@
         width: 30px;
     }
     .skill-stars{
-        width: 70px;
+        width: 65px;
     }
     .center-absolute{
         top: 45%;
@@ -379,7 +388,7 @@
 
 @media(max-width: 1020px){
     .skill-stars{
-        width: 70px;
+        width: 65px;
     }
     
 
@@ -392,7 +401,7 @@
 @media(max-width: 1000px){
     .skills-page{
         flex-direction: column;
-        margin-top: 60px;
+        margin-top: 10px;
         gap: 0px;
         width: 70%;
     }
@@ -433,6 +442,8 @@
         width: 90%;
         font-size: 11px;
         margin-top: -67px;
+        height: 140px;
+        max-height: 190px;
     }
 
     /* end left side */
@@ -461,7 +472,10 @@
         width: 25px;
     }
      .center-absolute-skills{
-        top: 48%;
+        top: 50%;
+    }
+    .skill-stars{
+        width: 55px;
     }
 
     /* end right side */
@@ -481,6 +495,10 @@
         width: 62px;
         height: 62px;
     }
+    .skills-text{
+        height: 160px;
+        max-height: 180px;
+    }
 
      .skill-icon{
         width: 22px;
@@ -489,17 +507,18 @@
 
 @media(max-width: 600px){
     .skills-page{
-        height: 100%;
+        height: 85vh;
         margin-top: 30px;
     }
     .center-absolute{
         top: 50%;
     }
      .skills-text{
-        width: 90%;
-        font-size: 10px;
+        width: 93%;
+        font-size: 9px;
         margin-top: -60px;
         padding: 17px;
+        height: 150px;
     }
     .work-around-skills{
         margin-top: 35vh;
@@ -521,8 +540,11 @@
         top: 72px;
     }
     .skills-text{
-        width: 80%;
-        font-size: 10px;
+        width: 95%;
+        font-size: 9px;
+        height: 125px;
+      
+        
     }
 
      .skill{
@@ -548,8 +570,11 @@
         top: 56px;
     }
     .skills-text{
-        width: 80%;
-        font-size: 9px;
+        width: 96%;
+        font-size: 8px;
+        height: 135px;
+        max-height: 170px;
+
     }
 
      .skill{

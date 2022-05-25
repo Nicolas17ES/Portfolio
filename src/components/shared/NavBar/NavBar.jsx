@@ -214,11 +214,11 @@ const hideModal = () => {
             </button>
               <div className="nav-links">
                   <div className="link-one" onClick={showDropdown}>          
-                      <Link className="link-nav home-link" to="/home" onClick={redirectToHome}>Home <BiDownArrow className="dropdown-arrow"/></Link>
+                      <Link className="link-nav home-link" to="/" onClick={redirectToHome}>Home <BiDownArrow className="dropdown-arrow"/></Link>
                       <ul ref={dropdown} className="dropdown">
-                        <li><Link to="/home" className="dropdown-links" onClick={redirectToAbout}>About</Link></li>
-                        <li><Link to="/home" className="dropdown-links" onClick={redirectToSkills}>Skills</Link></li>
-                        <li><Link to="/home" className="dropdown-links" onClick={redirectToBasement}>Basement</Link></li>
+                        <li><Link to="/" className="dropdown-links" onClick={redirectToAbout}>About</Link></li>
+                        <li><Link to="/" className="dropdown-links" onClick={redirectToSkills}>Skills</Link></li>
+                        <li><Link to="/" className="dropdown-links" onClick={redirectToBasement}>Basement</Link></li>
                       </ul>
                   </div>
                   <div className="link-two">

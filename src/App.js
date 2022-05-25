@@ -9,7 +9,6 @@ import {FeedbackProvider} from './context/feedback/FeedbackContext'
 import {GamesProvider} from './context/games/GamesContext'
 import Feedback from "./pages/feedback/Feedback"
 import NotFound from './pages/NotFound'
-import LandingPage from './pages/main/LandingPage'
 import Main from './pages/main/MainPage'
 import Projects from './pages/projects/Projects'
 import FoundIt from './pages/projects/foundit/FoundIt'
@@ -43,8 +42,7 @@ function App() {
                             
                                 <Route path="/about" element={<AboutPage/>}/>
                                 <Route path='/*' element={<NotFound/>}/>
-                                <Route path='/'  element={<LandingPage/>}/>
-                                <Route path='/home'  element={<Main/>}/>
+                                <Route path='/'  element={<Main/>}/>
                                 <Route path='/rock'  element={<PaperScissors/>}/>
                                 <Route path='/contact'  element={<Contact/>}/>
                                 <Route path='/projects'  element={<Projects/>}/>

@@ -48,13 +48,13 @@ function TopDashboard() {
     // text for each block//
 
     const textOne = {
-        text: "La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone y envíenos una solicitud de extracción (pull request).",
+        text: "As you will see I created a series of gadgets that users will be able to use upon registration such as a Flight Search Engine, a Weather and News finder and an integration of Google Maps so users can find locations of their own interest.",
     }
     const textTwo = {
-        text: "La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone  y envíenos una solicitud de extracción (pull request).",
+        text: "More gadgets are meant to be added before deployment. So it is a work in progress. Users that want to save any available gadgets in their profile for later use will have to be previously registred and logged in so their data can be saved.",
     }
     const textThree = {
-        text: "La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone y envíenos una solicitud de extracción (pull request).",
+        text: "For this project besides stat management I also wanted to test how Google Authentication works. Users can then register through their Google account or just by filling in the resitration form.",
     }
     // end text for each block//
 

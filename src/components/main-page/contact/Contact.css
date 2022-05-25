@@ -99,16 +99,18 @@
 
 /* LABEL ======================================= */
 .label-contact{
-  color:rgb(250, 235, 208); 
-  font-size:16px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left: 0;
-  top: -10px;
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
+    color:rgb(250, 235, 208); 
+    font-size:16px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left: 0;
+    top: -10px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 /* active state */
@@ -126,15 +128,17 @@
 }
 
 .bar:before, .bar:after 	{
-  content:'';
-  height:3px; 
-  width:0;
-  bottom:-1px; 
-  position:absolute;
-  background:#171830; 
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
+    content:'';
+    height:3px; 
+    width:0;
+    bottom:-1px; 
+    position:absolute;
+    background:#171830; 
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 .bar:before {
   left:50%;
@@ -188,9 +192,13 @@
     border-radius: 5px;
     border: 1px solid rgb(250, 235, 208);
     color:  rgb(250, 235, 208);
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
 }
 .contact-submit:hover{
-    transition: 0.7s ease;
     transform: scale(1.1);
     background: rgb(250, 235, 208);
     color:  #171830;

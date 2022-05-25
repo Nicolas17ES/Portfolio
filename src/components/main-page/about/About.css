@@ -1,6 +1,6 @@
 .about-page{
     width: 100%;
-    margin: 30px auto 0 auto;
+    margin: 80px auto 0 auto;
     padding: 10px 0px 50px 0;
     position: relative;
     min-height: 100%;
@@ -42,72 +42,72 @@
 .box1{
     grid-area: uno;
     border: 2px solid white;
-    visibility: hidden;
+    /* visibility: hidden; */
     white-space: nowrap;
-    animation: .8s fadeIn ease-in forwards .3s;
+    /* animation: .8s fadeIn ease-in forwards .3s; */
 }
 .box2{
     grid-area: dos;
     background-color: #a4fac3;
-    visibility: hidden;
-    animation: .8s fadeIn ease-in forwards .1s;
-
+    /* visibility: hidden; */
+    /* animation: .8s fadeIn ease-in forwards .1s; */
 }
 .box3{
     grid-area: tres;
     position: relative;
     font-weight: 400;
-    font-size: 1.1vw; 
+    font-size: 1vw; 
     letter-spacing: 3px;
     border: 2px solid white;
-    visibility: hidden;
+    /* visibility: hidden; */
     z-index: 99;
     cursor: pointer;
-    animation: .8s fadeIn ease-in forwards .6s;
-    transition: .6s;
+    /* animation: .8s fadeIn ease-in forwards .6s; */
 }
-.box3:hover{
+/* .box3:hover{
     transform: scale(1.05);
-}
+} */
 /* .modal-about-do{
     z-index: 999;
 } */
 .box4{
     grid-area: cuatro;
     border: 2px solid white;
-    visibility: hidden;
     white-space: nowrap;
-    animation: .8s fadeIn ease-in forwards .3s;
-
+    /* visibility: hidden;
+    animation: .8s fadeIn ease-in forwards .3s; */
 }
 .box5{
     grid-area: cinco;
     background-color: #f57e7e;
-    visibility: hidden;
-    animation: .8s fadeIn ease-in forwards;
+    /* visibility: hidden;
+    animation: .8s fadeIn ease-in forwards; */
 
 }
 .box6{
     position: relative;
     grid-area: seis;
     font-weight: 400;
-    font-size: 1.1vw; 
+    font-size: 1vw; 
     letter-spacing: 3px;
     border: 2px solid white;
-    visibility: hidden;
     z-index: 99;
     cursor: pointer;
-    animation: .8s fadeIn ease-in forwards .6s;
-
+    /* visibility: hidden;
+    animation: .8s fadeIn ease-in forwards .6s; */
 }
+
+/* .box6:hover{
+    transform: scale(1.05);
+} */
 
 
 .box7{
     grid-area: siete;
     border: 2px solid white;
-    visibility: hidden;
     white-space: nowrap;
-    animation: .8s fadeIn ease-in forwards .3s;
+    /* visibility: hidden;
+    animation: .8s fadeIn ease-in forwards .3s; */
 }
 
 .box8{
@@ -118,20 +118,24 @@
     grid-area: nueve;
     position: relative;
     font-weight: 400;
-    font-size: 1.1vw; 
+    font-size: 1vw; 
     letter-spacing: 3px;
     border: 2px solid white;
-    visibility: hidden;
     z-index: 99;
     cursor: pointer;
-    animation: .8s fadeIn ease-in forwards .6s;
+    /* visibility: hidden;
+    animation: .8s fadeIn ease-in forwards .6s; */
 }
+
+/* .box9:hover{
+    transform: scale(1.05);
+} */
 
 .box10{
     grid-area: diez;
     background-color: #a4fac3;
-    visibility: hidden;
-    animation: .8s fadeIn ease-in forwards 0.1s;
+    /* visibility: hidden;
+    animation: .8s fadeIn ease-in forwards 0.1s; */
 }
 
 .box11{
@@ -148,8 +152,8 @@
 .box13{
     grid-area: trece;
     background-color: #a4fac3;
-    visibility: hidden;
-    animation: .8s fadeIn ease-in forwards .1s;
+    /* visibility: hidden;
+    animation: .8s fadeIn ease-in forwards .1s; */
 }
 
 .box15{
@@ -160,8 +164,8 @@
 .box16{
     grid-area: dieciseis;
     background-color: #f57e7e;
-    visibility: hidden;
-    animation: .8s fadeIn ease-in forwards;
+    /* visibility: hidden;
+    animation: .8s fadeIn ease-in forwards; */
     
 
 }
@@ -178,8 +182,8 @@
 
 .box19{
     grid-area: diecinueve;
-    visibility: hidden;
-    animation: .8s fadeIn ease-in forwards;
+    /* visibility: hidden;
+    animation: .8s fadeIn ease-in forwards; */
     background-color: #f57e7e;
 }
 
@@ -223,7 +227,7 @@
 }
 
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -231,7 +235,7 @@
     visibility: visible;
     opacity: 1;
   }
-}
+} */
 
 /* scroll button container */
 .scroll-button-container{
@@ -295,35 +299,48 @@
     }
     
 
-    .box5{
+    /* .box5{
         animation: .8s fadeIn ease-in forwards 0.1s;  
     }
     .box1{
         animation: .8s fadeIn ease-in forwards .3s;
-    }
+    } */
     .box6{
-        font-size: 1.7vw;
+        font-size: 1.4vw;
         animation: .8s fadeIn ease-in forwards .5s;
+        height: 70%;
+        text-align: center; /* For Edge */
+       
     }
-    .box2{
+    /* .box2{
         animation: .8s fadeIn ease-in forwards .8s;
     }
     .box7{
         animation: .8s fadeIn ease-in forwards 1s;
-    }
+    } */
     .box9{
-        font-size: 1.7vw;
-        animation: .8s fadeIn ease-in forwards 1.2s;
+        font-size: 1.4vw;
+        height: 70%;
+        text-align: center; /* For Edge */
+       
+        /* animation: .8s fadeIn ease-in forwards 1.2s; */
     }
-    .box19{
+    /* .box19{
         animation: .8s fadeIn ease-in forwards 1.5s;
     }
     .box4{
         animation: .8s fadeIn ease-in forwards 1.8s;
-    }
+    } */
     .box3{
-        font-size: 1.7vw;
-        animation: .8s fadeIn ease-in forwards 2s;   
+        font-size: 1.4vw;
+        height: 70%;
+        text-align: center; /* For Edge */
+        /* text-align-last: center; */
+        /* animation: .8s fadeIn ease-in forwards 2s;    */
+    }
+
+    .box p{
+        width: 70%;
     }
 
 }
@@ -339,16 +356,16 @@
         width: 20%;
     }
     .box3{
-        font-size: 2.3vw; 
+        font-size: 1.6vw; 
         
     }
     .box6{
-        font-size: 2.3vw;
+        font-size: 1.6vw;
        
         
     }
     .box9{
-        font-size: 2.3vw;    
+        font-size: 1.6vw;    
     }
     .box7{
         white-space: nowrap;
@@ -361,28 +378,28 @@
     } */
 }
 
-@media(max-width: 420px){
+@media(max-width: 460px){
     .section-two{
         font-size: 3.5vw;
         width: 70%;
     }
 
     .about-page{
-        margin-top: 55px;
+        margin-top: 135px;
     }
     .work-around-about{
         margin-top: 30vh;
     }
     .box3{
-        font-size: 2.8vw; 
+        font-size: 2.1vw; 
         
     }
     .box6{
-        font-size: 2.8vw;
+        font-size: 2.1vw;
        
         
     }
     .box9{
-        font-size: 2.8vw;    
+        font-size: 2.1vw;    
     }
 }

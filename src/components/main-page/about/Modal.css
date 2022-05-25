@@ -145,11 +145,31 @@
     height: 30%;
   } 
 }
+@media(max-width: 750px) {
+  .modal-about{
+    width: 65%;
+    height: 70%;
+  }
+  .modal-content{
+    width: 60vw;
+    height: 50vh; 
+  }
+   .modal-content-about:before {
+    right: -30px;
+    top: -30px;
+    height: 30%;
+  }
+  .modal-content-about:after {
+    left: -30px;
+    bottom: -30px;
+    height: 30%;
+  } 
+}
 
 @media(max-width: 500px) {
   .modal-about{
     top: 52%;
-    height: 65%;
+    height: 74%;
   }
   .close-modal-about{
   position: absolute;

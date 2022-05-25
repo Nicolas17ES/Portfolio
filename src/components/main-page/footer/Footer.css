@@ -1,9 +1,13 @@
 .footer-page{
-    margin: 190px auto 20px auto;
+    margin: 190px auto 0px auto;
     width: 100%;
     height: 420px;
     position: relative;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
 }
 
 /* block with animations */
@@ -13,16 +17,16 @@
     justify-content: center;
     margin: auto;
     width: 100%;
-    border-top: 2px solid #f66;
-    border-bottom: 2px solid #f66;
+    /* border-top: 2px solid #f66;
+    border-bottom: 2px solid #f66; */
     padding: 20px 0px;
     position: relative;
-    -webkit-animation: linear 1 forwards;
+    /* -webkit-animation: linear 1 forwards;
     -webkit-animation-name: display-footer;
-    -webkit-animation-duration: 1.7s;
+    -webkit-animation-duration: 1.7s; */
 }
 
-@keyframes display-footer {
+/* @keyframes display-footer {
   0% {
     height: 50px;
   }
@@ -40,7 +44,7 @@
     border-top: none;
     border-bottom: none;   
   }
-}
+} */
 
 /* rounded balls left and right */
 .full-footer:after{
@@ -52,9 +56,9 @@
     border-radius: 50%;
     left: 20px;
     border: 2px solid #f66;
-    -webkit-animation: linear 1 forwards;
+    /* -webkit-animation: linear 1 forwards;
     -webkit-animation-name: run-right;
-    -webkit-animation-duration: 1.7s;
+    -webkit-animation-duration: 1.7s; */
 }
 .full-footer:before{
     content: "";
@@ -65,14 +69,14 @@
     border-radius: 50%;
     right: 20px;
     border: 2px solid #f66;
-    -webkit-animation: linear 1 forwards;
+    /* -webkit-animation: linear 1 forwards;
     -webkit-animation-name: run-left;
-    -webkit-animation-duration: 1.7s;
+    -webkit-animation-duration: 1.7s; */
 }
 
 /* animation for rounded balls */
 
-@keyframes run-right {
+/* @keyframes run-right {
   0% {
     left: 0;
   }
@@ -96,7 +100,7 @@
   100% { 
     right: calc(100% - 44px);
    }
-}
+} */
 
 /* end animation for rounded balls */
 
@@ -115,7 +119,7 @@
     gap: 20px;
 }
 /* footer content fade in */
-.footer-content{
+/* .footer-content{
   animation: fadeInAbout 3s ease-out;
   -webkit-animation: fadeInAbout 3s ease-out;
   -moz-animation: fadeInAbout 3s ease-out;
@@ -151,7 +155,7 @@
   0% {opacity:0;}
   60%{opacity: 0;}
   100% {opacity:1;}
-}
+} */
 /* top of footer */
 
 .top-footer{
@@ -204,7 +208,11 @@
     height: 140px;
     margin: auto;
     margin-top: 35px;
-    transition: .6s;
+     -webkit-transition: all 600ms;
+    -moz-transition: all 600ms;
+    -ms-transition: all 600ms;
+    -o-transition: all 600ms;
+    transition: all 600ms;
 }
 .circle-1:hover,
 .circle-2:hover,
@@ -291,12 +299,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 7px;
     gap: 0px 10px;
     font-size: 0.8rem;
     height: 20%;
     width: 100%;
     border-radius: 20px;
     border: 2px solid #f66;
+    margin-top: 50px;
 }
 
 .footer-icons{
@@ -310,6 +320,12 @@
 .work-around-basement{
   margin-top: 45vh;
 }
+.center-absolute-footer{
+    position: absolute;
+    top: 60%;
+    
+  }
+
 
 
 /* end footer content */
@@ -317,7 +333,14 @@
 
 /* media queries */
 
-/* hide part of footer */
+@media(max-width: 1200px){
+  /* hide part of footer  */
+  .footer-hide{
+    display: none;
+  }
+}
+
+
 
 @media(max-width: 1070px){
   .footer-page{
@@ -360,20 +383,16 @@
   }
 
   .footer-block:nth-child(2):after{
+      height: 140px;
       left: -15px;
       width: 13px;
   }
   .footer-block:nth-child(2):before{
+      height: 140px;
       right: -15px;
       width: 13px;
   }
 
-
-  /* hide part of footer */
-
-  .footer-hide{
-    display: none;
-  }
 }
 
 
@@ -446,15 +465,18 @@
     font-size: 0.7rem;
     height: 15%;
     width: 113%;
-    margin-top: -40px;
+    /* margin-top: -40px; */
+  }
+  .center-absolute-footer{
+    top: 45%;
   }
 
 }
 
 @media (max-width: 680px){
   .footer-page{
-    margin: 175px auto 30px auto;
-    height: 530px;
+    margin: 175px auto 0px auto;
+    height: 100%;
     position: relative;
     padding: 10px;
 }
@@ -490,9 +512,16 @@
       width: 82%;
       height: 10px;
   }
+  .center-absolute-footer{
+    position: absolute;
+    bottom: 53%;
+  }
+  .title-basement{
+    display: none;
+  }
 
 /* rounded balls left and right */
-  .full-footer:after{
+  /* .full-footer:after{
       opacity: 0;
       -webkit-animation: linear 1;
       -webkit-animation-name: run-right-mobile;
@@ -503,11 +532,11 @@
       -webkit-animation: linear 1;
       -webkit-animation-name: run-left-mobile;
       -webkit-animation-duration: 1.8s;
-  }
+  } */
 
   /* animation for rounded balls */
 
-  @keyframes run-right-mobile {
+  /* @keyframes run-right-mobile {
     0% {
     left: 0;
     opacity: 1;
@@ -535,7 +564,7 @@
       right: calc(100% - 44px);
       opacity: 0; 
     }
-  }
+  } */
 
 /* end animation for rounded balls */
 
@@ -558,6 +587,7 @@
   .bottom-footer{
     margin-top: 40px;
     display: grid;
+    height: 70px;
     width: 100%;
     padding: 10px 0px;
     gap: 10px 0px;
@@ -568,7 +598,7 @@
 }
 @media (max-width: 480px){
   .footer-page{
-    margin-top: 100px;
+    margin-top: 140px;
   }
 
   .footer-block{
@@ -590,10 +620,10 @@
       height: 10px;
   }
   .full-footer:after{
-    left: -15px;
+    display: none;
 }
   .full-footer:before{
-      right: -15px;
+      display: none;
 
   }
 
@@ -608,9 +638,9 @@
   .bottom-footer{
     margin-top:15px;
     display: grid;
-    height: 200px;
-    width: 135%;
-    font-size: .6rem;
+    height: 80px;
+    width: 130%;
+    font-size: .5rem;
     padding: 10px 0px;
     gap: 10px 10px;
     grid-auto-flow: column;

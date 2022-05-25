@@ -11,7 +11,11 @@
     margin: auto;
     margin-top: -20px;
     position: relative;
-    transition: .6s;
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
     text-shadow: 3px 3px rgba(0, 0, 0, .6);
     
 }
@@ -26,7 +30,11 @@
     left: 0;
     background: rgba(255, 255, 255, 1);
     border-radius: 10px;
-    transition: all .6s;
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
     box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
 }
 
@@ -62,7 +70,11 @@
         left: 0;
         background: rgba(255, 255, 255, 1);
         border-radius: 10px;
-        transition: all .6s;
+         -webkit-transition: all 600ms ease;
+        -moz-transition: all 600ms ease;
+        -ms-transition: all 600ms ease;
+        -o-transition: all 600ms ease;
+        transition: all 600ms ease;
         box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
     }
     .video-js-dash{
@@ -88,7 +100,11 @@
         left: 0;
         background: rgba(255, 255, 255, 1);
         border-radius: 10px;
-        transition: all .6s;
+        -webkit-transition: all 600ms ease;
+        -moz-transition: all 600ms ease;
+        -ms-transition: all 600ms ease;
+        -o-transition: all 600ms ease;
+        transition: all 600ms ease;
         box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
     }
      .video-js-dash{
@@ -114,7 +130,11 @@
         left: 0;
         background: rgba(255, 255, 255, 1);
         border-radius: 10px;
-        transition: all .6s;
+        -webkit-transition: all 600ms ease;
+        -moz-transition: all 600ms ease;
+        -ms-transition: all 600ms ease;
+        -o-transition: all 600ms ease;
+        transition: all 600ms ease;
         box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
     }
     .video-js-dash{

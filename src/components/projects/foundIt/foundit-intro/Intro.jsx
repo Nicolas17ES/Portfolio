@@ -11,17 +11,16 @@ function Intro() {
     const navigate = useNavigate();
 
     const block1 = {
-        data: <> <li>ad dolores non quidem velit amet nobis voluptatibus eveniet architecto odit accusantium enim eius nesciunt neque eos quas. Sunt, dolores amet.</li>
-                <li>Lorem, unde laborum abusrd <strong className="strong">Lorem ipsum.</strong> eaque non quod praesentium, soluta, inventore vero vel exercitationem quos illo nemo quidem? Sit.</li>
+        data: <> <li><strong className="strong">Motivations:</strong> I have always had a personal interest in gaining a better understandement of the world of Mobile App Development. So I decided to embark myself in a new project based on another  one of my  own motivations, animals.</li>
                 </>
     }
     const block2 = {
         data: <>
-                <li>Lorem <strong className="strong">dolor sit amet lorem </strong>  ipsum beatae $19/month hola casa cocheipsam harum, sit, fuga totam quam a cumque provident voluptatibus illum facere.</li></>
+                <li>My home country, Spain, is still a moderately <strong className="strong">animal friendly</strong> country and there is ultimately 1 animal for every two households. </li></>
     }
     const block3 = {
         data: <>
-                <li>Lorem ipsum dolor sit amet aliquam corporis fuga  magni vero deserunt quasi quam et! Molestias accusantium dignissimos at ducimus voluptate odit minus <strong className="strong">Lore sit amet. </strong> fuga accusamus asperiores. A illo fugit magni?</li></>
+                <li>The main objective of FoundIt is to create a <strong className="strong">community</strong> of people by regions who will <strong className="strong">help</strong>  one and other in solving this problem. See below how the App works and all its features.</li></>
     }
     return (
         <div className="project-intro">

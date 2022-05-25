@@ -56,10 +56,14 @@
     background-color: #fbeee0;
     position: relative;
     border-radius: 30px;
+    -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
 }
 
 .reposatory-button-gallery:hover{
-    transition: 0.7s ease;
     transform: scale(1.05);      
 }
 

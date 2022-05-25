@@ -3,10 +3,11 @@ import './Footer.css'
 import { useContext, useRef, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
-import {BsWhatsapp, BsMailbox2} from 'react-icons/bs'
+import {BsWhatsapp} from 'react-icons/bs'
 import {GiClick} from 'react-icons/gi'
 import { useInView } from 'react-intersection-observer';
-import { motion } from "framer-motion"
+import {motion, useAnimation} from 'framer-motion'
+
 
 
 
@@ -24,13 +25,32 @@ function Footer() {
                     payload: false
                 })
         }
-
+         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [scroll])
 
     const [reference, inView] = useInView({
-        threshold: 0,
-        triggerOnce: true,
+        threshold: 0.2,
+        // triggerOnce: true,
     })
+
+    const animation = useAnimation();
+
+    useEffect(() => {
+        if(inView){
+            animation.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring',
+                    duration: 1.5,
+                    delay: 0.1,
+                    
+                }
+            })
+        } else if (!inView){
+            animation.start({ opacity: 0})
+        }
+         // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [inView]);
 
         // scroll to projects component top//
     const redirectToProjects = () => {
@@ -57,6 +77,7 @@ function Footer() {
      if(hasAnimated === true){
         return (
             <div className="footer-page" ref={reference}>
+                <h3 className="skills-title title-basement">BASEMENT</h3>
                 <div className="full-footer">
                     <div className="footer-content">
                         <div className="top-footer">
@@ -93,21 +114,21 @@ function Footer() {
                         </div>
                         <div className="bottom-footer">
                             <span  className="footer-hide"><p>Music is the highest philosophy :)</p></span>
-                            <span className="footer-icons"><p>WhatsApp</p><BsWhatsapp size={16}/></span>
-                            <span className="footer-icons"><p>Email</p> <BsMailbox2 size={16}/></span>
+                            <span className="footer-icons"><p>+34689060044</p><BsWhatsapp size={16}/></span>
+                            <span className="footer-icons"><Link to={"/contact"}><p>Contact Me</p></Link></span>
                             <span><p>Made by Nicolas Luque</p></span>
                             <span><p>@2022 All rights reserved</p></span>
                         </div>
                     </div>
                 </div>
-                  <span ref={scrollTo} className="center-absolute"></span>
+                  <span ref={scrollTo} className="center-absolute-footer"></span>
             </div>
             )
     } else {
         return (
-             <div className="footer-page" ref={reference}>
-                 {inView ? (
-                    <>
+            <div ref={reference}>
+                <motion.div animate={animation}  className="footer-page">
+                    <h3 className="skills-title title-basement">BASEMENT</h3>
                     <div className="full-footer">
                         <div className="footer-content">
                             <div className="top-footer">
@@ -145,22 +166,17 @@ function Footer() {
                             </div>
                             <div className="bottom-footer">
                                 <span  className="footer-hide"><p>Music is the highest philosophy :)</p></span>
-                                <span className="footer-icons"><p>WhatsApp</p><BsWhatsapp size={16}/></span>
-                                <span className="footer-icons"><p>Email</p> <BsMailbox2 size={16}/></span>
+                                <span className="footer-icons"><p>+34689060044</p><BsWhatsapp size={16}/></span>
+                                <span className="footer-icons"><Link to={"/contact"}><p>Contact Me</p></Link></span>
                                 <span><p>Made by Nicolas Luque</p></span>
                                 <span><p>@2022 All rights reserved</p></span>
                             </div>
                         </div>
                     </div>
-                        <span ref={scrollTo} className="center-absolute"></span>
-                    </>
-                ): (
-                
-                    <div ref={scrollTo} className="work-around-basement"></div>
-                    
-            )}
-                
+                        <span ref={scrollTo} className="center-absolute-footer"></span>
+                </motion.div>
             </div>
+             
             
         )
     }

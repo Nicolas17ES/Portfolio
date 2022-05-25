@@ -1,9 +1,8 @@
 .home-page{
     width: 100%;
     margin: 0px auto;
-    height: 100vh;
-    min-height: 100%;
-    
+    height: 85vh;
+    min-height: 100%;  
 }
 
 /* FIRST PAGE OF HOME */
@@ -33,9 +32,9 @@
 .hello-text{
     font-size: 20px;
     margin-bottom: 20px;
-    opacity: 0;
-    visibility: hidden;
-    animation: 2s appearElement ease forwards .5s;
+    /* opacity: 0;
+    visibility: hidden; */
+    /* animation: 2s appearElement ease forwards .5s; */
 }
 
 
@@ -46,9 +45,9 @@
     text-align-last: center;
     padding-bottom: 10px;
     position: relative;
-    opacity: 0;
-    visibility: hidden;
-    animation: 2s appearElement ease forwards 1.3s;
+    /* opacity: 0;
+    visibility: hidden; */
+    /* animation: 2s appearElement ease forwards 1.3s; */
 }
 
 .intro-text:after{
@@ -66,9 +65,9 @@
 .name{
     font-size: 27px;
     margin-bottom: 50px;
-    opacity: 0;
-    visibility: hidden;
-    animation: 2s appearElement ease forwards .9s;
+    /* opacity: 0;
+    visibility: hidden; */
+    /* animation: 2s appearElement ease forwards .9s; */
 }
 .nicolas{
     color: #f57e7e;
@@ -88,19 +87,19 @@
     margin: auto;
     width: 80%;
     /* animation: rotate-animation 2.5s ease-in-out forwards; */
-    opacity: 0;
-    visibility: hidden;
-    animation: 2s appearElement ease forwards 2.1s;
+    /* opacity: 0;
+    visibility: hidden; */
+    /* animation: 2s appearElement ease forwards 2.1s; */
     transform: rotate(45deg);
 
 }
 
 /* IMAGE ANIMATION */
 
-@keyframes rotate-animation {
+/* @keyframes rotate-animation {
     from {transform: rotate(221deg);}
     to {transform: rotate(45deg);}
-} 
+}  */
 
 
 /* BUTTONS HOME */
@@ -124,9 +123,14 @@
     padding: 13px 20px;
     border-radius: 5px;
     margin: 90px auto 0 auto;
-    opacity: 0;
-    visibility: hidden;
-    animation: 2s appearElement ease forwards 1.7s;
+     -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
+    /* opacity: 0;
+    visibility: hidden; */
+    /* animation: 2s appearElement ease forwards 1.7s; */
 }
 
 .contact-icon{
@@ -142,7 +146,7 @@
 
 
 /* animation appear */
-@keyframes appearElement{
+/* @keyframes appearElement{
     0%{
         opacity: 0;
         visibility: hidden; 
@@ -151,12 +155,11 @@
         opacity: 1;
         visibility: visible;
     }
-}
+} */
 
 .contact-button:hover{
     color: #171830;
     background-color: white;
-    transition: 0.7s ease;
     transform: scale(1.1);      
 }
 

@@ -55,8 +55,8 @@ function Projects() {
         logo4: <Mysql className="project-icon mysql-icon"/>,
         logo4Name: "MYSQL",
         title: <h3 className="project-title">FOUNDIT</h3>,
-        subtitle: "Mobile App created with Android Studio and Java focused on finding lost animals.",
-        about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque explicabo beatae, lorem lore m lorem lorem lorem lorem lore lorem lorem fugiat, vitae temporibus eligendi similique sapiente omnis ea molestias nemo vel, a molestiae consectetur autem.",
+        subtitle: "Mobile App created with Android Studio, Java and NodeJS.",
+        about: "The main objective behind the project is to create a community where users will be able to help each other when their pet gets lost. Moreover, users will be able to find Animal Walkers close to their location who are willing to take care of their pet. ",
     }
     const dashboardApp = {
         logo1: <React className="project-icon"/>,
@@ -68,8 +68,8 @@ function Projects() {
         logo4: <Tailwind className="project-icon"/>,
         logo4Name: "TAILWIND",
         title: <h3 className="project-title-dashboard">DASHBRD</h3>,
-        subtitle: "Web Application created with REACT and NODEJS based on a personal dashboard.",
-        about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque explicabo beatae, fugiat, vitae temporibus eligendi similique sapiente omnis ea molestias nemo vel, a molestiae consectetur autem.",
+        subtitle: "Web Application created with REACT and NODEJS.",
+        about: "DASHBRD is like if the infamous Inspector Gadget suddenly turned into a Web Application. The idea behind this project was to work with as many APIs as possible to completely understand the fundamentals behind state management in REACT.",
     }
     
     return (

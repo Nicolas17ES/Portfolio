@@ -8,17 +8,37 @@ import { useInView } from 'react-intersection-observer';
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import ModalVinyl from './ModalVinyl'
 import ScrollButton from '../../shared/scroll-button/ScrollButton2'
+import {motion, useAnimation} from 'framer-motion'
 
 
 
 
 function About(props) {
+
     const {scroll, dispatch, modal, hasAnimated} = useContext(FeedbackContext);
     const scrollTo = useRef();
+    
     const [reference, inView] = useInView({
-        threshold: 0,
-        triggerOnce: true,
+        threshold: 0.2,
     })
+    const animation = useAnimation();
+
+    useEffect(() => {
+        if(inView){
+            animation.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring',
+                    duration: 1.5,
+                    delay: 0.1,
+                    
+                }
+            })
+        } else if (!inView){
+            animation.start({ opacity: 0})
+        }
+         // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [inView]);
 
     const displayModalVinyl = () => {
         dispatch({
@@ -54,28 +74,30 @@ function About(props) {
     // blocks of data for each modal //
     const modalData = [
         {
-            itleOne: "CODING",
-            bodyOne: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
-            titleTwo: "MUSIC",
-            bodyTwo: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
-            titleThree: "SPORTS",
-            bodyThree: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
-        },
-        {
-            titleOne: "4rd May 2020",
-            bodyOne: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
-            titleTwo: "5rd May 2020",
-            bodyTwo: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
-            titleThree: "6rd May 2020",
-            bodyThree: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
-        },
-        {
             titleOne: "FRONT-END",
-            bodyOne: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+            bodyOne: "Implementing visual elements that users see and interact with in a web application using web languages such as HTML, CSS, and JavaScript has quickly become my main passion.",
             titleTwo: "BACK-END",
-            bodyTwo: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+            bodyTwo: "NodeJs has become my favourite platform  for executing server-side code. I have also had the opportunity of working with other frameworks such as Laravel and NestJS.",
             titleThree: "UI/UX",
-            bodyThree: "sit amet consectetur adipisicing elit. Ipsum, iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perferendis?",
+            bodyThree: "These past months I developed an interest in designing user interfaces via FIGMA, although I am still learning how to convert those same exact ideas into code I look forward to investing more time on this side of Web Development.",
+        },
+        
+        {
+            titleOne: "May 2020",
+            bodyOne: "On May 2020 I started my journey as a Web Developer, I decided to make a change of careers and left the world of Events behind to enter the realm of coding.",
+            titleTwo: "September 2021",
+            bodyTwo: "After a long journey of self-teaching I started the Coding Academy at Epitech University. Where I was constantly challenged to create new projects and experiment with new languages and frameworks.",
+            titleThree: "March 2022",
+            bodyThree: "After finishing my masters I started building my own portfolio and some personal projects such as an Android Studio App and a React Dashboard.",
+        },
+
+        {
+            titleOne: "EVENTS",
+            bodyOne: "I have dedicated a great part of my past to designing and developing all kind of events, from Professional Congresses to Music Events.",
+            titleTwo: "MUSIC",
+            bodyTwo: "Music has always been my best ally. I collect records and I belong to different collectives where we curate our own music events.",
+            titleThree: "SPORTS",
+            bodyThree: "During my coding breaks I practice sports for my physical, health and mental refreshment.",
         },
     
     ]
@@ -124,31 +146,31 @@ if(hasAnimated === true){
                 <div className="box1 box">ABOUT ME</div>
                 <div className="box2 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box3 box">
-                    <Laptop className="laptop about-svg"/>
+                    <Vinyl className="vinyl about-svg"/>
                     <button className="plus-icon-button" onClick={displayModalLaptop}>
                         <AiFillPlusCircle className="plus-icon" size={26}/>
                     </button>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ashjkdh hola...</p> 
+                    <p>Besides coding and Design there are many other activities that awake an interest in me.</p> 
                     {modalToShow()}
                 </div>
-                <div className="box4 box">WHAT I DO</div>
+                <div className="box4 box">THINGS I LOVE </div>
                 <div className="box5 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box6 box">
                     <Road className="road about-svg"/>
                     <button className="plus-icon-button" onClick={displayModalRoad}>
                         <AiFillPlusCircle className="plus-icon" size={24}/>
                     </button>
-                    <p ref={scrollTo}>Lorem ipsum dolor sit amet consectetur adipisicing elit ashjkdh hola casa...</p>
+                    <p ref={scrollTo}>Follow the path and find out how I went from being a Professional Congress Organizer to a Web Developer.</p>
                     {modalToShow()}
                 </div>
-                <div className="box7 box">THINGS I LOVE</div>
+                <div className="box7 box">WHAT I DO</div>
                 <div className="box8 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box9 box">
-                    <Vinyl className="vinyl about-svg"/>
+                    <Laptop className="laptop about-svg"/>
                     <button className="plus-icon-button" onClick={displayModalVinyl}>
                         <AiFillPlusCircle className="plus-icon" size={24}/>
                     </button>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ashjkdh hola casa...</p>
+                    <p>In the last two years I learned how to transform ideas into real life projects. Let me show you how.</p>
                     {modalToShow()}  
                 </div>
                 <div className="box10 box"></div>
@@ -168,37 +190,35 @@ if(hasAnimated === true){
 } else {
     return (
        <div  ref={reference} className="about-page">
-           {inView ? (
-               <>
-               <section className="section-two">
-                <div className="box1 box">ABOUT ME</div>
+               <motion.div animate={animation}  className="section-two">
+                    <div className="box1 box">ABOUT ME</div>
                 <div className="box2 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box3 box">
-                    <Laptop className="laptop about-svg"/>
+                    <Vinyl className="vinyl about-svg"/>
                     <button className="plus-icon-button" onClick={displayModalLaptop}>
-                        <AiFillPlusCircle className="plus-icon" size={24}/>
+                        <AiFillPlusCircle className="plus-icon" size={26}/>
                     </button>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ashjkdh hola...</p> 
+                    <p>Besides coding and Design there are many other activities that awake an interest in me.</p> 
                     {modalToShow()}
                 </div>
-                <div className="box4 box">WHAT I DO</div>
+                <div className="box4 box">THINGS I LOVE </div>
                 <div className="box5 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box6 box">
                     <Road className="road about-svg"/>
                     <button className="plus-icon-button" onClick={displayModalRoad}>
                         <AiFillPlusCircle className="plus-icon" size={24}/>
                     </button>
-                    <p ref={scrollTo}>Lorem ipsum dolor sit amet consectetur adipisicing elit ashjkdh hola casa...</p>
+                    <p ref={scrollTo}>Follow the path and find out how I went from being a Professional Congress Organizer to a Web Developer.</p>
                     {modalToShow()}
                 </div>
-                <div className="box7 box">THINGS I LOVE</div>
+                <div className="box7 box">WHAT I DO</div>
                 <div className="box8 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box9 box">
-                    <Vinyl className="vinyl about-svg"/>
+                    <Laptop className="laptop about-svg"/>
                     <button className="plus-icon-button" onClick={displayModalVinyl}>
                         <AiFillPlusCircle className="plus-icon" size={24}/>
                     </button>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ashjkdh hola casa...</p>
+                    <p>In the last two years I learned how to transform ideas into real life projects. Let me show you how.</p>
                     {modalToShow()}  
                 </div>
                 <div className="box10 box"></div>
@@ -208,19 +228,10 @@ if(hasAnimated === true){
                 <div className="box15 box"></div>
                 <div className="box16 box"></div>
                 <div className="box19 box"></div>
-            </section>
-            {/* <div className="scroll-button-container" onClick={executeScroll}>
-                <ScrollButton/>
-            </div> */}
+            </motion.div>
             <div className="scroll-button-container"  onClick={executeScroll}>
                     <ScrollButton />
-                </div>
-            </>
-           ) : (
-              
-                <div ref={scrollTo} className="work-around-about"></div>
-                
-           )} 
+            </div>
         </div>
         
     )

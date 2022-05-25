@@ -13,7 +13,11 @@
     flex-direction: column;
     cursor: pointer;
     color: #171830;
-    transition: .6s;
+    -webkit-transition: all 600ms;
+    -moz-transition: all 600ms;
+    -ms-transition: all 600ms;
+    -o-transition: all 600ms;
+    transition: all 600ms;
     /* box-shadow: 20px 20px 50px 15px rgba(0, 0, 0, .9); */
 }
 .project-card:hover{
@@ -38,38 +42,46 @@
 
 
 .project-title::before {
-  content: "FOUNDIT";
-  position: absolute;
-  color: transparent;
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent 0,
-    transparent 2px,
-    white 2px,
-    white 4px
-  );
-  -webkit-background-clip: text;
-  top: 0px;
-  left: 0;
-  z-index: -1;
-  transition: 1s;
+    content: "FOUNDIT";
+    position: absolute;
+    color: transparent;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 2px,
+        white 2px,
+        white 4px
+    );
+    -webkit-background-clip: text;
+    top: 0px;
+    left: 0;
+    z-index: -1;
+    -webkit-transition: all 1000ms;
+    -moz-transition: all 1000ms;
+    -ms-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    transition: all 1000ms;
 }
 
 .project-title::after {
-  content: "FOUNDIT";
-  position: absolute;
-  color: transparent;
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent 0,
-    transparent 2px,
-    white 2px,
-    white 4px
-  );
-  -webkit-background-clip: text;
-  top: 0px;
-  left: 0px;
-  transition: 1s;
+    content: "FOUNDIT";
+    position: absolute;
+    color: transparent;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 2px,
+        white 2px,
+        white 4px
+    );
+    -webkit-background-clip: text;
+    top: 0px;
+    left: 0px;
+    -webkit-transition: all 1000ms;
+    -moz-transition: all 1000ms;
+    -ms-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    transition: all 1000ms;
 }
 
 .project-title:hover:before {
@@ -100,21 +112,25 @@
 
 
 .project-title-dashboard::before {
-  content: "DASHBRD";
-  position: absolute;
-  color: transparent;
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent 0,
-    transparent 2px,
-    white 2px,
-    white 4px
-  );
-  -webkit-background-clip: text;
-  top: 0px;
-  left: 0;
-  z-index: -1;
-  transition: 1s;
+    content: "DASHBRD";
+    position: absolute;
+    color: transparent;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 2px,
+        white 2px,
+        white 4px
+    );
+    -webkit-background-clip: text;
+    top: 0px;
+    left: 0;
+    z-index: -1;
+    -webkit-transition: all 1000ms;
+    -moz-transition: all 1000ms;
+    -ms-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    transition: all 1000ms;
 }
 
 .project-title-dashboard::after {
@@ -131,7 +147,11 @@
   -webkit-background-clip: text;
   top: 0px;
   left: 0px;
-  transition: 1s;
+  -webkit-transition: all 1000ms;
+    -moz-transition: all 1000ms;
+    -ms-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    transition: all 1000ms;
 }
 
 .project-title-dashboard:hover:before {
@@ -247,9 +267,9 @@
     margin-left: 0px;
     gap: 20px;
 }
-.lang-fram > section{
+/* .lang-fram > section{
     flex: 25%;
-}
+} */
 
 /* languages */
 
@@ -267,12 +287,12 @@
 .project-icon{
     margin: 5px auto;
     width: 25px;
-    height: fit-content;
+    height: 20px;
 }
-.mysql-icon{
+/* .mysql-icon{
     width: 37px;
     margin-bottom: 11px;
-}
+} */
 
 .languages{
     font-size: 11px;
@@ -466,10 +486,10 @@
     .languages{
         font-size: 10px;
     }
-    .mysql-icon{
+    /* .mysql-icon{
         width: 37px;
         margin-bottom: 10px;
-    }
+    } */
     .project-svg{
         height: 37px;
     }
@@ -511,10 +531,10 @@
     .languages{
         font-size: 10px;
     }
-    .mysql-icon{
+    /* .mysql-icon{
         width: 37px;
         margin-bottom: 10px;
-    }
+    } */
     .project-svg{
         height:40px;
     }
@@ -582,7 +602,7 @@
     .project-svg{
         height: 40px;
     }
-    .mysql-icon{
+    /* .mysql-icon{
         margin-bottom: 10px;
-    }
+    } */
 }

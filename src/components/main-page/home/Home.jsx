@@ -6,12 +6,20 @@ import { useContext, useEffect, useRef} from 'react'
 import { Link} from 'react-router-dom'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import ScrollButton from '../../shared/scroll-button/ScrollButton'
+import {motion, useAnimation} from 'framer-motion'
+import { useInView } from 'react-intersection-observer';
 
 
 function Home() {
 
-    const {dispatch, scroll} = useContext(FeedbackContext);
+    const {dispatch, scroll, hasAnimated} = useContext(FeedbackContext);
     const scrollTo = useRef();
+
+    const [reference, inView] = useInView({
+        threshold: 0.5,
+    })
+    const animation = useAnimation();
+
 
     useEffect(() => {
         if(scroll === 0){
@@ -22,7 +30,24 @@ function Home() {
                 })
         }
 
-    }, [scroll, dispatch])
+    }, [scroll, dispatch]);
+
+   useEffect(() => {
+        if(inView){
+            animation.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring',
+                    duration: 1.5,
+                    delay: 0.1,
+                    
+                }
+            })
+        } else if (!inView){
+            animation.start({ opacity: 0})
+        }
+         // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [inView]);
 
 
     const executeScroll = () => {
@@ -31,31 +56,59 @@ function Home() {
                     payload: 1
                 })
     }
-    return (
-        
-        <div className="home-page">
-            <span ref={scrollTo} className="top-absolute"></span>
-            <section className="section-one">
-                <div className="cabezera-left">
-                    <p className="hello-text">Hello!</p>
+
+    if (hasAnimated === true){
+        return ( 
+            <div className="home-page">
+                <span ref={scrollTo} className="top-absolute"></span>
+                <section className="section-one">
+                    <div className="cabezera-left">
+                        <p className="hello-text">Hello!</p>
+                        
+                        <h1 className="name">I'm <span className="nicolas">Nicolas</span></h1>
+                        <p className="intro-text">I am a Full Stack Web Developer and this is how I acquired the knowledge and patience to turn designs into dynamic websites.</p>
+                    <div className="buttons-home">
+                        <Link to="/contact"><button className="contact-button"><p>CONTACT</p><FcContacts size={25} className="contact-icon"/></button></Link>
+                        <a href="https://github.com/Nicolas17ES" rel="noreferrer" target="_blank"><button className="contact-button"><p>GITHUB</p><AiFillGithub size={25} className="contact-icon-git"/></button></a>
+                    </div>
+                    </div>
+                    <div className="cabezera-rigth">
+                    <img className="image-portrait" src={portrait} alt=""/>
+                    </div>
+                    <div onClick={executeScroll}>
+                        <ScrollButton />
+                    </div>
                     
-                    <h1 className="name">I'm <span className="nicolas">Nicolas</span></h1>
-                    <p className="intro-text">And I am a Full Stack Web Developer focused on JavaScript. veniam minima qui vel vitae tempora est officiis ut fugit bswk kskhn hdhiwhi.</p>
-                  <div className="buttons-home">
-                    <Link to="/contact"><button className="contact-button"><p>CONTACT</p><FcContacts size={25} className="contact-icon"/></button></Link>
-                    <a href="https://github.com/Nicolas17ES" rel="noreferrer" target="_blank"><button className="contact-button"><p>GITHUB</p><AiFillGithub size={25} className="contact-icon-git"/></button></a>
-                  </div>
-                </div>
-                <div className="cabezera-rigth">
-                   <img className="image-portrait" src={portrait} alt=""/>
-                </div>
-                <div onClick={executeScroll}>
-                    <ScrollButton />
-                </div>
-                
-            </section>
-        </div>
-    )
+                </section>
+            </div>
+        )
+    } else {
+        return (
+            <div ref={reference} className="home-page">
+                <span ref={scrollTo} className="top-absolute"></span>
+                <section className="section-one">
+                    <motion.div animate={animation} className="cabezera-left">
+                        <p className="hello-text">Hello!</p>
+                        
+                        <h1 className="name">I'm <span className="nicolas">Nicolas</span></h1>
+                        <p className="intro-text">I am a Full Stack Web Developer and this is how I acquired the knowledge and patience to turn designs into dynamic websites.</p>
+                        <div className="buttons-home">
+                            <Link to="/contact"><button className="contact-button"><p>CONTACT</p><FcContacts size={25} className="contact-icon"/></button></Link>
+                            <a href="https://github.com/Nicolas17ES" rel="noreferrer" target="_blank"><button className="contact-button"><p>GITHUB</p><AiFillGithub size={25} className="contact-icon-git"/></button></a>
+                        </div>
+                    </motion.div>
+                    <motion.div animate={animation} className="cabezera-rigth">
+                        <img className="image-portrait" src={portrait} alt=""/>
+                    </motion.div>
+                    <div onClick={executeScroll}>
+                        <ScrollButton />
+                    </div>
+                    
+                </section>
+            </div>
+        )
+    }
+
 }
 
 export default Home
