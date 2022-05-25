@@ -113,8 +113,12 @@ function FeedbackItem({item}) {
         <Card className="item-card">
             <div className="num-display">{item.rating}</div>
             {/* buttons */}
-            <button onClick={() => deleteTheFeedback(item.feedback_id)} className="close"><FaTimes color="#f57e7e"/></button>
-            <button onClick={editFeedback} className="edit"><FaEdit color="#f57e7e"/></button>
+            {owner && (
+                <>
+                    <button onClick={() => deleteTheFeedback(item.feedback_id)} className="close"><FaTimes color="#f57e7e"/></button>
+                    <button onClick={editFeedback} className="edit"><FaEdit color="#f57e7e"/></button>
+                </>
+            )}
             <button onClick={addALike} className="like"><FcLike/></button>
             {/* likes */}
             <p className="likesCount">{likePerItem.length}</p>
