@@ -13,6 +13,7 @@ function Videos({videoProp, posterProp}) {
                 poster={poster}
                 width="230"
                 height="420"
+                muted={true}
                 playbackRates={[0.75, 1, 1.5]}
             />
         </div>

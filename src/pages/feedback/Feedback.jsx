@@ -5,22 +5,18 @@ import FeedbackContext from '../../context/feedback/FeedbackContext'
 import {useContext} from 'react'
 
 
-
-import {Link} from 'react-router-dom'
-
-
 function Feedback() {
     
   const {questionCount} = useContext(FeedbackContext);
 
 
-    if( questionCount == 1) {
+    if( questionCount === 1) {
        return <QuestionOne/>
 
-    } else if (questionCount == 2) {
+    } else if (questionCount === 2) {
       return  <QuestionTwo/>
 
-    } else if (questionCount == 3){
+    } else if (questionCount === 3){
         return <QuestionThree/>
 
     } else {

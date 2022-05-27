@@ -1,4 +1,3 @@
-import {Link} from 'react-router-dom'
 import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 import {BsFillArrowLeftCircleFill} from 'react-icons/bs'
 import {nextQuestion, previousQuestion} from '../../context/feedback/FeedBackActions'
@@ -29,7 +28,7 @@ function NextArrow() {
         })
     }
 
-    if(questionCount == 1) {
+    if(questionCount === 1) {
         return (
         <>
         <div className="nextArrow">
@@ -53,7 +52,7 @@ function NextArrow() {
 
         </>
     )
-    } else if (questionCount == 3) {
+    } else if (questionCount === 3) {
          return (
         <>
         <div className="previousArrow">

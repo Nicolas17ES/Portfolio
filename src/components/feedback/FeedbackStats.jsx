@@ -5,7 +5,7 @@ import FeedbackContext from '../../context/feedback/FeedbackContext'
 function FeedbackStats({questionNumber}) {
     const {feedback} = useContext(FeedbackContext);
 
-    let validFeedback = feedback.filter((item) => item.questionNumber == questionNumber)
+    let validFeedback = feedback.filter((item) => item.questionNumber === questionNumber)
 
 
     const average = Math.round(

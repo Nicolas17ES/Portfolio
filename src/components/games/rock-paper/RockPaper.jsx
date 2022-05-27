@@ -2,7 +2,7 @@ import './RockPaper.css'
 import { ReactComponent as Paper }  from '../../assets/paper.svg'
 import  {ReactComponent as Rock } from '../../assets/rock2.svg'
 import {ReactComponent as Scissors } from '../../assets/scissors.svg'
-import {useRef, useState, useEffect} from 'react'
+import {useRef} from 'react'
 
 import {useContext} from 'react'
 import GamesContext from '../../../context/games/GamesContext'

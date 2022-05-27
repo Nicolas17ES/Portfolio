@@ -1,8 +1,8 @@
 import FeedbackContext from '../../context/feedback/FeedbackContext'
-import {useState, useContext, useRef} from 'react'
+import {useContext, useRef} from 'react'
 
 function Container({children}) {
-    const {blurry, showModal, dispatch} = useContext(FeedbackContext);
+    const {blurry, dispatch} = useContext(FeedbackContext);
 
     const hideModal = () => {
         dispatch({

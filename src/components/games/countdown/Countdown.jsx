@@ -14,7 +14,7 @@ function Countdown() {
                 payload: status,
             })
         }, 3780);
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
     return (
