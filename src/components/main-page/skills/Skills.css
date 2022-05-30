@@ -384,6 +384,9 @@
     .center-absolute-skills{
         top: 45%;
     }
+    .skill11 .skill-icon{
+        margin-bottom: -8px;
+    }
 }
 
 @media(max-width: 1020px){
@@ -477,6 +480,9 @@
     .skill-stars{
         width: 55px;
     }
+    .skill11 .skill-icon{
+        margin-bottom: -12px;
+    }
 
     /* end right side */
 
@@ -503,6 +509,9 @@
      .skill-icon{
         width: 22px;
     }
+    .skill11 .skill-icon{
+        margin-bottom: -17px;
+    }
 }
 
 @media(max-width: 600px){
@@ -511,7 +520,7 @@
         margin-top: 30px;
     }
     .center-absolute{
-        top: 50%;
+        top: 46%;
     }
      .skills-text{
         width: 93%;
