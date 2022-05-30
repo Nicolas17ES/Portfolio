@@ -10,6 +10,7 @@
     margin: 0 auto;
     position: relative;
     margin-top: 1%;
+    padding: 10px;
 }
 
 
@@ -99,18 +100,21 @@ ul.rb li .timestamp {
 @media(max-width: 500px){
   rb-container {
     width: 75%;
-    font-size: .35rem;
+  }
+  .rightbox{
+    margin-top: 20px;
   }
   .rb-container ul.rb li {
     margin-left: 1.3em;
     height: 140px;
     border-left: 2px dashed #fff;
     padding: 0 0 0px 30px;
-    font-size: .5rem;
+    font-size: .45rem;
+    letter-spacing: normal;
     width: 87%;
   }
   ul.rb li .timestamp {
-    font-size: .5rem;
+    font-size: .4rem;
   }
 
   .rb-container ul.rb li::before {
