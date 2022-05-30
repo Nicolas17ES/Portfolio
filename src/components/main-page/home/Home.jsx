@@ -5,7 +5,7 @@ import {AiFillGithub} from 'react-icons/ai'
 import { useContext, useEffect, useRef} from 'react'
 import { Link} from 'react-router-dom'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
-import ScrollButton from '../../shared/scroll-button/ScrollButton2'
+import ScrollButton from '../../shared/scroll-button/ScrollButton'
 import {motion, useAnimation} from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 
@@ -75,8 +75,8 @@ function Home() {
                     <div className="cabezera-rigth">
                     <img className="image-portrait" src={portrait} alt=""/>
                     </div>
-                    <div className="scroll-button-container" onClick={executeScroll}>
-                        <ScrollButton/>
+                    <div onClick={executeScroll}>
+                        <ScrollButton />
                     </div>
                     
                 </section>
