@@ -305,7 +305,7 @@
     
     font-size: 1vw;
     letter-spacing: 2px;
-    height: 150px;
+    height: 160px;
     padding: 20px;
     margin: 0px auto;
     /* opacity: 0;
@@ -443,10 +443,10 @@
 
     .skills-text{
         width: 90%;
-        font-size: 11px;
+        font-size: 10.5px;
         margin-top: -67px;
-        height: 140px;
-        max-height: 190px;
+        height: 149px;
+        max-height: 200px;
     }
 
     /* end left side */
@@ -502,8 +502,8 @@
         height: 62px;
     }
     .skills-text{
-        height: 160px;
-        max-height: 180px;
+        height: 167px;
+        max-height: 190px;
     }
 
      .skill-icon{
@@ -524,10 +524,10 @@
     }
      .skills-text{
         width: 93%;
-        font-size: 9px;
+        font-size: 8.6px;
         margin-top: -60px;
         padding: 17px;
-        height: 150px;
+        height: 158px;
     }
     .work-around-skills{
         margin-top: 35vh;
@@ -550,8 +550,8 @@
     }
     .skills-text{
         width: 95%;
-        font-size: 9px;
-        height: 125px;
+        font-size: 8.5px;
+        height: 130px;
     
       
         
@@ -582,8 +582,8 @@
     .skills-text{
         width: 96%;
         font-size: 8px;
-        height: 135px;
-        max-height: 170px;
+        height: 140px;
+        max-height: 180px;
         margin-top: -150px;
 
     }
