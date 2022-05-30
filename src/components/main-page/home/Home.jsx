@@ -104,8 +104,8 @@ function Home() {
                     
                 </section>
                 <div onClick={executeScroll}>
-                        <ScrollButton />
-                    </div>
+                    <ScrollButton />
+                </div>
             </div>
         )
     }

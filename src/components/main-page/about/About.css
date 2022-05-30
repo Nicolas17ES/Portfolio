@@ -1,6 +1,6 @@
 .about-page{
     width: 100%;
-    margin: 80px auto 0 auto;
+    margin: 150px auto 0 auto;
     padding: 10px 0px 50px 0;
     position: relative;
     min-height: 100%;
@@ -385,21 +385,21 @@
     }
 
     .about-page{
-        margin-top: 135px;
+        margin-top: 175px;
     }
     .work-around-about{
         margin-top: 30vh;
     }
     .box3{
-        font-size: 2.1vw; 
+        font-size: 1.9vw; 
         
     }
     .box6{
-        font-size: 2.1vw;
+        font-size: 1.9vw;
        
         
     }
     .box9{
-        font-size: 2.1vw;    
+        font-size: 1.9vw;    
     }
 }
