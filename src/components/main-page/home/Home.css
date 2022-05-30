@@ -2,7 +2,6 @@
     width: 100%;
     margin: 0px auto;
     min-height: 100%;
-    border: 1px solid yellow;
 }
 
 /* FIRST PAGE OF HOME */
@@ -15,7 +14,6 @@
     padding: 20px;
     border-radius: 30px;
     text-align: center;
-    border: 1px solid yellow;
     /* text-align-last: center; */
 }
 
