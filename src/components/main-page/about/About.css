@@ -370,12 +370,11 @@
     .box7{
         white-space: nowrap;
     }
-    /* .scroll-button-container{
+    .plus-icon-button{
         position: absolute;
-        bottom: 40px;
-        left: 0;
-        right: 0;
-    } */
+        right: 5px;
+        bottom: 5px;
+    }
 }
 
 @media(max-width: 460px){
@@ -391,15 +390,18 @@
         margin-top: 30vh;
     }
     .box3{
-        font-size: 1.9vw; 
+        font-size: 1.9vw;
+        height: 80%;
         
     }
     .box6{
         font-size: 1.9vw;
+        height: 80%;
        
         
     }
     .box9{
-        font-size: 1.9vw;    
+        font-size: 1.9vw;  
+        height: 80%;  
     }
 }

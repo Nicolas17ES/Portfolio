@@ -80,7 +80,7 @@ function ResultRockPaper() {
             <div className="rock-icons">
                 <div className="elements"><span>{resultUser}</span><p className="text-icons">You</p></div>
                 <div className="elements"><span><Versus className="versus"/></span></div>
-                <div className="elements"><span>{resultMachine}</span><p className="text-icons">Me</p></div>
+                <div className="elements"><span>{resultMachine}</span><p className="text-icons">Machine</p></div>
             </div>
             <div className="result-buttons">
                 <Play text="PLAY AGAIN"  rockDispatch={'PLAY AGAIN'} style={stylePlayAgain}/>
