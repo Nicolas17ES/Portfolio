@@ -33,6 +33,7 @@
 .rb-container ul.rb {
   padding: 0;
   width: 100%;
+  
 }
 
 .rb-container ul.rb li {
@@ -43,6 +44,7 @@
   border-left: 1px dashed #fff;
   padding: 0 0 0px 40px;
   position: relative;
+  
 }
 
 .rb-container ul.rb li:last-child {
@@ -97,17 +99,18 @@ ul.rb li .timestamp {
 @media(max-width: 500px){
   rb-container {
     width: 75%;
-    font-size: .45rem;
+    font-size: .35rem;
   }
   .rb-container ul.rb li {
     margin-left: 1.3em;
     height: 140px;
     border-left: 2px dashed #fff;
     padding: 0 0 0px 30px;
+    font-size: .5rem;
+    width: 87%;
   }
-
   ul.rb li .timestamp {
-    font-size: .6rem;
+    font-size: .5rem;
   }
 
   .rb-container ul.rb li::before {

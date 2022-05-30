@@ -172,8 +172,8 @@
     height: 74%;
   }
   .close-modal-about{
-  position: absolute;
-  right: 8px;
-  top: 8px;
-}
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
 }
