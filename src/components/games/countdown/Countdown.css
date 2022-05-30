@@ -3,11 +3,10 @@
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    height: 60vh;
     color: #e2d5d9;
     text-align: center;
     font-weight: bold;
-    font-size: 120px;
+    font-size: 90px;
   /*-----------------------*/
   text-shadow: 1px 1px #a54848, 2px 2px #a54848, 3px 3px #a54848, 4px 4px #a54848, 5px 5px #a54848, 6px 6px #a54848, 7px 7px #a54848;
 }
@@ -39,12 +38,12 @@
 
 @media (min-width: 560px){
     .countdown{
-        font-size: 150px;
+        font-size: 110px;
     }
 }
 
 @media (min-width: 760px){
     .countdown{
-        font-size: 180px;
+        font-size: 130px;
     }
 }

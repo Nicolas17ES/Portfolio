@@ -2,8 +2,8 @@
   color: #D5E2D6;
   text-align: center;
   font-weight: bold;
-  line-height: 50px;
-  font-size: 60px;
+  line-height: 20px;
+  font-size: 50px;
   /* mask-image: url('../../assets/pruebamask.jpg');
   mask-repeat: no-repeat; */
  
@@ -13,24 +13,24 @@
   
 }
 .game-title {
-    margin-top: 65px;
+    margin-top: 35px;
   }
 @media (min-width: 500px){
   .game-title {
-    margin-top: 70px;
+    margin-top: 40px;
   }
 }
 
 
 @media (min-width: 760px){
   .title-h1 {
-    font-size: 80px;
+    font-size: 70px;
   }
 }
 
 @media (min-width: 1500px){
   .title-h1 {
-    font-size: 90px;
+    font-size: 75px;
   }
 }
 
