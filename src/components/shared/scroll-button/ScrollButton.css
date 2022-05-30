@@ -117,7 +117,7 @@
 }
 @media(max-width: 450px){
     .center-con{
-        bottom: 5vh;
+        bottom: 0px;
         left: 14px;
     }
 
