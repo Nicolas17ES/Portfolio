@@ -12,6 +12,8 @@
     cursor: pointer;
     padding: 5px;
     margin: auto 10px;
+    min-width: 70px;
+    max-width: 75px;
     /* margin: auto 70px; */
 }
 

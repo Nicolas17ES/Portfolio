@@ -25,7 +25,7 @@ function Play({text, style, rockDispatch}) {
             payload: status,
         })
       } else if (rockDispatch === 'QUIT') {
-          navigate('/home')
+          navigate('/')
           const status = quitRockGame();
           dispatchGames({
               type: 'STATUS_ROCK_GAME',
