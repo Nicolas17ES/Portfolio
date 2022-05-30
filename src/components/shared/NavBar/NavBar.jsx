@@ -239,7 +239,7 @@ const hideModal = () => {
            <FaHamburger size={24}/>
          </button>
        </header>
-       <div className="divisor"></div>
+       <div className="divisor">kk</div>
       </>
 
        
