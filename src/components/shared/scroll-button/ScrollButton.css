@@ -3,11 +3,8 @@
 .center-con{
     width: fit-content;
     height: 100px;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin: -80px auto auto auto;
+
     cursor: pointer;
     /* opacity: 0;
     visibility: hidden;
@@ -97,7 +94,7 @@
 
 @media(max-width: 850px){
     .center-con{
-        bottom: -20px;
+       
     }
 
     .round {
@@ -117,8 +114,7 @@
 }
 @media(max-width: 450px){
     .center-con{
-        bottom: -90px;
-        left: 14px;
+      margin-top: 10px;
     }
 
     .round {

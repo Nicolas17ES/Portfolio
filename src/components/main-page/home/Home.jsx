@@ -75,11 +75,12 @@ function Home() {
                     <div className="cabezera-rigth">
                     <img className="image-portrait" src={portrait} alt=""/>
                     </div>
-                    <div onClick={executeScroll}>
-                        <ScrollButton />
-                    </div>
+                    
                     
                 </section>
+                <div onClick={executeScroll}>
+                        <ScrollButton />
+                    </div>
             </div>
         )
     } else {
@@ -100,11 +101,11 @@ function Home() {
                     <motion.div animate={animation} className="cabezera-rigth">
                         <img className="image-portrait" src={portrait} alt=""/>
                     </motion.div>
-                    <div onClick={executeScroll}>
-                        <ScrollButton />
-                    </div>
                     
                 </section>
+                <div onClick={executeScroll}>
+                        <ScrollButton />
+                    </div>
             </div>
         )
     }
