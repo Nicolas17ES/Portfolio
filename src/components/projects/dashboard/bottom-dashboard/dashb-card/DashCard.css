@@ -1,7 +1,7 @@
 .dash-cards-page{
     margin: auto;
     margin-top: 100px;
-    width: 70%;
+    width: 80%;
     position: relative;
 }
 
@@ -10,6 +10,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.block-dash img{
+    width: 85%;
+    height: 85%;
+    margin: auto;
+    margin-top: 50px;
+    cursor: pointer;
 }
 .block-dash-video{
     display: flex;
@@ -24,15 +31,27 @@
     
 }
 
+.full-screen{
+   position: fixed;
+  top: 0;
+  left: 0;
+  width:200%;
+  height: 100%;
+}
+
+
 @media(max-width: 1200px){
     .dash-cards-page{
-        width: 80%;
+        width: 90%;
     }
 }
 @media(max-width: 900px){
     .dash-cards-page{
         margin-top: 170px;
         width: 90%;
+    }
+    .block-dash img{
+        margin-top: 30px;
     }
 }
 @media(max-width: 570px){

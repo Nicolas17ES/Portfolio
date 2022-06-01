@@ -11,8 +11,8 @@ function VideoDash({videoProp, posterProp}) {
                 className="video-js-dash"
                 src={videoSrc}
                 poster={poster}
-                width="720"
-                height="350"
+                width="850"
+                height="420"
                 muted={true}
                 playbackRates={[0.75, 1, 1.5]}
             />

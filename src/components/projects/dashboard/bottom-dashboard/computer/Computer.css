@@ -11,7 +11,7 @@
 
 @media (max-width: 1000px){
     .computer-svg{
-        margin-top: 10px;
+      
         width: 560px;
         height: 430px;
         background-size: 92% 59.5%;
@@ -37,7 +37,6 @@
 }
 @media (max-width: 550px){
     .computer-svg{
-        margin-top: 50px;
         width: 350px;
         height: 270px;
         background-size: 92% 59.5%;
@@ -46,7 +45,6 @@
 }
 @media (max-width: 450px){
     .computer-svg{
-        margin-top: 40px;
         width: 250px;
         height: 200px;
         background-size: 92% 59.5%;
