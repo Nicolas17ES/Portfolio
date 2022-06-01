@@ -89,7 +89,7 @@
   display:block;
   width:300px;
   border:none;
-  color:#171830; 
+  color:rgb(250, 235, 208); 
   background-color: #232447;
   border-bottom:1px solid rgb(250, 235, 208);
 }
@@ -329,6 +329,17 @@
 
     .contact-title{
         font-size: 5vw;
+    }
+     .input-contact{
+        font-size:14px;
+        padding:10px 10px 10px 5px;
+        width:170px;
+        margin: auto;
+    }
+
+    /* BOTTOM BARS ================================= */
+    .bar{ 
+        width:170px;
     }
 
 }

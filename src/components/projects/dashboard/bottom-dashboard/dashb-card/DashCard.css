@@ -61,3 +61,13 @@
         margin-top: 150px;
     }
 }
+@media(max-width: 470px){
+    .dash-cards-page{
+        margin-top: 40px;
+        width: 100%;
+        position: relative;
+    }
+    .block-dash{
+        margin-bottom: 60px;
+    }
+}
