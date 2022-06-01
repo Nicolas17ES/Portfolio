@@ -2,14 +2,14 @@
 
 .project-card{
     margin: auto;
+    margin-top: 40px;
     position: relative;
-    width: 70vw;
-    height: 100%;
+    width: 310px;
+    height: 400px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 80px;
     flex-direction: column;
     cursor: pointer;
     color: #171830;
@@ -18,6 +18,9 @@
     -ms-transition: all 600ms;
     -o-transition: all 600ms;
     transition: all 600ms;
+    background-color: #2e315e;
+    box-shadow:  10px 10px rgb(0, 0, 0);
+    border: 2px solid black;
     /* box-shadow: 20px 20px 50px 15px rgba(0, 0, 0, .9); */
 }
 .project-card:hover{
@@ -26,282 +29,108 @@
 
 /* TITLE FOR THE PROJECT */
 
-/* FOUND IT APP*/
-.project-title {
-  position: absolute;
-  left: 36%;
-  top: 0%;
-  transform: translate(-50%, -50%);
-  display: block;
-  color: #F57E7E;
-  font-size: 6.5vw;
-  letter-spacing: 9px;
-  font-weight: 600;
-  cursor: pointer;
-}
 
-
-.project-title::before {
-    content: "FOUNDIT";
-    position: absolute;
-    color: transparent;
-    background-image: repeating-linear-gradient(
-        45deg,
-        transparent 0,
-        transparent 2px,
-        white 2px,
-        white 4px
-    );
-    -webkit-background-clip: text;
-    top: 0px;
-    left: 0;
-    z-index: -1;
-    -webkit-transition: all 1000ms;
-    -moz-transition: all 1000ms;
-    -ms-transition: all 1000ms;
-    -o-transition: all 1000ms;
-    transition: all 1000ms;
-}
-
-.project-title::after {
-    content: "FOUNDIT";
-    position: absolute;
-    color: transparent;
-    background-image: repeating-linear-gradient(
-        45deg,
-        transparent 0,
-        transparent 2px,
-        white 2px,
-        white 4px
-    );
-    -webkit-background-clip: text;
-    top: 0px;
-    left: 0px;
-    -webkit-transition: all 1000ms;
-    -moz-transition: all 1000ms;
-    -ms-transition: all 1000ms;
-    -o-transition: all 1000ms;
-    transition: all 1000ms;
-}
-
-.project-title:hover:before {
-  top: 5px;
-  left: 5px;
-}
-
-.project-title:hover:after {
-  top: -5px;
-  left: -5px;
-} 
-
-/* END FOUND IT APP*/
-
-/* ANIMALS APP */
-.project-title-dashboard {
-  position: absolute;
-  left: 36%;
-  top: 0%;
-  transform: translate(-50%, -50%);
-  display: block;
-  color: #F57E7E;
-  font-size: 6.5vw;
-  letter-spacing: 9px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-
-.project-title-dashboard::before {
-    content: "DASHBRD";
-    position: absolute;
-    color: transparent;
-    background-image: repeating-linear-gradient(
-        45deg,
-        transparent 0,
-        transparent 2px,
-        white 2px,
-        white 4px
-    );
-    -webkit-background-clip: text;
-    top: 0px;
-    left: 0;
-    z-index: -1;
-    -webkit-transition: all 1000ms;
-    -moz-transition: all 1000ms;
-    -ms-transition: all 1000ms;
-    -o-transition: all 1000ms;
-    transition: all 1000ms;
-}
-
-.project-title-dashboard::after {
-  content: "DASHBRD";
-  position: absolute;
-  color: transparent;
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent 0,
-    transparent 2px,
-    white 2px,
-    white 4px
-  );
-  -webkit-background-clip: text;
-  top: 0px;
-  left: 0px;
-  -webkit-transition: all 1000ms;
-    -moz-transition: all 1000ms;
-    -ms-transition: all 1000ms;
-    -o-transition: all 1000ms;
-    transition: all 1000ms;
-}
-
-.project-title-dashboard:hover:before {
-  top: 5px;
-  left: 5px;
-}
-
-.project-title-dashboard:hover:after {
-  top: -5px;
-  left: -5px;
-} 
-
-/* END ANIMALS APP */
-
-/* END PROJECT TITLE */
 
 
 
 
 /* PROJECT SUBTITLE */
 
+
+.project-title {
+    color: rgb(245, 126, 126);
+    font-size: 30px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin: -50px auto 0 auto;
+    position: relative;
+    -webkit-transition: all 600ms;
+    -moz-transition: all 600ms;
+    -ms-transition: all 600ms;
+    -o-transition: all 600ms;
+    transition: all 600ms;
+    text-shadow: 2px 2px rgba(0, 0, 0, .6);
+    
+}
+.project-title p{
+    font-weight: 600; 
+}
+
+
+.project-title::before {
+    content: '';
+    position: absolute;
+    width: 96%;
+    height: 3px;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    -webkit-transition: all 600ms;
+    -moz-transition: all 600ms;
+    -ms-transition: all 600ms;
+    -o-transition: all 600ms;
+    transition: all 600ms;
+    
+}
+
 .project-subtitle{
     color: white;
-    font-size: 16px;
+    font-size: 13px;
     font-style: italic;
     text-decoration: underline;
     text-underline-offset: 2px;
-    margin-top: -100px;
-    margin-left: -300px;
+    width: 250px;
+    text-align: center;
+    margin-top: 20px;
 }
-
-.about-and-icos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px auto 0px auto;
-    width: 100%;
-    gap: 20px;
-}
-
-.project-about{
-    text-align: left;
-    font-size: 13px;
-    padding: 25px 30px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-sizing: border-box;
-    position: relative;
-    width: 85%;
-    height: 95%;
-    color: #fbfbfb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.punto{ 
-    position: absolute; 
-    top: -15px;
-    left: -15px;
-    height: 42px; 
-    width: 20px; 
-    padding: 0px; 
-    border-radius: 3px; 
-    -webkit-transform: rotate(0deg) skew(0deg); 
-    transform: rotate(0deg) skew(0deg); 
-    border-left: 21px solid white; 
-    border-right: 21px solid white; 
-    border-bottom: 15px solid transparent; 
-}
-
-/* PSEUDO ELEMENTS FOR THE CARD */
-
-.project-card:before {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 70%;
-    width: 37%;
-    border-top: 4px solid #a4fac3;
-    border-right: 4px solid #a4fac3;
-    border-top-right-radius: 10px;
-    right: 0px;
-    top: 0px;
-}
-
-.project-card:after {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 70%;
-    width: 6%;
-    border-top: 4px solid #a4fac3;
-    border-left: 4px solid #a4fac3;
-    border-top-left-radius: 10px;
-    left: 0px;
-    top: 0px;
-}
-
-/* END PSEUDO ELEMENTS FOR THE CARD */
-
-/* PROJECT LANGUAGES AND FRAMEWORKS */
-/* wrapper language framework */
 
 .lang-fram{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 0px;
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 20px;
+    font-size: 11px;
+     grid-template-areas: 
+    "uno dos"
+    "tres cuatro";
 }
-/* .lang-fram > section{
-    flex: 25%;
-} */
 
-/* languages */
+.uno{
+    grid-area: uno;
+}
+.dos{
+    grid-area: dos;
+}
+.tres{
+    grid-area: tres;
+}
+.cuatro{
+    grid-area: cuatro;
+}
 
 .project-top{
     margin: 4px 0px;
-    width: 105px;
-    height: 70px;
-    border: 3px solid white;
+    width: 75px;
+    height: 60px;
     border-radius: 10px;
     color: #171830;
-    text-align: center;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
 }
+
 .project-icon{
     margin: 5px auto;
-    width: 25px;
-    height: 20px;
-}
-/* .mysql-icon{
-    width: 37px;
-    margin-bottom: 11px;
-} */
-
-.languages{
-    font-size: 11px;
-    white-space: nowrap;
+    width: 40px;
+    height: 35px;
 }
 
-/* END PROJECT LANGUAGES AND FRAMEWORKS */
 
-/* WAVE SVG */
+
+
+
 
 .project-wave{
     position: absolute;
@@ -317,7 +146,7 @@
     position: relative;
     display: block;
     width: calc(168% + 1.3px);
-    height: 70px;
+    height: 50px;
 }
 .plus-icon-projects{
     position: absolute;
@@ -334,275 +163,43 @@
     fill: #F57E7E;
 }
 
-@media (max-width: 1500px){
-    .project-subtitle{
-        font-size: 15px;
-        margin-top: -40px;
-        margin-left: -100px;
-    }
-    .lang-fram > section{
-        flex: none;
-    }
-}
-@media (max-width: 1250px){
-    .project-subtitle{
-        font-size: 15px;
-        margin-top: -40px;
-        margin-left: -100px;
-    }
-    .java{
-        margin-bottom: 4.5vh;
-    }
-    .project-svg{
-        height: 70px;
-    }
 
-    .project-card:before {
-        height: 77%;
-    }
-
-    .project-card:after {
-        height: 77%;
-    }
-}
-
-@media (max-width: 1090px){
+@media (max-width: 870px){
     .project-card{
-        padding: 70px;
-    }
-    .project-subtitle{
-        font-size: 14px;
-        text-align: center;
-        margin-left: 0px;
-    }
-    .about-and-icos{
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin: 25px auto 0px auto;
-        width: 90%;
-        gap: 30px;
-    }
-    .project-about{
-        position: relative;
-        width: 100%;
-        text-align: center;
+        width: 270px;
     }
 
-    .lang-fram{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        margin-left: 0px;
-        width: 100%;
-        gap: 20px;
-    }
-    .java{
-        margin-bottom: .5vh;
-    }
 
-    .project-svg{
-        height: 70px;
-    }
-
-     .project-card:before {
-        height: 78%;
-    }
-
-    .project-card:after {
-        height: 78%;
-    }
-
-}
-
-@media (max-width: 930px){
-
-    .project-card{
-        padding: 0px 50px;
-    }
     .project-title {
-        left: 43%;
-        font-size: 7.7vw;
+        font-size: 27px;
+        
     }
-    .project-title-dashboard {
-        left: 43%;
-        font-size: 7.7vw;
-    }
-    .project-about{
-        text-align: center;
-        font-size: 11.8px;
-        padding: 12px 17px;
-        margin-top: 10px;
-    }
-    .punto{ 
-        height: 30px; 
-        border-left: 15px solid white; 
-        border-right: 15px solid white; 
-        border-bottom: 10px solid transparent; 
-    }
-
-    .languages{
-        font-size: 10px;
-    }
-
-     .project-card:before {
-        width: 25%;
-    }
-
-}
-
-@media (max-width: 774px){
-    .project-card{
-        padding: 30px;
-    }
-    .project-subtitle{
-        font-size: 13px;
-        margin-top: -10px;
-    }
-    .lang-fram{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        font-weight: 600;
-        gap: 0px 70px;
-    }
-    .project-top{
-        margin-top: 5px;
-        width: 100px;
-        height: 57px;
-        border: none;
-        color: #171830;
-        background-color: white;
-        padding: 5px;
-    }
-    .project-icon{
-        margin: 0px auto 0px auto;
-        width: 26px;
-    }
-
-    .languages{
-        font-size: 10px;
-    }
-    /* .mysql-icon{
-        width: 37px;
-        margin-bottom: 10px;
-    } */
-    .project-svg{
-        height: 37px;
-    }
-    
-}
-
-@media (max-width: 744px){
-    .project-card{
-        width: 90vw;
-    }
-
     .project-subtitle{
         font-size: 12px;
-        margin-top: -30px;
-    }
-    .lang-fram{
-        gap: 10px 20px;
-    }
-    .project-about{
-        text-align: center;
-        font-size: 10px;
-        padding: 10px 14px;
-        margin-top: 10px;
-    }
-    .project-top{
-        margin-top: 0px;
-        width: 100px;
-        height: 55px;
-        border: none;
-        color: white;
-        background-color: #171830;
-        padding: 5px;
-    }
-    .project-icon{
-        margin: 0px auto 0px auto;
-        width: 30px;
+        width: 210px;
     }
 
-    .languages{
-        font-size: 10px;
+    .project-top{
+        margin: 4px 0px;
+        width: 75px;
+        height: 60px;
+        border-radius: 10px;
+        color: #171830;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
     }
-    /* .mysql-icon{
-        width: 37px;
-        margin-bottom: 10px;
-    } */
-    .project-svg{
-        height:40px;
+
+    .project-icon{
+        margin: 5px auto;
+        width: 40px;
+        height: 35px;
     }
- 
+}
+
+@media (max-width: 760px){
+    
     
 }
 
-@media (max-width: 480px){
-    .project-card{
-        padding: 0px 25px;
-    }
-    .project-title {
-        left: 46%;
-        font-size: 6.5vw;
-    }
-    .project-title-dashboard {
-        left: 46%;
-        font-size: 6.5vw;
-    }
-    .project-subtitle{
-        font-size: 9px;
-        margin-top: -55px;
-    }
-     .project-about{
-        font-size: 8px;
-        padding: 10px 10px;
-        margin-top: 0px;
-    }
-
-    .punto{ 
-        height: 22px; 
-        border-left: 11px solid white; 
-        border-right: 11px solid white; 
-        border-bottom: 8px solid transparent;
-        top: -7px;
-        left: -11px;
-    }
-    .project-top{
-        margin-top: 0px;
-        width: 65px;
-    }
-    .project-icon{
-        margin: 0px auto;
-        width: 20px;
-    }
-
-    .languages{
-        font-size: 8px;
-    }
-    .lang-fram{
-        gap: 10px;
-        justify-content: space-between;
-    }
-
-    .project-card:before {
-        height: 80.7%;
-        width: 20%;
-
-    }
-
-    .project-card:after {
-        height: 80.7%;
-    }
-
-    .project-svg{
-        height: 40px;
-    }
-    /* .mysql-icon{
-        margin-bottom: 10px;
-    } */
-}

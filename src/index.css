@@ -21,6 +21,10 @@ body {
   margin-bottom: 30px;
 }
 
+.question{
+  margin-top: 70px;
+}
+
 /* RESET STYLESHEET */
 hr {
   box-sizing: content-box; /* 1 */
@@ -219,7 +223,7 @@ header {
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  background-color: rgba(78, 84, 252, 0.3);
+  background-color: #D5E2D6;
   border-radius: 3px;
   margin: auto;
   padding: 5px 10px;

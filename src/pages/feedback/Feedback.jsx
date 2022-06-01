@@ -1,6 +1,8 @@
 import QuestionOne from '../../components/feedback/QuestionOne'
 import QuestionTwo from '../../components/feedback/QuestionTwo'
 import QuestionThree from '../../components/feedback/QuestionThree'
+import ProjectTittle from '../../components/games/game-title/GameTitle'
+
 import FeedbackContext from '../../context/feedback/FeedbackContext'
 import {useContext} from 'react'
 
@@ -11,16 +13,40 @@ function Feedback() {
 
 
     if( questionCount === 1) {
-       return <QuestionOne/>
+       return (
+         <>
+          <ProjectTittle title={"PORTFOLIO"}/>
+          <QuestionOne/>
+         </>
+
+       )
 
     } else if (questionCount === 2) {
-      return  <QuestionTwo/>
+      return (
+         <>
+          <ProjectTittle title={"FOUNDIT"}/>
+          <QuestionTwo/>
+         </>
+
+       )
 
     } else if (questionCount === 3){
-        return <QuestionThree/>
+        return (
+         <>
+          <ProjectTittle title={"DASHBRD"}/>
+          <QuestionThree/>
+         </>
+
+       )
 
     } else {
-      return <QuestionThree/>
+      return (
+         <>
+          <ProjectTittle title={"DASHBRD"}/>
+          <QuestionThree/>
+         </>
+
+       )
     }
            
 

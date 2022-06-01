@@ -540,6 +540,7 @@
 @media(max-width: 500px){
     .skills-page{
         width: 95%;
+        margin-top: -40px;
 }
     
     .skills-title{
@@ -551,10 +552,7 @@
     .skills-text{
         width: 95%;
         font-size: 8.5px;
-        height: 130px;
-    
-      
-        
+        height: 130px;  
     }
 
      .skill{
@@ -572,7 +570,11 @@
         width: 35px;
     }
 }
-@media(max-width: 440px){    
+@media(max-width: 440px){
+      .skills-page{
+        width: 95%;
+        margin-top: -60px;
+    }
     .skills-title{
         font-size: 37px;
     }

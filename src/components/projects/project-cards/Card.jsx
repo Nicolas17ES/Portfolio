@@ -8,26 +8,18 @@ function Card({founditApp}) {
             {founditApp.title}
             <p className="project-subtitle">{founditApp.subtitle}</p>
             <div className="about-and-icos">
-                <div className="project-about">
-                    <span className="punto"></span>
-                    <p>{founditApp.about}</p>
-                </div>
                 <div className="lang-fram">
-                    <section className="project-top java">
+                    <section className="project-top uno">
                         {founditApp.logo1}
-                        <span className="languages">{founditApp.logo1Name}</span>
                     </section>
-                    <section className="project-top">
-                        {founditApp.logo2}
-                        <span className="languages">{founditApp.logo2Name}</span>                      
+                    <section className="project-top dos">
+                        {founditApp.logo2}                   
                     </section>
-                    <section className="project-top">
+                    <section className="project-top tres">
                         {founditApp.logo3}
-                        <span className="languages">{founditApp.logo3Name}</span>
                     </section>
-                    <section className="project-top">
-                        {founditApp.logo4}
-                        <span className="languages">{founditApp.logo4Name}</span>                      
+                    <section className="project-top cuatro">
+                        {founditApp.logo4}     
                     </section>
                 
                 </div>
