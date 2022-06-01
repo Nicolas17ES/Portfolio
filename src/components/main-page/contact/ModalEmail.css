@@ -18,7 +18,7 @@
     visibility: hidden;
     pointer-events: none;
     z-index: 100000;
-    border: 2px solid yellow;
+    border: 2px solid black;
     box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .7);
 }
 

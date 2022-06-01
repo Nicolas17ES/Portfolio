@@ -1,16 +1,14 @@
 .found-cards-page{
- 
+    width: 68%;
+    margin-top: 140px;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 70px;
-    width: 100%;
-    margin-top: 40px;
-    position: relative;
-    
+    align-items: center;   
 }
 
+
 .gallery-foundit{
+    margin: 60px auto 0 auto;
     text-align: center;
     font-size: 36px;
     font-weight: 600;
@@ -26,29 +24,30 @@
     border-radius: 30px;
 }
 
-.block-found{
 
-    gap: 0px 60px;
-    margin-bottom: 80px;
-    margin-right: 100px;
-    border: 1px solid yellow;
-}
-.block-found-video{
-    display: flex;
+.block-found{
+    display: flex !important;
     align-items: center;
     justify-content: center;
-    margin-left: 100px;
-    gap: 0px 100px;
-    margin-bottom: 80px;
-    margin-right: 100px;
-     border: 1px solid yellow;
+    width: 100%;
+    /* border: 1px solid yellow; */
+    
+}
+.block-found-video{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.text{
+.text{ 
+    margin: auto;
+    margin-right: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 35%;
     font-size: 13px;
     border: 2.5px solid black;
     box-shadow: 10px 10px rgba(0, 0, 0, 1);
@@ -78,7 +77,6 @@
 
 .image-text{
     position: relative;
-    width: 250px;
     border-radius: 2px;
     font-size: 14px; 
     line-height: 24px; 
@@ -103,9 +101,18 @@
    
 }
 
-@media (max-width: 930px){
+@media (max-width: 1400px){
+    .found-cards-page{
+        width: 77%;
+    }
+}
+@media (max-width: 1000px){
+    .found-cards-page{
+        width: 83%;
+    }
+
     .text{
-        margin-bottom: 0px;
+        margin-right: 60px;
     }
     .image-title{
         font-size: 23px; 
@@ -143,7 +150,7 @@
     }
 }
 
-@media (max-width: 760px){
+@media (max-width: 800px){
     .found-cards-page{
         margin-top: 0px;
         gap: 50px;
@@ -154,18 +161,21 @@
         height: 60px;
         padding: 7px;
     }
+    .text{
+        margin: 50px auto 0 auto;
+        width: 68%;
+    }
     .block-found{
         flex-direction: column-reverse;
         margin-bottom: 0px;
+        gap: 50px;
     }
     .block-found-video{
         flex-direction: column-reverse;
         margin: 0px auto 0px auto;
         gap: 0px 70px;
     }
-    .text{
-        margin-bottom: 30px;
-    }
+  
     .image-title{
         font-size: 20px; 
         text-align: center;
@@ -173,8 +183,7 @@
     .image-text{
         font-size: 12px; 
         line-height: 22px;
-        text-align: center;
-        width: 310px;  
+        text-align: center; 
         margin-top: -7px;
     }
 
@@ -187,19 +196,10 @@
     .found-cards-page{
         margin-top: 35px; 
     }
-    .block-found{
-        flex-direction: column-reverse;
-        margin: 0px auto 0px auto;
+   
 
-    }
-    .block-found-video{
-        flex-direction: column-reverse;
-        margin: 0px auto 0px auto;
-        gap: 0px 70px;
-        margin-bottom: 0px;
-    }
     .text{
-        margin-bottom: 45px;
+        margin-bottom: 0;
         width: 90%;
     }
     .image-title{
@@ -207,7 +207,6 @@
     }
     .image-text{
         width: 100%;  
-        margin-top: -7px;
         font-size: 10px;
     }
 

@@ -57,9 +57,11 @@ function FoundCard() {
         };
 
     return (
+        <>
+        <button className="gallery-foundit">GALLERY</button>
         <div className="found-cards-page">
-            <button className="gallery-foundit"><span>GALLERY</span></button>
-            <div>
+            
+            <div className="test-found">
                 <Slider {...settings}>
                 <div className="block-found">
                     <Mobile image={Logo}/>
@@ -182,6 +184,7 @@ function FoundCard() {
             </div>
         
         </div>
+        </>
     )
 }
 

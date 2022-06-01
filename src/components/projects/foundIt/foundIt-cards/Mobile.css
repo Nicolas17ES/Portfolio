@@ -1,28 +1,33 @@
 
 .mobile-svg{
+    /* border: 1px solid beige; */
     width: 430px;
     height: 460px;
     background-size: 47% 78.5%;
     background-repeat: no-repeat;
     background-position: center; 
-    /* border: 4px solid #131327; */
-    /* box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);  */
     -webkit-filter: drop-shadow( 10px 12px rgba(0, 0, 0, .9));
     filter: drop-shadow( 15px 10px rgba(0, 0, 0, .9));
 
 }
 
 
-@media (max-width: 930px){
+@media (max-width: 900px){
     .mobile-svg{
-        width: 330px;
-        height: 350px;  
+        margin-left: -40px; 
+    }
+}
+@media (max-width: 800px){
+    .mobile-svg{
+        margin: auto;
+        width: 400px;
+        height: 430px;
     }
 }
 @media (max-width: 760px){
     .mobile-svg{
-        width: 295px;
-        height: 320px;
+        width: 355px;
+        height: 390px;
     }
 }
 

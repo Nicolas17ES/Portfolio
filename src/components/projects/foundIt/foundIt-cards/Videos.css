@@ -1,3 +1,7 @@
+
+.video-js-found {
+    margin: auto;
+}
 @media (max-width: 930px){
     .video-js-found {
         width: 180px;
