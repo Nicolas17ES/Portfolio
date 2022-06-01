@@ -20,7 +20,9 @@
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.7",
+    "react-slick": "^0.29.0",
     "react-video-js-player": "^1.1.1",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"

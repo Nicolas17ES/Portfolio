@@ -1,26 +1,20 @@
 .dash-cards-page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    width: 70%;
     position: relative;
-    margin-top: 150px;
 }
 
 .block-dash{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 80px;
     flex-direction: column;
 }
 .block-dash-video{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 100px;
-    gap: 0px 70px;
-    margin-bottom: 80px;
     flex-direction: column;
 }
 
@@ -30,12 +24,20 @@
     
 }
 
-@media(max-width: 470px){
+@media(max-width: 1200px){
     .dash-cards-page{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 95vw;
+        width: 80%;
+    }
+}
+@media(max-width: 900px){
+    .dash-cards-page{
+        margin-top: 170px;
+        width: 90%;
+    }
+}
+@media(max-width: 570px){
+    .dash-cards-page{
+        width: 100%;
         position: relative;
         margin-top: 150px;
     }

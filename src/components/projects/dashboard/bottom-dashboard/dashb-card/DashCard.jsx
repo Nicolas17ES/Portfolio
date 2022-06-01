@@ -6,7 +6,13 @@ import FeedbackContext from '../../../../../context/feedback/FeedbackContext'
 import Computer from '../computer/Computer'
 import Video from '../video/VideoDash'
 import Title from '../title/VideoTitle'
-import { Carousel } from 'react-responsive-carousel';
+// import { Carousel } from 'react-responsive-carousel';
+
+// carousel
+
+import Slider from "react-slick";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 // images
 import FlightResults  from '../../../../assets/dashboard/FlightResults2.png'
@@ -46,17 +52,17 @@ function DashCard() {
 
     }, [scroll, dispatch])
 
-     console.log(scroll)
+    const settings = {
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    };
     
     return (
         <div className="dash-cards-page">
             <span ref={scrollToHere} className="center-absolute"></span>
-             <Carousel 
-                className="carousel" 
-                showArrows={true} 
-                showStatus={false} 
-                useKeyboardArrows={true}  
-            >
+          
+            <Slider {...settings}>
                 <div className="block-dash">
                     <Title title={"HOME PAGE"}/>
                     <Computer image={Welcome}/>
@@ -125,7 +131,7 @@ function DashCard() {
                     <Title title={"ADMIN PANEL"}/>
                     <Video videoProp={AdminPanelVideo} posterProp={Welcome}/>
                 </div>
-            </Carousel>
+            </Slider>
         </div>
     )
 }
