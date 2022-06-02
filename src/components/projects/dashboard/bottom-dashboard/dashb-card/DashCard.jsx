@@ -27,12 +27,12 @@ import UserEmpty  from '../../../../assets/dashboard/UserEmpty.png'
 import Welcome  from '../../../../assets/dashboard/Welcome.png'
 
 // videos
-import AdminPanelVideo  from '../../../../assets/dashboard/AdminPanel.mov'
-import FlightsVideo  from '../../../../assets/dashboard/FlightsVideo.mp4'
-import GoogleLogInVideo  from '../../../../assets/dashboard/LogInVideo.mp4'
-import GoogleRegisterVideo  from '../../../../assets/dashboard/RegisterVideo.mp4'
-import NewsVideo  from '../../../../assets/dashboard/News.mov'
-import WeatherVideo  from '../../../../assets/dashboard/Weather.mov'
+// import AdminPanelVideo  from '../../../../assets/dashboard/AdminPanel.mov'
+// import FlightsVideo  from '../../../../assets/dashboard/FlightsVideo.mp4'
+// import GoogleLogInVideo  from '../../../../assets/dashboard/LogInVideo.mp4'
+// import GoogleRegisterVideo  from '../../../../assets/dashboard/RegisterVideo.mp4'
+// import NewsVideo  from '../../../../assets/dashboard/News.mov'
+// import WeatherVideo  from '../../../../assets/dashboard/Weather.mov'
 
 function DashCard() {
 
@@ -74,11 +74,11 @@ function DashCard() {
                 </div>
                 <div className="block-dash">
                     <Title title={"LOGIN GOOGLE"}/>
-                    <Video videoProp={GoogleLogInVideo} posterProp={Welcome}/>
+                    <Video videoProp={"../../../../../../public/assets/dashboard/LogInVideo.mp4"} posterProp={Welcome}/>
                 </div>
                 <div className="block-dash">
                     <Title title={"GOOGLE AUTH"}/>
-                    <Video videoProp={GoogleRegisterVideo} posterProp={Welcome}/>
+                    <Video videoProp={"../../../../../../public/assets/dashboard/RegisterVideo.mp4"} posterProp={Welcome}/>
                 </div>
                 <div className="block-dash">
                     <Title title={"DASHBOARD"}/>
@@ -94,7 +94,7 @@ function DashCard() {
                 </div>
                 <div className="block-dash">
                     <Title title={"FLIGHT BOOKING"}/>
-                    <Video videoProp={FlightsVideo} posterProp={FlightResults}/>
+                    <Video videoProp={"../../../../../../public/assets/dashboard/FlightsVideo.mp4"} posterProp={FlightResults}/>
                 </div>
                 <div className="block-dash">
                     <Title title={"FLIGHTS FORM"}/>
@@ -110,7 +110,7 @@ function DashCard() {
                 </div>
                 <div className="block-dash">
                     <Title title={"NEWS VIDEO"}/>
-                    <Video videoProp={NewsVideo} posterProp={News}/>
+                    <Video videoProp={"../../../../../../public/assets/dashboard/News.mov"} posterProp={News}/>
                 </div>
                 <div className="block-dash">
                     <Title title={"NEWS"}/>
@@ -122,7 +122,7 @@ function DashCard() {
                 </div>
                 <div className="block-dash">
                     <Title title={"WEATHER VIDEO"}/>
-                    <Video videoProp={WeatherVideo} posterProp={Weather}/>
+                    <Video videoProp={"../../../../../../public/assets/dashboard/Weather.mov"} posterProp={Weather}/>
                 </div>
                 <div className="block-dash">
                     <Title title={"WEATHER"}/>
@@ -130,7 +130,7 @@ function DashCard() {
                 </div>
                 <div className="block-dash">
                     <Title title={"ADMIN PANEL"}/>
-                    <Video videoProp={AdminPanelVideo} posterProp={Welcome}/>
+                    <Video videoProp={"../../../../../../public/assets/dashboard/AdminPanel.mov"} posterProp={Welcome}/>
                 </div>
             </Slider>
 {/*           

@@ -13,6 +13,7 @@ function VideoDash({videoProp, posterProp}) {
                 poster={poster}
                 width="850"
                 height="420"
+                autoplay={'muted'}
                 muted={true}
                 playbackRates={[0.75, 1, 1.5]}
             />
