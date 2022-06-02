@@ -3,7 +3,6 @@ import './DashCard.css'
 import {useContext, useEffect, useRef} from 'react'
 import FeedbackContext from '../../../../../context/feedback/FeedbackContext'
 
-import Computer from '../computer/Computer'
 import Video from '../video/VideoDash'
 import Title from '../title/VideoTitle'
 // import { Carousel } from 'react-responsive-carousel';
