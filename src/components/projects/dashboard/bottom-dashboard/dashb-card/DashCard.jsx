@@ -74,13 +74,13 @@ function DashCard() {
                 </div>
                 <div className="block-dash">
                     <Title title={"LOGIN GOOGLE"}/>
-                    <video width="600" controls autoplay muted>
+                    <video className="video-js-dash" controls muted>
                         <source src={GoogleLogInVideo} type="video/mp4"></source>
                     </video>
                 </div>
                 <div className="block-dash">
                     <Title title={"REGISTER GOOGLE"}/>
-                    <video width="600" controls autoplay muted>
+                    <video className="video-js-dash" controls muted>
                         <source src={GoogleRegisterVideo} type="video/mp4"></source>
                     </video>
                 </div>
@@ -98,7 +98,7 @@ function DashCard() {
                 </div>
                 <div className="block-dash">
                     <Title title={"FLIGHT BOOKING"}/>
-                    <video width="600" controls autoplay muted>
+                    <video className="video-js-dash" controls muted>
                         <source src={FlightsVideo} type="video/mp4"></source>
                     </video>
                 </div>
@@ -116,7 +116,7 @@ function DashCard() {
                 </div>
                 <div className="block-dash">
                     <Title title={"NEWS VIDEO"}/>
-                    <video width="600" controls autoplay muted>
+                    <video className="video-js-dash" controls muted>
                         <source src={NewsVideo} type="video/mp4"></source>
                     </video>
                 </div>
@@ -130,7 +130,7 @@ function DashCard() {
                 </div>
                 <div className="block-dash">
                     <Title title={"WEATHER VIDEO"}/>
-                    <video width="600" controls autoplay muted>
+                    <video className="video-js-dash" controls muted>
                         <source src={WeatherVideo} type="video/mp4"></source>
                     </video>
                 </div>
@@ -140,7 +140,7 @@ function DashCard() {
                 </div>
                 <div className="block-dash">
                     <Title title={"ADMIN PANEL"}/>
-                    <video width="600" controls autoplay muted>
+                    <video className="video-js-dash" controls muted>
                         <source src={AdminPanelVideo} type="video/mp4"></source>
                     </video>
                 </div>

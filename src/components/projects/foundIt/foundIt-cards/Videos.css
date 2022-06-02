@@ -1,16 +1,20 @@
 
 .video-js-found {
-    margin: auto;
+    margin-left: 100px;
 }
-@media (max-width: 930px){
+@media (max-width: 900px){
     .video-js-found {
-        width: 180px;
-        height: 340px;
+        margin-left: 60px;
+    }
+}
+@media (max-width: 800px){
+    .video-js-found {
+        margin: auto;
     }
 }
 @media (max-width: 760px){
     .video-js-found {
-        width: 160px;
-        height: 290px;
+        width: 190px;
+        height: 350px;
     }
 }

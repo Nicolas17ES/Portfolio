@@ -6,7 +6,7 @@ function Videos({videoProp, posterProp}) {
     const videoSrc = videoProp;
     const poster = posterProp
     return (
-        <div>
+        <div className="video-div">
             <VideoPlayer
             className="video-js-found"
                 src={videoSrc}

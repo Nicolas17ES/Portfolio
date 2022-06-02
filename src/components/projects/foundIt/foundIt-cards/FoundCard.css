@@ -138,10 +138,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 100px;
-        gap: 0px 70px;
         margin-bottom: 80px;
-        margin-right: 70px;
+
     }
 }
 @media (max-width: 850px){
@@ -172,8 +170,7 @@
     }
     .block-found-video{
         flex-direction: column-reverse;
-        margin: 0px auto 0px auto;
-        gap: 0px 70px;
+        gap: 70px;
     }
   
     .image-title{
@@ -193,8 +190,11 @@
     }
 }
 @media (max-width: 450px){
+    
+   
     .found-cards-page{
-        margin-top: 35px; 
+        margin-top: 35px;
+        width: 96%; 
     }
    
 
