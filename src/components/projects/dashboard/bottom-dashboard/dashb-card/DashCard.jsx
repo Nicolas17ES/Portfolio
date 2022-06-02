@@ -3,7 +3,7 @@ import './DashCard.css'
 import {useContext, useEffect, useRef} from 'react'
 import FeedbackContext from '../../../../../context/feedback/FeedbackContext'
 
-import Video from '../video/VideoDash'
+// import Video from '../video/VideoDash'
 import Title from '../title/VideoTitle'
 // import { Carousel } from 'react-responsive-carousel';
 
@@ -74,10 +74,92 @@ function DashCard() {
                 </div>
                 <div className="block-dash">
                     <Title title={"LOGIN GOOGLE"}/>
+                    <video width="600" controls autoplay muted>
+                        <source src={GoogleLogInVideo} type="video/mp4"></source>
+                    </video>
+                </div>
+                <div className="block-dash">
+                    <Title title={"REGISTER GOOGLE"}/>
+                    <video width="600" controls autoplay muted>
+                        <source src={GoogleRegisterVideo} type="video/mp4"></source>
+                    </video>
+                </div>
+                <div className="block-dash">
+                    <Title title={"DASHBOARD"}/>
+                    <img src={Dashboard} alt="main dashboard"></img>
+                </div>
+                <div className="block-dash">
+                    <Title title={"PROFILE (1)"}/>
+                    <img src={UserEmpty} alt="user empty profile"></img>
+                </div>
+                <div className="block-dash">
+                    <Title title={"PROFILE(2)"}/>
+                    <img src={UserDashboard} alt="user profile with gadgets added"></img>
+                </div>
+                <div className="block-dash">
+                    <Title title={"FLIGHT BOOKING"}/>
+                    <video width="600" controls autoplay muted>
+                        <source src={FlightsVideo} type="video/mp4"></source>
+                    </video>
+                </div>
+                <div className="block-dash">
+                    <Title title={"FLIGHTS FORM"}/>
+                    <img src={Flights} alt="flights gadget"></img>
+                </div>
+                <div className="block-dash">
+                    <Title title={"FLIGHT RESULTS"}/>
+                    <img src={FlightResults} alt="flight results"></img>
+                </div>
+                <div className="block-dash">
+                    <Title title={"TICKETS"}/>
+                    <img src={Aviasales} alt="flight tickets"></img>
+                </div>
+                <div className="block-dash">
+                    <Title title={"NEWS VIDEO"}/>
+                    <video width="600" controls autoplay muted>
+                        <source src={NewsVideo} type="video/mp4"></source>
+                    </video>
+                </div>
+                <div className="block-dash">
+                    <Title title={"NEWS"}/>
+                    <img src={News} alt="news result"></img>
+                </div>
+                <div className="block-dash">
+                    <Title title={"NEWS (2)"}/>
+                    <img src={News2} alt="news result 2"></img>
+                </div>
+                <div className="block-dash">
+                    <Title title={"WEATHER VIDEO"}/>
+                    <video width="600" controls autoplay muted>
+                        <source src={WeatherVideo} type="video/mp4"></source>
+                    </video>
+                </div>
+                <div className="block-dash">
+                    <Title title={"WEATHER"}/>
+                    <img src={Weather} alt="weather gadget result"></img>
+                </div>
+                <div className="block-dash">
+                    <Title title={"ADMIN PANEL"}/>
+                    <video width="600" controls autoplay muted>
+                        <source src={AdminPanelVideo} type="video/mp4"></source>
+                    </video>
+                </div>
+            </Slider>
+            {/* <Slider {...settings}>
+                <div className="block-dash">
+                    <Title title={"HOME PAGE"}/>
+                    <img src={Welcome} alt="main page"></img>
+                </div>
+                <div className="block-dash">
+                    <Title title={"LOGIN"}/>
+                    <img src={LogIn} alt="login"></img>
+                </div>
+                <div className="block-dash">
+                    <Title title={"LOGIN GOOGLE"}/>
                     <Video videoProp={GoogleLogInVideo}/>
                 </div>
                 <div className="block-dash">
-                    <Title title={"GOOGLE AUTH"}/>
+                    <Title title={"REGISTER GOOGLE"}/>
                     <Video videoProp={GoogleRegisterVideo}/>
                 </div>
                 <div className="block-dash">
@@ -132,7 +214,7 @@ function DashCard() {
                     <Title title={"ADMIN PANEL"}/>
                     <Video videoProp={AdminPanelVideo}/>
                 </div>
-            </Slider>
+            </Slider> */}
 {/*           
             <Slider {...settings}>
                 <div className="block-dash">
