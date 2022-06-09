@@ -54,7 +54,7 @@ function TopDashboard() {
         text: "More gadgets are meant to be added before deployment. So it is a work in progress. Users that want to save any available gadgets in their profile for later use will have to be previously registred and logged in so their data can be saved.",
     }
     const textThree = {
-        text: "For this project besides stat management I also wanted to test how Google Authentication works. Users can then register through their Google account or just by filling in the resitration form.",
+        text: "For this project besides state management I also wanted to test how Google Authentication works. Users can then register through their Google account or just by filling in the resitration form.",
     }
     // end text for each block//
 

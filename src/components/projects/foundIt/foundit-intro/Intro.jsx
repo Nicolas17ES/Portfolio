@@ -11,7 +11,7 @@ function Intro() {
     const navigate = useNavigate();
 
     const block1 = {
-        data: <> <li><strong className="strong">Motivations:</strong> I have always had a personal interest in gaining a better understandement of the world of Mobile App Development. So I decided to embark myself in a new project based on another  one of my  own motivations, animals.</li>
+        data: <> <li><strong className="strong">Motivations :</strong> I have always had a personal interest in gaining a better understandement of the world of Mobile App Development. So I decided to embark myself in a new project based on another  one of my  own motivations, animals.</li>
                 </>
     }
     const block2 = {
