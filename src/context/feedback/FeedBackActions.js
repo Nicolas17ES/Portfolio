@@ -5,7 +5,7 @@
 
 export const fetchFeedback = async () => {
         
-        const response = await fetch("http://localhost:3001/feedback")
+        const response = await fetch("https://node-mysql-portfolio.herokuapp.com/feedback")
         const data = await response.json();
         return data;
     }
@@ -13,7 +13,7 @@ export const fetchFeedback = async () => {
 //add feedback
 
   export const addFeedback = async (newFeedback) => {
-        const response = await fetch("http://localhost:3001/feedback", {
+        const response = await fetch("https://node-mysql-portfolio.herokuapp.com/feedback", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ export const fetchFeedback = async () => {
     //Edit the item that has been set
     export const updateFeedback = async (id, updatedItem) => {
         
-        const response = await fetch(`http://localhost:3001/feedback/${id}`, {
+        const response = await fetch(`https://node-mysql-portfolio.herokuapp.com/feedback/${id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ export const fetchFeedback = async () => {
 
 export const deleteFeedback = async (id) => {
         if(window.confirm('Are you sure you want to delete?')){
-            await fetch(`http://localhost:3001/feedback/${id}`, { method: "DELETE"})
+            await fetch(`https://node-mysql-portfolio.herokuapp.com/${id}`, { method: "DELETE"})
         } else {
             return null
         }
@@ -57,7 +57,7 @@ export const deleteFeedback = async (id) => {
 //fetch likes//
 export const fetchLikes = async () => {
         
-        const response = await fetch(`http://localhost:3001/portfolio/likes`)
+        const response = await fetch(`https://node-mysql-portfolio.herokuapp.com/portfolio/likes`)
         const data = await response.json();
         return data;
     }
@@ -66,7 +66,7 @@ export const fetchLikes = async () => {
 
 export const addLike = async (info) => {
 
-        const response = await fetch("http://localhost:3001/portfolio/likes", {
+        const response = await fetch("https://node-mysql-portfolio.herokuapp.com/portfolio/likes", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -83,7 +83,7 @@ export const addLike = async (info) => {
 
 //get replies//
 export const getReplies = async () => {
-    const response = await fetch(`http://localhost:3001/portfolio/comments`)
+    const response = await fetch(`https://node-mysql-portfolio.herokuapp.com/portfolio/comments`)
         const data = await response.json();
         return data;
 }
@@ -91,7 +91,7 @@ export const getReplies = async () => {
 //post replies//
 export const addReply = async (replyData) => {
     
-        const response = await fetch("http://localhost:3001/portfolio/comments", {
+        const response = await fetch("https://node-mysql-portfolio.herokuapp.com/portfolio/comments", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
