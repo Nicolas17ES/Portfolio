@@ -50,8 +50,8 @@ function Play({text, style, rockDispatch}) {
     }
     
     return (
-        <div className="play-button" style={style}>
-            <button className="play-text" onClick={playGame}>{text}</button>
+        <div onClick={playGame} className="play-button" style={style}>
+            <button className="play-text">{text}</button>
         </div>
     )
 }
