@@ -69,7 +69,7 @@ function FoundCard() {
                 </div>
                 <div className="block-found">
                     <Mobile image={Sign1}/>
-                    <CardText title={"SignUp Form (1)"} text={"Users can vie lost animals but will not be able to interact with other users unless the get resitered and have their own profile."}/>
+                    <CardText title={"SignUp Form (1)"} text={"Users can view lost animals but will not be able to interact with other users unless they resiter and have their own profile."}/>
                 </div>
                 <div className="block-found">
                     <Mobile image={Sign2}/>
@@ -125,7 +125,7 @@ function FoundCard() {
                 </div>
                 <div className="block-found">
                     <Mobile image={Request}/>
-                    <CardText title={"View Profile / Friend Request"} text={"Users can access their profile to see if they can help with the finding, but previously a friend request will must be sended before any possible interaction."}/>
+                    <CardText title={"View Profile / Friend Request"} text={"Users can access their profile to see if they can help with the finding, but previously a friend request must be sended before any possible interaction."}/>
                 </div>
                 <div className="block-found">
                     <Mobile image={RequestSended}/>
@@ -133,7 +133,7 @@ function FoundCard() {
                 </div>
                 <div className="block-found">
                     <Mobile image={Notification}/>
-                    <CardText title={"Friend Request Received"} text={"From the other users perspective this is the notification they will receive once they a friend request. They will be able to accept or reject."}/>
+                    <CardText title={"Friend Request Received"} text={"From the other users perspective this is the notification they will receive once they get send a friend request. They will be able to accept or reject."}/>
                 </div>
                 <div className="block-found">
                     <Mobile image={ExternProfile}/>
@@ -161,7 +161,7 @@ function FoundCard() {
                 </div>
                 <div className="block-found">
                     <Mobile image={Profile}/>
-                    <CardText title={"Your User Profile"} text={"Once users are registered this is the main profile that they will have acess to."}/>
+                    <CardText title={"Your User Profile"} text={"Once users are registered this is the main profile that they will have access to."}/>
                 </div>
                 <div className="block-found">
                     <Mobile image={Friends}/>
@@ -173,11 +173,11 @@ function FoundCard() {
                 </div>
                 <div className="block-found">
                     <Mobile image={Settings}/>
-                    <CardText title={"Change Profile Settings"} text={"In the users settings ther will be the option to change to a public/private profile, walker/nonWalker profile, change password or edit your username, location, etc."}/>
+                    <CardText title={"Change Profile Settings"} text={"In the users settings ther will be the option to change to a public/private profile, walker/non-walker profile, change password or edit your username, location, etc."}/>
                 </div>
                 <div className="block-found">
                     <Mobile image={LogOut}/>
-                    <CardText title={"LogOut"} text={"Once the user once to logout of the app the top right (three dots) button will be clicked to exit."}/>
+                    <CardText title={"LogOut"} text={"The top right (three dots) button will be clicked to to logout of the application."}/>
                 </div>
             
            </Slider>
