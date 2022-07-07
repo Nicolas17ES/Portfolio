@@ -3,7 +3,7 @@
   text-align: center;
   font-weight: bold;
   line-height: 45px;
-  font-size: 50px;
+  font-size: 40px;
   /* mask-image: url('../../assets/pruebamask.jpg');
   mask-repeat: no-repeat; */
  
@@ -13,7 +13,7 @@
   
 }
 .game-title {
-    margin-top: 35px;
+    margin-top: 20px;
   }
 @media (min-width: 500px){
   .game-title {
@@ -25,6 +25,7 @@
 @media (min-width: 760px){
   .title-h1 {
     font-size: 70px;
+    margin-top: 70px;
   }
 }
 

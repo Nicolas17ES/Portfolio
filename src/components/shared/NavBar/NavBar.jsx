@@ -213,8 +213,8 @@ const hideModal = () => {
             <FaTimes className="nav-close-btn" size={24}/>
             </button>
               <div className="nav-links">
-                  <div className="link-one" onClick={showDropdown}>          
-                      <Link className="link-nav home-link" to="/" onClick={redirectToHome}>Home <BiDownArrow className="dropdown-arrow"/></Link>
+                  <div className="link-one">          
+                      <Link className="link-nav home-link" to="/" onClick={redirectToHome}>Home <BiDownArrow className="dropdown-arrow" onClick={showDropdown}/></Link>
                       <ul ref={dropdown} className="dropdown">
                         <li><Link to="/" className="dropdown-links" onClick={redirectToAbout}>About</Link></li>
                         <li><Link to="/" className="dropdown-links" onClick={redirectToSkills}>Skills</Link></li>

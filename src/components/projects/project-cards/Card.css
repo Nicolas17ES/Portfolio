@@ -203,6 +203,7 @@
     .project-card{
         width: 250px;
         height: 370px;
+        margin-top: 10px;
     }
     .project-title {
         color: rgb(245, 126, 126);

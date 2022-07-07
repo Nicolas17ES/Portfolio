@@ -315,10 +315,6 @@ header .nav-btn:hover{
        right: 17vw;
     }
 
-    .divisor{
-        margin-bottom: 0px;
-    }
-
     .nav-links{
         display: flex;
         flex-wrap: wrap;
@@ -346,23 +342,24 @@ header .nav-btn:hover{
     }
 
     .divisor{
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
 
     .dropdown{
-        left: 10%;
-        font-size: 0.7rem;
+        display: none;
+    }
+    .dropdown li{
+        display: none;
     }
 
     .dropdown-arrow{
-        top: 36%;
-        right: 10%;
+        display: none;
     }
     .showDropdown{
-        visibility: visible;
-        opacity: 1;
-        display: block;
-        text-align: left;
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+        
     }
 }
 
@@ -380,13 +377,13 @@ header .nav-btn:hover{
         font-size: 0.6rem;
     }
 
-    .dropdown-arrow{
+    /* .dropdown-arrow{
         top: 42%;
         right: 10%;
-    }
+    } */
 
-    .dropdown{
+    /* .dropdown{
         left: 0%;
         font-size: 0.6rem;
-    }
+    } */
 } 

@@ -308,6 +308,7 @@
 @media (max-width: 480px){
     .contact-page{
         margin: 0px auto;
+        margin-top: -40px;
         width: 80vw;
         padding: 0px 30px;
         height: 100%;    
