@@ -16,7 +16,7 @@ function Intro() {
     }
     const block2 = {
         data: <>
-                <li>My home country, Spain, is still a moderately <strong className="strong">animal friendly</strong> country and there is ultimately 1 animal for every two households. </li></>
+                <li>My home country, Spain, is still a moderately <strong className="strong">animal friendly</strong> country and there is ultimately 1 animal for every two households. Many pets get lost around the city and struggle to find their way home.</li></>
     }
     const block3 = {
         data: <>
