@@ -48,7 +48,7 @@
 }
 .box2{
     grid-area: dos;
-    background-color: #a4fac3;
+    background-color: rgb(252, 236, 206);
     /* visibility: hidden; */
     /* animation: .8s fadeIn ease-in forwards .1s; */
 }
@@ -133,7 +133,7 @@
 
 .box10{
     grid-area: diez;
-    background-color: #a4fac3;
+    background-color: rgb(252, 236, 206);
     /* visibility: hidden;
     animation: .8s fadeIn ease-in forwards 0.1s; */
 }
@@ -151,7 +151,7 @@
 
 .box13{
     grid-area: trece;
-    background-color: #a4fac3;
+    background-color: rgb(252, 236, 206);
     /* visibility: hidden;
     animation: .8s fadeIn ease-in forwards .1s; */
 }

@@ -14,7 +14,9 @@ import Projects from './pages/projects/Projects'
 import FoundIt from './pages/projects/foundit/FoundIt'
 import Dashboard from './pages/projects/dashboard/Dashboard'
 import PaperScissors from './pages/games/Paper'
-import Contact from './components/main-page/contact/Contact'
+import Games from './pages/games/MainGames'
+import Answers from './pages/games/answers/Answers'
+import Contact from './components/main-page/contact/Contact2'
 import Computer from './components/projects/dashboard/bottom-dashboard/dashb-card/DashCard'
 
 
@@ -44,7 +46,9 @@ function App() {
                                 <Route path="/about" element={<AboutPage/>}/>
                                 <Route path='/*' element={<NotFound/>}/>
                                 <Route path='/'  element={<Main/>}/>
-                                <Route path='/rock'  element={<PaperScissors/>}/>
+                                <Route path='/games/rock'  element={<PaperScissors/>}/>
+                                <Route path='/games'  element={<Games/>}/>
+                                <Route path='/games/answers'  element={<Answers/>}/>
                                 <Route path='/contact'  element={<Contact/>}/>
                                 <Route path='/projects'  element={<Projects/>}/>
                                 <Route path='/projects/foundit'  element={<FoundIt/>}/>

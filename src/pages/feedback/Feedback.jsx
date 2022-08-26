@@ -15,7 +15,7 @@ function Feedback() {
     if( questionCount === 1) {
        return (
          <>
-          <ProjectTittle title={"PORTFOLIO"}/>
+          <h1 className="title-all-feed"> <span className="title-main-feed">PORTFOLIO</span><sub className="title-sub-feed">design</sub></h1>
           <QuestionOne/>
          </>
 
@@ -24,7 +24,7 @@ function Feedback() {
     } else if (questionCount === 2) {
       return (
          <>
-          <ProjectTittle title={"FOUNDIT"}/>
+          <h1 className="title-all-feed"> <span className="title-main-feed">FOUNDIT</span><sub className="title-sub-feed">app</sub></h1>
           <QuestionTwo/>
          </>
 
@@ -33,7 +33,7 @@ function Feedback() {
     } else if (questionCount === 3){
         return (
          <>
-          <ProjectTittle title={"DASHBRD"}/>
+          <h1 className="title-all-feed"> <span className="title-main-feed">DASHBOARD</span><sub className="title-sub-feed">web</sub></h1>
           <QuestionThree/>
          </>
 
@@ -42,7 +42,7 @@ function Feedback() {
     } else {
       return (
          <>
-          <ProjectTittle title={"DASHBRD"}/>
+          <h1 className="title-all-feed"> <span className="title-main-feed">DASHBOARD</span><sub className="title-sub-feed">web</sub></h1>
           <QuestionThree/>
          </>
 

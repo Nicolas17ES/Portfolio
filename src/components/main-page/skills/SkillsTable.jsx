@@ -1,5 +1,7 @@
 import './Skills.css'
 
+import {useRef, useEffect, useState} from 'react';
+
 import {ReactComponent as Android } from '../../assets/skills/android.svg'
 import {ReactComponent as Bootstrap } from '../../assets/skills/bootstrap.svg'
 import {ReactComponent as Css } from '../../assets/skills/css.svg'
@@ -22,71 +24,94 @@ import {BsStarHalf} from 'react-icons/bs'
 
 
 function SkillsTable() {
+
+    const [isOn, setIsOn] = useState(0);
+
+
     return (
         <div className="skills-right">
-                <div className="skill skill1">
+                <div className="main-text-skills">
+                     <div class="inner">
+                        <span>{`<React>`}&nbsp; &nbsp; {`<Vue>`}</span>
+                        <span className="lorem-two red"> {`<Javascript>`}</span>
+                        <span className="lorem-three">{`<HTML>`} &nbsp; &nbsp;{`<CSS>`}</span>
+                        <span className="lorem-four red">{`<Bootstrap>`} &nbsp; &nbsp; {`<Tailwind>`}</span>
+                        <span className="lorem-four2">{`<Figma>`}</span>
+                        <span className="lorem-five red">{`<Android>`} &nbsp; &nbsp; {`<Java>`}</span>
+                        <span className="lorem-six">{`<NodeJS>`}</span>
+                        <span className="lorem-seven">{`<PHP>`} &nbsp; &nbsp; {`<Laravel>`}</span>
+                        <span className="lorem-eight red">{`<Mysq>`} &nbsp; &nbsp; {`<MongoDb>`}</span>
+                    </div>
+                    <div class="inner">
+                        <span>{`<React>`}&nbsp; &nbsp; {`<Vue>`}</span>
+                        <span className="lorem-two red"> {`<Javascript>`}</span>
+                        <span className="lorem-three">{`<HTML>`} &nbsp; &nbsp;{`<CSS>`}</span>
+                        <span className="lorem-four red">{`<Bootstrap>`} &nbsp; &nbsp; {`<Tailwind>`}</span>
+                        <span className="lorem-four2">{`<Figma>`}</span>
+                        <span className="lorem-five red">{`<Android>`} &nbsp; &nbsp; {`<Java>`}</span>
+                        <span className="lorem-six">{`<NodeJS>`}</span>
+                        <span className="lorem-seven">{`<PHP>`} &nbsp; &nbsp; {`<Laravel>`}</span>
+                        <span className="lorem-eight red">{`<Mysq>`} &nbsp; &nbsp; {`<MongoDb>`}</span>
+                    </div>
+                </div>
+                <div className="front-end end">
+                    <h3>FRONT-<span className="red">END</span></h3>
+                </div>
+                <div className={`${isOn === 1 ? "skill skill1 animated left" : "skill skill1 left"}`} onMouseOver={() => setIsOn(1)}  onAnimationEnd={() => setIsOn(0)}>
                     <Reactsvg className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
+                    {/* <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span> */}
                 </div>
-                <div className="skill skill2">
+                <div className={`${isOn === 2 ? "skill skill2 animated left" : "skill skill2 left"}`} onMouseOver={() => setIsOn(2)}  onAnimationEnd={() => setIsOn(0)}>
                     <Vue className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
                 </div>
-                <div className="skill skill3">
+                <div className={`${isOn === 3 ? "skill skill3 animated right" : "skill skill3 right"}`} onMouseOver={() => setIsOn(3)}  onAnimationEnd={() => setIsOn(0)}>
                     <Android className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
                 </div>
-                <div className="skill skill4">
+                <div className={`${isOn === 4 ? "skill skill4 animated right" : "skill skill4 right"}`} onMouseOver={() => setIsOn(4)}  onAnimationEnd={() => setIsOn(0)}>
                     <Laravel className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
                 </div>
-                <div className="skill skill5">
+                <div className="back-end end">
+                    <h3>BACK-<span className="red">END</span></h3>
+                </div>
+               <div className={`${isOn === 5 ? "skill skill5 animated left" : "skill skill5 left"}`} onMouseOver={() => setIsOn(5)}  onAnimationEnd={() => setIsOn(0)}>
                     <Javascript className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={21}/><BsStarHalf className="half-star" size={18}/></span>
                 </div>
-                <div className="skill skill6">
-                    <Java className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
-                </div>
-                <div className="skill skill7">
-                    <Php className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
-                </div>
-                <div className="skill skill8">
-                    <Node className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
-                </div>
-                <div className="skill skill9">
-                    <Html className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
-                </div>
-                <div className="skill skill10">
-                    <Css className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
-                </div>
-                <div className="skill skill11">
-                    <Bootstrap className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
-                </div>
-                <div className="skill skill12">
-                    <Tailwind className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
-                </div>
-                <div className="skill skill13">
-                    <Mysql className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/></span>
-                </div>
-                <div className="skill skill14">
-                    <Mongodb className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
-                </div>
-                <div className="skill skill15">
+                <div className={`${isOn === 6 ? "skill skill6 animated left" : "skill skill6 left"}`} onMouseOver={() => setIsOn(6)}  onAnimationEnd={() => setIsOn(0)}>
                     <Figma className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiOutlineStar size={21}/><AiOutlineStar size={21}/></span>
                 </div>
-                <div className="skill skill16">
+                <div className="hover-trick-left"></div>
+                <div className={`${isOn === 7 ? "skill skill7 animated right" : "skill skill7 right"}`} onMouseOver={() => setIsOn(7)}  onAnimationEnd={() => setIsOn(0)}>
+                    <Java className="skill-icon"/>
+                </div>
+                <div className={`${isOn === 8 ? "skill skill8 animated right" : "skill skill8 right"}`} onMouseOver={() => setIsOn(8)}  onAnimationEnd={() => setIsOn(0)}>
+                    <Node className="skill-icon"/>
+                </div>
+                <div className={`${isOn === 9 ? "skill skill9 animated left" : "skill skill9 left"}`} onMouseOver={() => setIsOn(9)}  onAnimationEnd={() => setIsOn(0)}>
+                    <Html className="skill-icon"/>
+                </div>
+                <div className={`${isOn === 10 ? "skill skill10 animated left" : "skill skill10 left"}`} onMouseOver={() => setIsOn(10)}  onAnimationEnd={() => setIsOn(0)}>
+                    <Css className="skill-icon"/>
+                </div>
+                <div className={`${isOn === 11 ? "skill skill11 animated right" : "skill skill11 right"}`} onMouseOver={() => setIsOn(11)}  onAnimationEnd={() => setIsOn(0)}>
+                    <Mysql className="skill-icon"/>
+                </div>
+                <div className={`${isOn === 12 ? "skill skill12 animated right" : "skill skill12 right"}`} onMouseOver={() => setIsOn(12)}  onAnimationEnd={() => setIsOn(0)}>
+                    <Mongodb className="skill-icon"/>
+                </div>
+                <div className={`${isOn === 13 ? "skill skill13 animated left" : "skill skill13 left"}`} onMouseOver={() => setIsOn(13)}  onAnimationEnd={() => setIsOn(0)}>
+                    <Bootstrap className="skill-icon"/>
+                </div>
+               <div className={`${isOn === 14 ? "skill skill14 animated left" : "skill skill14 left"}`} onMouseOver={() => setIsOn(14)}  onAnimationEnd={() => setIsOn(0)}>
+                    <Tailwind className="skill-icon"/>
+                </div>
+                <div className={`${isOn === 15 ? "skill skill15 animated right" : "skill skill15 right"}`} onMouseOver={() => setIsOn(15)}  onAnimationEnd={() => setIsOn(0)}>
+                    <Php className="skill-icon"/>
+                </div>
+                <div className={`${isOn === 16 ? "skill skill16 animated right" : "skill skill16 right"}`} onMouseOver={() => setIsOn(16)}  onAnimationEnd={() => setIsOn(0)}>
                     <Fire className="skill-icon"/>
-                    <span className="skill-stars"><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/><AiFillStar size={20}/></span>
+                </div>
+                <div class="skills-title" data-text="SKILLS">
+                   <h2>SKILLS</h2>
                 </div>
             </div>
     )

@@ -72,6 +72,11 @@ const feedbackReducer = (state, action) => {
                 ...state,
                 hasAnimated: action.payload,
             }
+        case 'ANSWER_RIDDLE':
+            return {
+                ...state,
+                riddleAnswer: action.payload,
+            }
         
         default: 
             return state;

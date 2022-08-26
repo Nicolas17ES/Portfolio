@@ -75,7 +75,7 @@ function Projects() {
     
     return (
         <div className="full-projects">
-            <ProjectTittle title={"PROJECTS"}/>
+            <h1 className="title-all"> <sub className="title-sub">my</sub><span className="title-main">PROJECTS</span></h1>
             <span ref={scrollTo} className="top-absolute"></span>
             <div className="projects-page">
                 <Link to="/projects/foundit">

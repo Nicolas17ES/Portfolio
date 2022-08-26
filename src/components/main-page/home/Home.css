@@ -55,7 +55,7 @@
     position: absolute;
     height: 40%;
     width: 98%;
-    border-bottom: 8px solid #a4fac3;
+    border-bottom: 8px solid rgb(252, 236, 206);
     left: 0;
     bottom: -6px;
 }

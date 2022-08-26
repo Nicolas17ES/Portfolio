@@ -1,7 +1,7 @@
 import './About.css'
-import { ReactComponent as Vinyl }  from '../../assets/vinyl.svg'
-import { ReactComponent as Road }  from '../../assets/road.svg'
-import { ReactComponent as Laptop }  from '../../assets/laptop.svg'
+// import { ReactComponent as Vinyl }  from '../../assets/vinyl.svg'
+// import { ReactComponent as Road }  from '../../assets/road.svg'
+// import { ReactComponent as Laptop }  from '../../assets/laptop.svg'
 import {useRef, useContext, useEffect} from 'react'
 import {AiFillPlusCircle} from 'react-icons/ai'
 import { useInView } from 'react-intersection-observer';
@@ -146,7 +146,7 @@ if(hasAnimated === true){
                 <div className="box1 box">ABOUT ME</div>
                 <div className="box2 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box3 box">
-                    <Vinyl className="vinyl about-svg"/>
+                    {/* <Vinyl className="vinyl about-svg"/> */}
                     <button className="plus-icon-button" onClick={displayModalLaptop}>
                         <AiFillPlusCircle className="plus-icon" size={26}/>
                     </button>
@@ -156,7 +156,7 @@ if(hasAnimated === true){
                 <div className="box4 box">THINGS I LOVE </div>
                 <div className="box5 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box6 box">
-                    <Road className="road about-svg"/>
+                    {/* <Road className="road about-svg"/> */}
                     <button className="plus-icon-button" onClick={displayModalRoad}>
                         <AiFillPlusCircle className="plus-icon" size={24}/>
                     </button>
@@ -166,7 +166,7 @@ if(hasAnimated === true){
                 <div className="box7 box">WHAT I DO</div>
                 <div className="box8 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box9 box">
-                    <Laptop className="laptop about-svg"/>
+                    {/* <Laptop className="laptop about-svg"/> */}
                     <button className="plus-icon-button" onClick={displayModalVinyl}>
                         <AiFillPlusCircle className="plus-icon" size={24}/>
                     </button>
@@ -194,7 +194,7 @@ if(hasAnimated === true){
                     <div className="box1 box">ABOUT ME</div>
                 <div className="box2 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box3 box">
-                    <Vinyl className="vinyl about-svg"/>
+                    {/* <Vinyl className="vinyl about-svg"/> */}
                     <button className="plus-icon-button" onClick={displayModalLaptop}>
                         <AiFillPlusCircle className="plus-icon" size={26}/>
                     </button>
@@ -204,7 +204,7 @@ if(hasAnimated === true){
                 <div className="box4 box">THINGS I LOVE </div>
                 <div className="box5 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box6 box">
-                    <Road className="road about-svg"/>
+                    {/* <Road className="road about-svg"/> */}
                     <button className="plus-icon-button" onClick={displayModalRoad}>
                         <AiFillPlusCircle className="plus-icon" size={24}/>
                     </button>
@@ -214,7 +214,7 @@ if(hasAnimated === true){
                 <div className="box7 box">WHAT I DO</div>
                 <div className="box8 box"></div>
                 <div onClick={e => e.stopPropagation()} className="box9 box">
-                    <Laptop className="laptop about-svg"/>
+                    {/* <Laptop className="laptop about-svg"/> */}
                     <button className="plus-icon-button" onClick={displayModalVinyl}>
                         <AiFillPlusCircle className="plus-icon" size={24}/>
                     </button>

@@ -225,7 +225,7 @@ const hideModal = () => {
                       <Link className="link-nav" to="/projects" onClick={redirectToProjects}>Projects</Link>
                   </div>
                   <div className="link-three">
-                      <Link className="link-nav" to="/rock" onClick={reStartNavBar}>Games</Link>
+                      <Link className="link-nav" to="/games" onClick={reStartNavBar}>Games</Link>
                   </div>
                   <div className="link-four">
                       <Link className="link-nav" to="/feedback" onClick={redirectToFeedback}>Feedback</Link>

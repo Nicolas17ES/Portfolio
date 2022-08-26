@@ -61,16 +61,7 @@ function Skills() {
         return (
             <div ref={reference} className="skills-page" id="skillsId">
                 <>
-                <div className="skills-left">
-                    <div className="top-skill">
-                        <h3 className="skills-title">MY SKILLS</h3>
-                    </div>
-                    <span ref={scrollTo} className="center-absolute-skills"></span>
-                    <div className="bottom-skill">
-                        <p className="skills-text">Throughout the last two years I acquired a series of skills that helped me become the Developer I am today. Some of those skills were self-taught and others were learned during my 6 month journey at the Coding Academy at Epitech University.</p>
-                        {/* <span className="skills-arrow"><Arrow className="arrow-svg"/></span> */}
-                    </div>
-                </div>
+                <span ref={scrollTo} className="center-absolute-skills"></span>
                 <SkillsTable/>
                     <div className="scrolling-test" onClick={executeScroll}> 
                         <ScrollButton className="button-skills"/> 
@@ -82,15 +73,7 @@ function Skills() {
         return (
             <div ref={reference} >
                 <motion.div animate={animation} className="skills-page" id="skillsId">
-                    <div className="skills-left">
-                        <div className="top-skill">
-                            <h3 className="skills-title">MY SKILLS</h3>
-                        </div>
-                        <span ref={scrollTo} className="center-absolute-skills"></span>
-                        <div className="bottom-skill">
-                            <p className="skills-text">Throughout the last two years I acquired a series of skills that helped me become the Developer I am today. Some of those skills were self-taught and others were learned during my 6 month journey at the Coding Academy at Epitech University.</p>
-                        </div>
-                    </div>
+                    <span ref={scrollTo} className="center-absolute-skills"></span>
                     <SkillsTable/>
                     <div className="scrolling-test" onClick={executeScroll}> 
                         <ScrollButton/>  

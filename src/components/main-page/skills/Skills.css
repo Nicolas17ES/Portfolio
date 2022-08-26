@@ -2,30 +2,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 88%;
-    height: 80vh;
+    width: 90%;
+    height: 90vh;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 70px;
     position: relative;
-    gap: 60px;
+    gap: 0px;
 }
 
 /* ICON SIDE */
 
 .skills-right{
-    width: 40%;
-    height: 65%;
-    margin: 0px auto;
+    width: 80%;
+    height: 75%;
+    margin: auto;
     display: grid;
     position: relative;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 5px;
+    grid-template-columns: 1fr 1fr 5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
      grid-template-areas: 
-    "one two three four"
-    "five six seven eight"
-    "nine ten eleven twelve"
-    "thirteen fourteen fifteen sixteen"; 
+    "frontEnd frontEnd centerTop backEnd backEnd"
+    "one two centerOne three four"
+    "five six centerOne seven eight"
+    "nine ten centerOne eleven twelve"
+    "thirteen fourteen centerOne fifteen sixteen"; 
+
     /* animation: 10s curtain cubic-bezier(.86,0,.07,1) forwards; */
 }
 
@@ -36,23 +37,26 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 85px;
-    height: 85px;
-    opacity: 0;
-    visibility: hidden;
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    visibility: visible;
     cursor: pointer;
     border-radius: 50%;
-    -webkit-transition: all 600ms;
+    border: 2.5px solid white;
+    /* -webkit-transition: all 600ms;
     -moz-transition: all 600ms;
     -ms-transition: all 600ms;
     -o-transition: all 600ms;
-    transition: all 600ms;
-    box-shadow:  4px 4px rgba(0, 0, 0, 1);
-    border: 2px solid black;
+    transition: all 600ms; */
+    /* box-shadow:  1px 3px white; */
 }
 
-.skill:hover{
-    transform: scale(1.03) rotateY(180deg);
+.animated{
+    animation: ani 0.7s ease-in-out 1;
+}
+.animated2{
+    animation: aniLess 0.7s ease-in-out 1;
 }
 
 .skill-icon{
@@ -60,275 +64,316 @@
     height: 38px;
 }
 
-/* on hover hide icon and text */
-.skill:hover .skill-icon{
-    display: none;
-}
-
-.skill:hover:after{
-    transform: rotateY(-180deg);
-  
-}
-
-/* skill stars only shown on hover */
-.skill-stars{
-    display: none;
-    width: 65px;
-}
-.half-star{
-    margin-top: 1px;
-}
-.skill:hover .skill-stars{
-    display: flex;
-    transform: rotateY(-180deg);
-}
-
-/* GRID AREAS */
-.skill1{
-    grid-area: one;
-    animation: 
-    /* .5s griddy linear forwards,  */
-    1s backgroundOne ease forwards .8s;
-}
-
-.skill2{
-    grid-area: two;
-    animation: 
-    /* .5s griddy linear forwards .5s,  */
-    1s backgroundThree ease forwards .9s;
-}
-.skill3{
-    grid-area: three;
-    animation: 
-    /* .5s griddy linear forwards 1s,  */
-    1s backgroundTwo ease forwards 1s;
-}
-.skill4{
-    grid-area: four;
-    animation: 
-    /* 1s rotateLeft linear forwards 1.5s,  */
-    1s backgroundFour ease forwards 1.1s;
-}
-.skill5{
-    grid-area: five;
-    animation: 
-    /* .5s griddy linear forwards,  */
-    1s backgroundTwo ease forwards 1.2s;
-}
-.skill6{
-    grid-area: six;
-    animation: 
-    /* .5s griddy linear forwards .5s,  */
-    1s backgroundFour ease forwards 1.3s;
-}
-.skill7{
-    grid-area: seven;
-    animation: 
-    /* .5s griddy linear forwards 1s,  */
-    1s backgroundThree ease forwards 1.4s;
-}
-.skill8{
-    grid-area: eight;
-    animation: 
-    /* 1s rotateLeft linear forwards 1.7s,  */
-    1s backgroundOne ease forwards 1.5s ;
-}
-.skill9{
-    grid-area: nine;
-    animation: 
-    /* .5s griddy linear forwards,  */
-    1s backgroundThree ease forwards 1.6s;
-}
-.skill10{
-    grid-area: ten;
-    animation: 
-    /* .5s griddy linear forwards .5s,  */
-    1s backgroundOne ease forwards 1.7s;
-}
-.skill11{
-    grid-area: eleven;
-    animation: 
-    /* .5s griddy linear forwards 1s,  */
-    1s backgroundFour ease forwards 1.8s;
-}
-.skill12{
-    grid-area: twelve;
-    animation: 
-    /* 1s rotateLeft linear forwards 1.9s,  */
-    1s backgroundTwo ease forwards 1.9s;
-}
-.skill13{
-    grid-area: thirteen;
-    animation: 
-    /* .5s griddy linear forwards,  */
-    1s backgroundFour ease forwards 2s;
-}
-.skill14{
-    grid-area: fourteen;
-    animation: 
-    /* .5s griddy linear forwards .5s,  */
-    1s backgroundThree ease forwards 2.1s;
-}
-.skill15{
-    grid-area: fifteen;
-    animation: 
-    /* .5s griddy linear forwards 1s,  */
-    1s backgroundOne ease forwards 2.2s;
-}
-.skill16{
-    grid-area: sixteen;
-    animation: 
-    /* 1s rotateLeft linear forwards 2.1s,  */
-    1s backgroundThree ease forwards 2.3s;
-}
-
-@keyframes backgroundOne{
-    0%{
-        background-color: none;
-        color: white;
-        border-radius: 0;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        background-color: #f66;
-        color: #171830;
-        border-radius: 50%;
-    }
-}
-@keyframes backgroundTwo{
-    0%{
-        background-color: none;
-        color: #171830;
-        border-radius: 0;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        background-color: #ef8043;
-        color: #171830;;
-        border-radius: 50%;
-    }
-}
-@keyframes backgroundThree{
-    0%{
-        background-color: none;
-        color: #171830;
-        border-radius: 0;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        background-color: #fec540;
-        color: #171830;
-        border-radius: 50%;
-    }
-}
-@keyframes backgroundFour{
-    0%{
-        background-color: none;
-        color: white;
-        border-radius: 0;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        background-color: #FFD68A;
-        color: #171830;
-        border-radius: 50%;
-    }
-}
-
-/* end animations */
-
-
-/* left side of skills */
-.skills-left{
-    width: 45%;
-    height: 65%;;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-/* SKILL TITLE */
-
-
 .skills-title {
-    color: rgb(245, 126, 126);
+    color: transparent;
     font-size: 70px;
-    white-space: nowrap;
     text-align: center;
-    letter-spacing: 6px;
-    margin: 0px auto;
+    letter-spacing: 15px;
+    margin: -55px auto 0px auto;
     position: relative;
-    /* visibility: hidden;
-    opacity: 0;
-    animation: 2s appearElement ease forwards; */
-    text-shadow: 4px 4px rgba(0, 0, 0, .6);   
+    font-weight: 500;
+    font-family: 'Impact';
+    padding-left: 20px;
+   
+} 
+
+.skills-title::before,
+.skills-title::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+    transition: 0.2s;
+    padding-left: 20px;
 }
 
 .skills-title::before {
-    content: '';
-    position: absolute;
-    width: 97.4%;
-    height: 7px;
-    top: 100px;
-    background: rgba(255, 255, 255, 1);
-    border-radius: 10px;
-   -webkit-transition: all 600ms;
-    -moz-transition: all 600ms;
-    -ms-transition: all 600ms;
-    -o-transition: all 600ms;
-    transition: all 600ms;
-    box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, .9);
+/* 	background-color: darkgreen; */
+	clip-path: polygon(0 0, 60% 0, 30% 100%, 0 100%);
 }
 
+.skills-title::after {
+	/*background-color: darkblue;*/
+	clip-path: polygon(60% 0, 100% 0, 100% 100%, 30% 100%);
+}
 
+.skills-title:hover::before {
+	left: -0.15em;
+	transform: rotate(-5deg);
+	top: -0.05em;
+}
 
+.skills-title:hover::after {
+	left: 0.15em;
+	transform: rotate(5deg);
+	top: 0.05em;
+}
 
-/* BOTTOM TEXT AND ARROW */
-.bottom-skill{
+.left:hover ~ .skills-title::before { 
+    left: -0.15em;
+	transform: rotate(-5deg);
+	top: -0.05em;
+}
+.right:hover ~ .skills-title::after { 
+    left: 0.15em;
+	transform: rotate(5deg);
+	top: 0.05em;
+}
+
+.red{
+    color: rgb(245, 126, 126);
+}
+
+.end{
+    font-size: 20px;
+    white-space: nowrap;
+    text-align: center;
+    letter-spacing: 6px;
+    margin: -50px auto 0px auto;
+    position: relative;
+    font-weight: bold;
+}
+
+/* MAIN TEXT */
+
+.main-text-skills{
+    grid-area: centerOne;
+    width: 60%;
+    margin: auto;
     display: flex;
-    width: 100%;
-    height: 55%;
-    margin-top: 80px; 
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rockwell';
+    cursor: pointer;
+    transition: all .8s;
+}
+.main-text-skills:hover{
+    transform: scale(1.6);
+    margin-top: -40px;
+}
+.main-text-skills:hover ~ .skill{
+    display: none;
+}
+.main-text-skills:hover ~ .skills-title{
+    display: none;
+}
+.main-text-skills:hover ~ .front-end{
+    display: none;
+}
+.main-text-skills:hover ~ .back-end{
+    display: none;
+}
+
+.main-text-skills .inner {
+	width: 100%;
+	height: 380px;
+	font-size: 20px;
+	font-weight: 600;
+	white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 1px;
+    color: white;
 
 }
 
 
-.skills-text{
-    width: 100%;
-    text-align: justify;
-    
-    font-size: 1vw;
-    letter-spacing: 2px;
-    height: 160px;
-    padding: 20px;
-    margin: 0px auto;
-    /* opacity: 0;
-    visibility: hidden;
-    animation: 2s appearElement ease forwards .3s; */
-    box-shadow:  10px 10px rgba(0, 0, 0, 1);
-    border: 2px solid black;
-    background-color: #2e315e;
-    border-radius: 10px;
+.main-text-skills .inner:first-child {
+	background-color: #171830;
+	transform-origin: right;
+    transform: perspective(160px) rotateY(-15deg);
     
 }
 
-/* animation appear */
-/* @keyframes appearElement{
-    0%{
-        opacity: 0;
-        visibility: hidden; 
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-    }
-} */
+.main-text-skills .inner:last-child {
+	background-color: #171830;
+	transform-origin: left;
+    transform: perspective(160px) rotateY(15deg);
+}
+
+.main-text-skills .inner span {
+	position: absolute;
+	animation: marquee 8s linear infinite;
+}
+
+.main-text-skills .inner:first-child span {
+	animation-delay: 4.1s;
+	left: -100%;
+}
+
+.lorem-two{
+    margin-top: 35px;
+}
+.lorem-three{
+    margin-top: 70px;
+}
+.lorem-four{
+    margin-top: 105px;
+}
+.lorem-four2{
+    margin-top: 145px;
+}
+.lorem-five{
+    margin-top: 190px;
+}
+.lorem-six{
+    margin-top: 220px;
+}
+.lorem-seven{
+    margin-top: 270px;
+}
+.lorem-eight{
+    margin-top: 310px;
+}
+
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}
+/* MAIN TEXT */
+
+
+
+/* GRID AREAS */
+.front-end{
+    grid-area: frontEnd;
+    margin-top: 40px;
+    text-align: center;
+}
+.skill1{
+    grid-area: one; 
+}
+.skill2{
+    grid-area: two; 
+}
+
+.skills-arrows{
+    grid-area: centerOne;
+}
+.skills-title{
+    grid-area: centerTop
+}
+.skill3{
+    grid-area: three;
+}
+.skill4{
+    grid-area: four;
+}
+.back-end{
+    grid-area: backEnd;
+    text-align: center;
+    margin-top: 40px;
+}
+.skill5{
+    grid-area: five;
+}
+.skill6{
+    grid-area: six;
+}
+.skill7{
+    grid-area: seven;
+}
+.skill8{
+    grid-area: eight;
+}
+.skill9{
+    grid-area: nine;
+}
+.skill10{
+    grid-area: ten;
+}
+.skill11{
+    grid-area: eleven;
+}
+.skill12{
+    grid-area: twelve;
+}
+.skill13{
+    grid-area: thirteen;
+}
+.skill14{
+    grid-area: fourteen;
+}
+.skill15{
+    grid-area: fifteen;
+}
+.skill16{
+    grid-area: sixteen;
+}
+
+
+/* bouncy animation */
+
+@keyframes ani {
+  0%{
+    transform: scale(1.2,0.5);
+  }
+  10%{
+    transform: scale(1.2,0.5);
+  }
+  23%{
+    transform: scale(1.2,0.5);
+  }
+  32%{
+    transform: scale(0.8,1.1);
+  }
+  48%{
+    transform: scale(0.95,1);
+  }
+  64%{
+    transform: scale(0.8,1.2);
+  }
+  80%{
+    transform: scale(1.15,1);
+  }
+  87%{
+    transform: scale(1.15,1);
+  }
+  90%{
+    /* This will add the shaking effect one time almost at the end   */
+    transform: scale(0.8,1);
+  }
+}
+
+@keyframes aniLess {
+  0%{
+    transform: scale(1,0.3);
+  }
+  10%{
+    transform: scale(1,0.3);
+  }
+  23%{
+    transform: scale(1,0.3);
+  }
+  32%{
+    transform: scale(0.9,1);
+  }
+  48%{
+    transform: scale(0.95,1);
+  }
+  64%{
+    transform: scale(0.9,1.1);
+  }
+  80%{
+    transform: scale(1.15,1);
+  }
+  87%{
+    transform: scale(1.15,1);
+  }
+  90%{
+    /* This will add the shaking effect one time almost at the end   */
+    transform: scale(0.8,1);
+  }
+}
+/* bouncy animation */
+
+/* end animations */
 
 /* WORK AROUND FOR SCROLL */
 
@@ -341,7 +386,7 @@
 }
 .center-absolute-skills{
     position: absolute;
-    top: 50%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -361,12 +406,6 @@
 /* MEDIA QUERIES */
 
 @media(max-width: 1200px){
-    .skills-right{
-        width: 40%;
-        height: 70%;
-        padding: 20px;
-        gap: 10px;
-    }
     .skill{
         width: 80px;
         height: 80px;
@@ -374,9 +413,6 @@
 
     .skill-icon{
         width: 30px;
-    }
-    .skill-stars{
-        width: 65px;
     }
     .center-absolute{
         top: 45%;
@@ -389,98 +425,42 @@
     }
 }
 
-@media(max-width: 1020px){
-    .skill-stars{
-        width: 65px;
-    }
-    
 
-    .skills-text{
-        font-size: 1.2vw;
-        width: 120%;
-    }
+@media(max-width: 1100px){
 
-}
-@media(max-width: 1000px){
-    .skills-page{
-        flex-direction: column;
-        margin-top: 10px;
-        gap: 0px;
-        width: 70%;
-        height: 100%;
-    }
-
-    /* left side */
-
-    .skills-left{
-        width: 100%;
-        margin: auto;
-        padding: 0;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    .skills-title{
-        margin-top: 30px;
+    .skills-title {
         font-size: 60px;
-        letter-spacing: 4px;
-    }
+        letter-spacing: 10px;
+        margin: -45px auto 0px auto;
+    } 
 
-    .skills-title::before {
-        width: 100%;
-        top: 87px;
-    }
-
-    /* BOTTOM TEXT AND ARROW */
-    .bottom-skill{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 55px; 
-
-    }
-
-
-    .skills-text{
-        width: 90%;
-        font-size: 10.5px;
-        height: 129px;
-        max-height: 200px !important;
-       
-    }
-
-    /* end left side */
-
-    /* right side */
     .skills-right{
-        width: 100%;
-        margin: 40px auto 0px auto;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 7px 0px;
-        grid-template-areas: 
-        "one two three four five"
-        "six seven eight nine ten"
-        "eleven twelve thirteen fourteen fifteen";
+        width: 90%;
     }
+
+
     .skill{
         width: 70px;
         height: 70px;
-    }
-
-    .skill16{
-        display: none;
+        border: 2px solid white;
     }
      .skill-icon{
         width: 25px;
     }
+
+    /* MAIN TEXT */
+
+    .main-text-skills .inner {
+        width: 100%;
+        height: 380px;
+        font-size: 17px;
+
+    }
+
      .center-absolute-skills{
         top: 50%;
     }
-    .skill-stars{
-        width: 55px;
-    }
+
     .skill11 .skill-icon{
         margin-bottom: -12px;
     }
@@ -488,34 +468,98 @@
     /* end right side */
 
 }
-@media(max-width: 720px){
-    .skills-title{
-        font-size: 50px;
+@media(max-width: 870px){
+
+    .skills-page{
+        width: 95%;
     }
-    .skills-title::before {
-        top: 72px;
-    }
-    .skill-stars{
-        width: 50px;
-    }
+
+    .skills-title {
+        font-size: 54px;
+        margin: -45px auto 0px auto;
+    } 
     .skill{
         width: 62px;
         height: 62px;
     }
-    .skills-text{
-        height: 167px;
-        max-height: 190px !important;
-    }
-
      .skill-icon{
         width: 22px;
     }
     .skill11 .skill-icon{
         margin-bottom: -17px;
     }
+
+    .main-text-skills .inner {
+        font-size: 15px;
+    }
+
+    .front-end{
+        font-size: 19px;
+        margin-left: -10px;
+    }
+    .back-end{
+        font-size: 19px;
+    }
+}
+@media(max-width: 760px){
+    .skills-title {
+        font-size: 46px;
+        margin: -50px auto 0px auto;
+    } 
+    .skill{
+        width: 62px;
+        height: 62px;
+    }
+    .skill11 .skill-icon{
+        margin-bottom: -17px;
+    }
+
+    .main-text-skills .inner {
+        width: 100%;
+    }
+     .front-end{
+        font-size: 17px;
+    }
+    .back-end{
+        font-size: 17px;
+    }
 }
 
-@media(max-width: 600px){
+@media(max-width: 680px){
+
+    .skills-page{
+        width: 100%;
+    }
+
+    .skills-right{
+        width: 97%;
+        height: 65%;
+        margin: auto;
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "frontEnd frontEnd centerTop backEnd backEnd"
+        "one two centerOne three four"
+        "five six centerOne seven eight"
+        "nine ten centerOne eleven twelve"
+        "thirteen fourteen centerOne fifteen sixteen"; 
+
+        /* animation: 10s curtain cubic-bezier(.86,0,.07,1) forwards; */
+    }
+
+    .skills-title {
+        padding-left: 0px;
+        margin-top: -65px;
+    }
+    .skills-title::before,
+    .skills-title::after {
+        padding-left: 0px;
+    }
+    .main-text-skills:hover{
+        width: 180px;
+    }
     .center-absolute{
         top: 46%;
     }
@@ -527,72 +571,79 @@
         width: 57px;
         height: 57px;
     }
+
+    .front-end{
+        font-size: 17px;
+        margin-left: 17px;
+    }
+    .back-end{
+        font-size: 17px;
+    }
 }
 @media(max-width: 570px){
-    .skills-page{
-        width: 95%;
-        margin-top: -40px;
-}
-    
-    .skills-title{
-        font-size: 50px;
-    }
-    .skills-title::before {
-        top: 72px;
-    }
-    .skills-text{
-        width: 93%;
-        font-size: 8.5px;
-        height: 130px;  
+    .skills-right{
+        width: 100%;
     }
 
      .skill{
         width: 50px;
         height: 50px;
     }
-    .skills-right{
-        width: 90%;
-    }
 
     .skill-icon{
         width: 23px;
     }
-    .skill-stars{
-        width: 35px;
+
+     .front-end{
+        margin-left: -7px;
     }
 }
-@media(max-width: 440px){
-      .skills-page{
-        width: 95%;
+@media(max-width: 480px){
 
+
+    .skills-title {
+        font-size: 38px;
+        margin-top: -65px;
+        text-align: center;
+        margin-left: -50px;
     }
-    .skills-title{
-        font-size: 37px;
-    }
-    .skills-title::before {
-        top: 56px;
-    }
-    .skills-text{
+
+
+    .skills-right{
         width: 96%;
-        font-size: 8px;
-        height: 140px;
-        max-height: 180px !important;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "frontEnd frontEnd centerTop backEnd backEnd"
+        "one two centerOne three four"
+        "five six centerOne seven eight"
+        "nine ten centerOne eleven twelve"
+        "thirteen fourteen centerOne fifteen sixteen"; 
 
+        /* animation: 10s curtain cubic-bezier(.86,0,.07,1) forwards; */
+    }
+
+
+     .main-text-skills{
+        display: none;
     }
 
      .skill{
         width: 42px;
         height: 42px;
     }
-    .skills-right{
-        width: 100%;
-        height: 37%;
-    }
 
     .skill-icon{
         width: 20px;
     }
-    .skill-stars{
-        width: 35px;
+
+    .front-end{
+        font-size: 13px;
+        margin-left: 0px;
+        letter-spacing: 2.5px;
+    }
+    .back-end{
+        font-size: 13px;
+         letter-spacing: 2.5px;
     }
 }
