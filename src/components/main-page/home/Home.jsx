@@ -102,9 +102,65 @@ function Home() {
     }
 
   
+    if(hasAnimated === true){
+        return (
+            <div ref={reference}>
+                <div className="home-page-one">
+                <span ref={scrollTo} className="top-absolute"></span>
+                <div 
+                    className="welcome-figure"
+                    
+                >
+                    <div  class="inner-welcome">
+                        <span >Hi I'm bla bla,</span>
+                        <span  className="span-margin">a Bla Blu BU</span>                  
+                    </div>
+                    <div class="inner-welcome">
+                        <span >Hi I'm bla bla,</span>
+                        <span  className="span-margin">a Bla Blu BU</span>
+                    </div>
+                </div>
+                <div className="home-figures">
+                    <motion.div  className="svg-one">
+                        <HomeSvg/>
+                    </motion.div>
+         
+                    <motion.div  
+                        className="between-svgs"
+                        initial={{opacity: 0, y: "300px"}}
+                        animate={{opacity: 1, y:0}}
+                        transition={{duration: 1.1, delay: 1}}
+                    
+                    >
+                        <motion.p whileHover={{scale: 1.2}} transition={{type: 'spring', duration: .7}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo fugit at impedit doloribus itaque nobis reiciendis magnam iure animi omnis. Lorem ipsum dolor.</motion.p>
+                    </motion.div>
+                    <motion.div drag className="svg-two" >
+                        <HomeSvg/>
+                    </motion.div>
+                </div>
+                <motion.div 
+                    onClick={executeScroll}
+                    initial={{opacity: 0, y: "300px"}}
+                    animate={{opacity: 1, y:0}}
+                    transition={{duration: 1.1, delay: 1}}
+                >
+                    <ScrollButton />
+                </motion.div>
+                {/* <motion.div
+                    className='cursor'
+                    variants={variants}
+                    animate={cursorVariant}
+                /> */}
+            </div>
+            </div>
+            
+        )
+    
+    } else {
     
         return (
-            <motion.div animate={animation} ref={reference} className="home-page-one">
+            <div ref={reference}>
+                <motion.div animate={animation} className="home-page-one">
                 <span ref={scrollTo} className="top-absolute"></span>
                 <div 
                     className="welcome-figure"
@@ -151,8 +207,10 @@ function Home() {
                     animate={cursorVariant}
                 /> */}
             </motion.div>
+            </div>
+            
         )
-    
+    }
 
 }
 

@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 63%;
+  width: 50%;
   margin: auto;
 }
 .welcome-figure .inner-welcome {
@@ -57,13 +57,13 @@
 
 .welcome-figure .inner-welcome span {
   position: absolute;
-  animation: marquee 8s linear infinite;
+  animation: marquee 7s linear infinite;
   font-weight: 200;
   font-size: 33px;
 }
 
 .welcome-figure .inner-welcome:first-child span {
-  animation-delay: 4s;
+  animation-delay: 3.5s;
   left: -100%;
 }
 
@@ -93,7 +93,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 96%;
+  width: 92%;
   margin-top: 30px;
 }
 

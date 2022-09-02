@@ -24,8 +24,7 @@ const FooterSvg = () => {
         show: {
             y: "0px",
             transition: {
-            delay: 0,
-            duration: 1,
+            delay: 0.85,
             ease: "easeInOut",
             },
         },
@@ -37,8 +36,8 @@ const FooterSvg = () => {
         show: {
             pathLength: 2,
             transition: {
-            delay: .25,
-            duration: 1.25,
+            delay: .1,
+            duration: 1.45,
             ease: "easeInOut",
             },
         },

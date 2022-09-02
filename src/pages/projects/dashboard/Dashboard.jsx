@@ -15,7 +15,7 @@ function Dashboard() {
         useEffect(() => {
             if(scroll === 'DASH_GALLERY' || scroll === false){
                 return null
-            } else if(scroll === "dashboard" || window.location.href === 'http://localhost:3000/projects/dashboard'){
+            } else if(scroll === "dashboard" || window.location.href === 'https://www.nicolas-luque.com/projects/dashboard'){
                 scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center"})
                 dispatch({
                         type: 'SCROLL_VIEW',

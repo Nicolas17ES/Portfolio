@@ -44,7 +44,7 @@ function SkillsTable() {
                 opacity: 1,
                 transition: {
                     type: "tween",
-                    delay: 0.25,
+                    delay: 0.1,
                     duration: 0.5,
                 },
             })
@@ -53,13 +53,13 @@ function SkillsTable() {
                 opacity: 1,
                 transition: {
                     type: "tween",
-                    delay: 0.25,
+                    delay: 0.1,
                     duration: 0.5,
                 },
             })
         } else if (!inView){
-            animation.start({ x: "-100vw", opacity: 0 })
-            animation2.start({ x: "100vw", opacity: 0 })
+            animation.start({ x: "-40vw", opacity: 0 })
+            animation2.start({ x: "40vw", opacity: 0 })
         }
      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [inView]);

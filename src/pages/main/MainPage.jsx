@@ -10,10 +10,10 @@ import './LandingPage.css'
 function MainPage() {
     return (
         <motion.div
-            initial={{width: "0%"}}
-            animate={{width: "100%"}}
-            exit={{x: window.innerWidth, transition: {duration: 0.4}}}
-            transition={{type: 'tween'}}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: .4, delay: .1}}
+            exit={{opacity: 0, transition: {duration: .2}}}
             className="main-page"
         >
             <Home/>

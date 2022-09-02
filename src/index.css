@@ -29,6 +29,18 @@ body {
 
 }
 
+.feedback-block{
+  position: relative;
+}
+
+.top-absolute-feedback{
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%,-50%);
+}
+
 .question{
   margin-top: 70px;
 }
@@ -267,6 +279,7 @@ header {
   align-items: center;
   justify-content: space-around;
   margin: 30px 0 40px;
+  position: relative;
 }
 
 .rating li,
@@ -712,6 +725,7 @@ header {
     border-radius: 8px;
   }
 
+
   .input-group2{
     margin-bottom: 27px;
     font-size: 11px;
@@ -737,16 +751,7 @@ header {
 }
 
 @media (max-width: 520px) {
-  html{
-  overflow-x: hidden;
-}
 
-body {
-  overflow-x: hidden;
-  margin-bottom: 30px;
-  position: relative;
-
-}
   .title-all-feed{
     font-size: 40px;
     font-weight: 600;

@@ -14,7 +14,7 @@ function FoundIt() {
 
         // scroll till this point//
         useEffect(() => {
-            if(scroll === "foundit" || window.location.href === 'http://localhost:3000/projects/foundit'){
+            if(scroll === "foundit" || window.location.href === 'https://www.nicolas-luque.com/projects/foundit'){
                 scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center"})
                 dispatch({
                         type: 'SCROLL_VIEW',

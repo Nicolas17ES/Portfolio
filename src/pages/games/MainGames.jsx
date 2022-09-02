@@ -35,8 +35,8 @@ function MainGames() {
             className="main-games"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
-            transition={{duration: .7, delay: .1}}
-            exit={{opacity: 0, transition: {duration: .4}}} 
+            transition={{duration: .4, delay: .1}}
+            exit={{opacity: 0, transition: {duration: .2}}} 
          >
             <h1 className="title-all"> <sub className="title-sub">play a</sub><span className="title-main">GAME</span></h1>
             <div className="games-page-titles">

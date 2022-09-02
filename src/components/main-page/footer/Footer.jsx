@@ -111,11 +111,11 @@ function Footer() {
                                 </div>
                         </div>
                         <div className="bottom-footer">
-                            {/* <span  className="footer-hide"><p>Music is the highest philosophy :)</p></span>
+                            <span  className="footer-hide"><p>Music is the highest philosophy :)</p></span>
                             <span className="footer-icons"><p>+34689060044</p><BsWhatsapp size={16}/></span>
                             <span className="footer-icons"><Link to={"/contact"}><p>Contact</p></Link></span>
                             <span><p>Made by Nicolas Luque</p></span>
-                            <span><p>@2022 All rights reserved</p></span> */}
+                            <span><p>@2022 All rights reserved</p></span>
                         </div>
                     </div>
                 </div>

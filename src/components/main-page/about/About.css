@@ -22,7 +22,7 @@
     ;
     gap: 0.6rem;
     margin: auto;
-    width: 80%;
+    width: 85%;
     font-weight: bold;
     letter-spacing: 3px;
     font-size: 1.6vw;
@@ -41,7 +41,7 @@
 
 .box1{
     grid-area: uno;
-    border:  1px solid #fdca87;
+    border:  2px solid #fdca87;
     white-space: nowrap;
     color: white;
     font-weight: 600;
@@ -62,7 +62,7 @@
     font-weight: 400;
     font-size: 1vw; 
     letter-spacing: 3px;
-    border:  1px solid white;
+    border:  2px solid white;
     z-index: 99;
     cursor: pointer;
 }
@@ -72,7 +72,7 @@
         white-space: nowrap;
     color: white;
     font-weight: 500;
-    border:  1px solid #fdca87;
+    border:  2px solid #fdca87;
     font-weight: 600;
     font-size: 22px;
 }
@@ -86,7 +86,7 @@
 
 .box5{
     grid-area: cinco;
-    border: 1px solid #f57e7e;
+    border: 2px solid #f57e7e;
 }
 .box6{
     position: relative;
@@ -94,7 +94,7 @@
     font-weight: 400;
     font-size: 1vw; 
     letter-spacing: 3px;
-    border: 1px solid white;
+    border: 2px solid white;
     z-index: 99;
     cursor: pointer;
 }
@@ -104,7 +104,7 @@
 
 .box7{
     grid-area: siete;
-    border:  1px solid #fdca87;
+    border:  2px solid #fdca87;
     white-space: nowrap;
     color: white;
     font-weight: 500;
@@ -129,23 +129,17 @@
     font-weight: 400;
     font-size: 1vw; 
     letter-spacing: 3px;
-    border: 1px solid white;
+    border: 2px solid white;
     z-index: 99;
     cursor: pointer;
-    /* visibility: hidden;
-    animation: .8s fadeIn ease-in forwards .6s; */
+
 }
 
-/* .box9:hover{
-    transform: scale(1.05);
-} */
 
 .box10{
     grid-area: diez;
-    /* background-color: rgb(252, 236, 206); */
-    border:  1px solid #fdca87;
-    /* visibility: hidden;
-    animation: .8s fadeIn ease-in forwards 0.1s; */
+    border:  2px solid #fdca87;
+
 }
 
 .box11{
@@ -161,10 +155,8 @@
 
 .box13{
     grid-area: trece;
-    /* background-color: rgb(252, 236, 206); */
-    border:  1px solid #fdca87;
-    /* visibility: hidden;
-    animation: .8s fadeIn ease-in forwards .1s; */
+    border:  2px solid #fdca87;
+
 }
 
 .box15{
@@ -174,12 +166,7 @@
 
 .box16{
     grid-area: dieciseis;
-    /* background-color: #f57e7e; */
-    border:  1px solid #f57e7e;
-    /* visibility: hidden;
-    animation: .8s fadeIn ease-in forwards; */
-    
-
+    border:  2px solid #f57e7e;
 }
 
 .box17{
@@ -194,10 +181,7 @@
 
 .box19{
     grid-area: diecinueve;
-    /* visibility: hidden;
-    animation: .8s fadeIn ease-in forwards; */
-    /* background-color: #f57e7e; */
-    border:  1px solid #f57e7e;
+    border:  2px solid #f57e7e;
 }
 
 .box{
