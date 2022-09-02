@@ -256,7 +256,7 @@ header {
 .text-display{
   background-color: rgba(78, 84, 252, 0.2);
   width: fit-content;
-  color: black;
+  color: white;
   padding: 8px;
   margin-bottom: 4px;
   border-radius: 8px;
