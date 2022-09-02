@@ -14,9 +14,7 @@ function About(props) {
   const { scroll, dispatch, modal, hasAnimated } = useContext(FeedbackContext);
   const scrollTo = useRef();
 
-  const [reference, inView] = useInView({
-    threshold: 0.2,
-  });
+  const [reference, inView] = useInView();
   const animationLeft = useAnimation();
   const animationRight = useAnimation();
   const animationLeftDelay = useAnimation();

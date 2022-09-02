@@ -15,9 +15,7 @@ function Skills() {
     const {scroll, dispatch, hasAnimated} = useContext(FeedbackContext);
     const scrollTo = useRef();
 
-    const [reference, inView] = useInView({
-        threshold: 0.2,
-    })
+    const [reference, inView] = useInView()
     const animation = useAnimation();
 
     useEffect(() => {

@@ -6,17 +6,17 @@
   background: #fff;
 }*/
 
-.main-loader{
-    display: flex;
-    width: 90vw;
-    height: 80vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 60px;
-    letter-spacing: 2px;
-} 
+.main-loader {
+  display: flex;
+  width: 90vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+}
 
 .container-loader {
   display: flex;
@@ -34,25 +34,25 @@
 .uno-load {
   margin-right: -24px;
   transform-origin: center left;
-  animation: spin 4s linear infinite;  
+  animation: spin 4s linear infinite;
 }
 
 .dos-load {
   transform-origin: center right;
   animation: spin2 4s linear infinite;
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 
 .tres-load {
   transform-origin: center right;
   animation: spin3 4s linear infinite;
-  animation-delay: .4s;
+  animation-delay: 0.4s;
 }
 
 .cuatro-load {
   transform-origin: center right;
   animation: spin4 4s linear infinite;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 @keyframes spin {
@@ -108,7 +108,7 @@
     transform: rotate(0deg);
   }
   27% {
-    transform: rotate(0deg);  
+    transform: rotate(0deg);
   }
   40% {
     transform: rotate(180deg);
@@ -157,43 +157,65 @@
   }
 }
 
-.loading-animation{
-    font-size: 27px;
-    font-weight: 400;
-    opacity: 0;
-    visibility: hidden;
-    letter-spacing: 4px;
+.loading-animation {
+  font-size: 27px;
+  font-weight: 400;
+  opacity: 0;
+  visibility: hidden;
+  letter-spacing: 4px;
 }
-.loading-animation:nth-child(1){
+.loading-animation:nth-child(1) {
   position: absolute;
-    left: 50%;
-    top: 65%;
-    transform: translate(-50%,-50%);
-    opacity: 0;
-    visibility: hidden;
-    animation: appear 1.3s ease-in-out 3 normal .3s;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  animation: appear 1.3s ease-in-out 3 normal 0.3s;
 }
 
-.container-loader-2{
+.container-loader-2 {
   margin-top: -200px;
 }
 
-
-.ready{
+.ready {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 300px;
 }
 
-.load-start{
+.load-start {
   margin-top: 80px;
 }
 
-
 @keyframes appear {
-    30%, 70%{ 
-        visibility: visible;
-        opacity: 1; 
-	}
+  30%,
+  70% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-loader {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .dash {
+    margin: 0 16px;
+    width: 33px;
+    height: 17px;
+  }
+  .uno-load {
+    margin-right: -16px;
+  }
+
+  .loading-animation {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .loading-animation:nth-child(1) {
+    top: 58%;
+  }
 }
