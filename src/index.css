@@ -14,7 +14,6 @@
 
   
 }
-
 html{
   overflow-x: hidden;
 }
@@ -24,8 +23,8 @@ body {
   background-color: #171830;
   color: #fff;
   line-height: 1.6;
-  overflow-x: hidden;
   margin-bottom: 30px;
+  overflow-x: hidden;
   position: relative;
 
 }
@@ -737,7 +736,17 @@ header {
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
+  html{
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  margin-bottom: 30px;
+  position: relative;
+
+}
   .title-all-feed{
     font-size: 40px;
     font-weight: 600;

@@ -29,10 +29,7 @@ function Footer() {
          // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [scroll])
 
-    const [reference, inView] = useInView({
-        threshold: 0.2,
-        // triggerOnce: true,
-    })
+    const [reference, inView] = useInView()
 
     const animation = useAnimation();
     const animationRight = useAnimation();
