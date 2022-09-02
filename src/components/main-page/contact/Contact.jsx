@@ -5,6 +5,8 @@ import { send } from 'emailjs-com';
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import ModalVinyl from './ModalEmail'
 import Spinner from '../../shared/spinner/Spinner'
+import {motion} from 'framer-motion'
+
 
 
 function Contact() {
@@ -90,7 +92,12 @@ function Contact() {
         )
     } else {
         return (
-            <div className="contact-page">
+            <motion.div 
+                className="contact-page"
+                initial={{width: 0}}
+                animate={{width: "100%"}}
+                exit={{x: window.innerWidth, transition: {duration: 0.1}}}
+            >
                 <span ref={scrollTo} className="top-absolute"></span>
                 <section className="form-border">
                     <div className="contact-left">
@@ -132,7 +139,7 @@ function Contact() {
                     </div>
                     {modalToShow()}
                 </section>
-            </div>
+            </motion.div>
         )
     }
 

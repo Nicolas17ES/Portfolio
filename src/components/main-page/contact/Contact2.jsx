@@ -7,6 +7,8 @@ import ModalVinyl from './ModalEmail'
 import Spinner from '../../shared/spinner/Spinner'
 import {FaArrowUp} from 'react-icons/fa'
 
+import {motion} from 'framer-motion'
+
 
 function Contact() {
     const {dispatch, modal, isLoading, scroll} = useContext(FeedbackContext);
@@ -85,13 +87,15 @@ function Contact() {
         else{ return null}
     }
 
-    if(isLoading){
+    if(!isLoading){
         return (
-            <Spinner/>
-        )
-    } else {
-        return (
-            <div className="contact-page">
+            <motion.div 
+                className="contact-page"
+                initial={{width: 0}}
+                animate={{width: "100%"}}
+                exit={{x: window.innerWidth, transition: {duration: 0.4}}}
+                transition={{type: 'tween'}}
+            >
                 <span ref={scrollTo} className="top-absolute"></span>
                 <section className="form-border">
                     <div className="show-form">
@@ -150,8 +154,12 @@ function Contact() {
                     </div>
                     {modalToShow()}
                 </section>
-            </div>
+            </motion.div>
         )
+    } else {
+        return (
+            <Spinner/>
+        )      
     }
 
 }

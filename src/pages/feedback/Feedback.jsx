@@ -5,6 +5,8 @@ import ProjectTittle from '../../components/games/game-title/GameTitle'
 
 import FeedbackContext from '../../context/feedback/FeedbackContext'
 import {useContext} from 'react'
+import {motion} from 'framer-motion'
+
 
 
 function Feedback() {
@@ -14,37 +16,51 @@ function Feedback() {
 
     if( questionCount === 1) {
        return (
-         <>
+         <motion.div
+            initial={{width: 0}}
+            animate={{width: "100%"}}
+            exit={{x: window.innerWidth, transition: {duration: 0.3}}}
+        >
           <h1 className="title-all-feed"> <span className="title-main-feed">PORTFOLIO</span><sub className="title-sub-feed">design</sub></h1>
           <QuestionOne/>
-         </>
+        </motion.div>
 
        )
 
     } else if (questionCount === 2) {
       return (
-         <>
+         <motion.div
+            initial={{width: 0}}
+            animate={{width: "100%"}}
+            exit={{x: window.innerWidth, transition: {duration: 0.3}}}
+        >
           <h1 className="title-all-feed"> <span className="title-main-feed">FOUNDIT</span><sub className="title-sub-feed">app</sub></h1>
           <QuestionTwo/>
-         </>
-
+</motion.div>
        )
 
     } else if (questionCount === 3){
         return (
-         <>
+         <motion.div
+            initial={{width: 0}}
+            animate={{width: "100%"}}
+            exit={{x: window.innerWidth, transition: {duration: 0.3}}}
+        >
           <h1 className="title-all-feed"> <span className="title-main-feed">DASHBOARD</span><sub className="title-sub-feed">web</sub></h1>
           <QuestionThree/>
-         </>
-
+</motion.div>
        )
 
     } else {
       return (
-         <>
+         <motion.div
+            initial={{width: 0}}
+            animate={{width: "100%"}}
+            exit={{x: window.innerWidth, transition: {duration: 0.3}}}
+        >
           <h1 className="title-all-feed"> <span className="title-main-feed">DASHBOARD</span><sub className="title-sub-feed">web</sub></h1>
           <QuestionThree/>
-         </>
+</motion.div>
 
        )
     }

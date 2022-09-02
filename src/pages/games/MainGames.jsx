@@ -2,6 +2,8 @@ import './MainGames.css'
 import {useContext, useEffect} from 'react'
 import FeedbackContext from '../../context/feedback/FeedbackContext'
 import {useNavigate, Link} from 'react-router-dom'
+import {motion} from 'framer-motion'
+
 
 
 function MainGames() {
@@ -29,7 +31,13 @@ function MainGames() {
 
 
     return (
-        <div className="main-games">
+        <motion.div
+            className="main-games"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: .7, delay: .1}}
+            exit={{opacity: 0, transition: {duration: .4}}} 
+         >
             <h1 className="title-all"> <sub className="title-sub">play a</sub><span className="title-main">GAME</span></h1>
             <div className="games-page-titles">
                 <h1 className="title-all-games" onClick={alertLeave} ><span className="title-main"> ' take a GUESS '</span></h1>
@@ -45,7 +53,7 @@ function MainGames() {
                     <Link to={'/games/rock'} className="games-button ball b2"></Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

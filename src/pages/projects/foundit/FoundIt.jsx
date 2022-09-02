@@ -1,6 +1,8 @@
 import './FoundIt.css'
 
 import {useContext, useEffect, useRef} from 'react'
+import {motion} from 'framer-motion'
+
 
 import CardMobile from '../../../components/projects/foundIt/foundIt-cards/FoundCard'
 import ProjectIntro from '../../../components/projects/foundIt/foundit-intro/Intro'
@@ -23,11 +25,17 @@ function FoundIt() {
         }, [scroll, dispatch])
 
     return (
-        <div className="foundit-page">
+         <motion.div
+            className="foundit-page"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: .2, delay: .1}}
+            exit={{opacity: 0, transition: {duration: .1}}} 
+        >
             <span ref={scrollTo} className="top-absolute"></span>
             <ProjectIntro/>
             <CardMobile/>
-        </div>
+        </motion.div>
     )
 }
 

@@ -3,9 +3,7 @@
 .center-con{
     width: 100%;
     height: 100px;
-    margin: -80px auto auto auto;
-    margin-left: 7px;
-
+    margin: 70px auto auto auto;
     cursor: pointer;
     /* opacity: 0;
     visibility: hidden;
@@ -16,7 +14,7 @@
 
 .round {
     position: relative;
-    border: 2px solid #fff;
+    border: 1.4px solid #fff;
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -34,7 +32,7 @@
 
 .button-lines{
     z-index: 9;
-    height: 2px;
+    height: 1.4px;
     margin: 0px;
     width: 11px;
     background: #fff;
@@ -99,13 +97,13 @@
     }
 
     .round {
-        border: 1.4px solid #fff;
+        border: 1.3px solid #fff;
         width: 35px;
         height: 35px;
     }
     .button-lines{
         z-index: 9;
-        height: 1.4px;
+        height: 1.3px;
         margin: 0px;
         width: 10px;
         background: #fff;
@@ -119,13 +117,13 @@
     }
 
     .round {
-        border: 1.4px solid #fff;
+        border: 1.3px solid #fff;
         width: 35px;
         height: 35px;
     }
     .button-lines{
         z-index: 9;
-        height: 1.4px;
+        height: 1.3px;
         margin: 0px;
         width: 10px;
         background: #fff;

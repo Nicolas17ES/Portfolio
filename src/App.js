@@ -1,31 +1,20 @@
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom'
 
-import AboutPage from './pages/feedback/AboutPage'
 
 import NavBar from './components/shared/NavBar/NavBar'
 import Container from './components/shared/Container'
+import AnimatedRoutes from './components/shared/animations/AnimatedRoutes'
 
 import {FeedbackProvider} from './context/feedback/FeedbackContext'
 import {GamesProvider} from './context/games/GamesContext'
-import Feedback from "./pages/feedback/Feedback"
-import NotFound from './pages/NotFound'
-import Main from './pages/main/MainPage'
-import Projects from './pages/projects/Projects'
-import FoundIt from './pages/projects/foundit/FoundIt'
-import Dashboard from './pages/projects/dashboard/Dashboard'
-import PaperScissors from './pages/games/Paper'
-import Games from './pages/games/MainGames'
-import Answers from './pages/games/answers/Answers'
-import Contact from './components/main-page/contact/Contact2'
-import Computer from './components/projects/dashboard/bottom-dashboard/dashb-card/DashCard'
 
 
 
 
 
 
-function App() {
-  
+
+function App() {  
 
     return (
         <Router>
@@ -36,25 +25,7 @@ function App() {
                     <Container>
                         <div className="container">
                             <main>
-                            <Routes>
-                                
-                                <Route 
-                                    path="/feedback"
-                                    element={<Feedback/>}
-                                ></Route>
-                            
-                                <Route path="/about" element={<AboutPage/>}/>
-                                <Route path='/*' element={<NotFound/>}/>
-                                <Route path='/'  element={<Main/>}/>
-                                <Route path='/games/rock'  element={<PaperScissors/>}/>
-                                <Route path='/games'  element={<Games/>}/>
-                                <Route path='/games/answers'  element={<Answers/>}/>
-                                <Route path='/contact'  element={<Contact/>}/>
-                                <Route path='/projects'  element={<Projects/>}/>
-                                <Route path='/projects/foundit'  element={<FoundIt/>}/>
-                                <Route path='/projects/dashboard'  element={<Dashboard/>}/>
-                                <Route path='/tests'  element={<Computer/>}/>
-                            </Routes>
+                                <AnimatedRoutes/>
                             </main>
                         </div>
                     </Container>

@@ -13,6 +13,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {useContext, useEffect, useRef} from 'react'
 import {Link} from 'react-router-dom'
 
+import {motion} from 'framer-motion'
+
+
 import FeedbackContext from '../../context/feedback/FeedbackContext'
 
 
@@ -74,7 +77,13 @@ function Projects() {
     }
     
     return (
-        <div className="full-projects">
+        <motion.div
+            className="full-projects"
+            initial={{width: 0}}
+            animate={{width: "100%"}}
+            exit={{x: window.innerWidth, transition: {duration: 0.4}}}
+            transition={{type: 'tween'}}
+        >
             <h1 className="title-all"> <sub className="title-sub">my</sub><span className="title-main">PROJECTS</span></h1>
             <span ref={scrollTo} className="top-absolute"></span>
             <div className="projects-page">
@@ -90,7 +99,7 @@ function Projects() {
                     </div>
                 </Link>
             </div>
-        </div>
+        </motion.div>
 
      
     )

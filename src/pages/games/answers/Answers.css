@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
 .bottom-asnwers{
@@ -12,6 +13,7 @@
   gap: 100px;
   
 }
+
 
 .size{
   font-size: 24px !important;
@@ -32,7 +34,8 @@
 }
 
 .blur{
-  opacity: .2;
+  opacity: .4;
+  cursor: zoom-in;
   
 }
 .blur:hover{

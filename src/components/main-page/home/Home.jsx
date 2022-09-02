@@ -2,15 +2,61 @@ import './Home.css'
 import portrait from '../../assets/fluid16.png'
 import {FcContacts} from 'react-icons/fc'
 import {AiFillGithub} from 'react-icons/ai'
-import { useContext, useEffect, useRef} from 'react'
+import { useState, useContext, useEffect, useRef} from 'react'
 import { Link} from 'react-router-dom'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import ScrollButton from '../../shared/scroll-button/ScrollButton'
 import {motion, useAnimation} from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
+import HomeSvg from './HomeSvg2'
+import Loader from './loader/Loader'
+
 
 
 function Home() {
+
+    // CURSOR
+    // const [mousePosition, setMousePosition] = useState({
+    //     x: 0,
+    //     y: 0
+    // });
+    // const [cursorVariant, setCursorVariant] = useState("default");
+
+
+    // useEffect(() => {
+    //     const mouseMove = e => {
+    //     setMousePosition({
+    //         x: e.clientX,
+    //         y: e.clientY
+    //     })
+    //     }
+
+    //     window.addEventListener("mousemove", mouseMove);
+
+    //     return () => {
+    //     window.removeEventListener("mousemove", mouseMove);
+    //     }
+    // }, []);
+
+    // const variants = {
+    //     default: {
+    //         x: mousePosition.x - 16,
+    //         y: mousePosition.y - 16,
+    //         },
+    //     text: {
+    //         height: 100,
+    //         width: 100,
+    //         x: mousePosition.x - 75,
+    //         y: mousePosition.y - 75,
+    //         backgroundColor: "#f57e7e",
+    //         mixBlendMode: "difference"
+    //     }
+    // }
+
+    // const textEnter = () => setCursorVariant("text");
+    // const textLeave = () => setCursorVariant("default");
+
+    // CURSOR
 
     const {dispatch, scroll, hasAnimated} = useContext(FeedbackContext);
     const scrollTo = useRef();
@@ -38,7 +84,7 @@ function Home() {
                 opacity: 1,
                 transition: {
                     type: 'spring',
-                    duration: 1.5,
+                    duration: .4,
                     delay: 0.1,
                     
                 }
@@ -57,58 +103,58 @@ function Home() {
                 })
     }
 
-    if (hasAnimated === true){
-        return ( 
-            <div className="home-page">
-                <span ref={scrollTo} className="top-absolute"></span>
-                <section className="section-one">
-                    <div className="cabezera-left">
-                        <p className="hello-text">Hello!</p>
-                        
-                        <h1 className="name">I'm <span className="nicolas">Nicolas</span></h1>
-                        <p className="intro-text">I am a Full Stack Web Developer and this is how I acquired the knowledge and patience to turn designs into dynamic websites.</p>
-                    <div className="buttons-home">
-                        <Link to="/contact"><button className="contact-button"><p>CONTACT</p><FcContacts size={25} className="contact-icon"/></button></Link>
-                        <a href="https://github.com/Nicolas17ES" rel="noreferrer" target="_blank"><button className="contact-button"><p>GITHUB</p><AiFillGithub size={25} className="contact-icon-git"/></button></a>
-                    </div>
-                    </div>
-                    <div className="cabezera-rigth">
-                    <img className="image-portrait" src={portrait} alt=""/>
-                    </div>
-                    
-                    
-                </section>
-                <div onClick={executeScroll}>
-                        <ScrollButton />
-                    </div>
-            </div>
-        )
-    } else {
+  
+    
         return (
-            <div ref={reference} className="home-page">
+            <motion.div animate={animation} ref={reference} className="home-page-one">
                 <span ref={scrollTo} className="top-absolute"></span>
-                <section className="section-one">
-                    <motion.div animate={animation} className="cabezera-left">
-                        <p className="hello-text">Hello!</p>
-                        
-                        <h1 className="name">I'm <span className="nicolas">Nicolas</span></h1>
-                        <p className="intro-text">I am a Full Stack Web Developer and this is how I acquired the knowledge and patience to turn designs into dynamic websites.</p>
-                        <div className="buttons-home">
-                            <Link to="/contact"><button className="contact-button"><p>CONTACT</p><FcContacts size={25} className="contact-icon"/></button></Link>
-                            <a href="https://github.com/Nicolas17ES" rel="noreferrer" target="_blank"><button className="contact-button"><p>GITHUB</p><AiFillGithub size={25} className="contact-icon-git"/></button></a>
-                        </div>
-                    </motion.div>
-                    <motion.div animate={animation} className="cabezera-rigth">
-                        <img className="image-portrait" src={portrait} alt=""/>
-                    </motion.div>
+                <div 
+                    className="welcome-figure"
                     
-                </section>
-                <div onClick={executeScroll}>
-                    <ScrollButton />
+                >
+                    <div  class="inner-welcome">
+                        <span >Hi I'm bla bla,</span>
+                        <span  className="span-margin">a Bla Blu BU</span>                  
+                    </div>
+                    <div class="inner-welcome">
+                        <span >Hi I'm bla bla,</span>
+                        <span  className="span-margin">a Bla Blu BU</span>
+                    </div>
                 </div>
-            </div>
+                <div className="home-figures">
+                    <motion.div  className="svg-one">
+                        <HomeSvg/>
+                    </motion.div>
+         
+                    <motion.div  
+                        className="between-svgs"
+                        initial={{opacity: 0, y: "300px"}}
+                        animate={{opacity: 1, y:0}}
+                        transition={{duration: 1.1, delay: 1}}
+                    
+                    >
+                        <motion.p whileHover={{scale: 1.2}} transition={{type: 'spring', duration: .7}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo fugit at impedit doloribus itaque nobis reiciendis magnam iure animi omnis. Lorem ipsum dolor.</motion.p>
+                    </motion.div>
+                    <motion.div drag className="svg-two" >
+                        <HomeSvg/>
+                    </motion.div>
+                </div>
+                <motion.div 
+                    onClick={executeScroll}
+                    initial={{opacity: 0, y: "300px"}}
+                    animate={{opacity: 1, y:0}}
+                    transition={{duration: 1.1, delay: 1}}
+                >
+                    <ScrollButton />
+                </motion.div>
+                {/* <motion.div
+                    className='cursor'
+                    variants={variants}
+                    animate={cursorVariant}
+                /> */}
+            </motion.div>
         )
-    }
+    
 
 }
 

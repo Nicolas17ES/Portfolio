@@ -26,8 +26,8 @@ function Skills() {
                 opacity: 1,
                 transition: {
                     type: 'spring',
-                    duration: 1.5,
-                    delay: 0.1,
+                    duration: .8,
+                    delay: 0.2,
                     
                 }
             })

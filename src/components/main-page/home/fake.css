@@ -1,0 +1,313 @@
+
+/* FIRST PAGE OF HOME */
+.section-one{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 0px auto 50px auto;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    /* text-align-last: center; */
+}
+
+/* LEFT SIDE -- INTRO */
+
+.cabezera-left{
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    width: 100%;
+    /* border: 4px solid white; */
+    margin: 0px auto auto auto;
+}
+
+/* TEXT LEFT SIDE */
+.hello-text{
+    font-size: 20px;
+    margin-bottom: 20px;
+    /* opacity: 0;
+    visibility: hidden; */
+    /* animation: 2s appearElement ease forwards .5s; */
+}
+
+
+.intro-text{
+    font-weight: 100;
+    font-size: 12px;
+    text-align: justify; /* For Edge */
+    text-align-last: center;
+    padding-bottom: 10px;
+    position: relative;
+    /* opacity: 0;
+    visibility: hidden; */
+    /* animation: 2s appearElement ease forwards 1.3s; */
+}
+
+.intro-text:after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 40%;
+    width: 98%;
+    border-bottom: 8px solid rgb(252, 236, 206);
+    left: 0;
+    bottom: -6px;
+}
+
+
+.name{
+    font-size: 27px;
+    margin-bottom: 50px;
+    /* opacity: 0;
+    visibility: hidden; */
+    /* animation: 2s appearElement ease forwards .9s; */
+}
+.nicolas{
+    color: #f57e7e;
+}
+
+
+/* RIGHT SIDE - IMAGE */
+.cabezera-rigth{
+    width: 50%;
+    margin: auto;
+    display: none;
+}
+
+
+
+.image-portrait{
+    margin: auto;
+    width: 80%;
+    /* animation: rotate-animation 2.5s ease-in-out forwards; */
+    /* opacity: 0;
+    visibility: hidden; */
+    /* animation: 2s appearElement ease forwards 2.1s; */
+    transform: rotate(45deg);
+
+}
+
+/* IMAGE ANIMATION */
+
+/* @keyframes rotate-animation {
+    from {transform: rotate(221deg);}
+    to {transform: rotate(45deg);}
+}  */
+
+
+/* BUTTONS HOME */
+.buttons-home{
+    display: flex;
+    gap: 0px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CONTACT BUTTON */
+.contact-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    width: 95%;
+    height: 40px;
+    border: 1px solid white;
+    padding: 13px 20px;
+    border-radius: 5px;
+    margin: 90px auto 0 auto;
+     -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
+    /* opacity: 0;
+    visibility: hidden; */
+    /* animation: 2s appearElement ease forwards 1.7s; */
+}
+
+.contact-icon{
+    margin-left: 10px;
+    color: white;
+    width: 18px;
+}
+.contact-icon-git{
+    margin-left: 10px;
+    color: white;
+    width: 18px;
+}
+
+
+/* animation appear */
+/* @keyframes appearElement{
+    0%{
+        opacity: 0;
+        visibility: hidden; 
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+} */
+
+.contact-button:hover{
+    color: #171830;
+    background-color: white;
+    transform: scale(1.1);      
+}
+
+
+.contact-button:hover .contact-icon-git{
+    color: #171830;  
+}
+
+
+/* scroll down button */
+/* end scroll */
+
+
+@media (min-width: 490px){
+    .section-one{
+        display: flex;
+        flex-direction: column;
+      }
+    .home-page{
+        width: 90%;
+        margin: 0px auto;   
+    }
+    .hello-text{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+
+    .intro-text{
+        font-weight: 100;
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .name{
+        font-size: 42px;
+        margin-bottom: 50px;
+    }
+    .cabezera-rigth img{
+        width: 60%;   
+    }
+
+    .buttons-home{
+        display: flex;
+        gap: 0px 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-button{
+        width: 130px;
+        margin: 50px auto;
+    }
+}
+
+
+
+@media (min-width: 770px){
+    .cabezera-rigth{
+        width: 50%;
+        margin: auto;
+        display: block;
+    }
+
+    .section-one{
+        display: flex;
+        flex-direction: row;
+        height: 80vh;
+        margin-bottom: 50px;
+        padding: 20px;
+        border-radius: 30px;
+        text-align: left;
+        text-align-last: left;
+    
+    }
+
+    .cabezera-left{
+        font-weight: 800;
+        letter-spacing: 1px;
+        width: 50%;
+        /* border: 4px solid white; */
+        margin: 40px auto;
+    }
+    .hello-text{
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+
+    .intro-text{
+        font-weight: 100;
+        font-size: 15px;
+        text-align: left;
+        text-align-last: left;
+    }
+
+    .name{
+        font-size: 45px;
+        margin-bottom: 50px;
+    }
+
+    .cabezera-rigth{
+        width: 50%;
+        /* border: 4px solid white; */
+        margin: auto;
+    }
+
+    .cabezera-rigth img{
+        width: 100%;
+        margin-left: 50px;
+       
+    }
+
+    /* BUTTONS HOME */
+    .buttons-home{
+        display: flex;
+        gap: 0px 10px;
+    }
+    .buttons-home{
+        justify-content: flex-start;
+        gap: 0px 35px;
+    }
+
+     .contact-button{
+         font-size: 14px;
+        width: 140px;
+        margin: 0;
+        height: 50px;
+    }
+}
+
+@media (min-width: 1020px){
+
+    .name{
+        font-size: 68px;
+        margin-bottom: 70px;
+    }
+    .cabezera-rigth img{
+        width: 85%;
+        margin-left: 120px;
+    }
+
+     .contact-button{
+        width: 160px;
+    }
+
+
+    /* scroll down button */
+    
+}
+
+@media (min-width: 1300px){
+    .cabezera-rigth img{
+        width: 75%;
+        margin-left: 170px; 
+    }
+}

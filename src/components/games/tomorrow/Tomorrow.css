@@ -1,16 +1,40 @@
+.games-hearts{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  width: 80%;
+  z-index: 10;
+}
+
 .tomorrow{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 230px;
   height: 230px;
-  border-radius: 50%;
+  border-radius: 60% 40% 60% 40% / 60% 41% 59% 40% ;
   margin: 100px auto;
   position: relative;
   background: rgb(245, 126, 126);
   animation: pumping 2.5s infinite;
-  cursor: pointer;
+  cursor: grab;
 }
+
+.behind-eyes{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: -1;
+  gap: 160px;
+}
+
 .tomorrow-input{
   display: flex;
   align-items: center;
@@ -25,6 +49,11 @@
 }
 .tomorrow .nothing {
     text-align: center;
+    color: white;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    background-color: #171830;
 }
 
 .riddle-input{
@@ -39,6 +68,8 @@
 .spanY{
   color: rgb(245, 126, 126);
 }
+
+
 
 @keyframes pumping {
   0% {

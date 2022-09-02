@@ -41,16 +41,20 @@
 
 .box1{
     grid-area: uno;
-    border: 2px solid white;
-    /* visibility: hidden; */
+    border:  1px solid #fdca87;
     white-space: nowrap;
-    /* animation: .8s fadeIn ease-in forwards .3s; */
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+}
+.box1 sub{
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 19px;
+    margin-left: 8px;
 }
 .box2{
-    grid-area: dos;
-    background-color: rgb(252, 236, 206);
-    /* visibility: hidden; */
-    /* animation: .8s fadeIn ease-in forwards .1s; */
+    display: none;
 }
 .box3{
     grid-area: tres;
@@ -58,31 +62,31 @@
     font-weight: 400;
     font-size: 1vw; 
     letter-spacing: 3px;
-    border: 2px solid white;
-    /* visibility: hidden; */
+    border:  1px solid white;
     z-index: 99;
     cursor: pointer;
-    /* animation: .8s fadeIn ease-in forwards .6s; */
 }
-/* .box3:hover{
-    transform: scale(1.05);
-} */
-/* .modal-about-do{
-    z-index: 999;
-} */
+
 .box4{
     grid-area: cuatro;
-    border: 2px solid white;
-    white-space: nowrap;
-    /* visibility: hidden;
-    animation: .8s fadeIn ease-in forwards .3s; */
+        white-space: nowrap;
+    color: white;
+    font-weight: 500;
+    border:  1px solid #fdca87;
+    font-weight: 600;
+    font-size: 22px;
 }
+
+.box4 sub{
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 19px;
+    margin-left: 8px;
+}
+
 .box5{
     grid-area: cinco;
-    background-color: #f57e7e;
-    /* visibility: hidden;
-    animation: .8s fadeIn ease-in forwards; */
-
+    border: 1px solid #f57e7e;
 }
 .box6{
     position: relative;
@@ -90,24 +94,29 @@
     font-weight: 400;
     font-size: 1vw; 
     letter-spacing: 3px;
-    border: 2px solid white;
+    border: 1px solid white;
     z-index: 99;
     cursor: pointer;
-    /* visibility: hidden;
-    animation: .8s fadeIn ease-in forwards .6s; */
 }
 
-/* .box6:hover{
-    transform: scale(1.05);
-} */
+
 
 
 .box7{
     grid-area: siete;
-    border: 2px solid white;
+    border:  1px solid #fdca87;
     white-space: nowrap;
-    /* visibility: hidden;
-    animation: .8s fadeIn ease-in forwards .3s; */
+    color: white;
+    font-weight: 500;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.box7 sub{
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 19px;
+    margin-left: 8px;
 }
 
 .box8{
@@ -120,7 +129,7 @@
     font-weight: 400;
     font-size: 1vw; 
     letter-spacing: 3px;
-    border: 2px solid white;
+    border: 1px solid white;
     z-index: 99;
     cursor: pointer;
     /* visibility: hidden;
@@ -133,7 +142,8 @@
 
 .box10{
     grid-area: diez;
-    background-color: rgb(252, 236, 206);
+    /* background-color: rgb(252, 236, 206); */
+    border:  1px solid #fdca87;
     /* visibility: hidden;
     animation: .8s fadeIn ease-in forwards 0.1s; */
 }
@@ -151,7 +161,8 @@
 
 .box13{
     grid-area: trece;
-    background-color: rgb(252, 236, 206);
+    /* background-color: rgb(252, 236, 206); */
+    border:  1px solid #fdca87;
     /* visibility: hidden;
     animation: .8s fadeIn ease-in forwards .1s; */
 }
@@ -163,7 +174,8 @@
 
 .box16{
     grid-area: dieciseis;
-    background-color: #f57e7e;
+    /* background-color: #f57e7e; */
+    border:  1px solid #f57e7e;
     /* visibility: hidden;
     animation: .8s fadeIn ease-in forwards; */
     
@@ -184,13 +196,14 @@
     grid-area: diecinueve;
     /* visibility: hidden;
     animation: .8s fadeIn ease-in forwards; */
-    background-color: #f57e7e;
+    /* background-color: #f57e7e; */
+    border:  1px solid #f57e7e;
 }
 
 .box{
     display: flex;
     position: relative;
-    flex-direction: column;
+    
     align-items: center;
     justify-content: center;
     border-radius: 6px;

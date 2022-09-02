@@ -2,14 +2,18 @@ import './Answers.css'
 import Clock from '../../../components/games/clock/Clock'
 import Tomorrow from '../../../components/games/tomorrow/Tomorrow'
 import {Link, useNavigate} from 'react-router-dom'
-import {useContext, useEffect} from 'react'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
+import {useRef, useContext, useEffect} from 'react'
+import { useInView } from 'react-intersection-observer';
+import {motion, useAnimation} from 'framer-motion'
 
 
 function Answers() {
 
     const navigate = useNavigate();
     const {riddleAnswer, dispatch} = useContext(FeedbackContext);
+
+   
 
     const promptRiddle = () => {
         let reply = prompt(' I never was, I am always to be; everyone is looking, but no one sees me. What am I?');
@@ -28,7 +32,14 @@ function Answers() {
 
     if(riddleAnswer === 'time' || riddleAnswer === 'TIME' || riddleAnswer === 'Time' ){
         return (
-            <div className="answers">
+            <motion.div
+                className="answers"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: .7, delay: .2}}
+                exit={{opacity: 0, transition: {duration: .3}}}
+              
+            >
                 <Clock/>
                 <div className="bottom-asnwers">
                     <button className="more-riddles" onClick={promptRiddle}>
@@ -38,20 +49,36 @@ function Answers() {
                         <h3 className="block-title size shakeit"><sub>take me </sub>OUT</h3>
                     </Link>
                 </div>
-            </div>
+            </motion.div>
         )
     } else if (riddleAnswer === 'tomorrow' || riddleAnswer === 'TOMORROW' || riddleAnswer === 'Tomorrow') {
         return (
-            <div className="answers">
-                <Tomorrow/>
-                <div className="bottom-asnwers">
-                    <button className="more-riddles">
-                        <h3 className="block-title sizePlus"><sub className="sizePlus blur">what lies between the</sub> <span className="eye-span">EYES</span></h3>
-                    </button>
-                    <Link to={'/games'}>
-                        <h3 className="block-title sizeMedium shakeit"><sub className="">take me </sub>OUT</h3>
-                    </Link>
-                </div>
+            
+            <div
+                className="answers"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{duration: 2, delay: 1}}
+            
+            >
+                 <motion.div
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        transition={{duration: .7, delay: .1}}
+                        exit={{opacity: 0, transition: {duration: .4}}} 
+                    >
+                    <Tomorrow/>
+                    <div className="bottom-asnwers lower-bottom">
+                        <button className="more-riddles">
+                            <h3 className="block-title sizePlus"><sub className="sizePlus blur">what lies behind the</sub> <span className="eye-span">EYES</span></h3>
+                        </button>
+                        <Link to={'/games'}>
+                            <h3 className="block-title sizeMedium shakeit"><sub className="">take me </sub>OUT</h3>
+                        </Link>
+                    </div>
+                </motion.div>
+                    
+                
             </div>
         )
     }

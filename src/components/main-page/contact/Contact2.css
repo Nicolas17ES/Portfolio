@@ -526,11 +526,11 @@
     .contact-page{
         width: 100%;
         padding: 0px;
-        border: 1px solid wheat;
     }
 
     .form-border{
-        width: 300px;
+        width: 260px;
+        cursor: pointer;
     }
     
 
@@ -567,7 +567,6 @@
     .estrellas {
         font-size: 23px;
         margin-top: 0px;
-        border: 1px solid red;
     }
     .estrellas span {
         left: 50%;
@@ -578,16 +577,16 @@
     }
 
     .estrellas span:nth-of-type(1)  {
-    transform: rotate(24deg);
+    transform: rotate(17deg);
     }
     .estrellas span:nth-of-type(2)  {
-    transform: rotate(18deg);
+    transform: rotate(13deg);
     }
     .estrellas span:nth-of-type(3)  {
-    transform: rotate(12deg);
+    transform: rotate(9deg);
     }
     .estrellas span:nth-of-type(4)  {
-    transform: rotate(6deg);
+    transform: rotate(5deg);
     }
     .estrellas span:nth-of-type(5)  {
     transform: rotate(2deg);
@@ -596,16 +595,16 @@
     transform: rotate(-2deg);
     }
     .estrellas span:nth-of-type(7)  {
-    transform: rotate(-6deg);
+    transform: rotate(-5deg);
     }
     .estrellas span:nth-of-type(8)  {
-    transform: rotate(-12deg);
+    transform: rotate(-9deg);
     }
     .estrellas span:nth-of-type(9)  {
-    transform: rotate(-18deg);
+    transform: rotate(-13deg);
     }
     .estrellas span:nth-of-type(10)  {
-    transform: rotate(-24deg);
+    transform: rotate(-17deg);
     }
 
 

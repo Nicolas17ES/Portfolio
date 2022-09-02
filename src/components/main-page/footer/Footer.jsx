@@ -7,7 +7,7 @@ import {BsWhatsapp} from 'react-icons/bs'
 import {GiClick} from 'react-icons/gi'
 import { useInView } from 'react-intersection-observer';
 import {motion, useAnimation} from 'framer-motion'
-
+import FooterSvg from './FooterSvg'
 
 
 
@@ -34,6 +34,7 @@ function Footer() {
     })
 
     const animation = useAnimation();
+    const animationRight = useAnimation();
 
     useEffect(() => {
         if(inView){
@@ -46,8 +47,18 @@ function Footer() {
                     
                 }
             })
+            animationRight.start({
+                 x: 0,
+                opacity: 1,
+                transition: {
+                    type: "tween",
+                    delay: 0.1,
+                    duration: 0.9,
+                },
+            })
         } else if (!inView){
             animation.start({ opacity: 0})
+            animationRight.start({x: "77vw", opacity: 0})
         }
          // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [inView]);
@@ -77,47 +88,36 @@ function Footer() {
      if(hasAnimated === true){
         return (
             <div className="footer-page" ref={reference}>
-                <h3 className="skills-title title-basement">BASEMENT</h3>
+                {/* <h3 className="skills-title title-basement">BASEMENT</h3> */}
                 <div className="full-footer">
                     <div className="footer-content">
                         <div className="top-footer">
-                            <div className="footer-block">
-                                <h3 className="block-title"> <sub>view my </sub>PROJECTS</h3>
-                                <Link to="/projects" onClick={redirectToProjects}>
-                                    <div className="circle-1">
-                                        <div className="inner-circle-1">
-                                            <GiClick className="click-mouse" size={24}/>
-                                        </div>
+                                <div className="footer-block">
+                                    <h3 className="block-title"> <sub>view </sub>PROJECTS</h3>
+                                    <Link to="/projects" onClick={redirectToProjects}>
+                                        <FooterSvg/> 
+                                    </Link>
                                 </div>
-                                </Link>
-                            </div>
-                            <div className="footer-block">
-                                <h3 className="block-title">CONTACT <sub>me</sub></h3>
-                                <Link to="/contact" onClick={redirectToContact}>
-                                    <div className="circle-2">
-                                        <div className="inner-circle-2">
-                                            <GiClick className="click-mouse" size={24}/>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="footer-block">
-                                <h3 className="block-title"><sub>give me </sub>FEEDBACK</h3>
-                                <Link to="/feedback" onClick={redirectToFeedback}>
-                                    <div className="circle-3">
-                                        <div className="inner-circle-3">
-                                            <GiClick className="click-mouse" size={24}/>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
+                            
+                                <div className="footer-block">
+                                    <h3 className="block-title">CONTACT <sub>me</sub></h3>
+                                    <Link to="/contact" onClick={redirectToContact}>
+                                        <FooterSvg/> 
+                                    </Link>
+                                </div>
+                                <div className="footer-block">
+                                    <h3 className="block-title"><sub>give </sub>FEEDBACK</h3>
+                                    <Link to="/feedback" onClick={redirectToFeedback}>
+                                        <FooterSvg/>  
+                                    </Link>
+                                </div>
                         </div>
                         <div className="bottom-footer">
-                            <span  className="footer-hide"><p>Music is the highest philosophy :)</p></span>
+                            {/* <span  className="footer-hide"><p>Music is the highest philosophy :)</p></span>
                             <span className="footer-icons"><p>+34689060044</p><BsWhatsapp size={16}/></span>
-                            <span className="footer-icons"><Link to={"/contact"}><p>Contact Me</p></Link></span>
+                            <span className="footer-icons"><Link to={"/contact"}><p>Contact</p></Link></span>
                             <span><p>Made by Nicolas Luque</p></span>
-                            <span><p>@2022 All rights reserved</p></span>
+                            <span><p>@2022 All rights reserved</p></span> */}
                         </div>
                     </div>
                 </div>
@@ -128,49 +128,37 @@ function Footer() {
         return (
             <div ref={reference}>
                 <motion.div animate={animation}  className="footer-page">
-                    <h3 className="skills-title title-basement">BASEMENT</h3>
+                    {/* <h3 className="skills-title title-basement">BASEMENT</h3> */}
                     <div className="full-footer">
                         <div className="footer-content">
                             <div className="top-footer">
                                 <div className="footer-block">
-                                    <h3 className="block-title"> <sub>view my </sub>PROJECTS</h3>
+                                    <h3 className="block-title"> <sub>view </sub>PROJECTS</h3>
                                     <Link to="/projects" onClick={redirectToProjects}>
-                                        <div className="circle-1">
-                                            <div className="inner-circle-1">
-                                                <GiClick className="click-mouse" size={24}/>
-                                            </div>
-                                    </div>
+                                        <FooterSvg/> 
                                     </Link>
                                 </div>
                             
                                 <div className="footer-block">
-                                    <h3 className="block-title">CONTACT <sub>me</sub></h3>
+                                    <h3 className="block-title">CONTACT <sub>@@</sub></h3>
                                     <Link to="/contact" onClick={redirectToContact}>
-                                        <div className="circle-2">
-                                            <div className="inner-circle-2">
-                                                <GiClick className="click-mouse" size={24}/>
-                                            </div>
-                                        </div>
+                                        <FooterSvg/> 
                                     </Link>
                                 </div>
                                 <div className="footer-block">
-                                    <h3 className="block-title"><sub>give me </sub>FEEDBACK</h3>
+                                    <h3 className="block-title"><sub>give </sub>FEEDBACK</h3>
                                     <Link to="/feedback" onClick={redirectToFeedback}>
-                                        <div className="circle-3">
-                                            <div className="inner-circle-3">
-                                                <GiClick className="click-mouse" size={24}/>
-                                            </div>
-                                        </div>
+                                        <FooterSvg/>  
                                     </Link>
                                 </div>
                             </div>
-                            <div className="bottom-footer">
+                            <motion.div animate={animationRight} className="bottom-footer">
                                 <span  className="footer-hide"><p>Music is the highest philosophy :)</p></span>
                                 <span className="footer-icons"><p>+34689060044</p><BsWhatsapp size={16}/></span>
-                                <span className="footer-icons"><Link to={"/contact"}><p>Contact Me</p></Link></span>
+                                <span className="footer-icons"><Link to={"/contact"}><p>Contact</p></Link></span>
                                 <span><p>Made by Nicolas Luque</p></span>
                                 <span><p>@2022 All rights reserved</p></span>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                         <span ref={scrollTo} className="center-absolute-footer"></span>

@@ -1,6 +1,7 @@
 import './Dashboard.css'
 
 import {useContext, useEffect, useRef} from 'react'
+import {motion} from 'framer-motion'
 
 import TopDashboard from '../../../components/projects/dashboard/top-dashboard/TopDashboard'
 import BottomDashboard from '../../../components/projects/dashboard/bottom-dashboard/dashb-card/DashCard'
@@ -26,11 +27,18 @@ function Dashboard() {
         
 
     return (
-        <div className="dashboard-page">
+        
+        <motion.div 
+            className="dashboard-page"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: .2, delay: .1}}
+            exit={{opacity: 0, transition: {duration: .1}}} 
+        >
             <span ref={scrollTo} className="top-absolute"></span>
             <TopDashboard/>
             <BottomDashboard/>
-        </div>
+        </motion.div>
     )
 }
 
