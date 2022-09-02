@@ -15,7 +15,9 @@ function Skills() {
     const {scroll, dispatch, hasAnimated} = useContext(FeedbackContext);
     const scrollTo = useRef();
 
-    const [reference, inView] = useInView()
+    const [reference, inView] = useInView({
+        threshold: 0.2,
+    })
     const animation = useAnimation();
 
     useEffect(() => {
@@ -33,7 +35,7 @@ function Skills() {
             animation.start({ opacity: 0})
         }
      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [inView]);
+    }, [inView, animation]);
 
       // scroll to next component//
     const executeScroll = () => {

@@ -5,9 +5,10 @@ import {Link} from 'react-router-dom'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import {BsWhatsapp} from 'react-icons/bs'
 import {GiClick} from 'react-icons/gi'
-import { useInView } from 'react-intersection-observer';
 import {motion, useAnimation} from 'framer-motion'
 import FooterSvg from './FooterSvg'
+import { useInView } from 'react-intersection-observer';
+
 
 
 
@@ -61,7 +62,7 @@ function Footer() {
             animationRight.start({x: "77vw", opacity: 0})
         }
          // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [inView]);
+    }, [inView, animation, animationRight]);
 
         // scroll to projects component top//
     const redirectToProjects = () => {

@@ -93,7 +93,7 @@ function Home() {
             animation.start({ opacity: 0})
         }
          // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [inView]);
+    }, [animation, inView]);
 
 
     const executeScroll = () => {

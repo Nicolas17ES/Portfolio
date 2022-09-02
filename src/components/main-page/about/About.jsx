@@ -14,7 +14,9 @@ function About(props) {
   const { scroll, dispatch, modal, hasAnimated } = useContext(FeedbackContext);
   const scrollTo = useRef();
 
-  const [reference, inView] = useInView();
+  const [reference, inView] = useInView({
+    threshold: 0.2,
+  });
   const animationLeft = useAnimation();
   const animationRight = useAnimation();
   const animationLeftDelay = useAnimation();
@@ -113,7 +115,7 @@ function About(props) {
       animationOpacity.start({ opacity: 0 });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [inView]);
+  }, [inView, animationLeft, animationRight, animationLeftDelay, animationRightDelay, animationLeftDelayTwo, animationRightDelayTwo, animationOpacity]);
 
   const displayModalVinyl = () => {
     dispatch({
