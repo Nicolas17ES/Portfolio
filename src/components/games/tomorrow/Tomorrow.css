@@ -1,4 +1,4 @@
-.games-hearts{
+.games-hearts {
   margin: auto;
   display: flex;
   justify-content: center;
@@ -8,82 +8,175 @@
   z-index: 10;
 }
 
-.tomorrow{
+.tomorrow {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 230px;
   height: 230px;
-  border-radius: 60% 40% 60% 40% / 60% 41% 59% 40% ;
+  border-radius: 60% 40% 60% 40% / 60% 41% 59% 40%;
   margin: 100px auto;
   position: relative;
   background: rgb(245, 126, 126);
   animation: pumping 2.5s infinite;
   cursor: grab;
+  z-index: 10;
 }
 
-.behind-eyes{
+.behind-eyes {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  z-index: -1;
   gap: 160px;
 }
 
-.tomorrow-input{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  margin: 100px auto;
-  position: relative;
-  background: rgb(245, 126, 126);
-  cursor: pointer;
-}
+
 .tomorrow .nothing {
-    text-align: center;
-    color: white;
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    background-color: #171830;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: #171830;
 }
 
-.riddle-input{
+.riddle-input {
   color: #171830;
   height: 40px;
   width: 140px;
   border-radius: 10px;
   padding: 5px 10px;
-
 }
 
-.spanY{
+.spanY {
   color: rgb(245, 126, 126);
 }
 
+.pills-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
 
+.red-pill-tom {
+  color: rgb(245, 126, 126);
+  transform: rotate(90deg);
+}
+
+.blue-pill-tom {
+  color: #171830;
+}
 
 @keyframes pumping {
   0% {
     transform: scale(0.91);
     box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
   }
-  
+
   70% {
     transform: scale(1.05);
     box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
   }
-  
+
   100% {
     transform: scale(0.91);
     box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+  }
+}
+
+@media (max-width: 870px) {
+  .games-hearts {
+    width: 70%;
+    z-index: 10;
+    margin-top: 40px;
+  }
+  .tomorrow {
+    width: 180px;
+    height: 180px;
+    margin: 80px auto;
+  }
+  .tomorrow .nothing {
+    width: 60px;
+    height: 75px;
+    font-size: 15px;
+  }
+
+  .behind-eyes {
+    left: 50%;
+    top: 60%;
+    gap: 140px;
+  }
+
+  .pills-background {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+  }
+}
+@media (max-width: 670px) {
+  .games-hearts {
+    gap: 60px;
+  }
+  .tomorrow {
+    width: 170px;
+    height: 170px;
+    margin: 65px auto;
+  }
+  .tomorrow .nothing {
+    width: 40px;
+    height: 60px;
+    font-size: 15px;
+  }
+
+  .behind-eyes {
+    gap: 110px;
+  }
+
+  .pills-background {
+    width: 55px;
+    height: 55px;
+  }
+}
+@media (max-width: 520px) {
+  .tomorrow {
+    margin: 45px auto;
+  }
+}
+@media (max-width: 520px) {
+  .title-tomorrow {
+    max-width: 70%;
+    margin: auto;
+    margin-top: -10px;
+    font-size: 35px !important;
+  }
+  .games-hearts {
+    gap: 30px;
+  }
+
+  .tomorrow {
+    margin: 60px auto;
+    width: 170px;
+    height: 130px;
+  }
+
+  .tomorrow .nothing {
+    width: 30px;
+    height: 50px;
+    font-size: 13px;
+  }
+
+  .behind-eyes {
+    gap: 80px;
   }
 }

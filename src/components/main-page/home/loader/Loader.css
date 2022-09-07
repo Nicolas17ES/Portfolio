@@ -157,14 +157,12 @@
   }
 }
 
+
 .loading-animation {
   font-size: 27px;
   font-weight: 400;
-  opacity: 0;
-  visibility: hidden;
   letter-spacing: 4px;
-}
-.loading-animation:nth-child(1) {
+  color: #f89f9f;
   position: absolute;
   left: 50%;
   top: 65%;
@@ -194,6 +192,7 @@
   70% {
     visibility: visible;
     opacity: 1;
+  
   }
 }
 

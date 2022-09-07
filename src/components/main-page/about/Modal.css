@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     width:50%;
-    height: 65%;
+    height: 68%;
     top: 50%;
     left: 50%;
     right: auto;
@@ -12,7 +12,7 @@
     margin-right: -50%;
     margin-top: 3%;
     transform: translate(-50%, -50%);
-    background-color: #24254b;
+    background-color: #171830;
     border-radius: 10px;
     opacity: 0;
     visibility: hidden;
@@ -46,8 +46,8 @@
   border-top: 8px solid #a4fac3;
   border-right: 8px solid #a4fac3;
   border-top-right-radius: 10px;
-  right: -45px;
-  top: -45px;
+  right: -35px;
+  top: -35px;
 }
 .modal-content-about:after {
   content: "";
@@ -58,8 +58,8 @@
   border-left: 8px solid #f57e7e;
   border-bottom: 8px solid #f57e7e;
   border-bottom-left-radius: 10px;
-  left: -45px;
-  bottom: -45px;
+  left: -35px;
+  bottom: -35px;
 } 
 
 .modal-blur{
@@ -90,24 +90,6 @@
 }
 
 
-/* 
-
-.modal-header{
-    padding: 15px;
-}
-.modal-header{
-  font-size: 2vw;  
-}
-
-
-.modal-body{
-    padding: 20px;
-    font-size: 1vw;
-    height: 68%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-} */
-
 .modal-footer{
     text-align: center;
     padding: 10px;
@@ -117,59 +99,50 @@
 
 
 
-@media(max-width: 960px) {
-  .modal-content{
-    width: 50vw;
-    height: 50vh; 
+@media(max-width: 1060px) {
+  .modal-about{
+    width: 70%;
   }
 }
 
 
 @media(max-width: 750px) {
   .modal-about{
-    width: 65%;
-    height: 70%;
+    width: 77%;
+    height: 72.5%;
   }
-  .modal-content{
-    width: 60vw;
-    height: 50vh; 
-  }
+  
+  
    .modal-content-about:before {
-    right: -30px;
-    top: -30px;
+    right: -20px;
+    top: -20px;
     height: 30%;
+    border-top: 4px solid #a4fac3;
+    border-right: 4px solid #a4fac3;
   }
   .modal-content-about:after {
-    left: -30px;
-    bottom: -30px;
+    left: -20px;
+    bottom: -20px;
     height: 30%;
+    border-left: 4px solid #f57e7e;
+    border-bottom: 4px solid #f57e7e;
   } 
 }
-@media(max-width: 750px) {
-  .modal-about{
-    width: 65%;
-    height: 70%;
-  }
-  .modal-content{
-    width: 60vw;
-    height: 50vh; 
-  }
-   .modal-content-about:before {
-    right: -30px;
-    top: -30px;
-    height: 30%;
-  }
-  .modal-content-about:after {
-    left: -30px;
-    bottom: -30px;
-    height: 30%;
-  } 
-}
+
 
 @media(max-width: 500px) {
   .modal-about{
+    width: 82%;
     top: 52%;
-    height: 74%;
+    height: 80%;
+    padding-left: 10px;
+  }
+
+  .modal-content-about:before {
+    display: none;
+  }
+  .modal-content-about:after {
+    display: none;
   }
   .close-modal-about{
     position: absolute;

@@ -17,8 +17,6 @@
   justify-content: center;
   margin: auto;
   width: 100%;
-  /* border-top: 2px solid #f66;
-    border-bottom: 2px solid #f66; */
   padding: 20px 0px;
   position: relative;
   /* -webkit-animation: linear 1 forwards;
@@ -208,6 +206,10 @@
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: -10px;
+  }
+
+  .top-footer {
+    width: 100%;
   }
 
   .full-footer:after {

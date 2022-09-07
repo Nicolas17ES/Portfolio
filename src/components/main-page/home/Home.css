@@ -42,12 +42,13 @@
   white-space: nowrap;
   overflow: hidden;
   text-align: center;
-  color: rgb(211, 180, 143);
+  
 }
 
 .welcome-figure .inner-welcome:first-child {
   transform-origin: right;
   transform: perspective(140px) rotateY(-12deg);
+  color: #fdca87;
 }
 
 .welcome-figure .inner-welcome:last-child {
@@ -106,6 +107,7 @@
   line-height: 28px;
   letter-spacing: 2px;
   z-index: 10;
+  color: rgba(255, 255, 255, 0.5);
 }
 .between-svgs:after {
   content: "";

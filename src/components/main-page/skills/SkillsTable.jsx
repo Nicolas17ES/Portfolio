@@ -29,6 +29,8 @@ function SkillsTable() {
 
     const [isOn, setIsOn] = useState(0);
     const [scale, setScale] = useState(false);
+    const viewWidth = window.innerWidth;
+    console.log(viewWidth)
 
     const animation = useAnimation();
     const animation2 = useAnimation();
@@ -68,10 +70,10 @@ function SkillsTable() {
 
     if(refScale === null || refScale.current === null){
         console.log('hey');
-    }  else if(scale === true && (refScale !== null && refScale.current !== null)){
+    }  else if(scale === true && viewWidth > 960 && (refScale !== null && refScale.current !== null)){
         const element = refScale.current;
         element.className = "main-text-skills2"
-    }  else if(scale === false && (refScale !== null && refScale.current !== null)){
+    }  else if(scale === false && viewWidth > 960 && (refScale !== null && refScale.current !== null)){
         const element = refScale.current;
         element.className = "main-text-skills"
     }

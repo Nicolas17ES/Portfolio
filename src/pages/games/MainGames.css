@@ -1,139 +1,309 @@
-.main-games{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.main-games {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.games-page-titles{
-    display: flex;
-    justify-content: space-between;
-    gap: 250px;
-    margin-top: 90px;
-}
-
-.title-all-games{
-    font-size: 25px !important;
+.games-page-titles {
+  display: flex;
+  justify-content: space-between;
+  gap: 250px;
+  margin-top: 90px;
 }
 
 
-.title-all-games{
-    cursor: pointer;
-    font-style: italic;
-}
-.cursor{
-    cursor: pointer;
+.title-all-games {
+  font-size: 25px !important;
 }
 
-.tennis-table{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 700px;
-    height: 300px;
-    margin-top: 40px;
-    
+.title-all-games {
+  cursor: pointer;
+  font-style: italic;
+}
+.cursor {
+  cursor: pointer;
 }
 
-.table-left{
-    height: 100%;
-    width: 50%;
-    border-left: 3px solid rgb(252, 236, 206);
-    border-right: 3px solid rgb(252, 236, 206);
-    border-bottom: 3px solid rgb(252, 236, 206);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-right: 50px;
-}
-.table-right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 50%;
-    border-left: 3px solid rgb(252, 236, 206);
-    border-right: 3px solid rgb(252, 236, 206);
-    border-bottom: 3px solid rgb(252, 236, 206);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-left: 50px;
-   
+.tennis-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 300px;
+  margin-top: 40px;
 }
 
-.games-button{
-    width: 80px;
-    height: 80px;
-    border: 1px solid gainsboro;
-    border-radius: 50%;
-    animation: gamesButton 10.5s linear infinite;
+.table-left {
+  height: 100%;
+  width: 50%;
+  border-left: 3px solid rgb(252, 236, 206);
+  border-right: 3px solid rgb(252, 236, 206);
+  border-bottom: 3px solid rgb(252, 236, 206);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-right: 50px;
+}
+.table-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  border-left: 3px solid rgb(252, 236, 206);
+  border-right: 3px solid rgb(252, 236, 206);
+  border-bottom: 3px solid rgb(252, 236, 206);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 50px;
 }
 
+.games-button {
+  width: 80px;
+  height: 80px;
+  border: 1px solid gainsboro;
+  border-radius: 50%;
+  animation: gamesButton 10.5s linear infinite;
+}
 
-
-.leave-button{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    animation: leaveButton 8.5s linear infinite;
+.leave-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: leaveButton 8.5s linear infinite;
 }
 
 .ball {
-	display: block;
+  display: block;
 }
-
 
 .b2 {
-  background: radial-gradient(circle at 65% 15%, white 1px, #ffe7ba 3%, #fddb9c 60%, #fafafa 100%);  
+  background: radial-gradient(
+    circle at 65% 15%,
+    white 1px,
+    #ffe7ba 3%,
+    #fddb9c 60%,
+    #fafafa 100%
+  );
 }
 
-
 @keyframes leaveButton {
-  0%{
-      transform: translate(0px, 50px) rotate(120deg);
+  0% {
+    transform: translate(0px, 50px) rotate(120deg);
   }
-  26%{
-      transform: translate(220px, 150px) rotate(260deg);
+  26% {
+    transform: translate(220px, 150px) rotate(260deg);
   }
   47% {
-      transform: translate(0px, 210px) rotate(0deg);
+    transform: translate(0px, 210px) rotate(0deg);
   }
   70% {
-      transform: translate(220px, 117px) rotate(300deg);
-      /* transform: translateX(0px); */
+    transform: translate(220px, 117px) rotate(300deg);
+    /* transform: translateX(0px); */
   }
   92% {
-      transform: translate(40px, 0px) rotate(60deg);
-      /* transform: translateX(0px); */
+    transform: translate(40px, 0px) rotate(60deg);
+    /* transform: translateX(0px); */
   }
   100% {
-      transform: translate(0px, 50px) rotate(120deg);
+    transform: translate(0px, 50px) rotate(120deg);
   }
 }
 
 @keyframes gamesButton {
-  0%, 100%{
-      transform: translate(-60px, 110px) rotate(0deg);
-  } 
-  6%{
-      transform: translate(-110px, 75px) rotate(60deg);
-  } 
-  24%{
-      transform: translate(110px, -30px) rotate(160deg);
-  } 
-  36%{
-      transform: translate(-15px, -110px) rotate(240deg);
-  }  
-  46%{
-      transform: translate(-110px, 0px) rotate(290deg);
-  } 
-  60%{
-      transform: translate(-20px, 110px) rotate(360deg);
-  } 
-  79%{
-      transform: translate(110px, -75px) rotate(240deg);
-  } 
-  84%{
-      transform: translate(90px, -110px) rotate(210deg);
-  } 
+  0%,
+  100% {
+    transform: translate(-60px, 110px) rotate(0deg);
+  }
+  6% {
+    transform: translate(-110px, 75px) rotate(60deg);
+  }
+  24% {
+    transform: translate(110px, -30px) rotate(160deg);
+  }
+  36% {
+    transform: translate(-15px, -110px) rotate(240deg);
+  }
+  46% {
+    transform: translate(-110px, 0px) rotate(290deg);
+  }
+  60% {
+    transform: translate(-20px, 110px) rotate(360deg);
+  }
+  79% {
+    transform: translate(110px, -75px) rotate(240deg);
+  }
+  84% {
+    transform: translate(90px, -110px) rotate(210deg);
+  }
+}
 
+@media (max-width: 770px) {
+  .table-left,
+  .table-right {
+    height: 190px;
+    width: 170px;
+    margin-right: 0px;
+  }
+
+  .games-page-titles {
+    gap: 80px;
+    margin-top: 120px;
+  }
+
+  .title-all-games {
+    font-size: 19px !important;
+  }
+
+  .tennis-table {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .games-button {
+    width: 40px;
+    height: 40px;
+    animation: gamesButton2 7.5s linear infinite;
+  }
+
+  .leave-button {
+    width: 40px;
+    height: 40px;
+    animation: leaveButton2 7s linear infinite;
+  }
+
+  @keyframes leaveButton2 {
+  0% {
+    transform: translate(0px, 50px) rotate(120deg);
+  }
+  26% {
+    transform: translate(120px, 150px) rotate(260deg);
+  }
+  47% {
+    transform: translate(0px, 115px) rotate(0deg);
+  }
+  70% {
+    transform: translate(120px, 70px) rotate(300deg);
+    /* transform: translateX(0px); */
+  }
+  92% {
+    transform: translate(40px, 0px) rotate(60deg);
+    /* transform: translateX(0px); */
+  }
+  100% {
+    transform: translate(0px, 50px) rotate(120deg);
+  }
+}
+
+@keyframes gamesButton2 {
+  0%,
+  100% {
+    transform: translate(-60px, 75px) rotate(0deg);
+  }
+  /* 6% {
+    transform: translate(-65px, 75px) rotate(60deg);
+  } */
+  24% {
+    transform: translate(65px, -30px) rotate(160deg);
+  }
+  36% {
+    transform: translate(-15px, -65px) rotate(240deg);
+  }
+  46% {
+    transform: translate(-65px, 0px) rotate(290deg);
+  }
+  60% {
+    transform: translate(-20px, 75px) rotate(360deg);
+  }
+  80% {
+    transform: translate(65px, -65px) rotate(240deg);
+  }
+  86% {
+    transform: translate(35px, -65px) rotate(210deg);
+  }
+}
+}
+@media (max-width: 480px) {
+  .table-left,
+  .table-right {
+    height: 115px;
+    width: 150px;
+  }
+
+  .games-page-titles {
+    gap: 40px;
+    margin-top: 100px;
+  }
+
+  .title-all-games {
+    font-size: 16px !important;
+  }
+
+  .tennis-table {
+    margin-top: -20px;
+  }
+
+  .games-button {
+    width: 25px;
+    height: 25px;
+    animation: gamesButton3 8s linear infinite;
+  }
+
+  .leave-button {
+    width: 25px;
+    height: 25px;
+    animation: leaveButton3 7.5s linear infinite;
+  }
+
+  @keyframes leaveButton3 {
+  0%, 100% {
+    transform: translate(0px, 0px) rotate(120deg);
+  }
+  26% {
+    transform: translate(72px, 87px) rotate(260deg);
+  }
+  30% {
+    transform: translate(82px, 70px) rotate(260deg);
+  }
+  48% {
+    transform: translate(20px, 0px) rotate(260deg);
+  }
+  54% {
+    transform: translate(0px, 20px) rotate(260deg);
+  }
+  70% {
+    transform: translate(87px, 65px) rotate(260deg);
+  }
+  76% {
+    transform: translate(60px, 87px) rotate(260deg);
+  }
+}
+
+@keyframes gamesButton3 {
+  0%,
+  100% {
+    transform: translate(-40px, 48px) rotate(0deg);
+  }
+  /* 6% {
+    transform: translate(-65px, 75px) rotate(60deg);
+  } */
+  24% {
+    transform: translate(45px, -30px) rotate(160deg);
+  }
+  36% {
+    transform: translate(-15px, -48px) rotate(240deg);
+  }
+  46% {
+    transform: translate(-45px, 0px) rotate(290deg);
+  }
+  60% {
+    transform: translate(-20px, 48px) rotate(360deg);
+  }
+  79% {
+    transform: translate(45px, -35px) rotate(240deg);
+  }
+  73% {
+    transform: translate(35px, -48px) rotate(210deg);
+  }
+}
 }
