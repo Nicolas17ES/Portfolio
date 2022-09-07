@@ -102,13 +102,13 @@ function About(props) {
         // animate from right
       animationRight.start({ x: "100vw", opacity: 0 });
         // animate left delay
-      animationLeftDelay.start({ x: "-100vh", opacity: 0 });
+      animationLeftDelay.start({ x: "-100vw", opacity: 0 });
         // animate right delay
-      animationRightDelay.start({ x: "100vh", opacity: 0 });
+      animationRightDelay.start({ x: "100vw", opacity: 0 });
         // animate left EXTR delay
-      animationLeftDelayTwo.start({ x: "-100vh", opacity: 0 });
+      animationLeftDelayTwo.start({ x: "-100vw", opacity: 0 });
         // animate right EXTR delay
-      animationRightDelayTwo.start({ x: "100vh", opacity: 0 });
+      animationRightDelayTwo.start({ x: "100vw", opacity: 0 });
         // animate right EXTR delay
       animationOpacity.start({ opacity: 0 });
     }

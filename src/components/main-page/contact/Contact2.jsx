@@ -124,7 +124,7 @@ function Contact() {
                         </div>                    
                     </div>
                     <div className="contact-right">
-                        <form className="contact-form" onSubmit={onSubmit}>
+                        <form autocomplete="off" className="contact-form" onSubmit={onSubmit}>
                             <div className="group">      
                                 <input name="from_name" value={toSend.from_name} onChange={handleChange} className="input-contact" type="text" required></input>
                                 <span className="highlight"></span>
@@ -132,7 +132,7 @@ function Contact() {
                                 <label className="label-contact">Name</label>
                             </div>
                             <div className="group">      
-                                <input name="from_email" value={toSend.from_email} onChange={handleChange} className="input-contact" type="email" required></input>
+                                <input name="from_email" value={toSend.from_email} onChange={handleChange} className="input-contact" type="email" autocomplete="off"  required></input>
                                 <span className="highlight"></span>
                                 <span className="bar"></span>
                                 <label className="label-contact">Email</label>
@@ -149,7 +149,7 @@ function Contact() {
                                 <span className="bar"></span>
                                 <label className="label-contact">Your Message</label>
                             </div>
-                            <button className="contact-submit" type="submit">Send</button>
+                            <button className="contact-submit2" type="submit">Send</button>
                         </form>
                     </div>
                     {modalToShow()}

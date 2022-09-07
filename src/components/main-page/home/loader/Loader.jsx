@@ -13,7 +13,7 @@ function Loader() {
 
         setTimeout(function(){
             setLoad(true)
-        }, 3800);
+        }, 3000);
 
         if(load){
             navigate("/home")
@@ -30,7 +30,7 @@ function Loader() {
                 className="main-loader"
                  initial={{width: 0}}
                 animate={{width: "100%"}}
-                exit={{x: window.innerWidth, transition: {duration: 0.7}}}
+                exit={{x: window.innerWidth, transition: {duration: 0.3}}}
                 transition={{type: 'tween'}}
             
             >

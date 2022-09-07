@@ -35,7 +35,7 @@ const HomeSvg2 = () => {
       pathLength: 1.8,
       transition: {
         delay: 0.2,
-        duration: 2,
+        duration: 1.2,
         ease: "easeInOut",
       },
     },

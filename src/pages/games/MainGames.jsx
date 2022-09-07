@@ -40,9 +40,9 @@ function MainGames() {
          >
             <h1 className="title-all"> <sub className="title-sub">play a</sub><span className="title-main">GAME</span></h1>
             <div className="games-page-titles">
-                <h1 className="title-all-games" onClick={alertLeave} ><span className="title-main"> ' take a GUESS '</span></h1>
+                <button onClick={alertLeave}  className="title-all-games-2"><span className="title-main"> ' take a GUESS '</span></button>
                 <Link to={'/games/rock'}>
-                    <h1 className="title-all-games"><span className="title-main"> ' view GAMES '</span></h1>
+                    <button className="title-all-games-2"><span className="title-main"> ' view GAMES '</span></button>
                 </Link>
             </div>
             <div className="tennis-table">

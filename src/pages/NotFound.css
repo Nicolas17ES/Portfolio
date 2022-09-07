@@ -1,13 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono:400");
 
-
-
-
-.error-container{
- 
+.error-container {
   display: flex;
   width: fit-content;
-  height: 300px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -15,85 +10,105 @@
   color: wheat;
   font-size: 96px;
   letter-spacing: -7px;
-
 }
 
+.text-error {
+  font-size: 25px;
+  letter-spacing: 1px;
+  width: 80%;
+  text-align: center;
+  margin-top: 80px;
+}
+.button-home {
+  font-size: 48px;
+  border: 3px solid wheat;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
 
-
-.error{
+.error {
+  margin-top: 40px;
   animation: glitch 1s linear infinite;
 }
 
-@keyframes glitch{
-  2%,64%{
-    transform: translate(2px,0) skew(0deg);
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
   }
-  4%,60%{
-    transform: translate(-2px,0) skew(0deg);
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
   }
-  62%{
-    transform: translate(0,0) skew(5deg); 
+  62% {
+    transform: translate(0, 0) skew(5deg);
   }
 }
 
 .error:before,
-.error:after{
+.error:after {
   content: attr(title);
   position: absolute;
   left: 0;
 }
 
-.error:before{
+.error:before {
   animation: glitchTop 1s linear infinite;
   clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
 
-@media only screen and (max-width: 768px){
-    
-
-.error-container{
- 
-
-  width: fit-content;
-  height: 300px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  color: wheat;
-  font-size: 40px;
-  letter-spacing: 3px;
-
-}
-}
-
-@keyframes glitchTop{
-  2%,64%{
-    transform: translate(2px,-2px);
+@media only screen and (max-width: 768px) {
+  .error-container {
+    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: wheat;
+    font-size: 70px;
+    letter-spacing: 3px;
   }
-  4%,60%{
-    transform: translate(-2px,2px);
-  }
-  62%{
-    transform: translate(13px,-1px) skew(-13deg); 
+  .button-home {
+    font-size: 37px;
+    border: 3px solid wheat;
+    padding: 15px;
+    border-radius: 10px;
+
   }
 }
 
-.error:after{
+@keyframes glitchTop {
+  2%,
+  64% {
+    transform: translate(2px, -2px);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
+.error:after {
   animation: glitchBotom 1.5s linear infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
-@keyframes glitchBotom{
-  2%,64%{
-    transform: translate(-2px,0);
+@keyframes glitchBotom {
+  2%,
+  64% {
+    transform: translate(-2px, 0);
   }
-  4%,60%{
-    transform: translate(-2px,0);
+  4%,
+  60% {
+    transform: translate(-2px, 0);
   }
-  62%{
-    transform: translate(-22px,5px) skew(21deg); 
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
   }
 }

@@ -13,14 +13,12 @@
 }
 
 
-.title-all-games {
+.title-all-games-2 {
   font-size: 25px !important;
-}
-
-.title-all-games {
-  cursor: pointer;
+   cursor: pointer;
   font-style: italic;
 }
+
 .cursor {
   cursor: pointer;
 }
@@ -151,7 +149,7 @@
     margin-top: 120px;
   }
 
-  .title-all-games {
+  .title-all-games-2 {
     font-size: 19px !important;
   }
 
@@ -232,11 +230,13 @@
 
   .games-page-titles {
     gap: 40px;
-    margin-top: 100px;
+    margin-top: 90px;
   }
 
-  .title-all-games {
-    font-size: 16px !important;
+  .title-all-games-2 {
+    font-size: 16px;
+    cursor: pointer;
+    height: 100%;
   }
 
   .tennis-table {

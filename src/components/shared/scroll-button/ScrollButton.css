@@ -3,7 +3,7 @@
 .center-con{
     width: 100%;
     height: 100px;
-    margin: 70px auto auto auto;
+    margin: 0px auto auto auto;
     cursor: pointer;
     /* opacity: 0;
     visibility: hidden;
@@ -14,7 +14,7 @@
 
 .round {
     position: relative;
-    border: 1.4px solid #fff;
+    border: 1.6px solid rgba(255, 255, 255, .5);
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -32,10 +32,10 @@
 
 .button-lines{
     z-index: 9;
-    height: 1.4px;
+    height: 2px;
     margin: 0px;
-    width: 11px;
-    background: #fff;
+    width: 10px;
+    background: rgba(255, 255, 255, .5);
     -webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
     -ms-transition: all 700ms ease;
