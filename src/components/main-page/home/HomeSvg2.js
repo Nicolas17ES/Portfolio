@@ -12,7 +12,7 @@ const HomeSvg2 = () => {
     if (inView) {
       controls.start("show");
     } else if (!inView) {
-      controls.start({ pathLength: 0 });
+      controls.start({ pathLength: 1 });
     }
   }, [controls, inView]);
 
@@ -22,20 +22,20 @@ const HomeSvg2 = () => {
       y: "0px",
       transition: {
         delay: 0,
-        duration: 1,
+        duration: .1,
         ease: "easeInOut",
       },
     },
   };
   const pathVariants = {
     hidden: {
-      pathLength: 0,
+      pathLength: 1,
     },
     show: {
-      pathLength: 1.8,
+      pathLength: 1,
       transition: {
-        delay: 0.2,
-        duration: 1.2,
+        delay: 0.1,
+        duration: 2,
         ease: "easeInOut",
       },
     },

@@ -47,7 +47,7 @@ function SkillsTable() {
                 transition: {
                     type: "tween",
                     delay: 0.1,
-                    duration: 0.5,
+                    duration: 0.4,
                 },
             })
             animation2.start({
@@ -56,7 +56,7 @@ function SkillsTable() {
                 transition: {
                     type: "tween",
                     delay: 0.1,
-                    duration: 0.5,
+                    duration: 0.4,
                 },
             })
         } else if (!inView){

@@ -2,68 +2,181 @@
   display: flex;
   justify-content: space-between;
   width: 92%;
-  height: 100%;
-  margin: 47px auto 0 auto;
+  height: 80vh;
+  margin: 120px auto -100px auto;
   font-family: "Fira";
   padding: 0 60px;
 }
 
-.intro-left{
+.intro-left {
   width: 65%;
   display: flex;
   flex-direction: column;
 }
 
 .home2-title {
-  color: wheat;
+  color: rgb(253, 202, 135);
   font-size: 96px;
   letter-spacing: -7px;
   line-height: 100px;
-  height: 50%;
+  height: 30%;
 }
 
-.home-main-texts{
+.home-main-texts {
   width: 70%;
   height: 50%;
-  margin-top: 30px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
 }
 .text-left {
   width: 100%;
-  font-size: 16.5px;
+  font-size: 17.5px;
   font-weight: 100;
   font-style: italic;
   font-family: "Poppins";
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, .8);
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.9);
 }
 .text-left:nth-child(2) {
-  color: rgba(255, 255, 255, .57);
-  align-self: flex-end;
-  width: 50%;
+  color: rgba(255, 255, 255, 0.63);
+  font-size: 16px;
+  width: 60%;
+  letter-spacing: 1px;
 }
 .intro-right {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
   width: 22%;
   height: 100%;
   gap: 50px;
 }
-.main-lines{
-  display: flex; 
-  margin-top: 35px;
+.main-lines {
+  display: flex;
+  margin-top: 65px;
   padding: 10px;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  color: rgba(255, 255, 255, .57);
+  color: rgba(255, 255, 255, 0.8);
   letter-spacing: 11px;
-
+  font-family: "Poppins";
+  font-weight: 400;
 }
 
-#home-svg{
+#home-svg {
   width: 180px;
   height: 180px;
+}
+
+@media (max-width: 1600px) {
+  .home2 {
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    height: 100%;
+    margin: 47px auto 0 auto;
+    font-family: "Fira";
+    padding: 0 60px;
+  }
+
+  .home2-title {
+    height: 50%;
+  }
+
+  .home-main-texts {
+    height: 50%;
+    margin-top: 30px;
+    gap: 30px;
+  }
+  .text-left {
+    width: 100%;
+  }
+
+  .intro-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 22%;
+    height: 100%;
+    gap: 20px;
+  }
+  .main-lines {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home2 {
+    padding: 0 20px;
+    padding-right: 40px;
+  }
+  .intro-left {
+    width: 60%;
+  }
+
+  .home2-title {
+    font-size: 86px;
+    height: 40%;
+  }
+
+  .home-main-texts {
+    width: 90%;
+    margin-top: 55px;
+    gap: 20px;
+  }
+  .text-left {
+    width: 100%;
+    font-size: 16.5px;
+  }
+  .text-left:nth-child(2) {
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 15px;
+  }
+  .main-lines {
+    margin-right: -30px;
+  }
+  .main-svgs {
+    margin-top: 0px;
+  }
+  #home-svg {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media (max-width: 860px) {
+  .home2 {
+    padding: 0;
+    padding-right: 60px;
+    
+
+  }
+  .intro-left {
+    width: 70%;
+  }
+
+  .home2-title {
+    font-size: 75px;
+  }
+
+  .home-main-texts {
+    width: 80%;
+  }
+  .text-left {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  .text-left:nth-child(2) {
+    font-size: 14.4px;
+  }
+  .intro-right{
+      align-items: center;
+
+  }
+  
+  #home-svg {
+    width: 160px;
+    height: 160px;
+  }
 }

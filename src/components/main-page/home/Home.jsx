@@ -14,6 +14,7 @@ import Loader from "./loader/Loader";
 function Home() {
   const { dispatch, scroll, hasAnimated } = useContext(FeedbackContext);
   const scrollTo = useRef();
+  console.log(window.innerWidth)
 
   const [reference, inView] = useInView();
   const animation = useAnimation();
@@ -62,7 +63,7 @@ function Home() {
         opacity: 1,
         transition: {
           type: "tween",
-          delay: 0.1,
+          delay: 0.2,
           duration: 0.7,
         },
       });
@@ -72,7 +73,7 @@ function Home() {
         opacity: 1,
         transition: {
           type: "tween",
-          delay: 0.3,
+          delay: 0.2,
           duration: 0.7,
         },
       });
@@ -83,7 +84,7 @@ function Home() {
         opacity: 1,
         transition: {
           type: "tween",
-          delay: 0.3,
+          delay: 0.2,
           duration: 0.7,
         },
       });
@@ -114,16 +115,16 @@ function Home() {
             <motion.h1 animate={animationLeft} className="home2-title">Welcome to my portfolio</motion.h1>
             <div className="home-main-texts">
               <motion.p animate={animationLeftDelay} className="text-left">
-                'My name is Nicolas and I am a Web Developer specialized in
-                front end design and back end functionality. '
+                ' My name is Nicolas and I am a Web Developer specialized in
+                front end design and back end functionality '
               </motion.p>
               <motion.p animate={animationLeftDelayTwo} className="text-left">
                 ' and this is how I acquired the knowledge and skills to turn
-                designs into dynamic websites'
+                designs into dynamic websites '
               </motion.p>
             </div>
           </div>
-          <div className="intro-right">
+          <motion.div animate={animationLeftDelay} className="intro-right">
               <Link to="/contact">
                   <div className="main-lines">
                     <p>GET IN TOUCH</p>
@@ -137,7 +138,7 @@ function Home() {
             </div>
               </Link>
             
-          </div>
+          </motion.div>
         </motion.div>
          <motion.div
           onClick={executeScroll}

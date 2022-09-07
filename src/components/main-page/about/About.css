@@ -1,6 +1,6 @@
 .about-page {
   width: 100%;
-  margin: 150px auto 0 auto;
+  margin: 150px auto 230px auto;
   padding: 10px 0px 50px 0;
   position: relative;
   min-height: 100% !important;
@@ -47,14 +47,16 @@
   height: 100%;
   padding: 15px 20px;
   text-align: center;
+      
+
 }
 .box1 {
   grid-area: uno;
   border: 2px solid #fdca87;
   white-space: nowrap;
-  color: white;
+  color: rgba(255, 255, 255, .88);
   font-weight: 600;
-  font-size: 22px;
+  font-size: 25px;
 }
 .box1 sub {
   white-space: nowrap;
@@ -68,7 +70,7 @@
 .box3 {
   grid-area: tres;
   position: relative;
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.88);;
   z-index: 99;
   cursor: pointer;
 }
@@ -76,11 +78,11 @@
 .box4 {
   grid-area: cuatro;
   white-space: nowrap;
-  color: white;
+  color: rgba(255, 255, 255, .88);
   font-weight: 500;
   border: 2px solid #fdca87;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .box4 sub {
@@ -100,7 +102,7 @@
   font-weight: 400;
   font-size: 1vw;
   letter-spacing: 3px;
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.88);;
   z-index: 99;
   cursor: pointer;
 }
@@ -109,10 +111,10 @@
   grid-area: siete;
   border: 2px solid #fdca87;
   white-space: nowrap;
-  color: white;
+  color: rgba(255, 255, 255, .88);
   font-weight: 500;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .box7 sub {
@@ -132,7 +134,7 @@
   font-weight: 400;
   font-size: 1vw;
   letter-spacing: 3px;
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.88);;
   z-index: 99;
   cursor: pointer;
 }
@@ -186,10 +188,12 @@
 .box p {
   width: 84%;
   height: 100%;
-  font-size: 15px;
+  font-size: 16.5px;
   text-align: left;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
   font-weight: 400;
+  color: rgba(255, 255, 255, 0.88);
+  font-style: italic;
 }
 
 .plus-icon {
@@ -213,6 +217,222 @@
 /* scroll button container */
 .scroll-button-container {
   margin-top: 50px;
+}
+
+@media (max-width: 1600px) {
+  .about-page {
+    width: 100%;
+    margin: 150px auto 0 auto;
+    padding: 10px 0px 50px 0;
+    position: relative;
+    min-height: 100% !important;
+  }
+
+  /* second PAGE OF HOME */
+  .section-two {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.3fr 1fr 0.3fr 1fr 0.3fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "cinco uno ocho dos once cuatro diecinueve"
+      "cinco seis ocho siete once tres diecinueve"
+      "cinco seis ocho nueve once tres diecinueve"
+      "cinco seis ocho nueve once tres diecinueve"
+      "trece trece ocho nueve once diez diez"
+      "quince quince ocho dieciseis once doce doce";
+    gap: 0.6rem;
+    margin: auto;
+    width: 85%;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 1.6vw;
+  }
+
+  .work-around-about {
+    margin-top: 30vh;
+  }
+
+  .about-svg {
+    width: 40%;
+    position: absolute;
+    left: -3.7vw;
+    top: -3.5vh;
+  }
+  .box {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  .box1 {
+    grid-area: uno;
+    border: 2px solid #fdca87;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .box1 sub {
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 19px;
+    margin-left: 8px;
+  }
+  .box2 {
+    display: none;
+  }
+  .box3 {
+    grid-area: tres;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.88);;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  .box4 {
+    grid-area: cuatro;
+    white-space: nowrap;
+    font-weight: 500;
+    border: 2px solid #fdca87;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  .box4 sub {
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 19px;
+    margin-left: 8px;
+  }
+
+  .box5 {
+    grid-area: cinco;
+    border: 2px solid #f57e7e;
+  }
+  .box6 {
+    position: relative;
+    grid-area: seis;
+    font-weight: 400;
+    font-size: 1vw;
+    letter-spacing: 3px;
+    border: 2px solid rgba(255, 255, 255, 0.88);;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  .box7 {
+    grid-area: siete;
+    border: 2px solid #fdca87;
+    white-space: nowrap;
+    font-weight: 500;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  .box7 sub {
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 19px;
+    margin-left: 8px;
+  }
+
+  .box8 {
+    grid-area: ocho;
+  }
+
+  .box9 {
+    grid-area: nueve;
+    position: relative;
+    font-weight: 400;
+    font-size: 1vw;
+    letter-spacing: 3px;
+    border: 2px solid rgba(255, 255, 255, 0.88);;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  .box10 {
+    grid-area: diez;
+    border: 2px solid #fdca87;
+  }
+
+  .box11 {
+    grid-area: once;
+  }
+
+  .box12 {
+    grid-area: doce;
+  }
+
+  .box13 {
+    grid-area: trece;
+    border: 2px solid #fdca87;
+  }
+
+  .box15 {
+    grid-area: quince;
+  }
+
+  .box16 {
+    grid-area: dieciseis;
+    border: 2px solid #f57e7e;
+  }
+
+  .box17 {
+    grid-area: diecisiete;
+  }
+
+  .box18 {
+    grid-area: dieciocho;
+  }
+
+  .box19 {
+    grid-area: diecinueve;
+    border: 2px solid #f57e7e;
+  }
+
+  /* show button */
+  .plus-icon-button {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+  .box p {
+    width: 84%;
+    height: 100%;
+    font-size: 15px;
+    text-align: left;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+
+  .plus-icon {
+    transition: 0.6s;
+  }
+  .plus-icon:hover {
+    color: #f57e7e;
+    transform: scale(1.2);
+  }
+
+  /* @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+} */
+
+  /* scroll button container */
+  .scroll-button-container {
+    margin-top: 50px;
+  }
 }
 
 /* MEDIA QUERIES */
@@ -262,7 +482,6 @@
     grid-template-columns: 0.1fr 1fr 1.5% 1fr 1.5% 1fr 0.1fr;
   }
 
-
   .box p {
     width: 96%;
     font-size: 13.5px;
@@ -271,20 +490,20 @@
   .box1 sub {
     font-size: 17px;
     margin-left: 4px;
-    }
+  }
   .box4 sub {
     font-size: 17px;
     margin-left: 4px;
-    }
+  }
   .box7 sub {
     font-size: 17px;
     margin-left: 4px;
-    }
+  }
 }
 
 @media (max-width: 880px) {
   .section-two {
-    grid-template-columns: 4fr .7fr;
+    grid-template-columns: 4fr 0.7fr;
     grid-template-rows: 1fr 2fr 1fr 1fr 2fr 1fr 1fr 2fr;
     grid-template-areas:
       "uno cinco"
@@ -294,15 +513,20 @@
       "nueve dieciseis"
       "once once"
       "cuatro diecinueve"
-      "tres diecinueve"
-      ;
+      "tres diecinueve";
     height: 100%;
     width: 75%;
     margin: auto;
   }
-  
-  .box2, .box10, .box11, .box12, .box13, .box14, .box15{
-      display: none;
+
+  .box2,
+  .box10,
+  .box11,
+  .box12,
+  .box13,
+  .box14,
+  .box15 {
+    display: none;
   }
 
   .box1,
@@ -313,20 +537,18 @@
   .box1 sub {
     font-size: 18px;
     margin-left: 9px;
-    }
+  }
   .box4 sub {
     font-size: 18px;
     margin-left: 9px;
-    }
+  }
   .box7 sub {
     font-size: 18px;
     margin-left: 9px;
-    }
-
+  }
 }
 
 @media (max-width: 630px) {
-  
   .box p {
     font-size: 13px;
   }
@@ -339,16 +561,15 @@
   .box1 sub {
     font-size: 16px;
     margin-left: 7px;
-    }
+  }
   .box4 sub {
     font-size: 16px;
     margin-left: 7px;
-    }
+  }
   .box7 sub {
     font-size: 16px;
     margin-left: 7px;
-    }
-
+  }
 }
 
 @media (max-width: 460px) {
@@ -366,5 +587,4 @@
   .box p {
     font-size: 12.5px;
   }
- 
 }
