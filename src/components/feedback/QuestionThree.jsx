@@ -2,6 +2,7 @@ import FeedbackForm from '../../components/feedback/FeedbackForm'
 import FeedbackStats from '../../components/feedback/FeedbackStats'
 import FeedbackList from '../../components/feedback/FeedbackList'
 import NextArrow from '../shared/NextArrow'
+import {motion} from 'framer-motion'
 
 function QuestionThree() {
     const data = {
@@ -13,7 +14,13 @@ function QuestionThree() {
     return (
         <div className="questionPages">
             <>
+            <motion.div
+                initial={{rotateY: 180}}
+                animate={{rotateY: 360}}
+                transition={{duration: .7, delay: 0}}
+             >
                 <FeedbackForm data={data}/>
+            </motion.div>
                 <NextArrow/>
                 <FeedbackStats questionNumber={data.questionNumber}/>
                 <FeedbackList questionNumber={data.questionNumber}/>
