@@ -627,8 +627,7 @@ header {
 
 @media (max-width: 550px){
   .card {
-    background-color: #fff;
-    color: #333;
+
     border-radius: 15px;
     padding: 10px 20px;
     margin: 20px auto;
@@ -646,23 +645,22 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     padding: 0px;
   }
 
   .rating li,
   .num-display {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border: 1px solid white;
   }
 
   .input-group {
     display: flex;
     flex-direction: row;
-    border: 1px solid #ccc;
     padding: 5px 7px;
     border-radius: 8px;
   }
@@ -671,15 +669,12 @@ header {
     flex-grow: 2;
     border: none;
     font-size: 11px;
-    background-color: #171830;
-    color: white;
+
   }
 
   .btn {
-    color: #fff;
     border: 0;
     border-radius: 8px;
-    color: #fff;
     width: 40px;
     height: 30px;
     cursor: pointer;
@@ -700,7 +695,6 @@ header {
   }
 
   .feedback-stats {
-    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -723,9 +717,7 @@ header {
   }
 
   .text-display{
-    background-color: rgba(78, 84, 252, 0.3);
     width: fit-content;
-    color: white;
     padding: 8px;
     margin-bottom: 4px;
     margin-top: 20px;

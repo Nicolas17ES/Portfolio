@@ -91,20 +91,26 @@ function Footer() {
                     <div className="footer-content">
                         <div className="top-footer">
                                 <div className="footer-block">
-                                    <h3 className="block-title"> <sub>view </sub>PROJECTS</h3>
+                                    <Link to="/projects">
+                                        <h3 className="block-title"> <sub>view </sub>PROJECTS</h3>
+                                    </Link>
                                     <Link to="/projects" onClick={redirectToProjects}>
                                         <FooterSvg/> 
                                     </Link>
                                 </div>
                             
                                 <div className="footer-block">
-                                    <h3 className="block-title">CONTACT <sub>me</sub></h3>
+                                    <Link to="/contact">
+                                        <h3 className="block-title">CONTACT <sub>me</sub></h3>
+                                    </Link>
                                     <Link to="/contact" onClick={redirectToContact}>
                                         <FooterSvg/> 
                                     </Link>
                                 </div>
                                 <div className="footer-block">
-                                    <h3 className="block-title"><sub>give </sub>FEEDBACK</h3>
+                                    <Link to="/feedback">
+                                        <h3 className="block-title"><sub>give </sub>FEEDBACK</h3>
+                                    </Link>
                                     <Link to="/feedback" onClick={redirectToFeedback}>
                                         <FooterSvg/>  
                                     </Link>

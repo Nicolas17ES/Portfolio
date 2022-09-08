@@ -1,6 +1,7 @@
 
 import {Link} from 'react-router-dom'
 import {FaHamburger, FaTimes, FaDog} from 'react-icons/fa'
+import {GiMushroomHouse} from 'react-icons/gi'
 import {BiDownArrow} from 'react-icons/bi'
 import {useRef} from 'react'
 import './NavBar.css'
@@ -205,7 +206,8 @@ const hideModal = () => {
       <>
       <header onClick={hideModal}>
         <div className="left-side flex">
-          <h3><FaDog onClick={handleClick} className="logo" size={30}/></h3>
+
+         <Link to="/home"> <h3><GiMushroomHouse onClick={handleClick} className="logo" size={30}/></h3></Link>
         </div>
          
          <nav ref={navRef}>
