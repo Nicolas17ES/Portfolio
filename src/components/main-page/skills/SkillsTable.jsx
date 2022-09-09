@@ -21,8 +21,7 @@ import {ReactComponent as Tailwind } from '../../assets/skills/tailwind.svg'
 import {ReactComponent as Vue } from '../../assets/skills/vue.svg'
 import {ReactComponent as Fire } from '../../assets/skills/fire.svg'
 
-import {AiFillStar, AiOutlineStar} from 'react-icons/ai'
-import {BsStarHalf} from 'react-icons/bs'
+
 
 
 function SkillsTable() {
@@ -30,7 +29,6 @@ function SkillsTable() {
     const [isOn, setIsOn] = useState(0);
     const [scale, setScale] = useState(false);
     const viewWidth = window.innerWidth;
-    console.log(viewWidth)
 
     const animation = useAnimation();
     const animation2 = useAnimation();

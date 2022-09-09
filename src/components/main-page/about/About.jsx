@@ -4,6 +4,7 @@ import "./About.css";
 // import { ReactComponent as Laptop }  from '../../assets/laptop.svg'
 import { useRef, useContext, useEffect } from "react";
 import { AiFillPlusCircle } from "react-icons/ai";
+import { GiRailRoad } from "react-icons/gi";
 import { useInView } from "react-intersection-observer";
 import FeedbackContext from "../../../context/feedback/FeedbackContext";
 import ModalVinyl from "./ModalVinyl";
@@ -22,6 +23,24 @@ function About(props) {
   const animationLeftDelayTwo = useAnimation();
   const animationRightDelayTwo = useAnimation();
   const animationOpacity = useAnimation();
+
+
+  // scroll till center//
+  useEffect(() => {
+    if (scroll === 1) {
+      scrollTo.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        offset: 10,
+      });
+      dispatch({
+        type: "SCROLL_VIEW",
+        payload: false,
+      });
+    }
+  }, [scroll, dispatch]);
+
+  // animationns left and ride
 
   useEffect(() => {
     if (inView) {
@@ -91,8 +110,8 @@ function About(props) {
         opacity: 1,
         transition: {
           type: "tween",
-          delay: 0.5,
-          duration: 0.6,
+          delay: 0.35,
+          duration: 0.4,
         },
       });
 
@@ -208,77 +227,66 @@ function About(props) {
     });
   };
 
-  useEffect(() => {
-    if (scroll === 1) {
-      scrollTo.current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        offset: 10,
-      });
-      dispatch({
-        type: "SCROLL_VIEW",
-        payload: false,
-      });
-    }
-  }, [scroll, dispatch]);
+  // whileHover={{ scale: 1.26, originX: .4,  color: '#f8e112', transition: {duration: .4} }}
+
+  
 
 //   if (hasAnimated === true) {
     return (
       <div ref={reference} className="about-page">
         <>
           <section className="section-two">
-            <motion.div animate={animationLeftDelay} className="box1 box">
+            <motion.div  whileHover={{ scale: 1.15, originX: .4, zIndex: 1000, transition: {duration: .4} }}  animate={animationLeftDelay} className="box1 box">
               ABOUT <sub className="red"> me</sub>
             </motion.div >
             <div className="box2 box"></div>
             <motion.div animate={animationOpacity} onClick={(e) => e.stopPropagation()} className="box3 box">
               {/* <Vinyl className="vinyl about-svg"/> */}
-              <button className="plus-icon-button" onClick={displayModalLaptop}>
-                <AiFillPlusCircle className="plus-icon" size={26} />
+              <button className="plus-icon-button">
+                <GiRailRoad className="plus-icon" size={26} />
               </button>
-              <p>
+              <p onClick={displayModalLaptop}>
                 Besides coding and Design there are many other activities that
                 awake an interest in me.
               </p>
               {modalToShow()}
             </motion.div>
-            <motion.div animate={animationRightDelay} className="box4 box">
+            <motion.div  whileHover={{ scale: 1.15, originX: .4, zIndex: 1000, transition: {duration: .4} }}  animate={animationRightDelay} className="box4 box">
               THINGS I <sub className="red"> enjoy</sub>
             </motion.div>
-            <motion.div animate={animationLeftDelayTwo} className="box5 box"></motion.div>
+            <motion.div whileHover={{ scale: 1.15, originX: .4, zIndex: 1000, transition: {duration: .4} }} animate={animationLeftDelayTwo} className="box5 box"></motion.div>
             <motion.div animate={animationOpacity} onClick={(e) => e.stopPropagation()} className="box6 box">
               {/* <Road className="road about-svg"/> */}
-              <button className="plus-icon-button" onClick={displayModalRoad}>
-                <AiFillPlusCircle className="plus-icon" size={24} />
+              <button className="plus-icon-button">
+                <GiRailRoad className="plus-icon" size={24} />
               </button>
-              <p ref={scrollTo}>
+              <p onClick={displayModalRoad} ref={scrollTo}>
                 Follow the path and find out how I went from being a
                 Professional Congress Organizer to a Web Developer.
               </p>
               {modalToShow()}
             </motion.div>
-            <motion.div animate={animationLeft} className="box7 box">
+            <motion.div  whileHover={{ scale: 1.15, originX: .4, zIndex: 1000, transition: {duration: .4} }} animate={animationLeft} className="box7 box">
               WHAT I <sub className="red"> do</sub>
             </motion.div>
             <div className="box8 box"></div>
-            <motion.div animate={animationOpacity} onClick={(e) => e.stopPropagation()} className="box9 box">
-              {/* <Laptop className="laptop about-svg"/> */}
-              <button className="plus-icon-button" onClick={displayModalVinyl}>
-                <AiFillPlusCircle className="plus-icon" size={24} />
+            <motion.div animate={animationOpacity}   onClick={(e) => e.stopPropagation()} className="box9 box">
+              <button className="plus-icon-button" >
+                <GiRailRoad className="plus-icon" size={24} />
               </button>
-              <p>
+              <p onClick={displayModalVinyl}>
                 In the last two years I learned how to transform ideas into real
                 life projects. Let me show you how.
               </p>
               {modalToShow()}
             </motion.div>
-            <motion.div animate={animationRightDelay} className="box10 box"></motion.div>
+            <motion.div whileHover={{ scale: 1.15, originX: .4, zIndex: 1000, transition: {duration: .4} }} animate={animationRightDelay} className="box10 box"></motion.div>
             <div className="box11 box"></div>
             <div className="box12 box"></div>
-            <motion.div animate={animationLeftDelay} className="box13 box"></motion.div>
+            <motion.div whileHover={{ scale: 1.15, originX: .4, zIndex: 1000, transition: {duration: .4} }} animate={animationLeftDelay} className="box13 box"></motion.div>
             <div className="box15 box"></div>
-            <motion.div animate={animationRight} className="box16 box"></motion.div>
-            <motion.div animate={animationRightDelayTwo} className="box19 box"></motion.div>
+            <motion.div whileHover={{ scale: 1.15, originX: .4, zIndex: 1000, transition: {duration: .4} }} animate={animationRight} className="box16 box"></motion.div>
+            <motion.div  whileHover={{ scale: 1.15, originX: .4, zIndex: 1000, transition: {duration: .4} }}  animate={animationRightDelayTwo} className="box19 box"></motion.div>
           </section>
           <div className="scroll-button-container" onClick={executeScroll}>
             <ScrollButton />

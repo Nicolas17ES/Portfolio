@@ -51,10 +51,16 @@
         gap: 90px;
     }
 }
-@media (max-width: 760px){
+@media (max-width: 850px){
+    .projects-page{
+        width: 90%;
+        gap: 30px;
+    }
+}
+@media (max-width: 690px){
     .projects-page{
        flex-direction: column;
-       gap: 90px;
+       gap: 50px;
     }
     
 }

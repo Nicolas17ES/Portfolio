@@ -14,7 +14,6 @@ import Loader from "./loader/Loader";
 function Home() {
   const { dispatch, scroll, hasAnimated } = useContext(FeedbackContext);
   const scrollTo = useRef();
-  console.log(window.innerWidth)
 
   const [reference, inView] = useInView();
   const animation = useAnimation();

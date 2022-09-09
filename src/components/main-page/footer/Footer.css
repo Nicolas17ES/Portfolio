@@ -77,6 +77,10 @@
   height: 100%;
   width: 100%;
   position: relative;
+  transition: all .4s;
+}
+.footer-block:hover {
+  transform: scale(1.25);
 }
 
 
@@ -300,7 +304,7 @@
   }
 
   #footer-svgs {
-    width: 135px;
+    width: 210px;
   }
 
   .center-absolute-footer {

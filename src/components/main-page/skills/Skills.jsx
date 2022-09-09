@@ -17,6 +17,21 @@ function Skills() {
 
     const [reference, inView] = useInView()
     const animation = useAnimation();
+    console.log(scroll)
+
+    // scroll till this point//
+    useEffect(() => {
+        if(scroll === 2){
+            scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center"})
+            dispatch({
+                    type: 'SCROLL_VIEW',
+                    payload: false
+                })
+        }
+
+    }, [scroll, dispatch])
+
+    // animation table//
 
     useEffect(() => {
         if(inView){
@@ -43,17 +58,7 @@ function Skills() {
             })
     }
 
-    // scroll till this point//
-    useEffect(() => {
-        if(scroll === 2){
-            scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center"})
-            dispatch({
-                    type: 'SCROLL_VIEW',
-                    payload: false
-                })
-        }
-
-    }, [scroll, dispatch])
+    
 
     if(hasAnimated === true){
         return (

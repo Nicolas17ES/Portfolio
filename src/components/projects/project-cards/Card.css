@@ -5,7 +5,7 @@
     margin-top: 40px;
     position: relative;
     width: 310px;
-    height: 400px;
+    height: 380px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -13,18 +13,18 @@
     flex-direction: column;
     cursor: pointer;
     color: white;
-    -webkit-transition: all 600ms;
-    -moz-transition: all 600ms;
-    -ms-transition: all 600ms;
-    -o-transition: all 600ms;
-    transition: all 600ms;
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
     /* background-color: #fde7be; */
     /* box-shadow:  10px 10px rgb(0, 0, 0); */
-    border: 2px solid white;
+    border: 1.4px solid rgb(253, 202, 135);
     /* box-shadow: 20px 20px 50px 15px rgba(0, 0, 0, .9); */
 }
 .project-card:hover{
-    transform: scale(1.03);
+    transform: scale(1.08);
 }
 
 /* TITLE FOR THE PROJECT */
@@ -38,7 +38,7 @@
 
 
 .project-title {
-    color: rgb(245, 126, 126);
+    
     font-size: 33px;
     letter-spacing: 2px;
     cursor: pointer;
@@ -53,7 +53,7 @@
     
 }
 .project-title p{
-    font-weight: 600; 
+    font-weight: 100; 
 }
 
 
@@ -116,8 +116,8 @@
     color: #171830;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: white;
+    align-items: center;  
+    border: 1px solid #F57E7E;
 }
 
 .project-icon{
@@ -125,11 +125,6 @@
     width: 40px;
     height: 35px;
 }
-
-
-
-
-
 
 .project-wave{
     position: absolute;
@@ -187,7 +182,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: white;
     }
 
     .project-icon{
@@ -201,16 +195,16 @@
     .project-card{
         margin-top: 50px;
     }
+   
 
 }
 @media (max-width: 550px){
     
     .project-card{
         width: 250px;
-        height: 370px;
+        height: 360px;
     }
     .project-title {
-        color: rgb(245, 126, 126);
         font-size: 30px;
         letter-spacing: 3px;
         
@@ -256,8 +250,8 @@
 @media (max-width: 470px){
     
     .project-card{
-        width: 250px;
-        height: 370px;
+        width: 230px;
+        height: 310px;
         margin-top: 10px;
     }
     .project-title {

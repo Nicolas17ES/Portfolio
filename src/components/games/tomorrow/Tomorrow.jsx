@@ -13,7 +13,7 @@ function Tomorrow() {
                 <div className="reply">
                     <h1 className="title-all-clock title-tomorrow"> <sub className="title-sub-clock">' tomorrow '</sub><span className="title-main-clock">TOMORROW</span></h1>
                 </div>
-                <motion.div drag className="games-hearts">
+                <motion.div className="games-hearts">
                     <div className="tomorrow">
                         <p className="nothing">[nothing to see]</p>
                     </div>

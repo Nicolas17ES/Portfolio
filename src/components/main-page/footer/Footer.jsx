@@ -88,43 +88,44 @@ function Footer() {
             <div className="footer-page" ref={reference}>
                 {/* <h3 className="skills-title title-basement">BASEMENT</h3> */}
                 <div className="full-footer">
-                    <div className="footer-content">
-                        <div className="top-footer">
-                                <div className="footer-block">
-                                    <Link to="/projects">
+                       <div className="footer-content">
+                            <div className="top-footer">
+                                <div   className="footer-block">
+                                    <Link to="/projects" onClick={redirectToProjects}>
                                         <h3 className="block-title"> <sub>view </sub>PROJECTS</h3>
                                     </Link>
+                                    
                                     <Link to="/projects" onClick={redirectToProjects}>
                                         <FooterSvg/> 
                                     </Link>
                                 </div>
                             
                                 <div className="footer-block">
-                                    <Link to="/contact">
-                                        <h3 className="block-title">CONTACT <sub>me</sub></h3>
+                                    <Link to="/contact" onClick={redirectToContact}>
+                                    <h3 className="block-title">CONTACT <sub>@@</sub></h3>
                                     </Link>
                                     <Link to="/contact" onClick={redirectToContact}>
                                         <FooterSvg/> 
                                     </Link>
                                 </div>
-                                <div className="footer-block">
-                                    <Link to="/feedback">
-                                        <h3 className="block-title"><sub>give </sub>FEEDBACK</h3>
+                                <div  className="footer-block">
+                                    <Link to="/feedback" onClick={redirectToFeedback}>
+                                                                            <h3 className="block-title"><sub>give </sub>FEEDBACK</h3>
                                     </Link>
                                     <Link to="/feedback" onClick={redirectToFeedback}>
                                         <FooterSvg/>  
                                     </Link>
                                 </div>
-                        </div>
-                        <div className="bottom-footer">
-                            <span  className="footer-hide"><p>Music is the highest philosophy :)</p></span>
-                            <span className="footer-icons"><p>+34689060044</p><BsWhatsapp size={16}/></span>
-                            <span className="footer-icons"><Link to={"/contact"}><p>Contact</p></Link></span>
-                            <span><p>Made by Nicolas Luque</p></span>
-                            <span><p>@2022 All rights reserved</p></span>
+                            </div>
+                            <motion.div animate={animationRight} className="bottom-footer">
+                                <span  className="footer-hide"><p>Music is the highest philosophy :)</p></span>
+                                <span className="footer-icons"><p>+34689060044</p><BsWhatsapp size={16}/></span>
+                                <span className="footer-icons"><Link to={"/contact"}><p>Contact</p></Link></span>
+                                <span><p>Made by Nicolas Luque</p></span>
+                                <span><p>@2022 All rights reserved</p></span>
+                            </motion.div>
                         </div>
                     </div>
-                </div>
                   <span ref={scrollTo} className="center-absolute-footer"></span>
             </div>
             )
@@ -136,21 +137,28 @@ function Footer() {
                     <div className="full-footer">
                         <div className="footer-content">
                             <div className="top-footer">
-                                <div className="footer-block">
-                                    <h3 className="block-title"> <sub>view </sub>PROJECTS</h3>
+                                <div   className="footer-block">
+                                    <Link to="/projects" onClick={redirectToProjects}>
+                                        <h3 className="block-title"> <sub>view </sub>PROJECTS</h3>
+                                    </Link>
+                                    
                                     <Link to="/projects" onClick={redirectToProjects}>
                                         <FooterSvg/> 
                                     </Link>
                                 </div>
                             
                                 <div className="footer-block">
+                                    <Link to="/contact" onClick={redirectToContact}>
                                     <h3 className="block-title">CONTACT <sub>@@</sub></h3>
+                                    </Link>
                                     <Link to="/contact" onClick={redirectToContact}>
                                         <FooterSvg/> 
                                     </Link>
                                 </div>
-                                <div className="footer-block">
-                                    <h3 className="block-title"><sub>give </sub>FEEDBACK</h3>
+                                <div  className="footer-block">
+                                    <Link to="/feedback" onClick={redirectToFeedback}>
+                                                                            <h3 className="block-title"><sub>give </sub>FEEDBACK</h3>
+                                    </Link>
                                     <Link to="/feedback" onClick={redirectToFeedback}>
                                         <FooterSvg/>  
                                     </Link>
