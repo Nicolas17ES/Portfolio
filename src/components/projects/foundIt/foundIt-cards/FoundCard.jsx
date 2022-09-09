@@ -58,7 +58,7 @@ function FoundCard() {
 
     return (
         <>
-        <button className="gallery-foundit">GALLERY</button>
+        <h3 className="gallery-foundit">GALLERY</h3>
         <div className="found-cards-page">
             
             <div className="test-found">

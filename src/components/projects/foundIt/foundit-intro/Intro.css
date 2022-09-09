@@ -83,6 +83,12 @@
     width: 100%;
     height: 100%;
     text-align: left;
+    transition: all .4s;
+}
+
+.block-1:hover{
+    transform: scale(1.1);
+    z-index: 1000;
 }
 
 .block-right{
@@ -98,11 +104,22 @@
     width: 100%;
     height: 100%;
     padding: 20px;
+    transition: all .4s;
 }
+
 .block-3{
     width: 100%;
     height: 100%;
     padding: 20px;
+    transition: all .4s;
+}
+.block-2:hover{
+    transform: scale(1.1);
+    z-index: 1000;
+}
+.block-3:hover{
+    transform: scale(1.1);
+    z-index: 1000;
 }
 
 @media(max-width: 1200px){

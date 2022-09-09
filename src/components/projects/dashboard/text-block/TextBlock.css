@@ -8,15 +8,16 @@
     color: white;
     padding: 20.2px;
     border-radius: 10px;
-    font-size: .9rem;
+    font-size: .96rem;
     position: relative;
+    transition: all .4s;
 }
 
 
 @media(max-width: 850px){
     .text-services{
         padding: 15px;
-        font-size: .8rem;
+        font-size: .93rem;
     }
 }
 

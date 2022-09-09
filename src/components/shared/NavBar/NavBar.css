@@ -151,15 +151,16 @@ header .nav-btn:hover{
     }
 
     .logo{
-        margin-left: 11vw;
+        margin-left: 8.6vw;
         -webkit-transition: all 1000ms ease-out;
         -moz-transition: all 1000ms ease-out;
         -ms-transition: all 1000ms ease-out;
         -o-transition: all 1000ms ease-out;
         transition: all 1000ms ease-out;
-        transform: rotate(1turn); 
         position: fixed; 
         display: block;
+        width: 33px;
+        height: 33px;
   
     }
 
@@ -214,6 +215,7 @@ header .nav-btn:hover{
         margin-right: 9vw;
         margin-top: 4vh;
         color: white;
+    
     }
 
 
@@ -299,6 +301,18 @@ header .nav-btn:hover{
 
     .link-nav:hover{
         transform: scale(1.2);
+    }
+    .logo{
+        margin-left: 8.4vw;
+        -webkit-transition: all 1000ms ease-out;
+        -moz-transition: all 1000ms ease-out;
+        -ms-transition: all 1000ms ease-out;
+        -o-transition: all 1000ms ease-out;
+        transition: all 1000ms ease-out;
+        
+        position: fixed; 
+        display: block;
+  
     }
 
     .dropdown{

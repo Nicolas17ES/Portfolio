@@ -80,7 +80,7 @@
   transition: all .4s;
 }
 .footer-block:hover {
-  transform: scale(1.25);
+  transform: scale(1.18);
 }
 
 
@@ -101,9 +101,9 @@
   margin-top: 20px;
   animation: moveIt 4.5s ease-in-out infinite;
 }
-.svg-paper:hover {
+/* .svg-paper:hover {
   transform: scale(1.33);
-}
+} */
 
 /* block title */
 .block-title {
@@ -154,6 +154,10 @@
   position: absolute;
   top: 60%;
 }
+
+#footer-svgs path{
+    stroke-width: 2px;
+  }
 
 /* end footer content */
 

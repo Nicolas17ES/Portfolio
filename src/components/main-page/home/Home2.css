@@ -67,9 +67,12 @@
   font-weight: 400;
 }
 
-#home-svg {
+#home-svg  {
   width: 180px;
   height: 180px;
+}
+#home-svg  path {
+  stroke-width: 2.4px;
 }
 
 @media (max-width: 1600px) {
