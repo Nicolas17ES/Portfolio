@@ -63,22 +63,23 @@
 /* BUTTON END */
 
 .about-blocks{
-    width: 65%;
+    width: 75%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
     padding: 1px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .block-left{
-    height: 250px;
-    width: 40%;
+    height: 100%;
+    width: 30%;
 }
 
 .block-1{
+    padding: 20px;
     width: 100%;
     height: 100%;
     text-align: left;
@@ -89,24 +90,25 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 60%;
-    height: 250px;
-    gap: 30px;
+    width: 67%;
+    height: 100%;
+    gap: 0px;
 }
 .block-2{
     width: 100%;
-    height: 40%;
-    padding: 0;
+    height: 100%;
+    padding: 20px;
 }
 .block-3{
     width: 100%;
-    height: 60%;
+    height: 100%;
+    padding: 20px;
 }
 
 @media(max-width: 1200px){
     .about-blocks{
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
         justify-content: center;
     }
     .block-left{
@@ -148,22 +150,27 @@
     }
 }
 @media(max-width: 550px){
-    .reposatory-button{
-        gap: 5px;
-        padding: 6px;
-        margin-top: 13px;
+
+    .about-blocks{
+        gap: 0;
+    }
+
+    .block-right{
+        gap: 0px;
     }
     .repo-icon{
-        width: 14px;
+        width: 18px;
     }
 
     .view-repo{
-        font-size: .6rem;
+        font-size: 13px;
     }
     .reposatory-button{
-        width: 60px;
-        height: 40px;
+        width: 73px;
+        height: 53px;
         padding: 3px;
+        margin-top: 16px;
+        font-size: 10.1px;
     }
     .view-repo{
         gap: 12px;
@@ -176,7 +183,7 @@
         margin-top: 50px;
     }
     .about-blocks{
-        width: 90%;
+        width: 100%;
     }
 }
 

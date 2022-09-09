@@ -78,7 +78,7 @@
 .image-text{
     position: relative;
     border-radius: 2px;
-    font-size: 14px; 
+    font-size: 15px; 
     line-height: 24px; 
     margin: 0 0 0px; 
     text-align: justify; 
@@ -118,7 +118,7 @@
         font-size: 23px; 
     }
     .image-text{
-        font-size: 12.5px; 
+        font-size: 14px; 
         line-height: 22px; 
         
     }
@@ -178,7 +178,8 @@
         text-align: center;
     }
     .image-text{
-        font-size: 12px; 
+        font-size: 14px; 
+        letter-spacing: 1px;
         line-height: 22px;
         text-align: center; 
         margin-top: -7px;
@@ -189,7 +190,7 @@
         bottom: 9px;
     }
 }
-@media (max-width: 450px){
+@media (max-width: 500px){
     
    
     .found-cards-page{
@@ -200,14 +201,15 @@
 
     .text{
         margin-bottom: 0;
-        width: 90%;
+        width: 80%;
     }
     .image-title{
         font-size: 17px; 
     }
     .image-text{
         width: 100%;  
-        font-size: 10px;
+        font-size: 13.5px;
+        letter-spacing: 0;
     }
 
     .image-text:after{

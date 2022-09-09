@@ -1,9 +1,8 @@
 .project-about-main{
     text-align: center; 
     text-justify: inter-word;
-    font-size: 13px;
-    padding: 25px 40px;
-    border: 6px solid #131327;
+    font-size: 15px;
+    padding: 20px 20px;
     box-shadow:  10px 10px rgba(0, 0, 0, 1);
     border: 2px solid black;
     border-radius: 10px;
@@ -54,20 +53,20 @@
 
 @media (max-width: 1200px){
     .project-about-main{
-      padding: 25px;
+      padding: 10px;
   }
 }
 
 @media (max-width: 930px){
     .project-about-main{
       width: 100%;
-      font-size: 12.5px;
+      
   }
 }
 
 
 @media (max-width: 450px){
     .project-about-main{
-      font-size: 11px;
+      font-size: 12px;
   }
 }

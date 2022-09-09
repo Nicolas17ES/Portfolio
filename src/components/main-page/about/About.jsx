@@ -110,8 +110,8 @@ function About(props) {
         opacity: 1,
         transition: {
           type: "tween",
-          delay: 0.35,
-          duration: 0.4,
+          delay: 0.5,
+          duration: 0.28,
         },
       });
 

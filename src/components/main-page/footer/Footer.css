@@ -275,6 +275,7 @@
   .footer-page {
     padding: 0px;
     gap: 0px;
+    width: 98%;
   }
 
   .full-footer {
@@ -304,7 +305,7 @@
   }
 
   #footer-svgs {
-    width: 210px;
+    width: 150px;
   }
 
   .center-absolute-footer {

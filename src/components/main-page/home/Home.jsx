@@ -123,7 +123,7 @@ function Home() {
               </motion.p>
             </div>
           </div>
-          <motion.div animate={animationLeftDelay} className="intro-right">
+          <motion.div whileHover={{scale: 1.07, transition: {duration: .36}}} animate={animationLeftDelay} className="intro-right">
               <Link to="/contact">
                   <div className="main-lines">
                     <p>GET IN TOUCH</p>
