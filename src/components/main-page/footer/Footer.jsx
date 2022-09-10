@@ -4,7 +4,6 @@ import { useContext, useRef, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import {BsWhatsapp} from 'react-icons/bs'
-import {GiClick} from 'react-icons/gi'
 import {motion, useAnimation} from 'framer-motion'
 import FooterSvg from './FooterSvg'
 import { useInView } from 'react-intersection-observer';

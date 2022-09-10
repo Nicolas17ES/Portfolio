@@ -16,7 +16,6 @@ import Games from '../../../pages/games/MainGames'
 import Answers from '../../../pages/games/answers/Answers'
 import Contact from '../../main-page/contact/Contact2'
 import LoadingPage from '../../main-page/home/loader/Loader'
-import Computer from '../../projects/dashboard/bottom-dashboard/dashb-card/DashCard'
 
 function AnimatedRoutes() {
     

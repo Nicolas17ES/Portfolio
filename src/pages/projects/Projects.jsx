@@ -1,6 +1,5 @@
 import "./Projects.css";
 import ProjectCard from "../../components/projects/project-cards/Card";
-import ProjectTittle from "../../components/games/game-title/GameTitle";
 import { ReactComponent as Android } from "../../components/assets/skills/android.svg";
 import { ReactComponent as Java } from "../../components/assets/skills/java.svg";
 import { ReactComponent as Node } from "../../components/assets/skills/node.svg";
@@ -32,18 +31,7 @@ function Projects() {
     }
   }, [scroll, dispatch]);
 
-  const redirectToDash = () => {
-    dispatch({
-      type: "SCROLL_VIEW",
-      payload: "dashboard",
-    });
-  };
-  const redirectToFound = () => {
-    dispatch({
-      type: "SCROLL_VIEW",
-      payload: "foundit",
-    });
-  };
+
 
   const founditApp = {
     logo1: <Java className="project-icon" />,
@@ -99,7 +87,6 @@ function Projects() {
       <div className="projects-page">
         <Link to="/projects/foundit">
           <motion.div
-           onClick={redirectToFound}
             className="block"
             onClick={() => setIsActive(!isActive)}
             initial={{ rotate: 0 }}
@@ -115,7 +102,6 @@ function Projects() {
 
         <Link to="/projects/dashboard">
           <motion.div 
-            onClick={redirectToDash}
             onClick={() => setIsActive(!isActive)}
             initial={{ rotate: 0 }}
             animate={{

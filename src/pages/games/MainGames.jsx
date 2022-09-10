@@ -1,5 +1,5 @@
 import "./MainGames.css";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import FeedbackContext from "../../context/feedback/FeedbackContext";
 import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,7 +8,7 @@ function MainGames() {
   const [isActive, setIsActive] = useState(false);
 
   const navigate = useNavigate();
-  const { riddleAnswer, dispatch } = useContext(FeedbackContext);
+  const { dispatch } = useContext(FeedbackContext);
 
   const alertLeave = () => {
     let reply = prompt(

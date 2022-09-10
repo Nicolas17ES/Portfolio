@@ -1,15 +1,12 @@
 import "./Home2.css";
-import portrait from "../../assets/fluid16.png";
-import { FcContacts } from "react-icons/fc";
-import { AiFillGithub } from "react-icons/ai";
-import { useState, useContext, useEffect, useRef } from "react";
+
+import { useContext, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import FeedbackContext from "../../../context/feedback/FeedbackContext";
 import ScrollButton from "../../shared/scroll-button/ScrollButton";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import HomeSvg from "./HomeSvg2";
-import Loader from "./loader/Loader";
 
 function Home() {
   const { dispatch, scroll, hasAnimated } = useContext(FeedbackContext);

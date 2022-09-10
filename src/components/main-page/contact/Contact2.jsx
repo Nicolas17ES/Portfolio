@@ -1,11 +1,9 @@
 import './Contact2.css'
-import  {ReactComponent as ContactSvg } from '../../assets/contact.svg'
 import { useState, useContext, useRef, useEffect } from 'react';
 import { send } from 'emailjs-com';
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
 import ModalVinyl from './ModalEmail'
 import Spinner from '../../shared/spinner/Spinner'
-import {FaArrowUp} from 'react-icons/fa'
 
 import {motion} from 'framer-motion'
 

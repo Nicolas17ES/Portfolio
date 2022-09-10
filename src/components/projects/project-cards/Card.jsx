@@ -1,6 +1,5 @@
 import './Card.css'
 
-import {AiFillPlusCircle} from 'react-icons/ai'
 
 function Card({founditApp}) {
     return (

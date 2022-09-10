@@ -1,9 +1,6 @@
 import "./About.css";
-// import { ReactComponent as Vinyl }  from '../../assets/vinyl.svg'
-// import { ReactComponent as Road }  from '../../assets/road.svg'
-// import { ReactComponent as Laptop }  from '../../assets/laptop.svg'
+
 import { useRef, useContext, useEffect } from "react";
-import { AiFillPlusCircle } from "react-icons/ai";
 import { GiRailRoad } from "react-icons/gi";
 import { useInView } from "react-intersection-observer";
 import FeedbackContext from "../../../context/feedback/FeedbackContext";

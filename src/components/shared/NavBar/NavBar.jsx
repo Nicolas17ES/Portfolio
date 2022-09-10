@@ -1,6 +1,6 @@
 
 import {Link} from 'react-router-dom'
-import {FaHamburger, FaTimes, FaDog} from 'react-icons/fa'
+import {FaHamburger, FaTimes} from 'react-icons/fa'
 import {GiMushroomHouse} from 'react-icons/gi'
 import {BiDownArrow} from 'react-icons/bi'
 import {useRef} from 'react'

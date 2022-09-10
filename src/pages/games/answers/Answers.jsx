@@ -3,9 +3,8 @@ import Clock from '../../../components/games/clock/Clock'
 import Tomorrow from '../../../components/games/tomorrow/Tomorrow'
 import {Link, useNavigate} from 'react-router-dom'
 import FeedbackContext from '../../../context/feedback/FeedbackContext'
-import {useRef, useContext, useEffect} from 'react'
-import { useInView } from 'react-intersection-observer';
-import {motion, useAnimation} from 'framer-motion'
+import { useContext, useEffect} from 'react'
+import {motion} from 'framer-motion'
 
 
 function Answers() {
@@ -13,7 +12,13 @@ function Answers() {
     const navigate = useNavigate();
     const {riddleAnswer, dispatch} = useContext(FeedbackContext);
 
-   
+    console.log(riddleAnswer)
+    useEffect(() => {
+    if(riddleAnswer !== "time" && riddleAnswer !== "Time" && riddleAnswer !== "TIME" && riddleAnswer !== "tomorrow" && riddleAnswer !== "Tomorrow" && riddleAnswer !== "TOMORROW"){
+        navigate("/games");
+    }
+    
+  }, [riddleAnswer, navigate]);
 
     const promptRiddle = () => {
         let reply = prompt(' I never was, I am always to be; everyone is looking, but no one sees me. What am I?');
@@ -29,6 +34,8 @@ function Answers() {
            alert('Wrong answer')
        }
     }
+
+    
 
     if(riddleAnswer === 'time' || riddleAnswer === 'TIME' || riddleAnswer === 'Time' ){
         return (
@@ -80,6 +87,10 @@ function Answers() {
                     
                 
             </div>
+        )
+    } else{
+        return(
+            <h1>Try Again</h1>
         )
     }
 

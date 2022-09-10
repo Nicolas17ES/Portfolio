@@ -1,5 +1,4 @@
-import { useState, useContext, useEffect, useRef } from 'react'
-import FeedbackContext from '../../context/feedback/FeedbackContext'
+import { useState} from 'react'
 
 
 function RatingSelect({ select }) {

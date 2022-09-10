@@ -1,5 +1,4 @@
 import './Tomorrow.css'
-import {useState} from 'react'
 import {motion} from 'framer-motion'
 import {CgPill} from 'react-icons/cg'
 import {Link} from 'react-router-dom'
