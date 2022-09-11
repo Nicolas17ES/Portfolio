@@ -94,6 +94,9 @@ function Contact() {
                 transition={{duration: .4, delay: .1}}
                 exit={{opacity: 0, transition: {duration: .2}}}
             >
+                <div className="box-contact"></div>
+                <div className="box-contact2"></div>
+                <div className="box-contact4"></div>
                 
                 <span ref={scrollTo} className="top-absolute"></span>
                 <section className="form-border">
@@ -153,6 +156,9 @@ function Contact() {
                     </div>
                     {modalToShow()}
                 </section>
+                <div className="box-contact"></div>
+                <div className="box-contact3"></div>
+                <div className="box-contact5"></div>
             </motion.div>
         )
     } else {

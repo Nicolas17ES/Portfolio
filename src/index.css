@@ -32,6 +32,9 @@ body {
 
 /* .App {position: relative; min-height: 100%;} */
 
+.feedback-page-new{
+  margin-top: 60px;
+}
 .feedback-block {
   position: relative;
 }
@@ -242,6 +245,8 @@ header {
   max-width: 768px;
   /* box-shadow:  6px 5px rgba(255, 255, 255,  0.9); */
   border: 2px solid white;
+  box-shadow: 8px 8px rgba(0, 0, 0, 0.8);
+  border: 3.2px solid black;
 }
 
 .card.reverse {
@@ -562,6 +567,12 @@ header {
 
 .about p {
   margin: 10px 0;
+}
+
+@media(max-width: 1600px){
+  .feedback-page-new{
+    margin-top: 0px;
+}
 }
 
 @media (max-width: 900px) {

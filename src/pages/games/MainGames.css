@@ -3,13 +3,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 30px;
 }
 
 .games-page-titles {
   display: flex;
   justify-content: space-between;
-  gap: 250px;
-  margin-top: 90px;
+  gap: 300px;
+  margin-top: 130px;
 }
 
 
@@ -27,10 +28,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 700px;
+  width: 800px;
   height: 300px;
-  margin-top: 40px;
+  gap: 100px;
+  
+  margin-top: 70px;
 }
+
 
 .table-left {
   height: 100%;
@@ -134,6 +138,152 @@
   84% {
     transform: translate(90px, -110px) rotate(210deg);
   }
+}
+
+
+@media(max-width: 1600px){
+  .main-games {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0px;
+}
+
+.games-page-titles {
+  display: flex;
+  justify-content: space-between;
+  gap: 250px;
+  margin-top: 90px;
+}
+
+
+.title-all-games-2 {
+  font-size: 25px !important;
+   cursor: pointer;
+  font-style: italic;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.tennis-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 300px;
+  margin-top: 40px;
+  gap: 0;
+}
+
+.table-left {
+  height: 100%;
+  width: 50%;
+  border-left: 3px solid rgb(252, 236, 206);
+  border-right: 3px solid rgb(252, 236, 206);
+  border-bottom: 3px solid rgb(252, 236, 206);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 7px 7px rgba(20, 20, 20, .9);
+  margin-right: 50px;
+}
+.table-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  border-left: 3px solid rgb(252, 236, 206);
+  border-right: 3px solid rgb(252, 236, 206);
+  border-bottom: 3px solid rgb(252, 236, 206);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 7px 7px rgba(20, 20, 20, .9);
+  margin-left: 50px;
+}
+
+.games-button {
+  width: 80px;
+  height: 80px;
+  border: 1px solid gainsboro;
+  border-radius: 50%;
+  animation: gamesButton 10.5s linear infinite;
+}
+
+.leave-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: leaveButton 8.5s linear infinite;
+}
+
+.ball {
+  display: block;
+}
+
+.b2 {
+  background: radial-gradient(
+    circle at 65% 15%,
+    white 1px,
+    #ffe7ba 3%,
+    #fddb9c 60%,
+    #fafafa 100%
+  );
+
+}
+
+@keyframes leaveButton {
+  0% {
+    transform: translate(0px, 50px) rotate(120deg);
+  }
+  26% {
+    transform: translate(220px, 150px) rotate(260deg);
+  }
+  47% {
+    transform: translate(0px, 210px) rotate(0deg);
+  }
+  70% {
+    transform: translate(220px, 117px) rotate(300deg);
+    /* transform: translateX(0px); */
+  }
+  92% {
+    transform: translate(40px, 0px) rotate(60deg);
+    /* transform: translateX(0px); */
+  }
+  100% {
+    transform: translate(0px, 50px) rotate(120deg);
+  }
+}
+
+@keyframes gamesButton {
+  0%,
+  100% {
+    transform: translate(-60px, 110px) rotate(0deg);
+  }
+  6% {
+    transform: translate(-110px, 75px) rotate(60deg);
+  }
+  24% {
+    transform: translate(110px, -30px) rotate(160deg);
+  }
+  36% {
+    transform: translate(-15px, -110px) rotate(240deg);
+  }
+  46% {
+    transform: translate(-110px, 0px) rotate(290deg);
+  }
+  60% {
+    transform: translate(-20px, 110px) rotate(360deg);
+  }
+  79% {
+    transform: translate(110px, -75px) rotate(240deg);
+  }
+  84% {
+    transform: translate(90px, -110px) rotate(210deg);
+  }
+}
 }
 
 @media (max-width: 770px) {

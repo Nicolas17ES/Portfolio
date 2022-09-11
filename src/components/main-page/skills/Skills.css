@@ -6,6 +6,436 @@
     height: 90vh;
     margin: auto;
     margin-top: 160px;
+    margin-bottom: 220px;
+    position: relative;
+    gap: 0px;
+}
+
+/* ICON SIDE */
+
+.skills-right{
+    width: 93%;
+    height: 75%;
+    margin: auto;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+     grid-template-areas: 
+    "frontEnd frontEnd centerTop backEnd backEnd"
+    "one two centerOne three four"
+    "five six centerOne seven eight"
+    "nine ten centerOne eleven twelve"
+    "thirteen fourteen centerOne fifteen sixteen"; 
+
+    /* animation: 10s curtain cubic-bezier(.86,0,.07,1) forwards; */
+}
+
+
+.skill{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+    
+    
+    /* -webkit-transition: all 600ms;
+    -moz-transition: all 600ms;
+    -ms-transition: all 600ms;
+    -o-transition: all 600ms;
+    transition: all 600ms; */
+    /* box-shadow:  1px 3px white; */
+}
+
+
+
+.animated{
+    animation: ani 0.7s ease-in-out 1;
+}
+.animated2{
+    animation: aniLess 0.7s ease-in-out 1;
+}
+
+.skill-icon{
+    width: 60px;
+    height: 60px;
+}
+
+.skills-title {
+    color: rgba(255, 255, 255, .88);
+    font-size: 90px;
+    text-align: center;
+    letter-spacing: -6px;
+    margin: -90px auto 0px auto;
+    position: relative;
+    padding-left: 0px;
+    
+   
+}
+
+.talent{
+    font-size: 56px;
+    color: rgb(253, 202, 135);
+}
+
+
+.red{
+    color: rgb(253, 202, 135);
+}
+
+.end{
+    font-size: 27px;
+    white-space: nowrap;
+    text-align: center;
+    letter-spacing: 6px;
+    margin: -50px auto 0px auto;
+    position: relative;
+    font-weight: bold;
+}
+
+/* MAIN TEXT */
+
+.main-text-skills{
+    grid-area: centerOne;
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rockwell';
+    cursor: pointer;
+    transition: all 1.3s;
+}
+.framework{
+    margin-bottom: 30px;
+}
+
+
+
+
+.main-text-skills .inner {
+	width: 100%;
+	height: 100%;
+    font-size: 25px;
+    line-height: 100px;
+	font-weight: 400;
+	white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, .88);
+
+}
+
+
+.main-text-skills .inner:first-child {
+	background-color: #171830;
+	transform-origin: right;
+    transform: perspective(160px) rotateY(-15deg);
+    
+}
+
+.main-text-skills .inner:last-child {
+	background-color: #171830;
+	transform-origin: left;
+    transform: perspective(160px) rotateY(15deg);
+}
+
+.main-text-skills .inner span {
+	position: absolute;
+	animation: marquee 8s linear infinite;
+}
+
+.main-text-skills .inner:first-child span {
+	animation-delay: 4.1s;
+	left: -100%;
+}
+
+/* replay fro onclik event */
+
+.main-text-skills2{
+    transform: scale(1.5);
+    margin-top: -40px;
+     grid-area: centerOne;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rockwell';
+    cursor: pointer;
+    transition: all 1.3s;
+}
+
+.main-text-skills2 .inner {
+	width: 100%;
+	height: 380px;
+	font-size: 30px;
+	font-weight: 400;
+	white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, .88);
+
+}
+
+.main-text-skills2 ~ .skill{
+    display: none;
+}
+.main-text-skills2 ~ .skills-title{
+    display: none;
+}
+.main-text-skills2 ~ .front-end{
+    display: none;
+}
+.main-text-skills2 ~ .back-end{
+    display: none;
+}
+
+
+.main-text-skills2 .inner:first-child {
+	background-color: #171830;
+	transform-origin: right;
+    transform: perspective(160px) rotateY(-15deg);
+    
+}
+
+.main-text-skills2 .inner:last-child {
+	background-color: #171830;
+	transform-origin: left;
+    transform: perspective(160px) rotateY(15deg);
+}
+
+.main-text-skills2 .inner span {
+	position: absolute;
+	animation: marquee 8s linear infinite;
+}
+
+.main-text-skills2 .inner:first-child span {
+	animation-delay: 4.1s;
+	left: -100%;
+}
+
+.lorem-two{
+    margin-top: 45px;
+}
+.lorem-three{
+    margin-top: 90px;
+}
+.lorem-four{
+    margin-top: 135px;
+}
+.lorem-four2{
+    margin-top: 185px;
+}
+.lorem-five{
+    margin-top: 240px;
+}
+.lorem-six{
+    margin-top: 300px;
+}
+.lorem-seven{
+    margin-top: 350px;
+}
+.lorem-eight{
+    margin-top: 400px;
+}
+
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}
+/* MAIN TEXT */
+
+
+
+/* GRID AREAS */
+.front-end{
+    grid-area: frontEnd;
+    margin-top: 40px;
+    text-align: center;
+    color: rgba(255, 255, 255, .88);
+}
+.skill1{
+    grid-area: one; 
+    
+}
+.skill2{
+    grid-area: two; 
+}
+
+.skills-arrows{
+    grid-area: centerOne;
+}
+.skills-title{
+    grid-area: centerTop
+}
+.skill3{
+    grid-area: three;
+}
+.skill4{
+    grid-area: four;
+}
+.back-end{
+    grid-area: backEnd;
+    text-align: center;
+    margin-top: 40px;
+    color: rgba(255, 255, 255, .88);
+}
+.skill5{
+    grid-area: five;
+}
+.skill6{
+    grid-area: six;
+}
+.skill7{
+    grid-area: seven;
+}
+.skill8{
+    grid-area: eight;
+}
+.skill9{
+    grid-area: nine;
+}
+.skill10{
+    grid-area: ten;
+}
+.skill11{
+    grid-area: eleven;
+}
+.skill12{
+    grid-area: twelve;
+}
+.skill13{
+    grid-area: thirteen;
+}
+.skill14{
+    grid-area: fourteen;
+}
+.skill15{
+    grid-area: fifteen;
+}
+.skill16{
+    grid-area: sixteen;
+}
+
+
+/* bouncy animation */
+
+@keyframes ani {
+  0%{
+    transform: scale(1.2,0.5);
+  }
+  10%{
+    transform: scale(1.2,0.5);
+  }
+  23%{
+    transform: scale(1.2,0.5);
+  }
+  32%{
+    transform: scale(0.8,1.1);
+  }
+  48%{
+    transform: scale(0.95,1);
+  }
+  64%{
+    transform: scale(0.8,1.2);
+  }
+  80%{
+    transform: scale(1.15,1);
+  }
+  87%{
+    transform: scale(1.15,1);
+  }
+  90%{
+    /* This will add the shaking effect one time almost at the end   */
+    transform: scale(0.8,1);
+  }
+}
+
+@keyframes aniLess {
+  0%{
+    transform: scale(1,0.3);
+  }
+  10%{
+    transform: scale(1,0.3);
+  }
+  23%{
+    transform: scale(1,0.3);
+  }
+  32%{
+    transform: scale(0.9,1);
+  }
+  48%{
+    transform: scale(0.95,1);
+  }
+  64%{
+    transform: scale(0.9,1.1);
+  }
+  80%{
+    transform: scale(1.15,1);
+  }
+  87%{
+    transform: scale(1.15,1);
+  }
+  90%{
+    /* This will add the shaking effect one time almost at the end   */
+    transform: scale(0.8,1);
+  }
+}
+/* bouncy animation */
+
+/* end animations */
+
+/* WORK AROUND FOR SCROLL */
+
+
+.center-absolute{
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.center-absolute-skills{
+    color: white;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* scroll button container */
+.scrolling-test{
+    cursor: pointer;
+    position: absolute;
+    bottom: -120px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@media(max-width: 1600px){
+    .skills-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    height: 90vh;
+    margin: auto;
+    margin-top: 160px;
+     margin-bottom: 20px;
     position: relative;
     gap: 0px;
 }
@@ -107,7 +537,7 @@
 
 .main-text-skills{
     grid-area: centerOne;
-    width: 60%;
+    width: 70%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -134,11 +564,12 @@
 .main-text-skills .inner {
 	width: 100%;
 	height: 380px;
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: 400;
 	white-space: nowrap;
     overflow: hidden;
     letter-spacing: 1px;
+    line-height: 40px;
     color: rgba(255, 255, 255, .88);
 
 }
@@ -435,7 +866,7 @@
     transform: translate(-50%, -50%);
 }
 
-
+}
 
 
 /* MEDIA QUERIES */

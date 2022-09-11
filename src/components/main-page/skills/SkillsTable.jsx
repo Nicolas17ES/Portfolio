@@ -82,25 +82,25 @@ function SkillsTable() {
                 <div ref={refScale} onClick={() => setScale(!scale)} onMouseLeave={() => setScale(false)} className="main-text-skills">
                      <div className="inner">
                         <span>{`<React>`}&nbsp; &nbsp; {`<Vue>`}</span>
-                        <span className="lorem-two red"> {`<Javascript>`}</span>
-                        <span className="lorem-three">{`<HTML>`} &nbsp; &nbsp;{`<CSS>`}</span>
-                        <span className="lorem-four red">{`<Bootstrap>`} &nbsp; &nbsp; {`<Tailwind>`}</span>
-                        <span className="lorem-four2">{`<Figma>`}</span>
-                        <span className="lorem-five red">{`<Android>`} &nbsp; &nbsp; {`<Java>`}</span>
-                        <span className="lorem-six">{`<NodeJS>`}</span>
-                        <span className="lorem-seven">{`<PHP>`} &nbsp; &nbsp; {`<Laravel>`}</span>
-                        <span className="lorem-eight red">{`<Mysql>`} &nbsp; &nbsp; {`<MongoDb>`}</span>
+                        <span className="lorem-two red framework"> {`<Javascript>`}</span>
+                        <span className="lorem-three framework">{`<HTML>`} &nbsp; &nbsp;{`<CSS>`}</span>
+                        <span className="lorem-four red framework">{`<Bootstrap>`} &nbsp; &nbsp; {`<Tailwind>`}</span>
+                        <span className="lorem-four2 framework">{`<Figma>`}</span>
+                        <span className="lorem-five red framework">{`<Android>`} &nbsp; &nbsp; {`<Java>`}</span>
+                        <span className="lorem-six framework">{`<NodeJS>`}</span>
+                        <span className="lorem-seven framework">{`<PHP>`} &nbsp; &nbsp; {`<Laravel>`}</span>
+                        <span className="lorem-eight red framework">{`<Mysql>`} &nbsp; &nbsp; {`<MongoDb>`}</span>
                     </div>
                     <div className="inner">
                         <span>{`<React>`}&nbsp; &nbsp; {`<Vue>`}</span>
-                        <span className="lorem-two red"> {`<Javascript>`}</span>
-                        <span className="lorem-three">{`<HTML>`} &nbsp; &nbsp;{`<CSS>`}</span>
-                        <span className="lorem-four red">{`<Bootstrap>`} &nbsp; &nbsp; {`<Tailwind>`}</span>
-                        <span className="lorem-four2">{`<Figma>`}</span>
-                        <span className="lorem-five red">{`<Android>`} &nbsp; &nbsp; {`<Java>`}</span>
-                        <span className="lorem-six">{`<NodeJS>`}</span>
-                        <span className="lorem-seven">{`<PHP>`} &nbsp; &nbsp; {`<Laravel>`}</span>
-                        <span className="lorem-eight red">{`<Mysql>`} &nbsp; &nbsp; {`<MongoDb>`}</span>
+                        <span className="lorem-two red framework"> {`<Javascript>`}</span>
+                        <span className="lorem-three framework">{`<HTML>`} &nbsp; &nbsp;{`<CSS>`}</span>
+                        <span className="lorem-four red framework">{`<Bootstrap>`} &nbsp; &nbsp; {`<Tailwind>`}</span>
+                        <span className="lorem-four2 framework">{`<Figma>`}</span>
+                        <span className="lorem-five red framework">{`<Android>`} &nbsp; &nbsp; {`<Java>`}</span>
+                        <span className="lorem-six framework">{`<NodeJS>`}</span>
+                        <span className="lorem-seven framework">{`<PHP>`} &nbsp; &nbsp; {`<Laravel>`}</span>
+                        <span className="lorem-eight red framework">{`<Mysql>`} &nbsp; &nbsp; {`<MongoDb>`}</span>
                     </div>
                 </div>
                 <motion.div animate={animation} className="front-end end">

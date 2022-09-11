@@ -20,10 +20,11 @@ function Feedback() {
        return (
          
              <motion.div
+             className="feedback-page-new"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: .4, delay: .1}}
-            exit={{opacity: 0, transition: {duration: .2}}}    
+            exit={{opacity: 0, transition: {duration: .2}}}   
         >
           <h1 className="title-all-feed"> <span className="title-main-feed">PORTFOLIO</span><sub className="title-sub-feed">design</sub></h1>
           <QuestionOne/>

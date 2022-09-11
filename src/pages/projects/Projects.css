@@ -1,6 +1,52 @@
 
+  .full-projects{
+      margin-top: 60px;
+  }
+  
+  .projects-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+    width: 70%;
+    gap: 200px;
 
-.projects-page{
+}
+
+.top-absolute{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.projects-page-title{
+    text-align: center;
+}
+
+.title-all{
+    font-size: 70px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: -30px;
+    text-align: center;
+}
+.title-sub{
+    margin-right: 10px;
+    color: #f57e7e;
+}
+.title-main{
+    
+}
+
+
+@media(max-width: 1600px){
+     .full-projects{
+      margin-top: 0px;
+  }
+  
+    .projects-page{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +83,7 @@
     
 }
 
+}
 
 /* PROJECT DIVISOR */
 

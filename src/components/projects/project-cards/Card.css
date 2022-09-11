@@ -21,7 +21,7 @@
 
     /* border: 1.4px solid rgb(253, 202, 135); */
     box-shadow: 8px 8px rgba(0, 0, 0, .8);
-    border: 2.9px solid black;
+    border: 3.3px solid black;
     /* box-shadow: 20px 20px 50px 15px rgba(0, 0, 0, .9); */
 }
 .project-card:hover{
@@ -123,8 +123,8 @@
 
 .project-icon{
     margin: 5px auto;
-    width: 40px;
-    height: 35px;
+    width: 43px;
+    height: 43px;
 }
 
 .project-wave{

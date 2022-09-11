@@ -133,7 +133,7 @@ const hideModal = () => {
                 type: 'SCROLL_VIEW',
                 payload: 1
             })
-            }, 620)
+            }, 520)
     }   
   }
 
@@ -162,7 +162,7 @@ const hideModal = () => {
                   type: 'SCROLL_VIEW',
                   payload: 2
               })
-      }, 670);
+      }, 570);
     }
   }
 // scroll to basement component//
@@ -200,10 +200,12 @@ const hideModal = () => {
   // scroll to contact component top//
   const redirectToContact = () => {
     reStartNavBar();
-    dispatch({
+    setTimeout(function() {
+               dispatch({
                 type: 'SCROLL_VIEW',
                 payload: "contact"
             })
+            }, 320)
   }
   
     return (
