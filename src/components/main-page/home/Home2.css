@@ -6,6 +6,7 @@
   margin: 120px auto -100px auto;
   font-family: "Fira";
   padding: 0 60px;
+  border: 1px solid yellow;
 }
 
 .intro-left {
@@ -182,31 +183,8 @@
     height: 160px;
   }
 }
-@media (max-width: 710px) {
-  .home2 {
-    padding-right: 20px;
-  }
-  .intro-left {
-    width: 75%;
-  }
 
-  .home2-title {
-    font-size: 70px;
-  }
-
-  .home-main-texts {
-    width: 93%;
-  }
-  .main-lines {
-    margin-right: -45px;
-  }
-
-  #home-svg {
-    width: 140px;
-    height: 140px;
-  }
-}
-@media (max-width: 630px) {
+@media (max-width: 790px) {
   .home2 {
     flex-direction: column;
     padding-right: 30px;

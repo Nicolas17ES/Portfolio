@@ -94,6 +94,7 @@ function Contact() {
                 transition={{duration: .4, delay: .1}}
                 exit={{opacity: 0, transition: {duration: .2}}}
             >
+                
                 <span ref={scrollTo} className="top-absolute"></span>
                 <section className="form-border">
                     <div className="show-form">

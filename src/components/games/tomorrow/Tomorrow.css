@@ -1,3 +1,7 @@
+
+.reply-time{
+  position: relative;
+}
 .games-hearts {
   margin: auto;
   display: flex;
@@ -115,7 +119,7 @@
 
   .behind-eyes {
     left: 50%;
-    top: 54.5%;
+    top: 58.5%;
     gap: 166px;
   }
 
@@ -142,7 +146,7 @@
 
   .behind-eyes {
     gap: 170px;
-    top: 49%;
+
   }
 
   .pills-background {
@@ -176,7 +180,7 @@
 
   .behind-eyes {
     gap: 116px;
-    top: 48.3%;
+    top: 62.3%;
   }
 
   .pills-background {

@@ -1,5 +1,5 @@
 
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import {FaHamburger, FaTimes} from 'react-icons/fa'
 import {GiMushroomHouse} from 'react-icons/gi'
 import {BiDownArrow} from 'react-icons/bi'
@@ -16,6 +16,7 @@ import { isOwner } from '../../../context/feedback/FeedBackActions'
 function NavBar() {
 const {blurry, dispatch} = useContext(FeedbackContext);
 const {dispatchGames} = useContext(GamesContext);
+
 
 
 const navRef = useRef();
@@ -94,7 +95,7 @@ const hideModal = () => {
   })
 }
 
-// scroll to about component//
+// scroll to home component//
   const redirectToHome = () => {
     hideResponsiveNavBar();
     reStartGame()
@@ -111,14 +112,29 @@ const hideModal = () => {
   const redirectToAbout = () => {
     hideResponsiveNavBar();
     reStartGame()
-      dispatch({
-                type: 'SCROLL_VIEW',
-                payload: 1
-            })
+    if(window.location.href === 'http://localhost:3000/home' || window.location.href === 'https://www.nicolas-luque.com/home'){
       dispatch({
                 type: 'ANIMATION',
                 payload: true
             })
+
+               dispatch({
+                type: 'SCROLL_VIEW',
+                payload: 1
+            })
+
+    } else {
+      dispatch({
+                type: 'ANIMATION',
+                payload: true
+            })
+            setTimeout(function() {
+               dispatch({
+                type: 'SCROLL_VIEW',
+                payload: 1
+            })
+            }, 620)
+    }   
   }
 
 // scroll to skills component//
@@ -126,7 +142,7 @@ const hideModal = () => {
     hideResponsiveNavBar();
     reStartGame()
    
-    if(window.location.href === 'http://localhost:3000/home'){
+    if(window.location.href === 'http://localhost:3000/home' || window.location.href === 'https://www.nicolas-luque.com/home'){
         dispatch({
                   type: 'SCROLL_VIEW',
                   payload: 2
@@ -140,23 +156,19 @@ const hideModal = () => {
                   type: 'ANIMATION',
                   payload: true
               })
-         dispatch({
-                  type: 'SCROLL_VIEW',
-                  payload: 1
-              })
+        
         setTimeout(() => {
           dispatch({
                   type: 'SCROLL_VIEW',
                   payload: 2
               })
-      }, 330);
+      }, 670);
     }
   }
 // scroll to basement component//
   const redirectToBasement = () => {
     hideResponsiveNavBar();
     reStartGame()
-    if(window.location.href === 'http://localhost:3000/home'){
         dispatch({
                   type: 'SCROLL_VIEW',
                   payload: "basement"
@@ -165,16 +177,6 @@ const hideModal = () => {
                 type: 'ANIMATION',
                 payload: true
             })
-    } else {
-        dispatch({
-                  type: 'ANIMATION',
-                  payload: true
-              })
-         dispatch({
-                  type: 'SCROLL_VIEW',
-                  payload: "basement"
-              })
-    }
   }
 
   // scroll to projects component top//
@@ -188,10 +190,12 @@ const hideModal = () => {
   // scroll to feedback component top//
   const redirectToFeedback = () => {
     reStartNavBar();
-    dispatch({
+    setTimeout(function() {
+               dispatch({
                 type: 'SCROLL_VIEW',
                 payload: "feedback"
             })
+            }, 420)
   }
   // scroll to contact component top//
   const redirectToContact = () => {

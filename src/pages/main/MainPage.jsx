@@ -9,19 +9,15 @@ import './LandingPage.css'
 
 function MainPage() {
     return (
-        <motion.div
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            transition={{duration: .4, delay: .1}}
-            exit={{opacity: 0, transition: {duration: .2}}}
+        <div
+            
             className="main-page"
         >
             <Home/>
             <About/>
             <Skills/>
-            <Footer/>
-            
-        </motion.div>
+            <Footer/>            
+        </div>
     )
 }
 

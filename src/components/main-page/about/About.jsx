@@ -28,7 +28,6 @@ function About(props) {
       scrollTo.current.scrollIntoView({
         behavior: "smooth",
         block: "center",
-        offset: 10,
       });
       dispatch({
         type: "SCROLL_VIEW",
@@ -224,13 +223,13 @@ function About(props) {
     });
   };
 
-  // whileHover={{ scale: 1.26, originX: .4,  color: '#f8e112', transition: {duration: .4} }}
-
+  
   
 
 //   if (hasAnimated === true) {
     return (
       <div ref={reference} className="about-page">
+        <span ref={scrollTo} className="center-absolute-ab"></span>
         <>
           <section className="section-two">
             <motion.div  whileHover={{ scale: 1.15, originX: .4, zIndex: 1000, transition: {duration: .4} }}  animate={animationLeftDelay} className="box1 box">
@@ -257,7 +256,7 @@ function About(props) {
               <button className="plus-icon-button">
                 <GiRailRoad className="plus-icon" size={24} />
               </button>
-              <p onClick={displayModalRoad} ref={scrollTo}>
+              <p onClick={displayModalRoad}>
                 Follow the path and find out how I went from being a
                 Professional Congress Organizer to a Web Developer.
               </p>

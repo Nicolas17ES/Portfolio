@@ -60,20 +60,8 @@ function Skills() {
 
     
 
-    if(hasAnimated === true){
         return (
-            <div ref={reference} className="skills-page" id="skillsId">
-                <>
-                <span ref={scrollTo} className="center-absolute-skills"></span>
-                <SkillsTable/>
-                    <div className="scrolling-test" onClick={executeScroll}> 
-                        <ScrollButton className="button-skills"/> 
-                    </div>
-                </>
-            </div>
-        )
-    } else {
-        return (
+
             <div ref={reference} >
                 <motion.div animate={animation} className="skills-page" id="skillsId">
                     <span ref={scrollTo} className="center-absolute-skills"></span>
@@ -85,7 +73,7 @@ function Skills() {
                 </motion.div>
             </div>
         )
-    }
+
 }
 
 export default Skills

@@ -6,6 +6,14 @@
   min-height: 100% !important;
 }
 
+.center-absolute-ab {
+  position: absolute;
+  left: 50%;
+  top: 41%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
 /* second PAGE OF HOME */
 .section-two {
   display: grid;
@@ -54,7 +62,7 @@
   grid-area: uno;
   border: 2px solid #fdca87;
   white-space: nowrap;
-  color: rgba(255, 255, 255, .88);
+  color: rgba(255, 255, 255, 0.88);
   font-weight: 600;
   font-size: 25px;
 }
@@ -70,16 +78,16 @@
 .box3 {
   grid-area: tres;
   position: relative;
-  border: 2px solid rgba(255, 255, 255, 0.88);;
+  border: 2px solid rgba(255, 255, 255, 0.88);
   z-index: 99;
   cursor: pointer;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .box4 {
   grid-area: cuatro;
   white-space: nowrap;
-  color: rgba(255, 255, 255, .88);
+  color: rgba(255, 255, 255, 0.88);
   font-weight: 500;
   border: 2px solid #fdca87;
   font-weight: 600;
@@ -100,17 +108,17 @@
 .box6 {
   position: relative;
   grid-area: seis;
-  border: 2px solid rgba(255, 255, 255, 0.88);;
+  border: 2px solid rgba(255, 255, 255, 0.88);
   z-index: 99;
   cursor: pointer;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .box7 {
   grid-area: siete;
   border: 2px solid #fdca87;
   white-space: nowrap;
-  color: rgba(255, 255, 255, .88);
+  color: rgba(255, 255, 255, 0.88);
   font-weight: 500;
   font-weight: 600;
   font-size: 25px;
@@ -132,9 +140,8 @@
   position: relative;
   z-index: 99;
   cursor: pointer;
-  border: 2px solid rgba(255, 255, 255, .88);
-  transition: all .4s;
-  
+  border: 2px solid rgba(255, 255, 255, 0.88);
+  transition: all 0.4s;
 }
 .box3:hover {
   background-color: #fdca87;
@@ -163,8 +170,6 @@
 .box9:hover p {
   color: #171830;
 }
-
-
 
 .box10 {
   grid-area: diez;
@@ -221,14 +226,12 @@
   font-weight: 400;
   color: rgba(255, 255, 255, 0.88);
   font-style: italic;
-  transition: all .4s;
+  transition: all 0.4s;
 }
-
 
 .plus-icon {
   transition: 0.6s;
 }
-
 
 /* scroll button container */
 .scroll-button-container {
@@ -286,11 +289,6 @@
     padding: 15px 20px;
     text-align: center;
   }
-  
-
-  
-
-  
 
   /* show button */
   .plus-icon-button {
@@ -306,8 +304,6 @@
     letter-spacing: 1px;
     font-weight: 400;
   }
-
-  
 
   /* scroll button container */
   .scroll-button-container {

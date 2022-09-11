@@ -33,7 +33,7 @@ function MainGames() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4, delay: 0.1 }}
-      exit={{ opacity: 0, transition: { duration: 0.27, delay: .29 } }}
+      exit={{ opacity: 0, transition: { duration: 0.25} }}
     >
       <h1 className="title-all">
         {" "}
@@ -58,7 +58,7 @@ function MainGames() {
           animate={{
             rotate: isActive ? 90 : 0,
           }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.25 }}
         >
           <button
             className="leave-button ball b2"
@@ -72,7 +72,7 @@ function MainGames() {
           animate={{
             rotate: isActive ? -90 : 0,
           }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.25 }}
         >
           <Link to={"/games/rock"} className="games-button ball b2"></Link>
         </motion.div>

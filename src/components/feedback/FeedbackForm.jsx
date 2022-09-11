@@ -2,27 +2,43 @@ import {Link} from 'react-router-dom'
 import Card from '../shared/Card'
 import Button from '../shared/Button'
 import RatingSelect from './RatingSelect'
-import {useState, useContext, useEffect} from 'react'
+import {useState, useContext, useEffect, useRef} from 'react'
 import FeedbackContext from '../../context/feedback/FeedbackContext'
 import {addFeedback, updateFeedback} from '../../context/feedback/FeedBackActions'
 import Button2 from '../shared/Button2'
 import PropTypes from 'prop-types'
+import { useInView } from "react-intersection-observer";
+
 
 
 
 
 function FeedbackForm({data}) {
-    const {feedbackEdit, feedback, dispatch} = useContext(FeedbackContext);
+    const {feedbackEdit, feedback, dispatch, scroll} = useContext(FeedbackContext);
     const [text, setText] = useState('');
     const [rating, setRating] = useState(10);
     const [btnDisabled, setBtnDisabled] = useState(true);
     const [message, setMessage] = useState('');
+    const [reference, inView] = useInView();
+    const scrollTo = useRef();
+
+
 
     const formInfo = {
         title: data.formTitle,
         questionNumber: data.questionNumber,
         dataLink: data.dataLink
     }
+
+    useEffect(() => {
+    if (scroll === "feedback") {
+      scrollTo.current.scrollIntoView({ behavior: "smooth", block: "center" });
+      dispatch({
+        type: "SCROLL_VIEW",
+        payload: false,
+      });
+    }
+  }, [scroll, dispatch]);
     
     useEffect(() => {
         if(feedbackEdit.edit === true){
@@ -89,7 +105,8 @@ function FeedbackForm({data}) {
         
     }
     return (
-        <section className="mt-28 question">
+        <section ref={reference} className="mt-28 question">
+            <span ref={scrollTo} className="top-absolute"></span>
             <Card >
             <form onSubmit={handleSubmit}>
                 <h2 className="form-title">{formInfo.title}</h2>
