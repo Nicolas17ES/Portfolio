@@ -36,6 +36,7 @@ function Feedback() {
     } else if (questionCount === 2) {
       return (
          <motion.div
+         className="feedback-page-new"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: .4, delay: .1}}
@@ -49,6 +50,7 @@ function Feedback() {
     } else if (questionCount === 3){
         return (
          <motion.div
+         className="feedback-page-new"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: .4, delay: .1}}
@@ -62,6 +64,7 @@ function Feedback() {
     } else {
       return (
          <motion.div
+         className="feedback-page-new"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: .4, delay: .1}}
