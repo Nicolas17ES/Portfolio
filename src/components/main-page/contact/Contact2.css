@@ -28,7 +28,7 @@
 .box-contact3:hover,
 .box-contact4:hover,
 .box-contact5:hover {
-  animation: pumpingContact 1.3s linear infinite;
+  transform: scale(1.2);
 }
 
 @keyframes rotation {
