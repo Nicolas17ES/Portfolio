@@ -1,16 +1,22 @@
 
   .full-projects{
-      margin-top: 60px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+       width: 100%;
   }
   
   .projects-page{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: auto;
     margin-top: 100px;
-    width: 70%;
-    gap: 200px;
+    min-width: 99%;
+    max-width: 100%;
 
 }
 
@@ -52,8 +58,9 @@
     align-items: center;
     margin: auto;
     margin-top: 50px;
-    width: 70%;
-    gap: 150px;
+    width: 100%;
+    gap: 80px;
+
 
 }
 
@@ -95,7 +102,7 @@
 @media (max-width: 1050px){
     .projects-page{
         width: 90%;
-        gap: 90px;
+        gap: 56px;
     }
 }
 @media (max-width: 850px){

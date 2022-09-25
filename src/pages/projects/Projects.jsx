@@ -7,6 +7,7 @@ import { ReactComponent as Node } from "../../components/assets/skills/node.svg"
 import { ReactComponent as Mysql } from "../../components/assets/skills/mysql.svg";
 import { ReactComponent as React } from "../../components/assets/skills/react.svg";
 import { ReactComponent as Tailwind } from "../../components/assets/skills/tailwind.svg";
+import { ReactComponent as Css } from "../../components/assets/skills/css.svg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import { useContext, useEffect, useRef, useState } from "react";
@@ -63,6 +64,24 @@ function Projects() {
     about:
       "The main objective behind the project is to create a community where users will be able to help each other when their pet gets lost. Moreover, users will be able to find Animal Walkers close to their location who are willing to take care of their pet. ",
   };
+  const memeApp = {
+    logo1: <React className="project-icon" />,
+    logo1Name: "REACT",
+    logo2: <Node className="project-icon" />,
+    logo2Name: "NODEJS",
+    logo3: <Mysql className="project-icon mysql-icon" />,
+    logo3Name: "MYSQL",
+    logo4: <Css className="project-icon" />,
+    logo4Name: "CSS",
+    title: (
+      <h2 className="project-title">
+        <p>MEMERATOR</p>
+      </h2>
+    ),
+    subtitle: "REACT APP used to transform pictures into memes",
+    about:
+      "DASHBRD is like if the infamous Inspector Gadget suddenly turned into a Web Application. The idea behind this project was to work with as many APIs as possible to completely understand the fundamentals behind state management in REACT.",
+  };
   const dashboardApp = {
     logo1: <React className="project-icon" />,
     logo1Name: "REACT",
@@ -97,35 +116,25 @@ function Projects() {
       </h1>
       <span ref={scrollTo} className="top-absolute"></span>
       <div className="projects-page">
-        <Link to="/projects/foundit">
-          <motion.div
-           onClick={redirectToFound}
-            className="block"
-            onClick={() => setIsActive(!isActive)}
-            initial={{ rotate: 0 }}
-            animate={{
-              rotate: isActive ? 90 : 0,
-            }}
-            transition={{ duration: 0.25 }}
-            
-          >
-            <ProjectCard founditApp={founditApp} />
-          </motion.div>
-        </Link>
+          <a href="https://sunny-frangipane-b14bdc.netlify.app/" target="_blank" >
+            <div>
+              <ProjectCard founditApp={memeApp} />
+            </div>
+          </a>
+          <Link to="/projects/foundit">
+            <motion.div
+            onClick={redirectToFound}
+              className="block">
+              <ProjectCard founditApp={founditApp} />
+            </motion.div>
+          </Link>
 
-        <Link to="/projects/dashboard">
-          <motion.div 
-            onClick={redirectToDash}
-            onClick={() => setIsActive(!isActive)}
-            initial={{ rotate: 0 }}
-            animate={{
-              rotate: isActive ? -90 : 0,
-            }}
-            transition={{ duration: 0.25 }}
-          >
-            <ProjectCard founditApp={dashboardApp} />
-          </motion.div>
-        </Link>
+          <Link to="/projects/dashboard">
+            <motion.div 
+              onClick={redirectToDash}>
+              <ProjectCard founditApp={dashboardApp} />
+            </motion.div>
+          </Link>
       </div>
     </motion.div>
   );

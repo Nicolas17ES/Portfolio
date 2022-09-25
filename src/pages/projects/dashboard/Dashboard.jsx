@@ -32,7 +32,7 @@ function Dashboard() {
             className="dashboard-page"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
-            transition={{duration: .2, delay: .1}}
+            transition={{duration: .2}}
             exit={{opacity: 0, transition: {duration: .1}}} 
         >
             <span ref={scrollTo} className="top-absolute"></span>
