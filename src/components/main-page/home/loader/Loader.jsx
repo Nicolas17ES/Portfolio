@@ -13,7 +13,7 @@ function Loader() {
 
         setTimeout(function(){
             setLoad(true)
-        }, 3000);
+        }, 1500);
 
         if(load){
             navigate("/home")

@@ -116,7 +116,7 @@ function Projects() {
       </h1>
       <span ref={scrollTo} className="top-absolute"></span>
       <div className="projects-page">
-          <a href="https://sunny-frangipane-b14bdc.netlify.app/" target="_blank" >
+          <a href="https://memerator-js.netlify.app/" target="_blank" >
             <div>
               <ProjectCard founditApp={memeApp} />
             </div>
